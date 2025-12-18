@@ -1,0 +1,110 @@
+"use client";
+
+import { useState } from "react";
+import Navbar from "@/components/Navbar";
+import Timeline, { TimelineEvent } from "./Timeline";
+import Gallery from "./Gallery";
+
+const timelineEvents: TimelineEvent[] = [
+  {
+    year: "2016-2017",
+    title: "The Beginning",
+    description:
+      "Began playing the viola in 5th grade at Woodbridge Elementary School in Catonsville, Maryland. What started as curiosity blossomed into a lifelong passion.",
+    location: "Woodbridge Elementary, Catonsville, MD",
+    images: ["/cms.jpg"],
+  },
+  {
+    year: "2019-2020",
+    title: "New Horizons",
+    description:
+      "Moved to Ellicott City, Maryland in 8th grade and was placed into the Gifted and Talented (G/T) Dunloggin Middle School orchestra.",
+    location: "Dunloggin Middle School, Ellicott City, MD",
+    images: ["/dms.png"],
+  },
+  {
+    year: "2020",
+    title: "High School Entry",
+    description:
+      "Entered high school in September 2020. Initially considered quitting after one year, but found renewed inspiration.",
+    location: "Centennial High School, Ellicott City, MD",
+    images: ["/chs.png"],
+  },
+  {
+    year: "2021",
+    title: "Turning Point",
+    description:
+      "Inspired by orchestra director Allen Leung to continue my musical journey instead of quitting.",
+    location: "Centennial High School, Ellicott City, MD",
+  },
+  {
+    year: "2021-2024",
+    title: "Chamber Orchestra Excellence",
+    description:
+      "Recommended to join the G/T Chamber Orchestra at Centennial for 10th grade (2021-2022) under the direction of Matthew Boggs. Loved it so much I continued through graduation in 2024.",
+    location: "Centennial High School, Ellicott City, MD",
+  },
+  {
+    year: "2021-2024",
+    title: "Mentoring and Tutoring Initiatives",
+    description:
+      "Part of my high school's Music Mentors club to mentor middle school musicians at Burleigh Manor Middle School (across the street), where I held the position of Attendance Manager for my junior year 2022-2023. Additionally, served as an online viola tutor through the nonprofit Do Re Mi Project, guiding 2 aspiring, resource-limited musicians who placed into Peabody Youth Orchestras, Baltimore Symphony Youth Orchetras, and the Howard County GT orchestra.",
+    location: "Burleigh Manor Middle School & Online, Ellicott City, MD",
+    images: ["/doremi.png", "/music_mentors.png"],
+  },
+  {
+    year: "2022-2024",
+    title: "Community Music Outreach",
+    description:
+      "Started playing in chamber experiences for retirement centers in the community every month in 2022. Became president of the Centennial Music Outreach Club in my senior year of high school 2023-2024.",
+    location:
+      "Centennial High School & Local Retirement Centers, Ellicott City, MD",
+    images: ["/cmop.png"],
+  },
+  {
+    year: "2025 and Beyond",
+    title: "University of Michigan-Ann Arbor",
+    description:
+      "Continuing my musical journey at the University of Michigan-Ann Arbor, studying under Zoie Hightower (student of Detroit Symphony Orchestra member Caroline Coade). Principal Viola of the University of Michigan Pops Orchestra for the 2025-2026 school year. Substitute violist for Adrian Symphony Orchestra for the 2025-2026 season.",
+    location: "Ann Arbor, MI",
+    images: ["/um.jpg"],
+  },
+];
+
+export default function MusicalJourneyPage() {
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  return (
+    <div className="relative min-h-screen overflow-x-hidden">
+      {/* Wrapper for Navbar to handle hiding. 
+         Fixed position ensures it stays at top, 
+         z-50 keeps it above timeline but below lightbox (also z-50, but rendered later)
+      */}
+      <div
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+          isLightboxOpen
+            ? "opacity-0 -translate-y-full pointer-events-none"
+            : "opacity-100 translate-y-0"
+        }`}
+      >
+        <Navbar page="music" />
+      </div>
+
+      <div className="px-8 py-20 max-w-5xl mx-auto relative z-10">
+        <h1 className="text-6xl font-bold text-center mb-12">
+          Musical Journey
+        </h1>
+        <p className="text-xl italic text-center mb-16">
+          "Where notes weave stories and melodies capture the soul..."
+        </p>
+
+        <Timeline events={timelineEvents} />
+
+        {/* Pass the state setter to the Gallery */}
+        <Gallery
+          imagesUrl="/gallery/gallery.json"
+          onToggle={(isOpen) => setIsLightboxOpen(isOpen)}
+        />
+      </div>
+    </div>
+  );
+}

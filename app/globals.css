@@ -1,26 +1,225 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* =========================
+   Light theme
+   ========================= */
+html.light {
+  --background: #fffdf8;
+  --foreground: #1f2937;
+  --muted: #4b5563;
+  --accent: #facc15;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* =========================
+   Dark theme (soft & warm)
+   ========================= */
+html.dark {
+  --background: #0b1020; /* deep space navy */
+  --foreground: #e5e7eb; /* soft white */
+  --muted: #9ca3af; /* cool gray */
+  --accent: #fde047; /* moon yellow */
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========================
+   Space background
+   ========================= */
+
+.stars {
+  background-image: radial-gradient(1px 1px at 20% 30%, white, transparent),
+    radial-gradient(1px 1px at 80% 40%, white, transparent),
+    radial-gradient(1px 1px at 50% 80%, white, transparent),
+    radial-gradient(1px 1px at 10% 90%, white, transparent),
+    radial-gradient(1px 1px at 90% 10%, white, transparent);
+  background-size: 200px 200px;
+  opacity: 0.6;
+  animation: twinkle 6s infinite ease-in-out alternate;
+}
+
+@keyframes twinkle {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
+/* Slow rotating nebula glow */
+.space-glow {
+  background: radial-gradient(
+    circle at center,
+    rgba(253, 224, 71, 0.08),
+    transparent 60%
+  );
+  animation: rotate-space 120s linear infinite;
+}
+
+@keyframes rotate-space {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   Shooting Star
+   ========================= */
+.shooting-star {
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  width: 2px;
+  height: 80px;
+  background: linear-gradient(transparent, rgba(255, 255, 255, 0.8));
+  opacity: 0.6;
+  animation: shoot 8s linear infinite;
+}
+
+@keyframes shoot {
+  0% {
+    transform: translateX(0) translateY(0) rotate(45deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-400px) translateY(600px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+/* =========================
+   Light mode bubbles
+   ========================= */
+
+.sun-bubble {
+  position: absolute;
+  border-radius: 9999px;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(250, 204, 21, 0.35),
+    rgba(250, 204, 21, 0.15),
+    transparent 70%
+  );
+  filter: blur(2px);
+  animation: float 20s ease-in-out infinite;
+}
+
+.bubble-1 {
+  width: 300px;
+  height: 300px;
+  top: 20%;
+  left: 10%;
+}
+
+.bubble-2 {
+  width: 200px;
+  height: 200px;
+  top: 60%;
+  left: 70%;
+  animation-duration: 25s;
+}
+
+.bubble-3 {
+  width: 400px;
+  height: 400px;
+  top: 80%;
+  left: 30%;
+  animation-duration: 30s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-40px) translateX(20px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+/* =========================
+   Stars
+   ========================= */
+.stars {
+  background-image: radial-gradient(1px 1px at 20% 30%, white, transparent),
+    radial-gradient(1px 1px at 80% 40%, white, transparent),
+    radial-gradient(1px 1px at 50% 80%, white, transparent),
+    radial-gradient(1px 1px at 10% 90%, white, transparent),
+    radial-gradient(1px 1px at 90% 10%, white, transparent);
+  background-size: 200px 200px;
+  opacity: 0.6;
+  animation: twinkle 6s infinite ease-in-out alternate;
+}
+
+@keyframes twinkle {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
+/* =========================
+   Floating Bubbles
+   ========================= */
+.sun-bubble {
+  position: absolute;
+  border-radius: 9999px;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(250, 204, 21, 0.35),
+    rgba(250, 204, 21, 0.15),
+    transparent 70%
+  );
+  filter: blur(2px);
+  animation: float 20s ease-in-out infinite;
+}
+
+.bubble-1 {
+  width: 300px;
+  height: 300px;
+  top: 20%;
+  left: 10%;
+}
+.bubble-2 {
+  width: 200px;
+  height: 200px;
+  top: 60%;
+  left: 70%;
+  animation-duration: 25s;
+}
+.bubble-3 {
+  width: 400px;
+  height: 400px;
+  top: 80%;
+  left: 30%;
+  animation-duration: 30s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-40px) translateX(20px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
 }
