@@ -3,13 +3,16 @@
 import {
   FaPython,
   FaGitAlt,
-  FaDocker,
+  FaGithub,
   FaTools,
   FaFilePowerpoint,
   FaFileExcel,
   FaEnvelope,
   FaCloud,
   FaChartBar,
+  FaWindows,
+  FaApple,
+  FaLinux,
 } from "react-icons/fa";
 import {
   SiC,
@@ -19,6 +22,7 @@ import {
   SiJira,
   SiAsana,
   SiScrumalliance,
+  SiDebian,
 } from "react-icons/si";
 import { DiJava } from "react-icons/di";
 
@@ -30,6 +34,8 @@ const skillCategories = [
       { name: "Jira", icon: SiJira, color: "text-blue-500" },
       { name: "Asana", icon: SiAsana, color: "text-orange-500" },
       { name: "DevOps", icon: FaTools, color: "text-indigo-500" },
+      { name: "Git", icon: FaGitAlt, color: "text-orange-600" },
+      { name: "GitHub", icon: FaGithub, color: "text-gray-400" },
     ],
   },
   {
@@ -42,11 +48,19 @@ const skillCategories = [
     ],
   },
   {
+    title: "Operating Systems",
+    skills: [
+      { name: "Windows", icon: FaWindows, color: "text-blue-500" },
+      { name: "MacOS", icon: FaApple, color: "text-gray-400" },
+      { name: "Linux/Unix", icon: FaLinux, color: "text-yellow-600" },
+      { name: "Debian", icon: SiDebian, color: "text-red-600" },
+    ],
+  },
+  {
     title: "Databases",
     skills: [
       { name: "SQL", icon: SiPostgresql, color: "text-blue-600" },
       { name: "NoSQL", icon: SiMongodb, color: "text-green-600" },
-      { name: "MongoDB", icon: SiMongodb, color: "text-green-600" },
     ],
   },
   {
@@ -79,23 +93,28 @@ export default function Skills() {
       id="skills"
       className="min-h-screen flex flex-col justify-center items-center px-8 py-16"
     >
-      <h2 className="text-4xl md:text-5xl font-semibold tracking-tight mb-12">
+      <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-12">
         Skills
       </h2>
-      <div className="space-y-12 max-w-6xl">
+      <div className="space-y-16 max-w-6xl w-full">
         {skillCategories.map((category) => (
           <div key={category.title} className="text-center">
-            <h3 className="text-2xl md:text-3xl font-medium mb-8">
+            <h3 className="text-2xl md:text-3xl font-medium mb-10 text-[var(--foreground)]/80">
               {category.title}
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
               {category.skills.map((skill) => (
                 <div
                   key={skill.name}
-                  className="flex flex-col items-center p-6 bg-white/10 dark:bg-gray-800/10 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+                  className="flex flex-col items-center p-6 bg-[var(--foreground)]/5 border border-[var(--accent)]/10 backdrop-blur-sm rounded-xl shadow-lg hover:scale-105 hover:border-[var(--accent)]/40 transition-all duration-300 group"
                 >
-                  <skill.icon size={48} className={`${skill.color} mb-4`} />
-                  <span className="text-lg font-medium">{skill.name}</span>
+                  <skill.icon
+                    size={42}
+                    className={`${skill.color} mb-4 group-hover:drop-shadow-[0_0_8px_rgba(250,204,21,0.4)] transition-all`}
+                  />
+                  <span className="text-sm md:text-base font-medium">
+                    {skill.name}
+                  </span>
                 </div>
               ))}
             </div>

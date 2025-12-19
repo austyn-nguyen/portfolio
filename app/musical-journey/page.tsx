@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Timeline, { TimelineEvent } from "./Timeline";
 import Gallery from "./Gallery";
+import PerformanceShowcase from "./PerformanceShowcase";
 
 const timelineEvents: TimelineEvent[] = [
   {
@@ -12,7 +14,7 @@ const timelineEvents: TimelineEvent[] = [
     description:
       "Began playing the viola in 5th grade at Woodbridge Elementary School in Catonsville, Maryland. What started as curiosity blossomed into a lifelong passion.",
     location: "Woodbridge Elementary, Catonsville, MD",
-    images: ["/cms.jpg"],
+    images: ["/timeline/cms.jpg"],
   },
   {
     year: "2019-2020",
@@ -20,7 +22,7 @@ const timelineEvents: TimelineEvent[] = [
     description:
       "Moved to Ellicott City, Maryland in 8th grade and was placed into the Gifted and Talented (G/T) Dunloggin Middle School orchestra.",
     location: "Dunloggin Middle School, Ellicott City, MD",
-    images: ["/dms.png"],
+    images: ["/timeline/dms.png"],
   },
   {
     year: "2020",
@@ -28,7 +30,7 @@ const timelineEvents: TimelineEvent[] = [
     description:
       "Entered high school in September 2020. Initially considered quitting after one year, but found renewed inspiration.",
     location: "Centennial High School, Ellicott City, MD",
-    images: ["/chs.png"],
+    images: ["/timeline/chs.png"],
   },
   {
     year: "2021",
@@ -48,37 +50,35 @@ const timelineEvents: TimelineEvent[] = [
     year: "2021-2024",
     title: "Mentoring and Tutoring Initiatives",
     description:
-      "Part of my high school's Music Mentors club to mentor middle school musicians at Burleigh Manor Middle School (across the street), where I held the position of Attendance Manager for my junior year 2022-2023. Additionally, served as an online viola tutor through the nonprofit Do Re Mi Project, guiding 2 aspiring, resource-limited musicians who placed into Peabody Youth Orchestras, Baltimore Symphony Youth Orchetras, and the Howard County GT orchestra.",
+      "Part of my high school's Music Mentors club to mentor middle school musicians. Served as an online viola tutor through the nonprofit Do Re Mi Project, guiding aspiring musicians into prestigious youth orchestras.",
     location: "Burleigh Manor Middle School & Online, Ellicott City, MD",
-    images: ["/doremi.png", "/music_mentors.png"],
+    images: ["/timeline/doremi.png", "/timeline/music_mentors.png"],
   },
   {
     year: "2022-2024",
     title: "Community Music Outreach",
     description:
-      "Started playing in chamber experiences for retirement centers in the community every month in 2022. Became president of the Centennial Music Outreach Club in my senior year of high school 2023-2024.",
+      "Started playing in chamber experiences for retirement centers. Became president of the Centennial Music Outreach Club in my senior year of high school.",
     location:
       "Centennial High School & Local Retirement Centers, Ellicott City, MD",
-    images: ["/cmop.png"],
+    images: ["/timeline/cmop.png"],
   },
   {
     year: "2025 and Beyond",
     title: "University of Michigan-Ann Arbor",
     description:
-      "Continuing my musical journey at the University of Michigan-Ann Arbor, studying under Zoie Hightower (student of Detroit Symphony Orchestra member Caroline Coade). Principal Viola of the University of Michigan Pops Orchestra for the 2025-2026 school year. Substitute violist for Adrian Symphony Orchestra for the 2025-2026 season.",
+      "Continuing my musical journey at UMich studying under Zoie Hightower. Principal Viola of the UMich Pops Orchestra and substitute violist for Adrian Symphony Orchestra.",
     location: "Ann Arbor, MI",
-    images: ["/um.jpg"],
+    images: ["/timeline/mpo.png", "/timeline/aso.png"],
   },
 ];
 
 export default function MusicalJourneyPage() {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+
   return (
     <div className="relative min-h-screen overflow-x-hidden">
-      {/* Wrapper for Navbar to handle hiding. 
-         Fixed position ensures it stays at top, 
-         z-50 keeps it above timeline but below lightbox (also z-50, but rendered later)
-      */}
+      {/* Navbar logic to hide when gallery is active */}
       <div
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
           isLightboxOpen
@@ -90,16 +90,26 @@ export default function MusicalJourneyPage() {
       </div>
 
       <div className="px-8 py-20 max-w-5xl mx-auto relative z-10">
-        <h1 className="text-6xl font-bold text-center mb-12">
-          Musical Journey
-        </h1>
-        <p className="text-xl italic text-center mb-16">
-          "Where notes weave stories and melodies capture the soul..."
-        </p>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h1 className="text-6xl font-bold text-center mb-6">
+            Musical Journey
+          </h1>
+          <p className="text-xl italic text-center mb-16 text-[var(--foreground)]/70">
+            “Nothing I play is perfect—everything I play can be refined.”
+          </p>
+        </motion.div>
 
+        {/* PERFORMANCE SHOWCASE */}
+        <PerformanceShowcase />
+
+        {/* TIMELINE */}
         <Timeline events={timelineEvents} />
 
-        {/* Pass the state setter to the Gallery */}
+        {/* GALLERY */}
         <Gallery
           imagesUrl="/gallery/gallery.json"
           onToggle={(isOpen) => setIsLightboxOpen(isOpen)}

@@ -1,4 +1,3 @@
-// app/page.tsx
 "use client";
 
 import { useState } from "react";
@@ -7,6 +6,7 @@ import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
+import Experiences from "@/components/Experiences"; // 1. Import the new component
 import Contact from "@/components/Contacts";
 
 export default function Home() {
@@ -27,9 +27,9 @@ export default function Home() {
       <main className="pt-16">
         <Hero />
         <About />
-        <Skills />
-        {/* Pass the toggle function here */}
+        <Experiences />
         <Projects onToggle={(isOpen) => setIsLightboxOpen(isOpen)} />
+        <Skills />
         <Contact />
       </main>
     </div>

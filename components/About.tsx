@@ -31,7 +31,7 @@ export default function About() {
           bridging user needs with innovative solutions, turning complex
           challenges into streamlined experiences. When I'm not diving into
           product strategy or analyzing market trends, you'll find me
-          strategizing in League of Legends or building worlds in Roblox.
+          strategizing in League of Legends or exploring worlds in Roblox.
         </p>
 
         <p className="mt-4 text-[var(--foreground)] text-lg leading-relaxed">

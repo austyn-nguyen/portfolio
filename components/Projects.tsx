@@ -27,6 +27,26 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Personal Portfolio",
+    affiliation: "~Me, Myself, and I!~",
+    date: "Dec 2025 – Present",
+    description:
+      "A high-performance, theme-aware professional portfolio featuring custom interactive galleries and musical journey timelines",
+    longDescription:
+      "A bespoke digital portfolio built to showcase technical and creative milestones. This project features a custom-engineered 'Musical Journey' timeline, a hybrid lightbox gallery system for projects and photos, and a sophisticated theme engine that swaps between 'Space' and 'Light' modes using CSS variables and LocalStorage. The site is optimized for performance with Next.js App Router and utilizes Framer Motion for hardware-accelerated animations.",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "React",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Vercel",
+    ],
+    link: "https://www.linkedin.com/in/austyn-an-nguyen/",
+    githubLink: "https://github.com/austyn-nguyen/portfolio",
+    image: "/projects/portfolio.png",
+  },
+  {
     title: "Electricity Price Hybrid Forecaster",
     affiliation: "ElectricFish",
     date: "Aug 2025 – Dec 2025",
@@ -36,7 +56,7 @@ const projects: Project[] = [
       "Developed a robust Day-Ahead Price Forecasting Model focusing on Locational Marginal Price (LMP) in the CAISO region. The system incorporates a three-tier hybrid architecture: LightGBM for spike classification, NGBoost for uncertainty estimation, and XGBoost for baselines. We pivoted to city-level data for nine major load centers to capture localized pricing required for operational needs.",
     tags: ["Python", "Machine Learning", "XGBoost", "Data Science"],
     link: "https://www.linkedin.com/in/austyn-an-nguyen/",
-    image: "/electricfish.png",
+    image: "/projects/ef.png",
   },
   {
     title: "Infusion Workflow Optimization",
@@ -48,7 +68,7 @@ const projects: Project[] = [
       "The nurses at Brighton Center for Specialty Care (BCSC) Infusion Clinic flagged delays caused by unactionable medication orders. Using process mapping, shadowing, and intensive data collection, I documented the infusion order checking workflow. This documentation identified critical bottlenecks and provided data-driven opportunities to streamline patient care.",
     tags: ["Healthcare Engineering", "Process Mapping", "Data Collection"],
     link: "https://www.linkedin.com/in/austyn-an-nguyen/",
-    image: "/cheps.jpg",
+    image: "/projects/ecco_poster_25.png",
   },
   {
     title: "The WiLi Watch",
@@ -61,7 +81,7 @@ const projects: Project[] = [
     tags: ["Python", "LLM", "Arduino", "Hardware"],
     link: "https://www.linkedin.com/in/austyn-an-nguyen/",
     devpostLink: "https://devpost.com/software/wili-watch",
-    image: "/mhack.jpg",
+    image: "/projects/wiLi_watch.png",
   },
   {
     title: "Beverage Delivery Robot",
@@ -73,7 +93,7 @@ const projects: Project[] = [
       "Developed a beverage delivery bot for the Duderstadt Library. Modified a VANLINNY omnidirectional robot for autonomous patrolling and developed a Java-based computer simulation to model robot navigation across various floors of the library. Conducted user interviews and surveys to gain insights into study habits and ethical opinions.",
     tags: ["Java", "C++", "CAD", "Robotics"],
     link: "https://www.linkedin.com/in/austyn-an-nguyen/",
-    image: "/robot.jpg",
+    image: "/projects/robot.png",
   },
   {
     title: "FAIR-Compliant Metadata Standard",
@@ -94,7 +114,7 @@ const projects: Project[] = [
     ],
     link: "https://www.linkedin.com/in/austyn-an-nguyen/",
     githubLink: "https://github.com/austyn-nguyen/RO-Crate",
-    image: "/nist.png",
+    image: "/projects/pfhub.png",
   },
   {
     title: "Manduca sexta Feeding Inductions",
@@ -106,7 +126,7 @@ const projects: Project[] = [
       "Investigated feeding inductions by rearing larvae on non-solanaceous plants from the Fabaceae and Cruciferae families. The study explores the dietary versatility of Manduca sexta to better understand extent of their adaptability when raised on different plant families outside their typical host range.",
     tags: ["LaTeX", "Biology Research"],
     link: "https://www.linkedin.com/in/austyn-an-nguyen/",
-    image: "/cms.jpg",
+    image: "/projects/manduca_sexta.png",
   },
 ];
 
@@ -117,6 +137,7 @@ interface ProjectsProps {
 export default function Projects({ onToggle }: ProjectsProps) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
+  // Sync with main page for Navbar hiding
   useEffect(() => {
     onToggle?.(selectedIndex !== null);
   }, [selectedIndex, onToggle]);
@@ -201,19 +222,20 @@ export default function Projects({ onToggle }: ProjectsProps) {
             onClick={() => setSelectedIndex(null)}
           >
             <motion.button
-              className="absolute top-8 right-8 text-[var(--foreground)] z-[110]"
+              className="absolute top-6 right-6 text-[var(--foreground)] z-[110] p-2 hover:bg-[var(--foreground)]/10 rounded-full transition-colors"
               onClick={() => setSelectedIndex(null)}
               whileHover={{ scale: 1.1, rotate: 90 }}
             >
-              <FaTimes size={40} />
+              <FaTimes size={32} />
             </motion.button>
 
+            {/* Navigation Arrows */}
             <button
               onClick={(e) => {
                 e.stopPropagation();
                 paginate(-1);
               }}
-              className="absolute left-4 md:left-10 top-1/2 -translate-y-1/2 text-[var(--foreground)]/50 hover:text-[var(--foreground)] z-[110]"
+              className="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 text-[var(--foreground)]/50 hover:text-[var(--foreground)] z-[110] transition-colors p-2"
             >
               <FaArrowLeft size={36} />
             </button>
@@ -222,68 +244,91 @@ export default function Projects({ onToggle }: ProjectsProps) {
                 e.stopPropagation();
                 paginate(1);
               }}
-              className="absolute right-4 md:right-10 top-1/2 -translate-y-1/2 text-[var(--foreground)]/50 hover:text-[var(--foreground)] z-[110]"
+              className="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 text-[var(--foreground)]/50 hover:text-[var(--foreground)] z-[110] transition-colors p-2"
             >
               <FaArrowRight size={36} />
             </button>
 
+            {/* Lightbox Modal */}
             <motion.div
-              className="bg-[var(--background)] border border-[var(--accent)]/30 p-8 md:p-12 rounded-2xl max-w-3xl w-full shadow-2xl relative overflow-y-auto max-h-[90vh]"
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="bg-[var(--background)] border border-[var(--accent)]/30 rounded-3xl max-w-5xl w-full shadow-2xl relative overflow-hidden flex flex-col md:flex-row max-h-[90vh]"
               onClick={(e) => e.stopPropagation()}
             >
-              <span className="text-[var(--accent)] font-bold tracking-widest uppercase text-xs">
-                {projects[selectedIndex].affiliation} •{" "}
-                {projects[selectedIndex].date}
-              </span>
-              <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-6 leading-tight">
-                {projects[selectedIndex].title}
-              </h2>
-              <p className="text-base md:text-lg text-[var(--muted)] leading-relaxed mb-8">
-                {projects[selectedIndex].longDescription}
-              </p>
-
-              <div className="flex flex-wrap gap-2 mb-8">
-                {projects[selectedIndex].tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-3 py-1 text-xs rounded-full bg-[var(--foreground)]/5 border border-[var(--accent)]/30 text-[var(--foreground)]"
-                  >
-                    {tag}
-                  </span>
-                ))}
+              {/* Left Side: Image */}
+              <div className="relative w-full md:w-1/2 h-64 md:h-auto bg-black/20">
+                <Image
+                  src={projects[selectedIndex].image}
+                  alt={projects[selectedIndex].title}
+                  fill
+                  className="object-contain p-4 md:p-8"
+                  priority
+                />
               </div>
 
-              <div className="flex flex-wrap gap-4">
-                <a
-                  href={projects[selectedIndex].link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-[#0077b5] text-white font-bold hover:scale-105 transition-transform shadow-lg"
-                >
-                  LinkedIn <FaLinkedin size={18} />
-                </a>
+              {/* Right Side: Text & Actions */}
+              <div className="w-full md:w-1/2 p-8 md:p-12 overflow-y-auto custom-scrollbar">
+                <div className="mb-6">
+                  <span className="text-[var(--accent)] font-bold tracking-widest uppercase text-xs">
+                    {projects[selectedIndex].affiliation} •{" "}
+                    {projects[selectedIndex].date}
+                  </span>
+                  <h2 className="text-3xl md:text-4xl font-bold mt-2 leading-tight">
+                    {projects[selectedIndex].title}
+                  </h2>
+                </div>
 
-                {projects[selectedIndex].githubLink && (
-                  <a
-                    href={projects[selectedIndex].githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-[#333] text-white font-bold hover:scale-105 transition-transform border border-white/10 shadow-lg"
-                  >
-                    GitHub <FaGithub size={18} />
-                  </a>
-                )}
+                <div className="space-y-6">
+                  <p className="text-base md:text-lg text-[var(--muted)] leading-relaxed">
+                    {projects[selectedIndex].longDescription}
+                  </p>
 
-                {projects[selectedIndex].devpostLink && (
-                  <a
-                    href={projects[selectedIndex].devpostLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-[#003E54] text-white font-bold hover:scale-105 transition-transform border border-white/10 shadow-lg"
-                  >
-                    Devpost <SiDevpost size={18} />
-                  </a>
-                )}
+                  <div className="flex flex-wrap gap-2">
+                    {projects[selectedIndex].tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 text-xs rounded-full bg-[var(--foreground)]/5 border border-[var(--accent)]/30 text-[var(--foreground)]"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="flex flex-wrap gap-4 pt-4">
+                    <a
+                      href={projects[selectedIndex].link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-[#0077b5] text-white font-bold hover:scale-105 transition-transform shadow-lg"
+                    >
+                      LinkedIn <FaLinkedin size={18} />
+                    </a>
+
+                    {projects[selectedIndex].githubLink && (
+                      <a
+                        href={projects[selectedIndex].githubLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-[#333] text-white font-bold hover:scale-105 transition-transform border border-white/10 shadow-lg"
+                      >
+                        GitHub <FaGithub size={18} />
+                      </a>
+                    )}
+
+                    {projects[selectedIndex].devpostLink && (
+                      <a
+                        href={projects[selectedIndex].devpostLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-[#003E54] text-white font-bold hover:scale-105 transition-transform border border-white/10 shadow-lg"
+                      >
+                        Devpost <SiDevpost size={18} />
+                      </a>
+                    )}
+                  </div>
+                </div>
               </div>
             </motion.div>
           </motion.div>
