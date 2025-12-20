@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Timeline, { TimelineEvent } from "./Timeline";
 import Gallery from "./Gallery";
 import PerformanceShowcase from "./PerformanceShowcase";
+import Hero from "./Hero";
 
 const timelineEvents: TimelineEvent[] = [
   {
@@ -78,7 +78,7 @@ export default function MusicalJourneyPage() {
 
   return (
     <div className="relative min-h-screen overflow-x-hidden">
-      {/* Navbar logic to hide when gallery is active */}
+      {/* Navbar fades out when the Gallery Lightbox is open to avoid overlapping */}
       <div
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
           isLightboxOpen
@@ -89,27 +89,19 @@ export default function MusicalJourneyPage() {
         <Navbar page="music" />
       </div>
 
+      {/* NEW: Modular Hero Section (Centering your image and title) */}
+      <Hero />
+
       <div className="px-8 py-20 max-w-5xl mx-auto relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h1 className="text-6xl font-bold text-center mb-6">
-            Musical Journey
-          </h1>
-          <p className="text-xl italic text-center mb-16 text-[var(--foreground)]/70">
-            “Nothing I play is perfect—everything I play can be refined.”
-          </p>
-        </motion.div>
+        {/* Performance Showcase with an ID for smooth-scroll targets */}
+        <div id="performances">
+          <PerformanceShowcase />
+        </div>
 
-        {/* PERFORMANCE SHOWCASE */}
-        <PerformanceShowcase />
-
-        {/* TIMELINE */}
+        {/* Chronological Journey */}
         <Timeline events={timelineEvents} />
 
-        {/* GALLERY */}
+        {/* Photo Gallery Grid */}
         <Gallery
           imagesUrl="/gallery/gallery.json"
           onToggle={(isOpen) => setIsLightboxOpen(isOpen)}

@@ -18,7 +18,9 @@ interface TimelineProps {
 export default function Timeline({ events }: TimelineProps) {
   return (
     <div id="timeline" className="relative mb-20">
-      <div className="absolute left-8 md:left-1/2 w-0.5 h-full bg-[var(--accent)] z-0" />
+      {/* Vertical Line - Added -translate-x-1/2 to center accurately */}
+      <div className="absolute left-8 md:left-1/2 w-0.5 h-full bg-[var(--accent)] z-0 -translate-x-1/2" />
+
       {events.map((event, index) => (
         <motion.div
           key={index}
@@ -30,7 +32,9 @@ export default function Timeline({ events }: TimelineProps) {
             index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
           }`}
         >
-          <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-[var(--accent)] rounded-full border-4 border-[var(--background)] z-10" />
+          {/* Timeline Dot - Added -translate-x-1/2 to align center of dot with line */}
+          <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-[var(--accent)] rounded-full border-4 border-[var(--background)] z-10 -translate-x-1/2" />
+
           <motion.div
             whileHover={{ scale: 1.02 }}
             className={`ml-16 md:ml-0 md:w-5/12 bg-[var(--background)]/70 backdrop-blur rounded-xl p-6 shadow-lg ${
@@ -41,8 +45,12 @@ export default function Timeline({ events }: TimelineProps) {
               <div className="flex-1">
                 <div className="text-sm font-semibold mb-2">{event.year}</div>
                 <h3 className="text-xl font-bold mb-2">{event.title}</h3>
-                <p className="mb-3">{event.description}</p>
-                <div className="text-sm italic">{event.location}</div>
+                <p className="mb-3 text-[var(--foreground)]/80">
+                  {event.description}
+                </p>
+                <div className="text-sm italic text-[var(--muted)]">
+                  {event.location}
+                </div>
               </div>
               {event.images && (
                 <div className="ml-4 space-y-2">
@@ -53,7 +61,7 @@ export default function Timeline({ events }: TimelineProps) {
                       alt=""
                       width={80}
                       height={80}
-                      className="rounded-full border-2 border-[var(--accent)]"
+                      className="rounded-full border-2 border-[var(--accent)] object-cover h-20 w-20"
                     />
                   ))}
                 </div>
