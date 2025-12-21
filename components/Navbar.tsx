@@ -12,7 +12,6 @@ interface NavbarProps {
 
 export default function Navbar({ page }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
-  // This threshold controls when the name "shoots" in on the portfolio page
   const showNamePortfolio = useScrollThreshold(300);
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -25,7 +24,7 @@ export default function Navbar({ page }: NavbarProps) {
     setIsOpen(false);
   };
 
-  // Defining section IDs for smooth scrolling based on current page context
+  // Updated Chronological order: Home -> About -> Experience -> Projects -> Roadmap -> Skills -> Contact
   const leftLinks =
     page === "portfolio"
       ? [
@@ -33,14 +32,15 @@ export default function Navbar({ page }: NavbarProps) {
           { name: "About", id: "about" },
           { name: "Experience", id: "experiences" },
           { name: "Projects", id: "projects" },
+          { name: "Roadmap", id: "roadmap" }, // New Section Link
           { name: "Skills", id: "skills" },
           { name: "Contact", id: "contact" },
         ]
       : [
-          { name: "Home", id: "hero" }, // Targets Music Hero
-          { name: "Showcase", id: "performances" }, // Targets PerformanceShowcase
-          { name: "Timeline", id: "timeline" }, // Targets Timeline
-          { name: "Gallery", id: "gallery" }, // Targets Gallery
+          { name: "Home", id: "hero" },
+          { name: "Showcase", id: "performances" },
+          { name: "Timeline", id: "timeline" },
+          { name: "Gallery", id: "gallery" },
         ];
 
   const rightLink =
@@ -53,9 +53,8 @@ export default function Navbar({ page }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            {/* BRANDING SECTION */}
+            {/* NAME BRANDING SECTION */}
             <div className="flex items-center">
-              {/* Portfolio Side: Shooting Star Animation logic */}
               {page === "portfolio" && (
                 <AnimatePresence>
                   {showNamePortfolio && (
@@ -82,8 +81,6 @@ export default function Navbar({ page }: NavbarProps) {
                   )}
                 </AnimatePresence>
               )}
-
-              {/* Music Side: Static Branding (Formatting matches the Portfolio side) */}
               {page === "music" && (
                 <button
                   onClick={() => scrollToSection("hero")}
@@ -94,8 +91,8 @@ export default function Navbar({ page }: NavbarProps) {
               )}
             </div>
 
-            {/* Nav Links (Chronological for whichever page we are on) */}
-            <div className="hidden md:flex items-center space-x-5 lg:space-x-8">
+            {/* Nav Links */}
+            <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
               {leftLinks.map((link) => (
                 <button
                   key={link.name}
@@ -118,10 +115,9 @@ export default function Navbar({ page }: NavbarProps) {
             <ThemeToggle />
           </div>
 
-          {/* Mobile Menu Toggle */}
           <button
             onClick={toggleMenu}
-            className="md:hidden p-2 rounded-md text-[var(--foreground)] hover:bg-[var(--foreground)]/10"
+            className="md:hidden p-2 text-[var(--foreground)]"
           >
             <svg
               className="w-6 h-6"
@@ -147,7 +143,7 @@ export default function Navbar({ page }: NavbarProps) {
                 <button
                   key={link.name}
                   onClick={() => scrollToSection(link.id)}
-                  className="block text-left px-3 py-3 text-[var(--foreground)] hover:bg-[var(--foreground)]/10 hover:text-[var(--accent)] rounded-md transition-all duration-300"
+                  className="block text-left px-3 py-3 text-[var(--foreground)] hover:bg-[var(--foreground)]/10 rounded-md transition-all"
                 >
                   {link.name}
                 </button>
@@ -160,9 +156,6 @@ export default function Navbar({ page }: NavbarProps) {
                 >
                   {rightLink.name}
                 </Link>
-              </div>
-              <div className="flex justify-center py-4">
-                <ThemeToggle />
               </div>
             </div>
           </div>

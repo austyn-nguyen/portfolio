@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
 import Experiences from "@/components/Experiences"; // 1. Import the new component
 import Contact from "@/components/Contacts";
+import Roadmap from "@/components/Roadmap";
 
 export default function Home() {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
@@ -29,6 +30,7 @@ export default function Home() {
         <About />
         <Experiences />
         <Projects onToggle={(isOpen) => setIsLightboxOpen(isOpen)} />
+        <Roadmap />
         <Skills />
         <Contact />
       </main>
