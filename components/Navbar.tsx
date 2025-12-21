@@ -21,13 +21,16 @@ export default function Navbar({ page }: NavbarProps) {
     setIsOpen(false);
   };
 
-  // Define links depending on the page
+  // Chronological order: Home -> About -> Experience -> Projects -> Skills -> Contact
   const leftLinks =
     page === "portfolio"
       ? [
           { name: "Home", id: "hero" },
           { name: "About", id: "about" },
+          { name: "Experience", id: "experiences" },
+          { name: "Projects", id: "projects" },
           { name: "Skills", id: "skills" },
+          { name: "Contact", id: "contact" },
         ]
       : [
           { name: "Timeline", id: "timeline" },
@@ -40,16 +43,16 @@ export default function Navbar({ page }: NavbarProps) {
       : { name: "Portfolio", href: "/" };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-40 bg-transparent backdrop-blur-md">
+    <nav className="fixed top-0 left-0 right-0 z-40 bg-transparent backdrop-blur-md border-b border-[var(--foreground)]/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Left Links */}
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Left Links - Updated chronological order */}
+          <div className="hidden md:flex items-center space-x-5 lg:space-x-8">
             {leftLinks.map((link) => (
               <button
                 key={link.name}
                 onClick={() => scrollToSection(link.id)}
-                className="text-[var(--foreground)] hover:text-[var(--accent)] hover:scale-105 hover:font-bold transition-all duration-300"
+                className="text-[var(--foreground)] text-sm lg:text-base font-medium hover:text-[var(--accent)] hover:scale-105 hover:font-bold transition-all duration-300 whitespace-nowrap"
               >
                 {link.name}
               </button>
@@ -60,7 +63,7 @@ export default function Navbar({ page }: NavbarProps) {
           <div className="flex items-center space-x-4">
             <Link
               href={rightLink.href}
-              className="px-4 py-2 border-2 border-[var(--accent)] rounded-lg text-[var(--accent)] font-semibold hover:bg-[var(--accent)]/10 transition"
+              className="px-4 py-2 border-2 border-[var(--accent)] rounded-lg text-[var(--accent)] text-sm md:text-base font-semibold hover:bg-[var(--accent)]/10 transition whitespace-nowrap"
             >
               {rightLink.name}
             </Link>
@@ -100,25 +103,27 @@ export default function Navbar({ page }: NavbarProps) {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden pb-4">
-            <div className="flex flex-col space-y-2">
+          <div className="md:hidden pb-4 bg-[var(--background)]/90 backdrop-blur-xl">
+            <div className="flex flex-col space-y-2 px-2">
               {leftLinks.map((link) => (
                 <button
                   key={link.name}
                   onClick={() => scrollToSection(link.id)}
-                  className="block px-3 py-2 text-[var(--foreground)] hover:bg-[var(--foreground)]/10 hover:scale-105 rounded-md transition-all duration-300"
+                  className="block text-left px-3 py-3 text-[var(--foreground)] hover:bg-[var(--foreground)]/10 hover:text-[var(--accent)] rounded-md transition-all duration-300"
                 >
                   {link.name}
                 </button>
               ))}
-              <Link
-                href={rightLink.href}
-                className="block px-3 py-2 text-[var(--accent)] border-2 border-[var(--accent)] rounded-md text-center font-semibold hover:bg-[var(--accent)]/10 transition"
-                onClick={() => setIsOpen(false)}
-              >
-                {rightLink.name}
-              </Link>
-              <div className="px-3 py-2">
+              <div className="border-t border-[var(--accent)]/20 my-2 pt-2">
+                <Link
+                  href={rightLink.href}
+                  className="block px-3 py-3 text-[var(--accent)] border-2 border-[var(--accent)] rounded-md text-center font-semibold hover:bg-[var(--accent)]/10 transition"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {rightLink.name}
+                </Link>
+              </div>
+              <div className="flex justify-center py-4">
                 <ThemeToggle />
               </div>
             </div>
