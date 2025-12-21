@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { ReactNode } from "react";
+import Counter from "./Counter";
 
 interface Project {
   title: string;
@@ -13,7 +15,7 @@ interface Experience {
   role: string;
   location: string;
   date: string;
-  description: string[];
+  description: (string | ReactNode)[];
   projects?: Project[];
   logo: string;
 }
@@ -36,7 +38,11 @@ const experiences: Experience[] = [
     location: "Detroit, MI",
     date: "Aug 2025 – Dec 2025",
     description: [
-      "Analyzed 5 years of ERCOT/CAISO market data to isolate 7+ key cost drivers, informing strategic procurement and reducing energy risk exposure.",
+      <span>
+        Analyzed <Counter value={5} /> years of ERCOT/CAISO market data to
+        isolate <Counter value={7} suffix="+" /> key cost drivers, informing
+        strategic procurement and reducing energy risk exposure.
+      </span>,
       "Modelled temporal and locational energy loss patterns to optimize battery deployment strategies in high-congestion markets.",
     ],
     projects: [
@@ -78,8 +84,16 @@ const experiences: Experience[] = [
     location: "Wilmington, DE",
     date: "May 2025 – Aug 2025",
     description: [
-      "Optimized technical performance by reducing dashboard size by 25% (400MB to <300MB) through SQL-based transformations and Power Query migration.",
-      "Standardized version control for 10+ cross-functional analysts by establishing a Power BI–Git DevOps integration and training program.",
+      <span>
+        Optimized technical performance by reducing dashboard size by{" "}
+        <Counter value={25} suffix="%" /> (400MB to &lt;300MB) through SQL-based
+        transformations and Power Query migration.
+      </span>,
+      <span>
+        Standardized version control for <Counter value={10} suffix="+" />{" "}
+        cross-functional analysts by establishing a Power BI–Git DevOps
+        integration and training program.
+      </span>,
     ],
     projects: [
       {
@@ -99,8 +113,16 @@ const experiences: Experience[] = [
     location: "Ann Arbor, MI",
     date: "Jan 2025 – May 2025",
     description: [
-      "Engineered automated shell scripts to categorize and index 4TB of neuro recordings, increasing data retrieval speed for researchers.",
-      "Developed MatLab scripts via Spike2 API to parse 2TB of spike data to correlate physiological numbers with specific events.",
+      <span>
+        Engineered automated shell scripts to categorize and index{" "}
+        <Counter value={4} suffix="TB" /> of neuro recordings, increasing data
+        retrieval speed for researchers.
+      </span>,
+      <span>
+        Developed MatLab scripts via Spike2 API to parse{" "}
+        <Counter value={2} suffix="TB" /> of spike data to correlate
+        physiological numbers with specific events.
+      </span>,
     ],
     logo: "/experiences/mm.jpeg",
   },
@@ -110,7 +132,11 @@ const experiences: Experience[] = [
     location: "Gaithersburg, MD",
     date: "May 2024 – Aug 2024",
     description: [
-      "Architected a scalable workflow automation solution to process 500+ GB of simulation data, significantly reducing manual processing time.",
+      <span>
+        Architected a scalable workflow automation solution to process{" "}
+        <Counter value={500} suffix="+ GB" /> of simulation data, significantly
+        reducing manual processing time.
+      </span>,
       "Translated complex technical workflows into actionable product roadmaps for interdisciplinary stakeholders and researchers.",
       "Partnered with open-source developers to establish standardized methodologies and improve documentation for the research community.",
     ],
@@ -122,7 +148,11 @@ const experiences: Experience[] = [
     location: "Baltimore, MD",
     date: "June 2023 – Aug 2024",
     description: [
-      "Synthesized insights from 1,300+ research papers to identify product-market fit for patient-facing AI tools in healthcare.",
+      <span>
+        Synthesized insights from <Counter value={1300} suffix="+" /> research
+        papers to identify product-market fit for patient-facing AI tools in
+        healthcare.
+      </span>,
       "Co-authored a PRISMA-standard systematic review on AI and haptic therapy to guide future medical-tech product development.",
     ],
     logo: "/experiences/umbc.png",
@@ -161,7 +191,6 @@ export default function Experiences() {
             viewport={{ once: true }}
             className="group grid grid-cols-1 md:grid-cols-[100px_1fr] gap-8"
           >
-            {/* Logo Container - Removed background and padding */}
             <div className="relative w-20 h-20 rounded-2xl overflow-hidden shadow-xl group-hover:rotate-3 transition-transform flex-shrink-0">
               <Image
                 src={exp.logo}

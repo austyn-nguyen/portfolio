@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useScrollThreshold } from "@/hooks/useScrollThreshold";
 import ThemeToggle from "./ThemeToggle";
 
 interface NavbarProps {
@@ -10,6 +12,8 @@ interface NavbarProps {
 
 export default function Navbar({ page }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
+  // This threshold controls when the name "shoots" in on the portfolio page
+  const showNamePortfolio = useScrollThreshold(300);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -21,7 +25,7 @@ export default function Navbar({ page }: NavbarProps) {
     setIsOpen(false);
   };
 
-  // Chronological order: Home -> About -> Experience -> Projects -> Skills -> Contact
+  // Defining section IDs for smooth scrolling based on current page context
   const leftLinks =
     page === "portfolio"
       ? [
@@ -33,8 +37,10 @@ export default function Navbar({ page }: NavbarProps) {
           { name: "Contact", id: "contact" },
         ]
       : [
-          { name: "Timeline", id: "timeline" },
-          { name: "Photo Gallery", id: "gallery" },
+          { name: "Home", id: "hero" }, // Targets Music Hero
+          { name: "Showcase", id: "performances" }, // Targets PerformanceShowcase
+          { name: "Timeline", id: "timeline" }, // Targets Timeline
+          { name: "Gallery", id: "gallery" }, // Targets Gallery
         ];
 
   const rightLink =
@@ -46,20 +52,62 @@ export default function Navbar({ page }: NavbarProps) {
     <nav className="fixed top-0 left-0 right-0 z-40 bg-transparent backdrop-blur-md border-b border-[var(--foreground)]/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Left Links - Updated chronological order */}
-          <div className="hidden md:flex items-center space-x-5 lg:space-x-8">
-            {leftLinks.map((link) => (
-              <button
-                key={link.name}
-                onClick={() => scrollToSection(link.id)}
-                className="text-[var(--foreground)] text-sm lg:text-base font-medium hover:text-[var(--accent)] hover:scale-105 hover:font-bold transition-all duration-300 whitespace-nowrap"
-              >
-                {link.name}
-              </button>
-            ))}
+          <div className="flex items-center">
+            {/* BRANDING SECTION */}
+            <div className="flex items-center">
+              {/* Portfolio Side: Shooting Star Animation logic */}
+              {page === "portfolio" && (
+                <AnimatePresence>
+                  {showNamePortfolio && (
+                    <motion.button
+                      initial={{ x: 200, opacity: 0, scale: 0.8 }}
+                      animate={{ x: 0, opacity: 1, scale: 1 }}
+                      exit={{
+                        x: 200,
+                        opacity: 0,
+                        scale: 0.8,
+                        transition: { duration: 0.4 },
+                      }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 100,
+                        damping: 15,
+                      }}
+                      onClick={() => scrollToSection("hero")}
+                      className="mr-6 pr-6 border-r border-[var(--foreground)]/10 text-xl font-bold tracking-tight text-[var(--foreground)] hidden md:block"
+                    >
+                      Austyn{" "}
+                      <span className="text-[var(--accent)]">Nguyen</span>
+                    </motion.button>
+                  )}
+                </AnimatePresence>
+              )}
+
+              {/* Music Side: Static Branding (Formatting matches the Portfolio side) */}
+              {page === "music" && (
+                <button
+                  onClick={() => scrollToSection("hero")}
+                  className="mr-6 pr-6 border-r border-[var(--foreground)]/10 text-xl font-bold tracking-tight text-[var(--foreground)] hidden md:block"
+                >
+                  Austyn <span className="text-[var(--accent)]">Nguyen</span>
+                </button>
+              )}
+            </div>
+
+            {/* Nav Links (Chronological for whichever page we are on) */}
+            <div className="hidden md:flex items-center space-x-5 lg:space-x-8">
+              {leftLinks.map((link) => (
+                <button
+                  key={link.name}
+                  onClick={() => scrollToSection(link.id)}
+                  className="text-[var(--foreground)] text-sm lg:text-base font-medium hover:text-[var(--accent)] hover:scale-105 transition-all duration-300 whitespace-nowrap"
+                >
+                  {link.name}
+                </button>
+              ))}
+            </div>
           </div>
 
-          {/* Right Page Link + Theme Toggle */}
           <div className="flex items-center space-x-4">
             <Link
               href={rightLink.href}
@@ -74,7 +122,6 @@ export default function Navbar({ page }: NavbarProps) {
           <button
             onClick={toggleMenu}
             className="md:hidden p-2 rounded-md text-[var(--foreground)] hover:bg-[var(--foreground)]/10"
-            aria-label="Toggle menu"
           >
             <svg
               className="w-6 h-6"
@@ -82,21 +129,12 @@ export default function Navbar({ page }: NavbarProps) {
               stroke="currentColor"
               viewBox="0 0 24 24"
             >
-              {isOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d={isOpen ? "M6 18L18 6" : "M4 6h16M4 12h16M4 18h16"}
+              />
             </svg>
           </button>
         </div>
@@ -117,7 +155,7 @@ export default function Navbar({ page }: NavbarProps) {
               <div className="border-t border-[var(--accent)]/20 my-2 pt-2">
                 <Link
                   href={rightLink.href}
-                  className="block px-3 py-3 text-[var(--accent)] border-2 border-[var(--accent)] rounded-md text-center font-semibold hover:bg-[var(--accent)]/10 transition"
+                  className="block px-3 py-3 text-[var(--accent)] border-2 border-[var(--accent)] rounded-md text-center font-semibold"
                   onClick={() => setIsOpen(false)}
                 >
                   {rightLink.name}
