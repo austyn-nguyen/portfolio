@@ -191,17 +191,29 @@ export default function Experiences() {
             viewport={{ once: true }}
             className="group grid grid-cols-1 md:grid-cols-[100px_1fr] gap-8"
           >
+            {/* Company Logo Section */}
             <div className="relative w-20 h-20 rounded-2xl overflow-hidden shadow-xl group-hover:rotate-3 transition-transform flex-shrink-0">
               <Image
                 src={exp.logo}
-                alt={`${exp.company} logo`}
+                alt={exp.company}
                 fill
                 className="object-cover"
               />
             </div>
 
-            <div className="border-l-2 border-[var(--accent)]/10 pl-8 relative">
-              <div className="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-[var(--background)] border-2 border-[var(--accent)] shadow-[0_0_10px_rgba(var(--accent-rgb),0.5)]" />
+            {/* Content Section with Data Flow Line */}
+            <div className="relative pl-8">
+              {/* Animated Data Flow Line */}
+              <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-[var(--accent)]/10 overflow-hidden">
+                <motion.div
+                  animate={{ y: ["-100%", "200%"] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+                  className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-transparent via-[var(--accent)] to-transparent"
+                />
+              </div>
+
+              {/* Centered Timeline Dot */}
+              <div className="absolute left-0 top-2 w-4 h-4 rounded-full bg-[var(--background)] border-2 border-[var(--accent)] shadow-[0_0_10px_rgba(var(--accent-rgb),0.5)] z-10 -translate-x-1/2" />
 
               <div className="flex flex-col md:flex-row md:justify-between mb-6">
                 <div>
