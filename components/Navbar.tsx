@@ -24,15 +24,15 @@ export default function Navbar({ page }: NavbarProps) {
     setIsOpen(false);
   };
 
-  // Updated Chronological order: Home -> About -> Experience -> Projects -> Roadmap -> Skills -> Contact
   const leftLinks =
     page === "portfolio"
       ? [
           { name: "Home", id: "hero" },
           { name: "About", id: "about" },
+          { name: "Education", id: "education" }, // Moved here
           { name: "Experience", id: "experiences" },
           { name: "Projects", id: "projects" },
-          { name: "Roadmap", id: "roadmap" }, // New Section Link
+          { name: "Roadmap", id: "roadmap" },
           { name: "Skills", id: "skills" },
           { name: "Contact", id: "contact" },
         ]
@@ -53,7 +53,6 @@ export default function Navbar({ page }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            {/* NAME BRANDING SECTION */}
             <div className="flex items-center">
               {page === "portfolio" && (
                 <AnimatePresence>
@@ -91,7 +90,6 @@ export default function Navbar({ page }: NavbarProps) {
               )}
             </div>
 
-            {/* Nav Links */}
             <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
               {leftLinks.map((link) => (
                 <button
@@ -135,7 +133,6 @@ export default function Navbar({ page }: NavbarProps) {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden pb-4 bg-[var(--background)]/90 backdrop-blur-xl">
             <div className="flex flex-col space-y-2 px-2">

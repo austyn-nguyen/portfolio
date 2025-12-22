@@ -20,6 +20,9 @@ html.dark {
   --accent: #fde047; /* moon yellow */
 }
 
+/* =========================
+   Base Styles & Scroll Logic
+   ========================= */
 body {
   background-color: var(--background);
   color: var(--foreground);
@@ -29,8 +32,17 @@ html {
   scroll-behavior: smooth;
 }
 
+/**
+ * Fixes the "hidden header" issue.
+ * When clicking a link, the browser scrolls to the element but leaves 
+ * 5rem (80px) of space at the top to account for the fixed navbar.
+ */
+[id] {
+  scroll-margin-top: 5rem;
+}
+
 /* =========================
-   Space background
+   Space background & Animations
    ========================= */
 
 .stars {
@@ -101,9 +113,8 @@ html {
 }
 
 /* =========================
-   Light mode bubbles
+   Floating Bubbles (Sun/Light Mode)
    ========================= */
-
 .sun-bubble {
   position: absolute;
   border-radius: 9999px;
@@ -153,77 +164,8 @@ html {
 }
 
 /* =========================
-   Stars
+   Utilities
    ========================= */
-.stars {
-  background-image: radial-gradient(1px 1px at 20% 30%, white, transparent),
-    radial-gradient(1px 1px at 80% 40%, white, transparent),
-    radial-gradient(1px 1px at 50% 80%, white, transparent),
-    radial-gradient(1px 1px at 10% 90%, white, transparent),
-    radial-gradient(1px 1px at 90% 10%, white, transparent);
-  background-size: 200px 200px;
-  opacity: 0.6;
-  animation: twinkle 6s infinite ease-in-out alternate;
-}
-
-@keyframes twinkle {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 0.8;
-  }
-}
-
-/* =========================
-   Floating Bubbles
-   ========================= */
-.sun-bubble {
-  position: absolute;
-  border-radius: 9999px;
-  background: radial-gradient(
-    circle at 30% 30%,
-    rgba(250, 204, 21, 0.35),
-    rgba(250, 204, 21, 0.15),
-    transparent 70%
-  );
-  filter: blur(2px);
-  animation: float 20s ease-in-out infinite;
-}
-
-.bubble-1 {
-  width: 300px;
-  height: 300px;
-  top: 20%;
-  left: 10%;
-}
-.bubble-2 {
-  width: 200px;
-  height: 200px;
-  top: 60%;
-  left: 70%;
-  animation-duration: 25s;
-}
-.bubble-3 {
-  width: 400px;
-  height: 400px;
-  top: 80%;
-  left: 30%;
-  animation-duration: 30s;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0) translateX(0);
-  }
-  50% {
-    transform: translateY(-40px) translateX(20px);
-  }
-  100% {
-    transform: translateY(0) translateX(0);
-  }
-}
-
 @keyframes spin-slow {
   from {
     transform: rotate(0deg);

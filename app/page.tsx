@@ -6,7 +6,8 @@ import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
-import Experiences from "@/components/Experiences"; // 1. Import the new component
+import Experiences from "@/components/Experiences";
+import Education from "@/components/Education"; // Correctly imported
 import Contact from "@/components/Contacts";
 import Roadmap from "@/components/Roadmap";
 
@@ -28,6 +29,7 @@ export default function Home() {
       <main className="pt-16">
         <Hero />
         <About />
+        <Education />
         <Experiences />
         <Projects onToggle={(isOpen) => setIsLightboxOpen(isOpen)} />
         <Roadmap />

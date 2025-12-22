@@ -62,9 +62,9 @@ export default function Gallery({ imagesUrl, onToggle }: GalleryProps) {
   return (
     <>
       <section id="gallery" className="py-10">
-        {" "}
-        {/* Add id="gallery" here */}
-        <h2 className="text-5xl font-bold text-center mb-8">Photo Gallery</h2>
+        <h2 className="text-5xl font-bold text-center mb-8">
+          Photo <span className="text-[var(--accent)]">Gallery</span>
+        </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {galleryImages.map((img, idx) => (
             <motion.div
@@ -98,7 +98,7 @@ export default function Gallery({ imagesUrl, onToggle }: GalleryProps) {
               <motion.button
                 className="absolute top-6 right-6 text-[var(--foreground)]/80 hover:text-[var(--foreground)] z-50 p-2"
                 onClick={(e) => {
-                  e.stopPropagation(); // Prevents the click from bubbling to the backdrop
+                  e.stopPropagation();
                   setSelectedIndex(null);
                 }}
                 whileHover={{ scale: 1.1, rotate: 90 }}
@@ -106,7 +106,7 @@ export default function Gallery({ imagesUrl, onToggle }: GalleryProps) {
               >
                 <FaTimes size={40} />
               </motion.button>
-              {/* Tap zones */}
+
               <div
                 className="absolute left-0 top-0 w-1/4 h-full cursor-pointer z-10"
                 onClick={(e) => {
@@ -122,7 +122,6 @@ export default function Gallery({ imagesUrl, onToggle }: GalleryProps) {
                 }}
               />
 
-              {/* Arrow Buttons */}
               <motion.button
                 className="absolute left-4 top-1/2 -translate-y-1/2 text-[var(--foreground)]/80 hover:text-[var(--foreground)] z-30"
                 onClick={(e) => {

@@ -43,6 +43,11 @@ const performances: Performance[] = [
 export default function PerformanceShowcase() {
   return (
     <section className="mb-20">
+      {/* Added Header */}
+      <h2 className="text-5xl font-bold text-center mb-12">
+        Featured <span className="text-[var(--accent)]">Performances</span>
+      </h2>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {performances.map((perf, index) => {
           const embedUrl = `https://www.youtube.com/embed/${perf.videoId}${

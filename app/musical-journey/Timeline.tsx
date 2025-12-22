@@ -18,8 +18,11 @@ interface TimelineProps {
 export default function Timeline({ events }: TimelineProps) {
   return (
     <div id="timeline" className="relative mb-20">
-      {/* Vertical Line - Added -translate-x-1/2 to center accurately */}
-      <div className="absolute left-8 md:left-1/2 w-0.5 h-full bg-[var(--accent)] z-0 -translate-x-1/2" />
+      {/* Added Header */}
+      <h2 className="text-5xl font-bold text-center mb-16">Timeline</h2>
+
+      {/* Vertical Line - adjusted top to start below header */}
+      <div className="absolute left-8 md:left-1/2 w-0.5 h-[calc(100%-7rem)] bg-[var(--accent)] z-0 -translate-x-1/2 top-28" />
 
       {events.map((event, index) => (
         <motion.div
@@ -32,7 +35,7 @@ export default function Timeline({ events }: TimelineProps) {
             index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
           }`}
         >
-          {/* Timeline Dot - Added -translate-x-1/2 to align center of dot with line */}
+          {/* Timeline Dot */}
           <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-[var(--accent)] rounded-full border-4 border-[var(--background)] z-10 -translate-x-1/2" />
 
           <motion.div
