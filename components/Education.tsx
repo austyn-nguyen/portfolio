@@ -24,7 +24,7 @@ const educationData: EducationEntry[] = [
   {
     school: "University of Michigan - Ann Arbor",
     degree: "B.S.E. in Computer Science",
-    years: "Aug 2024 – Dec 2026",
+    years: "Aug 2024 – May 2028",
     location: "Ann Arbor, MI",
     logo: "/educations/UM.png",
     accentColor: "rgba(0, 39, 76, 0.4)",
