@@ -34,7 +34,7 @@ const experiences: Experience[] = [
   },
   {
     company: "ElectricFish",
-    role: "Energy Market Analyst Intern",
+    role: "Product Management Intern",
     location: "Detroit, MI",
     date: "Aug 2025 – Dec 2025",
     description: [
