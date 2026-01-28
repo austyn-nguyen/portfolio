@@ -7,7 +7,7 @@ import Skills from "@/components/Skills";
 import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
 import Experiences from "@/components/Experiences";
-import Education from "@/components/Education"; // Correctly imported
+import Education from "@/components/Education"; 
 import Contact from "@/components/Contacts";
 import Roadmap from "@/components/Roadmap";
 
