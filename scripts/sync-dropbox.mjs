@@ -30,46 +30,95 @@ async function syncDropboxMap() {
   console.log("☁️  Connecting to Dropbox...");
 
   try {
-    // 2. List all files in the App Folder
-    const response = await dbx.filesListFolder({ path: '' });
-    const features = [];
+    // --- PART 1: LOAD EXISTING DATA ---
+    let features = [];
+    let existingNames = new Set();
 
-    for (const entry of response.result.entries) {
-      // Only process images
+    try {
+      // Attempt to read the current locations.json
+      const fileContent = await fs.readFile(OUTPUT_FILE, 'utf8');
+      const jsonContent = JSON.parse(fileContent);
+      
+      // Store existing data so we don't lose it
+      features = jsonContent.features || [];
+      
+      // Create a "Set" of names for instant lookup
+      features.forEach(f => existingNames.add(f.properties.name));
+      
+      console.log(`📂 Loaded ${features.length} existing locations.`);
+    } catch (err) {
+      console.log("🆕 No existing data found (or error reading). Starting fresh.");
+    }
+
+    // --- PART 2: FETCH ALL FILE LISTINGS ---
+    // We fetch the list of ALL files first (pagination)
+    let response = await dbx.filesListFolder({ 
+      path: '', 
+      recursive: true,  // Safe to leave on
+      limit: 2000       // Request max batch size
+    });
+    
+    let allEntries = response.result.entries;
+
+    // Loop until Dropbox says there are no more pages
+    while (response.result.has_more) {
+      console.log(`...fetching next page of files (currently have ${allEntries.length})...`);
+      response = await dbx.filesListFolderContinue({ cursor: response.result.cursor });
+      allEntries = allEntries.concat(response.result.entries);
+    }
+    
+    console.log(`📦 Dropbox reports ${allEntries.length} total items.`);
+
+    // --- PART 3: PROCESS ONLY NEW IMAGES ---
+    let newCount = 0;
+    let skippedCount = 0;
+
+    for (const entry of allEntries) {
+      
+      // Check if it's a file AND an image
       if (entry['.tag'] === 'file' && entry.name.match(/\.(jpeg|jpg|png|heic)$/i)) {
-        console.log(`Processing: ${entry.name}...`);
+        
+        // ** THE SKIP LOGIC **
+        if (existingNames.has(entry.name)) {
+           skippedCount++;
+           continue; // Jump to the next loop iteration immediately
+        }
+
+        console.log(`Processing New: ${entry.name}...`);
 
         try {
-          // 3. Create a temporary link to "peek" at the file
+          // 1. Get Temporary Link (for downloading content)
           const linkData = await dbx.filesGetTemporaryLink({ path: entry.path_lower });
           const tempUrl = linkData.result.link;
 
-          // 4. Create a permanent shared link for the website to use
-          // We try to create one, or get the existing one if it exists
+          // 2. Get Public Link (for the website SRC)
           let publicUrl;
           try {
              const share = await dbx.sharingCreateSharedLinkWithSettings({ path: entry.path_lower });
              publicUrl = share.result.url;
           } catch (err) {
-             // If link exists, fetch it
+             // If link already exists, we must fetch the list of links
              const shares = await dbx.sharingListSharedLinks({ path: entry.path_lower });
-             publicUrl = shares.result.links[0].url;
+             if (shares.result.links.length > 0) {
+                 publicUrl = shares.result.links[0].url;
+             } else {
+                 throw new Error("Could not retrieve shared link");
+             }
           }
 
-          // 5. Convert URL to Direct Link using raw=1 (Fix for 403 errors)
-          // This keeps the domain as www.dropbox.com but forces a raw file download
+          // 3. Clean up the URL for direct display (raw=1)
           const dlUrl = new URL(publicUrl);
-          dlUrl.searchParams.set('raw', '1'); // Force raw download
-          dlUrl.searchParams.delete('dl');    // Remove 'dl' param just in case
+          dlUrl.searchParams.set('raw', '1'); 
+          dlUrl.searchParams.delete('dl');    
           const directUrl = dlUrl.toString();
 
-          // 6. Download ONLY the first 128kb to get EXIF/GPS (Saves bandwidth)
+          // 4. Download first 128KB for GPS extraction
           const bufferReq = await fetch(tempUrl, {
-            headers: { Range: 'bytes=0-131072' } // First 128KB
+            headers: { Range: 'bytes=0-131072' } 
           });
           const buffer = await bufferReq.arrayBuffer();
 
-          // 7. Extract GPS
+          // 5. Parse GPS
           const exif = await exifr.parse(buffer, { gps: true });
 
           if (exif && exif.latitude && exif.longitude) {
@@ -80,30 +129,34 @@ async function syncDropboxMap() {
                 coordinates: [exif.longitude, exif.latitude],
               },
               properties: {
-                src: directUrl, // The remote Dropbox URL (raw=1)
+                src: directUrl, 
                 name: entry.name,
                 date: exif.DateTimeOriginal || new Date().toISOString(),
               },
             });
-            console.log(`   ✅ Located at ${exif.latitude}, ${exif.longitude}`);
+            console.log(`   ✅ Added! (${exif.latitude}, ${exif.longitude})`);
+            newCount++;
           } else {
             console.log(`   ⚠️  No GPS data found.`);
           }
 
         } catch (e) {
-          console.error(`   ❌ Failed to process ${entry.name}:`, e.message);
+          console.error(`   ❌ Error on ${entry.name}:`, e.message);
         }
       }
     }
 
-    // 8. Save to JSON
+    // --- PART 4: SAVE UPDATED LIST ---
     const geoJson = {
       type: 'FeatureCollection',
       features: features,
     };
 
     await fs.writeFile(OUTPUT_FILE, JSON.stringify(geoJson, null, 2));
-    console.log(`\n🎉 Success! Processed ${features.length} locations from Dropbox.`);
+    console.log(`\n🎉 Sync Complete.`);
+    console.log(`   - Skipped: ${skippedCount} existing`);
+    console.log(`   - Added:   ${newCount} new`);
+    console.log(`   - Total:   ${features.length} locations`);
 
   } catch (error) {
     console.error("Critical Error:", error);
