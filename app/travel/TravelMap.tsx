@@ -1,95 +1,130 @@
 "use client";
 
-import { useState, useMemo, useEffect, useRef } from "react";
-import Map, { Marker, Popup, NavigationControl, MapRef } from "react-map-gl/mapbox";
+import { useState, useEffect, useRef } from "react";
+import Map, { NavigationControl, MapRef, Source, Layer, Popup } from "react-map-gl/mapbox";
 import "mapbox-gl/dist/mapbox-gl.css";
 import Image from "next/image";
 import locations from "@/src/data/locations.json"; 
+import type { FeatureCollection } from 'geojson';
+import { CircleLayer, SymbolLayer } from "mapbox-gl";
 
 const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
 
-// Interface for the prop we are about to add
+// Layer Styles
+const clusterLayer: CircleLayer = {
+  id: 'clusters',
+  type: 'circle',
+  filter: ['has', 'point_count'],
+  paint: {
+    'circle-color': ['step', ['get', 'point_count'], '#51bbd6', 10, '#f1f075', 50, '#f28cb1'],
+    'circle-radius': ['step', ['get', 'point_count'], 20, 100, 30, 750, 40]
+  }
+};
+
+const clusterCountLayer: SymbolLayer = {
+  id: 'cluster-count',
+  type: 'symbol',
+  filter: ['has', 'point_count'],
+  layout: {
+    'text-field': '{point_count_abbreviated}',
+    'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
+    'text-size': 12
+  }
+};
+
+const unclusteredPointLayer: CircleLayer = {
+  id: 'unclustered-point',
+  type: 'circle',
+  filter: ['!', ['has', 'point_count']],
+  paint: {
+    'circle-color': '#ffc107',
+    'circle-radius': 6,
+    'circle-stroke-width': 1,
+    'circle-stroke-color': '#fff'
+  }
+};
+
 interface TravelMapProps {
-  highlightedLocation?: any | null; // Received from parent
+  highlightedLocation?: any | null;
 }
 
 export default function TravelMap({ highlightedLocation }: TravelMapProps) {
-  const mapRef = useRef<MapRef>(null); // Reference to control the map programmatically
+  const mapRef = useRef<MapRef>(null);
   const [selectedLocation, setSelectedLocation] = useState<any>(null);
+
   const [viewState, setViewState] = useState({
     longitude: -20,
     latitude: 20,
-    zoom: 1.8,
+    zoom: 1.5,
   });
 
-  // UX Feature: Listen for changes from the Gallery
   useEffect(() => {
     if (highlightedLocation && mapRef.current) {
-      // 1. Update internal state to show the popup immediately
       setSelectedLocation(highlightedLocation);
-
-      // 2. Smoothly fly the map to the new location
       mapRef.current.flyTo({
         center: [
           highlightedLocation.geometry.coordinates[0],
           highlightedLocation.geometry.coordinates[1]
         ],
-        zoom: 5, // Zoom in closer for context
-        duration: 2000, // Slow, cinematic flight
-        essential: true
+        zoom: 10,
+        duration: 2000
       });
     }
   }, [highlightedLocation]);
 
-  const markers = useMemo(() => locations.features.map((location, index) => (
-    <Marker
-      key={index}
-      longitude={location.geometry.coordinates[0]}
-      latitude={location.geometry.coordinates[1]}
-      anchor="bottom"
-      onClick={(e) => {
-        e.originalEvent.stopPropagation();
-        setSelectedLocation(location);
-        // Manual clicks just pan normally
-        mapRef.current?.flyTo({
-            center: [location.geometry.coordinates[0], location.geometry.coordinates[1]],
-            zoom: 4,
-            duration: 1000
-        });
-      }}
-    >
-      <div className="cursor-pointer hover:scale-125 transition-transform duration-200 group relative">
-        <span className="text-2xl drop-shadow-md filter drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">📍</span>
-      </div>
-    </Marker>
-  )), []);
+  const onClick = (event: any) => {
+    if(!event.features || event.features.length === 0) return;
 
-  if (!MAPBOX_TOKEN) return null; // Or your error component
+    const feature = event.features[0];
+    const clusterId = feature.properties.cluster_id;
+
+    if (clusterId) {
+      const mapboxSource = mapRef.current?.getSource('locations') as any;
+      mapboxSource.getClusterExpansionZoom(clusterId, (err: any, zoom: number) => {
+        if (err) return;
+        mapRef.current?.easeTo({
+          center: feature.geometry.coordinates,
+          zoom,
+          duration: 500
+        });
+      });
+      return;
+    }
+
+    setSelectedLocation({
+        geometry: feature.geometry,
+        properties: feature.properties
+    });
+  };
+
+  if (!MAPBOX_TOKEN) return null;
 
   return (
-    <section className="relative w-full h-[70vh] rounded-xl overflow-hidden shadow-2xl border border-[var(--foreground)]/10 bg-[#0b1020]">
-      
-      {/* Overlay Header */}
-      <div className="absolute top-4 left-4 z-10 bg-black/60 backdrop-blur-md p-4 rounded-lg text-white border border-white/10 max-w-xs shadow-xl pointer-events-none select-none">
-        <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-yellow-500">
-            Austyn&apos;s Travel Log
-        </h3>
-        <p className="text-xs text-gray-300 mt-1">
-          {locations.features.length} locations visited. <br/>
-          <span className="opacity-70">Drag to pan, scroll to zoom.</span>
-        </p>
-      </div>
-
+    <section className="relative w-full h-[60vh] md:h-[70vh] rounded-xl overflow-hidden shadow-2xl border border-white/10 bg-[#0b1020]">
       <Map
-        ref={mapRef} // Attach ref here
+        ref={mapRef}
         {...viewState}
         onMove={evt => setViewState(evt.viewState)}
         style={{ width: "100%", height: "100%" }}
-        mapStyle="mapbox://styles/mapbox/dark-v11" 
+        mapStyle="mapbox://styles/mapbox/dark-v11"
         mapboxAccessToken={MAPBOX_TOKEN}
+        interactiveLayerIds={['clusters', 'unclustered-point']}
+        onClick={onClick}
       >
         <NavigationControl position="bottom-right" />
-        {markers}
+
+        <Source
+          id="locations"
+          type="geojson"
+          data={locations as FeatureCollection}
+          cluster={true}
+          clusterMaxZoom={14}
+          clusterRadius={50}
+        >
+          <Layer {...clusterLayer} />
+          <Layer {...clusterCountLayer} />
+          <Layer {...unclusteredPointLayer} />
+        </Source>
 
         {selectedLocation && (
           <Popup
@@ -103,12 +138,14 @@ export default function TravelMap({ highlightedLocation }: TravelMapProps) {
           >
             <div className="flex flex-col gap-2 min-w-[200px]">
               <div className="relative w-full h-40 rounded-md overflow-hidden bg-gray-100">
+                {/* --- OPTIMIZATION 2: POPUP IMAGE --- */}
                 <Image 
                   src={selectedLocation.properties.src} 
                   alt={selectedLocation.properties.name}
                   fill
                   className="object-cover"
-                  unoptimized // Keep this for Dropbox
+                  sizes="200px" // Tells Next.js this is a tiny image
+                  // unoptimized <-- REMOVED
                 />
               </div>
               <div className="flex justify-between items-center px-1">
