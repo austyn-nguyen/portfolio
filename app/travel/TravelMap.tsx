@@ -10,10 +10,13 @@ import { CircleLayer, SymbolLayer } from "mapbox-gl";
 
 const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
 
-// Layer Styles
+// --- FIXED LAYER STYLES ---
+// We added "source: 'locations'" to all of these to satisfy TypeScript
+
 const clusterLayer: CircleLayer = {
   id: 'clusters',
   type: 'circle',
+  source: 'locations', // <--- Added this
   filter: ['has', 'point_count'],
   paint: {
     'circle-color': ['step', ['get', 'point_count'], '#51bbd6', 10, '#f1f075', 50, '#f28cb1'],
@@ -24,6 +27,7 @@ const clusterLayer: CircleLayer = {
 const clusterCountLayer: SymbolLayer = {
   id: 'cluster-count',
   type: 'symbol',
+  source: 'locations', // <--- Added this
   filter: ['has', 'point_count'],
   layout: {
     'text-field': '{point_count_abbreviated}',
@@ -35,6 +39,7 @@ const clusterCountLayer: SymbolLayer = {
 const unclusteredPointLayer: CircleLayer = {
   id: 'unclustered-point',
   type: 'circle',
+  source: 'locations', // <--- Added this
   filter: ['!', ['has', 'point_count']],
   paint: {
     'circle-color': '#ffc107',
@@ -138,14 +143,12 @@ export default function TravelMap({ highlightedLocation }: TravelMapProps) {
           >
             <div className="flex flex-col gap-2 min-w-[200px]">
               <div className="relative w-full h-40 rounded-md overflow-hidden bg-gray-100">
-                {/* --- OPTIMIZATION 2: POPUP IMAGE --- */}
                 <Image 
                   src={selectedLocation.properties.src} 
                   alt={selectedLocation.properties.name}
                   fill
                   className="object-cover"
-                  sizes="200px" // Tells Next.js this is a tiny image
-                  // unoptimized <-- REMOVED
+                  sizes="200px"
                 />
               </div>
               <div className="flex justify-between items-center px-1">
