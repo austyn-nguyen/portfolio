@@ -8,7 +8,7 @@ interface RoadmapItem {
   status: "Released" | "In Progress" | "Backlog";
   priority: "High" | "Medium";
   category: string;
-  progress?: number; // New field: Manual progress percentage (0-100)
+  progress?: number;
 }
 
 const roadmapData: RoadmapItem[] = [
@@ -19,10 +19,11 @@ const roadmapData: RoadmapItem[] = [
     category: "Career Strategy",
   },
   {
-    task: "Masters Applications: Analytics & Data Science Focus",
+    task: "Capital One PM Internship",
     status: "Backlog",
     priority: "High",
-    category: "Academic Growth",
+    category: "Product Management",
+    // progress: 1, 
   },
   {
     task: "Microsoft Azure Solutions Architect Certification",
@@ -31,18 +32,23 @@ const roadmapData: RoadmapItem[] = [
     category: "Cloud Infrastructure",
   },
   {
-    task: "Capital One PM Internship: FinTech Strategy",
+    task: "AWS Certified Solutions Architect - Associate",
+    status: "Backlog",
+    priority: "Medium",
+    category: "Cloud Infrastructure",
+  },
+  {
+    task: "Masters Applications: Operations Research, CS, or Financial Engineering...?",
     status: "In Progress",
     priority: "High",
-    category: "Product Management",
-    progress: 10, // <--- MANUALLY CHANGE THIS NUMBER
+    category: "Academic Growth",
+    progress: 7,
   },
   {
     task: "CHEPS: Clinical Flowchart & Referral Optimization",
-    status: "In Progress",
+    status: "Released",
     priority: "High",
     category: "Systems Design",
-    progress: 50, // <--- MANUALLY CHANGE THIS NUMBER
   },
   {
     task: "Electricity Price Hybrid Forecaster (XGBoost/LGBM)",
@@ -88,7 +94,7 @@ export default function Roadmap() {
               </h3>
             </div>
 
-            <div className="bg-[var(--foreground)]/5 rounded-2xl p-4 border border-[var(--accent)]/5 min-h-[400px] flex flex-col gap-4">
+            <div className="bg-[var(--foreground)]/5 rounded-2xl p-4 border border-[var(--accent)]/5 h-[520px] flex flex-col gap-4 overflow-y-auto">
               {roadmapData
                 .filter((item) => item.status === col)
                 .map((item, idx) => (

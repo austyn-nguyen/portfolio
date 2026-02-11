@@ -27,8 +27,7 @@ const experiences: Experience[] = [
     location: "McLean, VA",
     date: "June 2026 - Aug 2026",
     description: [
-      "Selected for a highly competitive PM internship to drive product strategy for FinTech solutions serving millions of customers.",
-      "Will collaborate with engineering and design teams to define product requirements, manage backlogs, and deliver customer-centric features using Agile methodologies.",
+      "1 of ~40-60 interns selected for the 2026 Summer Product Development Internship Program (PDIP)",
     ],
     logo: "/experiences/c1.jpeg",
   },
@@ -86,7 +85,7 @@ const experiences: Experience[] = [
     description: [
       <span>
         Optimized technical performance by reducing dashboard size by{" "}
-        <Counter value={25} suffix="%" /> (400MB to &lt;300MB) through SQL-based
+        <Counter value={25} suffix="%" /> (400GB to &lt;300GB) through SQL-based
         transformations and Power Query migration.
       </span>,
       <span>

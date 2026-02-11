@@ -24,6 +24,8 @@ import {
   SiAsana,
   SiScrumalliance,
   SiDebian,
+  SiGo,
+  SiAmazon,
 } from "react-icons/si";
 import { DiJava, DiMsqlServer } from "react-icons/di";
 
@@ -46,6 +48,7 @@ const skillCategories = [
       { name: "C++", icon: SiCplusplus, color: "text-blue-600" },
       { name: "C", icon: SiC, color: "text-gray-600" },
       { name: "Java", icon: DiJava, color: "text-red-500" },
+      { name: "Go", icon: SiGo, color: "text-cyan-500" },
     ],
   },
   {
@@ -66,11 +69,12 @@ const skillCategories = [
     ],
   },
   {
-    title: "Microsoft Tools & Certifications",
+    title: "Cloud & Certifications",
     skills: [
       { name: "PowerPoint", icon: FaFilePowerpoint, color: "text-orange-600" },
       { name: "Excel", icon: FaFileExcel, color: "text-green-600" },
       { name: "Outlook", icon: FaEnvelope, color: "text-blue-600" },
+      { name: "AWS", icon: SiAmazon, color: "text-orange-500" },
       { name: "Microsoft Azure", icon: FaCloud, color: "text-blue-400" },
       {
         name: "Power BI (Certified)",
