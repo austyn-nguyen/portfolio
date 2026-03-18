@@ -39,14 +39,10 @@ const educationData: EducationEntry[] = [
         name: "Zeta Pi Professional Technical Fraternity",
       },
       {
-        role: "Principal / Asst-Principal Violist",
+        role: "Principal Violist",
         name: "UMich Pops Orchestra",
       },
       { role: "Violist", name: "Chamber Ensemble" },
-      {
-        role: "Embedded & Business Subteams",
-        name: "UMARV (Autonomous Robotic Vehicle)",
-      },
     ],
     studyAbroad: {
       university: "Yonsei University",

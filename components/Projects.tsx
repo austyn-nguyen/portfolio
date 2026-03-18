@@ -10,7 +10,7 @@ import {
   FaLinkedin,
   FaGithub,
 } from "react-icons/fa";
-import { SiDevpost } from "react-icons/si";
+import { SiDevpost, SiGoogledrive } from "react-icons/si";
 
 interface Project {
   title: string;
@@ -20,12 +20,26 @@ interface Project {
   longDescription: string;
   tags: string[];
   link: string;
+  driveLink?: string;
   githubLink?: string;
   devpostLink?: string;
   image: string;
 }
 
 const projects: Project[] = [
+  {
+    title: "To Drink or Not to Drink",
+    affiliation: "Policy & Economic Analysis",
+    date: "Feb 2026",
+    description:
+      "A structured policy and economic analysis assessing the impact of Maryland's alcohol retail restrictions on state revenue and consumer behavior",
+    longDescription:
+      "Conducted a structured policy and economic analysis evaluating Maryland's Alcoholic Beverages Section 4-205 through cross-state benchmarking, per-capita tax revenue analysis, licensing data, and public testimony. Identified over $1.6M in unrealized annual revenue driven by cross-border purchasing and constrained retail access. Synthesized findings into an executive-ready narrative linking policy outcomes to key state budget priorities — including healthcare, education, transportation, and public safety — and delivered a data-backed recommendation to modernize alcohol retail policy while balancing regulatory and public health considerations.",
+    tags: ["Policy Analysis", "Economic Research", "Data Analysis", "Public Health"],
+    link: "https://www.linkedin.com/in/austyn-an-nguyen/",
+    driveLink: "https://docs.google.com/presentation/d/1gM40ZbfNSMu-udQki7lpNhiOmLe5R0KdEg9f332_0GI/edit?usp=sharing",
+    image: "/projects/maryland_alcohol.png",
+  },
   {
     title: "Personal Portfolio",
     affiliation: "~Me, Myself, and I!~",
