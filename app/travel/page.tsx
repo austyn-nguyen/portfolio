@@ -65,7 +65,7 @@ export default function TravelPage() {
                <div>
                   <h2 className="text-3xl font-bold text-[var(--foreground)]">Gallery</h2>
                   <p className="text-[var(--muted)] mt-2">
-                    A visual timeline of my journeys.
+                    A visual timeline of my nom nom adventures.
                   </p>
                </div>
                <span className="text-sm text-[var(--accent)] font-mono hidden md:block">

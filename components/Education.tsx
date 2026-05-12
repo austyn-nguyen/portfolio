@@ -78,26 +78,8 @@ const educationData: EducationEntry[] = [
     location: "Ellicott City, MD",
     logo: "/educations/chs.png",
     accentColor: "rgba(157, 34, 53, 0.3)",
-    honors: [
-      "Director's Award (Matthew Boggs)",
-      "Jumpstart Program Certificate (AA Completion)",
-      "National Science Honor Society",
-      "Spanish National Honor Society",
-      "Mu Alpha Theta (Math) Honor Society",
-      "Tri-M Music Honor Society",
-      "National Technical Honor Society",
-    ],
-    clubs: [
-      { role: "President", name: "Centennial Music Outreach Program (CMOP)" },
-      { role: "Attendance Manager", name: "Music Mentors" },
-      { role: "Viola Tutor", name: "The Do Re Mi Project" },
-      {
-        role: "Principal / Asst-Principal",
-        name: "BSYO (Youth & Concert levels)",
-      },
-      { role: "Principal / Asst-Principal", name: "Peabody Youth Orchestra" },
-      { role: "Principal / Asst-Principal", name: "G/T Chamber Orchestra" },
-    ],
+    honors: [],
+    clubs: [],
   },
 ];
 

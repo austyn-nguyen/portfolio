@@ -173,22 +173,24 @@ export default function EducationCard({
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Honors Section */}
-          <section>
-            <h4 className="flex items-center gap-3 mb-6 text-[11px] font-black uppercase tracking-[0.3em] text-[var(--muted)] border-b border-[var(--accent)]/10 pb-2">
-              <FaAward className="text-[var(--accent)] text-sm" /> Honors &
-              Awards
-            </h4>
-            <div className="flex flex-wrap gap-2">
-              {edu.honors.map((honor, i) => (
-                <span
-                  key={i}
-                  className="px-4 py-2 text-xs font-bold rounded-xl bg-white/5 border border-white/10"
-                >
-                  {honor}
-                </span>
-              ))}
-            </div>
-          </section>
+          {edu.honors.length > 0 && (
+            <section>
+              <h4 className="flex items-center gap-3 mb-6 text-[11px] font-black uppercase tracking-[0.3em] text-[var(--muted)] border-b border-[var(--accent)]/10 pb-2">
+                <FaAward className="text-[var(--accent)] text-sm" /> Honors &
+                Awards
+              </h4>
+              <div className="flex flex-wrap gap-2">
+                {edu.honors.map((honor, i) => (
+                  <span
+                    key={i}
+                    className="px-4 py-2 text-xs font-bold rounded-xl bg-white/5 border border-white/10"
+                  >
+                    {honor}
+                  </span>
+                ))}
+              </div>
+            </section>
+          )}
 
           {/* ECs Section */}
           {edu.clubs.length > 0 && (

@@ -34,7 +34,7 @@ const experiences: Experience[] = [
         title: "Product Management Intern",
         date: "June 2026 - Aug 2026",
         description: [
-          "1 of 65 interns selected for the 2026 Summer Product Development Internship Program (PDIP)",
+          "1 of 60 interns selected for the 2026 Summer Product Development Internship Program (PDIP)",
         ],
       },
     ],
@@ -46,7 +46,7 @@ const experiences: Experience[] = [
     roles: [
       {
         title: "Emergency Department Operations Consultant (Team REDC)",
-        date: "Jan 2026 – Present",
+        date: "Jan 2026 – Apr 2026",
         description: [
           "Spearheading data-driven interventions for the Reducing Emergency Department Crowding (REDC) team to mitigate systemic patient boarding.",
           "Investigating imaging delays for post-spinal surgery patients, addressing baseline wait times of 4+ months that drive acute ED surges.",

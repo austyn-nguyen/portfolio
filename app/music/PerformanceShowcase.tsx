@@ -38,6 +38,13 @@ const performances: Performance[] = [
     description:
       "University of Michigan Fall recital highlight, showcasing growth in technical mastery and musical interpretation.",
   },
+  {
+    title: "Beethoven: Trio B flat Major, op. 11 \“Gassenhauer-Trio\”",
+    videoId: "GdOosos4a8s",
+    startTime: 3091, // 51:31
+    description:
+      "A collaborative chamber performance of Beethoven's Clarinet Trio with two besties.",
+  },
 ];
 
 export default function PerformanceShowcase() {
