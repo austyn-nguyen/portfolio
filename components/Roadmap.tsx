@@ -14,22 +14,17 @@ interface RoadmapItem {
 const roadmapData: RoadmapItem[] = [
   {
     task: "Full-Time PM Recruiting: Fall 2026 Cycle",
-    status: "Backlog",
+    status: "In Progress",
     priority: "High",
     category: "Career Strategy",
+    progress: 10
   },
   {
     task: "Capital One PM Internship",
-    status: "Backlog",
+    status: "In Progress",
     priority: "High",
     category: "Product Management",
-    // progress: 1, 
-  },
-  {
-    task: "Microsoft Azure Solutions Architect Certification",
-    status: "Backlog",
-    priority: "Medium",
-    category: "Cloud Infrastructure",
+    progress: 70, 
   },
   {
     task: "AWS Certified Solutions Architect - Associate",
@@ -38,11 +33,11 @@ const roadmapData: RoadmapItem[] = [
     category: "Cloud Infrastructure",
   },
   {
-    task: "Masters Applications: Operations Research, CS, or Financial Engineering...?",
+    task: "Masters Applications: Operations Research or CS",
     status: "In Progress",
     priority: "High",
     category: "Academic Growth",
-    progress: 7,
+    progress: 99,
   },
   {
     task: "CHEPS: Clinical Flowchart & Referral Optimization",
