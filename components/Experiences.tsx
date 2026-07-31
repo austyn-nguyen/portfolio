@@ -34,16 +34,16 @@ const experiences: Experience[] = [
         title: "Product Management Intern",
         date: "June 2026 – Aug. 2026",
         description: [
-          "Authored PRDs and technical specifications for Bank Statement modernization, translating system constraints into sprint-ready requirements and OKRs targeting $10M in projected savings and $175K annual OpEx reduction.[cite: 1]",
-          "Spearheaded competitive analysis across 6 peer banks (e.g., Wells Fargo, JPMC, Stripe) to design a customer-facing help page for VOD — surfacing UX patterns that shaped go-to-market strategy and feature roadmap prioritization.[cite: 1]",
+          "Authored PRDs and technical specifications for Bank Statement modernization, translating system constraints into sprint-ready requirements and OKRs targeting $10M in projected savings and $175K annual OpEx reduction.",
+          "Spearheaded competitive analysis across 6 peer banks (e.g., Wells Fargo, JPMC, Stripe) to design a customer-facing help page for VOD — surfacing UX patterns that shaped go-to-market strategy and feature roadmap prioritization.",
         ],
         projects: [
           {
             title: "Product Strategy & Execution",
             bullets: [
-              <span>Defined UI, data-availability, and API requirements with <Counter value={2} /> engineering leads across <Counter value={2} /> sprint teams — leading sprint planning and backlog grooming across the SDLC — launching <Counter value={2} /> self-service products serving <Counter value={20} /> M+ customers.[cite: 1]</span>,
-              <span>Conducted 7-method customer research (call listening, <Counter value={28} /> customer/associate interviews, competitive analysis across <Counter value={26} /> services) — mapping <Counter value={3} /> customer journeys and <Counter value={4} /> behavioral modes to drive data-driven product decisions.[cite: 1]</span>,
-              <span>Coordinated associate UAT pilot across <Counter value={125} /> test cases covering navigation, PDF generation, and edge-case account rules — managing launch sequencing across <Counter value={3} /> legacy teams previously handling ~<Counter value={1000} /> manual calls per 6 months.[cite: 1]</span>,
+              <span>Defined UI, data-availability, and API requirements with <Counter value={2} /> engineering leads across <Counter value={2} /> sprint teams — leading sprint planning and backlog grooming across the SDLC — launching <Counter value={2} /> self-service products serving <Counter value={20} /> M+ customers.</span>,
+              <span>Conducted 7-method customer research (call listening, <Counter value={28} /> customer/associate interviews, competitive analysis across <Counter value={26} /> services) — mapping <Counter value={3} /> customer journeys and <Counter value={4} /> behavioral modes to drive data-driven product decisions.</span>,
+              <span>Coordinated associate UAT pilot across <Counter value={125} /> test cases covering navigation, PDF generation, and edge-case account rules — managing launch sequencing across <Counter value={3} /> legacy teams previously handling ~<Counter value={1000} /> manual calls per 6 months.</span>,
             ],
           },
         ],
