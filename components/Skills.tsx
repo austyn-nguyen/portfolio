@@ -26,6 +26,8 @@ import {
   SiDebian,
   SiGo,
   SiAmazon,
+  SiFigma,
+  SiConfluence,
 } from "react-icons/si";
 import { DiJava, DiMsqlServer } from "react-icons/di";
 
@@ -35,7 +37,9 @@ const skillCategories = [
     skills: [
       { name: "Agile Scrum", icon: SiScrumalliance, color: "text-purple-500" },
       { name: "Jira", icon: SiJira, color: "text-blue-500" },
+      { name: "Confluence", icon: SiConfluence, color: "text-blue-400" },
       { name: "Asana", icon: SiAsana, color: "text-orange-500" },
+      { name: "Figma", icon: SiFigma, color: "text-pink-500" },
       { name: "DevOps", icon: FaTools, color: "text-indigo-500" },
       { name: "Git", icon: FaGitAlt, color: "text-orange-600" },
       { name: "GitHub", icon: FaGithub, color: "text-gray-400" },

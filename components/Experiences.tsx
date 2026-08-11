@@ -32,9 +32,9 @@ const experiences: Experience[] = [
     roles: [
       {
         title: "Product Management Intern",
-        date: "June 2026 – Aug. 2026",
+        date: "June 2026 – Aug 2026",
         description: [
-          "Authored PRDs and technical specifications for Bank Statement modernization, translating system constraints into sprint-ready requirements and OKRs targeting $10M in projected savings and $175K annual OpEx reduction.",
+          "Authored PRDs and technical specifications for Bank Statement modernization, translating system constraints into sprint-ready requirements and OKRs targeting $10M in projected savings and $475K annual OpEx reduction.",
           "Spearheaded competitive analysis across 6 peer banks (e.g., Wells Fargo, JPMC, Stripe) to design a customer-facing help page for VOD — surfacing UX patterns that shaped go-to-market strategy and feature roadmap prioritization.",
         ],
         projects: [
@@ -44,6 +44,7 @@ const experiences: Experience[] = [
               <span>Defined UI, data-availability, and API requirements with <Counter value={2} /> engineering leads across <Counter value={2} /> sprint teams — leading sprint planning and backlog grooming across the SDLC — launching <Counter value={2} /> self-service products serving <Counter value={20} /> M+ customers.</span>,
               <span>Conducted 7-method customer research (call listening, <Counter value={28} /> customer/associate interviews, competitive analysis across <Counter value={26} /> services) — mapping <Counter value={3} /> customer journeys and <Counter value={4} /> behavioral modes to drive data-driven product decisions.</span>,
               <span>Coordinated associate UAT pilot across <Counter value={125} /> test cases covering navigation, PDF generation, and edge-case account rules — managing launch sequencing across <Counter value={3} /> legacy teams previously handling ~<Counter value={1000} /> manual calls per 6 months.</span>,
+              <span>Presented product strategy and research findings to VP-level leadership at the monthly Banking "Brewing Concepts" forum, and partnered cross-functionally with Legal, Risk, Compliance, and Audit (LRCA) teams to ensure regulatory alignment and mitigate operational risks.</span>,
             ],
           },
         ],
@@ -56,7 +57,7 @@ const experiences: Experience[] = [
     logo: "/experiences/cheps.png",
     roles: [
       {
-        title: "Emergency Department Operations Consultant (Team REDC)",
+        title: "Research Assistant, Emergency Department Operations",
         date: "Jan 2026 – Apr 2026",
         description: [
           "Spearheading data-driven interventions for the Reducing Emergency Department Crowding (REDC) team to mitigate systemic patient boarding.",
@@ -76,7 +77,7 @@ const experiences: Experience[] = [
         ],
       },
       {
-        title: "Operations Consultant (Team ECCO)",
+        title: "Research Assistant, Cancer Center Operations",
         date: "Aug 2025 – Dec 2025",
         description: [
           "Spearheading cross-functional operational improvements for the Enhancing Cancer Center Operations (ECCO) team to improve patient throughput.",
@@ -89,6 +90,31 @@ const experiences: Experience[] = [
               "Engineered an interactive restructured org-chart proposal using code-based visualization to improve communication velocity.",
               "Leveraged Excel PivotTables and advanced data modeling to synthesize breast cancer referral datasets.",
               "Designed a phone tag intervention strategy, utilizing data-driven spreadsheets to quantify and reduce patient outreach delays.",
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    company: "Kite & Key Partners",
+    location: "Ann Arbor, MI",
+    logo: "/experiences/kkp.jpeg",
+    roles: [
+      {
+        title: "Student Consultant, AI & Economic Research Analyst",
+        date: "Jan 2026 – Apr 2026",
+        description: [
+          "Designed and implemented an agentic AI system to automate economic impact analysis for state healthcare legislation, transforming a manual research process into a scalable, high-speed pipeline.",
+          "Managed client relations and synthesized qualitative insights from legislative and academic experts to shape product requirements and validate the system's economic models.",
+        ],
+        projects: [
+          {
+            title: "Agentic AI Workflow for Economic Impact Analysis",
+            bullets: [
+              <span>Architected an end-to-end agentic AI system that autonomously researches and drafts economic impact analyses for <Counter value={16} /> concurrent state healthcare bills, entirely replacing a time-intensive, manual process.</span>,
+              <span>Delivered a proof-of-concept compressing analysis timelines from weeks to hours; co-authored a research paper on LLM-driven economic analysis validating technical feasibility with IHPI faculty and opening policy access at scale.</span>,
+              <span>Facilitated weekly client check-ins and conducted primary research by interviewing <Counter value={4} /> key stakeholder groups—including Representative Rheingans, Michigan4SinglePayer advocates, medical experts, and pioneer healthcare economist Gerald Friedman.</span>,
             ],
           },
         ],

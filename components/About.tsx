@@ -81,20 +81,20 @@ export default function About() {
           </span>{" "}
           and{" "}
           <span className="font-bold text-[var(--accent)]">
-            Operational Strategy
+            AI-Driven Strategy
           </span>
-          . I thrive at the intersection of user needs and systems optimization—turning complex clinical and technical bottlenecks into streamlined, impactful experiences.
+          . I thrive at the intersection of user empathy and technical execution—turning complex constraints into scalable, impactful experiences.
         </motion.p>
 
         <motion.p
           variants={itemVariants}
           className="text-[var(--foreground)]/90 text-lg leading-relaxed mb-6"
         >
-          Whether I'm modeling ED throughput or analyzing market trends, I’m driven by{" "}
+          From spearheading FinTech modernization for millions of users at <span className="font-bold">Capital One</span> to architecting agentic AI workflows for economic policy, I love bridging the gap between engineering sprints and go-to-market strategy. Whether I'm mapping clinical bottlenecks or defining API requirements, I’m driven by{" "}
           <span className="font-semibold text-[var(--foreground)] border-b-2 border-[var(--accent)]/50 pb-0.5">
             high-stakes problem solving
           </span>
-          . I'm excited to pursue roles where I can leverage my analytical mindset to drive meaningful innovation. 
+          .
         </motion.p>
         
         <motion.p 
