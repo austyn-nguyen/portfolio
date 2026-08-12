@@ -13,24 +13,24 @@ interface RoadmapItem {
 
 const roadmapData: RoadmapItem[] = [
   {
+    task: "Adulthood...",
+    status: "Backlog",
+    priority: "High",
+    category: "Life",
+  },
+  {
     task: "Full-Time PM Recruiting: Fall 2026 Cycle",
     status: "In Progress",
     priority: "High",
     category: "Career Strategy",
-    progress: 10
-  },
-  {
-    task: "Capital One PM Internship",
-    status: "In Progress",
-    priority: "High",
-    category: "Product Management",
-    progress: 70, 
+    progress: 50
   },
   {
     task: "AWS Certified Solutions Architect - Associate",
-    status: "Backlog",
+    status: "In Progress",
     priority: "Medium",
     category: "Cloud Infrastructure",
+    progress: 1,
   },
   {
     task: "Masters Applications: Operations Research or CS",
@@ -56,6 +56,12 @@ const roadmapData: RoadmapItem[] = [
     status: "Released",
     priority: "High",
     category: "Data Engineering",
+  },
+  {
+    task: "Capital One: NLP Feedback Categorization",
+    status: "Released",
+    priority: "High",
+    category: "Machine Learning",
   },
 ];
 
