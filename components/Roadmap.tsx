@@ -23,7 +23,7 @@ const roadmapData: RoadmapItem[] = [
     status: "In Progress",
     priority: "High",
     category: "Career Strategy",
-    progress: 50
+    progress: 98
   },
   {
     task: "AWS Certified Solutions Architect - Associate",
@@ -33,29 +33,23 @@ const roadmapData: RoadmapItem[] = [
     progress: 1,
   },
   {
-    task: "Masters Applications: Operations Research or CS",
+    task: "Bloomberg Market Concepts Certification",
     status: "In Progress",
-    priority: "High",
-    category: "Academic Growth",
-    progress: 99,
+    priority: "Medium",
+    category: "Financial Literacy",
+    progress: 40,
   },
   {
-    task: "CHEPS: Clinical Flowchart & Referral Optimization",
+    task: "Master Program Application",
     status: "Released",
     priority: "High",
-    category: "Systems Design",
+    category: "Academic Growth",
   },
   {
     task: "Electricity Price Hybrid Forecaster (XGBoost/LGBM)",
     status: "Released",
     priority: "High",
     category: "Machine Learning",
-  },
-  {
-    task: "Chemours BI: 25% Dashboard Performance Optimization",
-    status: "Released",
-    priority: "High",
-    category: "Data Engineering",
   },
   {
     task: "Capital One: NLP Feedback Categorization",

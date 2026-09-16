@@ -11,7 +11,7 @@ import {
   FaGlobeAmericas,
   FaCalendarAlt,
 } from "react-icons/fa";
-import { EducationEntry } from "./Education";
+import { EducationEntry } from "./Education"; // Ensure this matches your file name
 
 export default function EducationCard({
   edu,
@@ -128,6 +128,15 @@ export default function EducationCard({
           </div>
         </div>
 
+        {/* Description Section (e.g. "Incoming OMSCS") */}
+        {edu.description && (
+          <div className="mb-10">
+            <p className="inline-block px-4 py-2 rounded-lg bg-[var(--accent)]/10 text-[var(--accent)] font-bold text-sm tracking-wide border border-[var(--accent)]/20">
+              {edu.description}
+            </p>
+          </div>
+        )}
+
         {/* Study Abroad Section - Clipping Fix Applied */}
         {edu.studyAbroad && (
           <div className="mb-12 mt-6 p-6 rounded-3xl bg-white/5 border border-white/10 relative overflow-visible">
@@ -173,7 +182,7 @@ export default function EducationCard({
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Honors Section */}
-          {edu.honors.length > 0 && (
+          {edu.honors && edu.honors.length > 0 && (
             <section>
               <h4 className="flex items-center gap-3 mb-6 text-[11px] font-black uppercase tracking-[0.3em] text-[var(--muted)] border-b border-[var(--accent)]/10 pb-2">
                 <FaAward className="text-[var(--accent)] text-sm" /> Honors &
@@ -193,7 +202,7 @@ export default function EducationCard({
           )}
 
           {/* ECs Section */}
-          {edu.clubs.length > 0 && (
+          {edu.clubs && edu.clubs.length > 0 && (
             <section>
               <h4 className="flex items-center gap-3 mb-6 text-[11px] font-black uppercase tracking-[0.3em] text-[var(--muted)] border-b border-[var(--accent)]/10 pb-2">
                 <FaUsers className="text-[var(--accent)] text-sm" /> Leadership

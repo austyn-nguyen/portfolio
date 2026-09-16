@@ -9,8 +9,9 @@ export interface EducationEntry {
   location: string;
   logo: string;
   accentColor: string;
-  honors: string[];
-  clubs: { role: string; name: string }[];
+  description?: string;
+  honors?: string[]; 
+  clubs?: { role: string; name: string }[]; 
   studyAbroad?: {
     university: string;
     program: string;
@@ -22,13 +23,23 @@ export interface EducationEntry {
 
 const educationData: EducationEntry[] = [
   {
+    school: "Georgia Institute of Technology",
+    degree: "M.S. in Computer Science",
+    years: "Jan 2027 - Dec 2028",
+    location: "Atlanta, GA",
+    logo: "/educations/gatech.png",
+    accentColor: "rgba(186, 12, 47, 0.3)",
+    description: "Incoming OMSCS",
+  },
+  {
     school: "University of Michigan - Ann Arbor",
     degree: "B.S.E. in Computer Science",
-    years: "Aug 2024 – December 2026",
+    years: "Aug 2024 – Dec 2026",
     location: "Ann Arbor, MI",
     logo: "/educations/UM.png",
     accentColor: "rgba(0, 39, 76, 0.4)",
     honors: [
+      "Clara E. Mara Scholarship",
       "Cornelius and Margaret Donovan Scholarship",
       "First-Gen Education Abroad Scholarship",
       "MHacks Category Winner: Best App Built on Groq",
@@ -42,7 +53,9 @@ const educationData: EducationEntry[] = [
         role: "Principal Violist",
         name: "UMich Pops Orchestra",
       },
-      { role: "Violist", name: "Chamber Ensemble" },
+      { role: "Violist", 
+        name: "Chamber Ensemble" 
+      },
     ],
     studyAbroad: {
       university: "Yonsei University",
@@ -70,16 +83,6 @@ const educationData: EducationEntry[] = [
         name: "Feeding Inductions on Manduca Sexta",
       },
     ],
-  },
-  {
-    school: "Centennial High School",
-    degree: "High School Diploma",
-    years: "Sep 2020 – May 2024",
-    location: "Ellicott City, MD",
-    logo: "/educations/chs.png",
-    accentColor: "rgba(157, 34, 53, 0.3)",
-    honors: [],
-    clubs: [],
   },
 ];
 

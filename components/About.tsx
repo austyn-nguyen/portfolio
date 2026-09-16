@@ -75,7 +75,11 @@ export default function About() {
           <span className="font-bold text-[var(--accent)]">
             University of Michigan
           </span>{" "}
-          with a deep passion for{" "}
+          and an incoming CS Master's student at{" "}
+          <span className="font-bold text-[var(--accent)]">
+            Georgia Tech
+          </span>{" "}
+          specializing in AI and HCI. I have a deep passion for{" "}
           <span className="font-bold text-[var(--accent)]">
             Product Management
           </span>{" "}

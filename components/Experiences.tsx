@@ -248,21 +248,6 @@ const experiences: Experience[] = [
       },
     ],
   },
-  {
-    company: "Wegmans Food Markets",
-    location: "Columbia, MD",
-    logo: "/experiences/weggies.jpeg",
-    roles: [
-      {
-        title: "Front-End Associate",
-        date: "April 2023 – April 2024",
-        description: [
-          "Optimized front-end operational efficiency by managing high-volume transactions during peak retail hours.",
-          "Maintained real-time inventory oversight to ensure product availability and department organization.",
-        ],
-      },
-    ],
-  },
 ];
 
 export default function Experiences() {
