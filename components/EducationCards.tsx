@@ -11,7 +11,7 @@ import {
   FaGlobeAmericas,
   FaCalendarAlt,
 } from "react-icons/fa";
-import { EducationEntry } from "./Education"; // Ensure this matches your file name
+import { EducationEntry } from "./Education";
 
 export default function EducationCard({
   edu,
@@ -28,7 +28,6 @@ export default function EducationCard({
 
   const isEven = index % 2 === 0;
 
-  // Parallax and Rotation logic based on index
   const y = useTransform(
     scrollYProgress,
     [0, 1],
@@ -105,18 +104,56 @@ export default function EducationCard({
 
       {/* RIGHT: Content Area */}
       <div className="relative z-10 flex-grow p-8 lg:p-12 bg-gradient-to-r from-transparent to-[var(--background)]/10">
-        <div className="flex flex-col lg:flex-row justify-between gap-6 mb-10">
-          <div>
-            <h3 className="text-3xl lg:text-4xl font-black tracking-tight mb-2">
+        <div className="flex flex-col lg:flex-row justify-between gap-6 mb-8">
+          <div className="flex-grow">
+            <h3 className="text-3xl lg:text-4xl font-black tracking-tight mb-4">
               {edu.school}
             </h3>
-            <div className="flex items-center gap-2 text-[var(--accent)] font-bold">
-              <FaGraduationCap className="text-xl" />
-              <span className="text-lg lg:text-xl tracking-tight">
-                {edu.degree}
-              </span>
-            </div>
+
+            {/* Degrees Section */}
+            {edu.degrees && edu.degrees.length > 0 ? (
+              <div className="space-y-1">
+                {edu.degrees.map((deg, dIndex, arr) => (
+                  <div key={dIndex} className="relative flex items-stretch gap-3">
+                    {/* Icon + Centered Connector Line Column */}
+                    <div className="flex flex-col items-center shrink-0">
+                      <div className="z-10 flex items-center justify-center w-6 h-6 rounded-full bg-[var(--background)] border border-[var(--accent)] text-[var(--accent)] text-xs shrink-0">
+                        <FaGraduationCap />
+                      </div>
+                      {dIndex < arr.length - 1 && (
+                        <div className="w-[2px] bg-[var(--accent)]/30 flex-grow my-1" />
+                      )}
+                    </div>
+
+                    {/* Degree Text Details */}
+                    <div className={dIndex < arr.length - 1 ? "pb-4" : ""}>
+                      <div className="flex flex-wrap items-center gap-2">
+                        <span className="text-lg lg:text-xl font-bold tracking-tight">
+                          {deg.degree}
+                        </span>
+                        {deg.description && (
+                          <span className="px-2.5 py-0.5 rounded-full bg-[var(--accent)]/15 text-[var(--accent)] font-bold text-xs border border-[var(--accent)]/30">
+                            {deg.description}
+                          </span>
+                        )}
+                      </div>
+                      <p className="text-xs font-bold text-[var(--muted)] mt-0.5">
+                        {deg.years}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="flex items-center gap-2 text-[var(--accent)] font-bold">
+                <FaGraduationCap className="text-xl" />
+                <span className="text-lg lg:text-xl tracking-tight">
+                  {edu.degree}
+                </span>
+              </div>
+            )}
           </div>
+
           <div className="lg:text-right shrink-0">
             <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[var(--background)] border border-[var(--accent)]/30 text-sm font-black shadow-sm">
               <FaCalendarAlt className="text-[var(--accent)]" />
@@ -128,16 +165,16 @@ export default function EducationCard({
           </div>
         </div>
 
-        {/* Description Section (e.g. "Incoming OMSCS") */}
+        {/* Optional Description */}
         {edu.description && (
-          <div className="mb-10">
+          <div className="mb-8">
             <p className="inline-block px-4 py-2 rounded-lg bg-[var(--accent)]/10 text-[var(--accent)] font-bold text-sm tracking-wide border border-[var(--accent)]/20">
               {edu.description}
             </p>
           </div>
         )}
 
-        {/* Study Abroad Section - Clipping Fix Applied */}
+        {/* Study Abroad Section */}
         {edu.studyAbroad && (
           <div className="mb-12 mt-6 p-6 rounded-3xl bg-white/5 border border-white/10 relative overflow-visible">
             <div className="absolute -top-3 left-6 px-4 py-1 bg-[var(--accent)] text-[var(--background)] text-[10px] font-black uppercase tracking-widest rounded-full shadow-lg z-20">

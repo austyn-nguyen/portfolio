@@ -2,16 +2,23 @@
 
 import EducationCard from "./EducationCards";
 
+export interface DegreeDetail {
+  degree: string;
+  years: string;
+  description?: string;
+}
+
 export interface EducationEntry {
   school: string;
-  degree: string;
+  degree?: string;
+  degrees?: DegreeDetail[];
   years: string;
   location: string;
   logo: string;
   accentColor: string;
   description?: string;
-  honors?: string[]; 
-  clubs?: { role: string; name: string }[]; 
+  honors?: string[];
+  clubs?: { role: string; name: string }[];
   studyAbroad?: {
     university: string;
     program: string;
@@ -23,21 +30,22 @@ export interface EducationEntry {
 
 const educationData: EducationEntry[] = [
   {
-    school: "Georgia Institute of Technology",
-    degree: "M.S. in Computer Science",
-    years: "Jan 2027 - Dec 2028",
-    location: "Atlanta, GA",
-    logo: "/educations/gatech.png",
-    accentColor: "rgba(186, 12, 47, 0.3)",
-    description: "Incoming OMSCS",
-  },
-  {
     school: "University of Michigan - Ann Arbor",
-    degree: "B.S.E. in Computer Science",
-    years: "Aug 2024 – Dec 2026",
+    years: "Aug 2024 – Aug 2027",
     location: "Ann Arbor, MI",
     logo: "/educations/UM.png",
     accentColor: "rgba(0, 39, 76, 0.4)",
+    degrees: [
+      {
+        degree: "M.S.E. in Industrial & Operations Engineering",
+        years: "Jan 2027 – Aug 2027",
+        description: "Incoming (Winter 2027)",
+      },
+      {
+        degree: "B.S.E. in Computer Science",
+        years: "Aug 2024 – Dec 2026",
+      },
+    ],
     honors: [
       "Clara E. Mara Scholarship",
       "Cornelius and Margaret Donovan Scholarship",
@@ -53,8 +61,9 @@ const educationData: EducationEntry[] = [
         role: "Principal Violist",
         name: "UMich Pops Orchestra",
       },
-      { role: "Violist", 
-        name: "Chamber Ensemble" 
+      {
+        role: "Violist",
+        name: "Chamber Ensemble",
       },
     ],
     studyAbroad: {
