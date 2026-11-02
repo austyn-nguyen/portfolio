@@ -1,0 +1,93 @@
+export interface DegreeDetail {
+  degree: string;
+  years: string;
+  description?: string;
+}
+
+export interface EducationEntry {
+  school: string;
+  degree?: string;
+  degrees?: DegreeDetail[];
+  years: string;
+  location: string;
+  logo: string;
+  accentColor: string;
+  description?: string;
+  honors?: string[];
+  clubs?: { role: string; name: string }[];
+  studyAbroad?: {
+    university: string;
+    program: string;
+    location: string;
+    years: string;
+    logo?: string;
+  };
+}
+
+export const educationData: EducationEntry[] = [
+  {
+    school: "University of Michigan - Ann Arbor",
+    years: "Aug 2024 – Aug 2027",
+    location: "Ann Arbor, MI",
+    logo: "/images/education/university-of-michigan-logo.png",
+    accentColor: "rgba(0, 39, 76, 0.4)",
+    degrees: [
+      {
+        degree: "M.S.E. in Industrial & Operations Engineering",
+        years: "Jan 2027 – Aug 2027",
+        description: "Incoming (Winter 2027)",
+      },
+      {
+        degree: "B.S.E. in Computer Science",
+        years: "Aug 2024 – Dec 2026",
+      },
+    ],
+    honors: [
+      "Clara E. Mara Scholarship",
+      "Cornelius and Margaret Donovan Scholarship",
+      "First-Gen Education Abroad Scholarship",
+      "MHacks Category Winner: Best App Built on Groq",
+    ],
+    clubs: [
+      {
+        role: "Prof Dev, Recruitment & Membership",
+        name: "Zeta Pi Professional Technical Fraternity",
+      },
+      {
+        role: "Principal Violist",
+        name: "UMich Pops Orchestra",
+      },
+      {
+        role: "Violist",
+        name: "Chamber Ensemble",
+      },
+    ],
+    studyAbroad: {
+      university: "Yonsei University",
+      program: "Study Abroad",
+      location: "Seoul, South Korea",
+      years: "Jun 2025 – Aug 2025",
+      logo: "/images/education/yonsei-university-logo.png",
+    },
+  },
+  {
+    school: "Howard Community College",
+    degree: "A.A. in Computer Science & General Studies (STEM)",
+    years: "May 2021 – May 2024",
+    location: "Columbia, MD",
+    logo: "/images/education/howard-community-college-logo.png",
+    accentColor: "rgba(186, 12, 47, 0.3)",
+    honors: [
+      "Frederick K. Schoenbrodt Scholar",
+      "Graduated Summa Cum Laude",
+      "Phi Theta Kappa Honor Society",
+    ],
+    clubs: [
+      {
+        role: "Undergraduate Researcher (Dr. Gretes)",
+        name: "Feeding Inductions on Manduca Sexta",
+      },
+    ],
+  },
+];
+

@@ -1,159 +1,58 @@
-"use client";
-
-import { motion } from "framer-motion";
-import {
-  FaPython,
-  FaGitAlt,
-  FaGithub,
-  FaTools,
-  FaFilePowerpoint,
-  FaFileExcel,
-  FaEnvelope,
-  FaCloud,
-  FaChartBar,
-  FaWindows,
-  FaApple,
-  FaLinux,
-} from "react-icons/fa";
-import {
-  SiC,
-  SiCplusplus,
-  SiMongodb,
-  SiPostgresql,
-  SiJira,
-  SiAsana,
-  SiScrumalliance,
-  SiDebian,
-  SiGo,
-  SiAmazon,
-  SiFigma,
-  SiConfluence,
-} from "react-icons/si";
+import { ArrowUpRight, Code2, Compass, Database, Monitor } from "lucide-react";
+import type { CSSProperties } from "react";
+import type { IconType } from "react-icons";
+import { FaPython, FaGitAlt, FaGithub, FaTools, FaFilePowerpoint, FaFileExcel, FaEnvelope, FaCloud, FaChartBar, FaWindows, FaApple, FaLinux } from "react-icons/fa";
+import { SiC, SiCplusplus, SiMongodb, SiPostgresql, SiJira, SiAsana, SiScrumalliance, SiDebian, SiGo, SiAmazon, SiFigma, SiConfluence } from "react-icons/si";
 import { DiJava, DiMsqlServer } from "react-icons/di";
 
-const skillCategories = [
-  {
-    title: "Product Management Tools",
-    skills: [
-      { name: "Agile Scrum", icon: SiScrumalliance, color: "text-purple-500" },
-      { name: "Jira", icon: SiJira, color: "text-blue-500" },
-      { name: "Confluence", icon: SiConfluence, color: "text-blue-400" },
-      { name: "Asana", icon: SiAsana, color: "text-orange-500" },
-      { name: "Figma", icon: SiFigma, color: "text-pink-500" },
-      { name: "DevOps", icon: FaTools, color: "text-indigo-500" },
-      { name: "Git", icon: FaGitAlt, color: "text-orange-600" },
-      { name: "GitHub", icon: FaGithub, color: "text-gray-400" },
-    ],
-  },
-  {
-    title: "Programming Languages",
-    skills: [
-      { name: "Python", icon: FaPython, color: "text-yellow-500" },
-      { name: "C++", icon: SiCplusplus, color: "text-blue-600" },
-      { name: "C", icon: SiC, color: "text-gray-600" },
-      { name: "Java", icon: DiJava, color: "text-red-500" },
-      { name: "Go", icon: SiGo, color: "text-cyan-500" },
-    ],
-  },
-  {
-    title: "Operating Systems",
-    skills: [
-      { name: "Windows", icon: FaWindows, color: "text-blue-500" },
-      { name: "MacOS", icon: FaApple, color: "text-gray-400" },
-      { name: "Linux/Unix", icon: FaLinux, color: "text-yellow-600" },
-      { name: "Debian", icon: SiDebian, color: "text-red-600" },
-    ],
-  },
-  {
-    title: "Databases",
-    skills: [
-      { name: "PostgreSQL", icon: SiPostgresql, color: "text-blue-600" },
-      { name: "SQL Server", icon: DiMsqlServer, color: "text-red-600" },
-      { name: "NoSQL", icon: SiMongodb, color: "text-green-600" },
-    ],
-  },
-  {
-    title: "Cloud & Certifications",
-    skills: [
-      { name: "PowerPoint", icon: FaFilePowerpoint, color: "text-orange-600" },
-      { name: "Excel", icon: FaFileExcel, color: "text-green-600" },
-      { name: "Outlook", icon: FaEnvelope, color: "text-blue-600" },
-      { name: "AWS", icon: SiAmazon, color: "text-orange-500" },
-      { name: "Microsoft Azure", icon: FaCloud, color: "text-blue-400" },
-      {
-        name: "Power BI (Certified)",
-        icon: FaChartBar,
-        color: "text-yellow-500",
-        // Certification link added here
-        url: "https://learn.microsoft.com/en-us/users/austynnguyen-2735/credentials/c37b22fdc08bdf5a",
-      },
-    ],
-  },
+const skillVisuals: Record<string, { icon: IconType; color: string }> = {
+  "Agile Scrum": { icon: SiScrumalliance, color: "#9664c5" },
+  Jira: { icon: SiJira, color: "#4285df" },
+  Confluence: { icon: SiConfluence, color: "#528bd3" },
+  Asana: { icon: SiAsana, color: "#e67676" },
+  Figma: { icon: SiFigma, color: "#c46caa" },
+  Python: { icon: FaPython, color: "#c69b23" },
+  "C++": { icon: SiCplusplus, color: "#4b86ce" },
+  C: { icon: SiC, color: "#8295af" },
+  Java: { icon: DiJava, color: "#d2644e" },
+  Go: { icon: SiGo, color: "#31a6bd" },
+  Git: { icon: FaGitAlt, color: "#e47450" },
+  GitHub: { icon: FaGithub, color: "var(--foreground)" },
+  DevOps: { icon: FaTools, color: "#9381cc" },
+  PostgreSQL: { icon: SiPostgresql, color: "#5486b4" },
+  "SQL Server": { icon: DiMsqlServer, color: "#d46d70" },
+  NoSQL: { icon: SiMongodb, color: "#68a46a" },
+  Excel: { icon: FaFileExcel, color: "#55a17c" },
+  PowerPoint: { icon: FaFilePowerpoint, color: "#d47c55" },
+  "Power BI": { icon: FaChartBar, color: "#c69b23" },
+  AWS: { icon: SiAmazon, color: "#d59639" },
+  "Microsoft Azure": { icon: FaCloud, color: "#57a4d5" },
+  Windows: { icon: FaWindows, color: "#548fe0" },
+  macOS: { icon: FaApple, color: "var(--foreground)" },
+  "Linux/Unix": { icon: FaLinux, color: "#c69b23" },
+  Debian: { icon: SiDebian, color: "#cd6481" },
+  Outlook: { icon: FaEnvelope, color: "#548fe0" },
+};
+
+const toolkit = [
+  { title: "From idea to plan", description: "Organizing the work and bringing a team along.", icon: Compass, tools: ["Agile Scrum", "Jira", "Confluence", "Asana", "Figma"] },
+  { title: "From plan to something real", description: "Building, iterating, and keeping track of what changed.", icon: Code2, tools: ["Python", "C++", "C", "Java", "Go", "Git", "GitHub", "DevOps"] },
+  { title: "Making sense of the data", description: "Finding patterns and sharing the story behind the numbers.", icon: Database, tools: ["PostgreSQL", "SQL Server", "NoSQL", "Excel", "PowerPoint", "Power BI"] },
+  { title: "The everyday setup", description: "The platforms and tools that keep things moving.", icon: Monitor, tools: ["AWS", "Microsoft Azure", "Windows", "macOS", "Linux/Unix", "Debian", "Outlook"] },
 ];
 
 export default function Skills() {
   return (
-    <section
-      id="skills"
-      className="py-24 px-8 max-w-6xl mx-auto flex flex-col items-center"
-    >
-      <motion.h2
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        className="text-5xl md:text-6xl font-bold tracking-tight mb-16"
-      >
-        Technical <span className="text-[var(--accent)]">Skills</span>
-      </motion.h2>
-
-      <div className="space-y-20 w-full">
-        {skillCategories.map((category, catIdx) => (
-          <div key={category.title} className="text-center">
-            <h3 className="text-2xl font-semibold mb-10 text-[var(--foreground)]/70 uppercase tracking-widest">
-              {category.title}
-            </h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 justify-center">
-              {category.skills.map((skill, skillIdx) => {
-                // Determine if this skill should be a link or a div
-                const isLink = !!skill.url;
-                const Wrapper = isLink ? motion.a : motion.div;
-
-                return (
-                  <Wrapper
-                    key={skill.name}
-                    {...(isLink
-                      ? {
-                          href: skill.url,
-                          target: "_blank",
-                          rel: "noopener noreferrer",
-                        }
-                      : {})}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: catIdx * 0.1 + skillIdx * 0.05 }}
-                    whileHover={{ y: -5 }}
-                    className={`flex flex-col items-center p-6 bg-[var(--foreground)]/5 border border-[var(--accent)]/10 backdrop-blur-md rounded-2xl shadow-sm hover:border-[var(--accent)]/40 transition-all group ${
-                      isLink ? "cursor-pointer" : ""
-                    }`}
-                  >
-                    <skill.icon
-                      size={40}
-                      className={`${skill.color} mb-4 transition-transform group-hover:scale-110`}
-                    />
-                    <span className="text-sm font-medium tracking-tight">
-                      {skill.name}
-                    </span>
-                    {isLink && (
-                      <span className="text-[10px] mt-2 opacity-0 group-hover:opacity-100 transition-opacity text-[var(--accent)] font-bold uppercase">
-                        View Credential
-                      </span>
-                    )}
-                  </Wrapper>
-                );
-              })}
-            </div>
-          </div>
-        ))}
-      </div>
+    <section id="skills" className="personal-toolkit">
+      <header className="chapter-heading"><p className="work-eyebrow">05 / Tools of the trade</p><h2>A few things <span>in my toolkit.</span></h2><p>Different problems call for different tools. These are some of the ones I bring to the table.</p></header>
+      <div className="toolkit-rows">{toolkit.map((group) => <div key={group.title} className="toolkit-row"><div className="toolkit-label"><group.icon size={23} aria-hidden="true" /><div><h3>{group.title}</h3><p>{group.description}</p></div></div><ul>{group.tools.map((tool) => {
+        const visual = skillVisuals[tool];
+        return <li key={tool} style={{ "--skill-color": visual.color } as CSSProperties}>
+          <span className="skill-icon-badge"><visual.icon size={28} aria-hidden="true" /></span>
+          <span className="skill-name">{tool}</span>
+        </li>;
+      })}</ul></div>)}</div>
+      <a className="toolkit-credential" href="https://learn.microsoft.com/en-us/users/austynnguyen-2735/credentials/c37b22fdc08bdf5a" target="_blank" rel="noopener noreferrer"><span className="credential-mark" aria-hidden="true">✳</span><span>Power BI certified<span className="credential-caption">A little extra time with the data.</span></span><span className="credential-action">View credential <ArrowUpRight size={17} aria-hidden="true" /></span></a>
     </section>
   );
 }

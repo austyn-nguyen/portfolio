@@ -1,160 +1,18 @@
-"use client";
+import { ArrowUpRight, Check, Cloud, ChartNoAxesCombined, Compass } from "lucide-react";
 
-import { motion } from "framer-motion";
-import { FaCheckCircle, FaSpinner, FaRocket } from "react-icons/fa";
-
-interface RoadmapItem {
-  task: string;
-  status: "Released" | "In Progress" | "Backlog";
-  priority: "High" | "Medium";
-  category: string;
-  progress?: number;
-}
-
-const roadmapData: RoadmapItem[] = [
-  {
-    task: "Adulthood...",
-    status: "Backlog",
-    priority: "High",
-    category: "Life",
-  },
-  {
-    task: "Full-Time PM Recruiting: Fall 2026 Cycle",
-    status: "In Progress",
-    priority: "High",
-    category: "Career Strategy",
-    progress: 98
-  },
-  {
-    task: "AWS Certified Solutions Architect - Associate",
-    status: "In Progress",
-    priority: "Medium",
-    category: "Cloud Infrastructure",
-    progress: 1,
-  },
-  {
-    task: "Bloomberg Market Concepts Certification",
-    status: "In Progress",
-    priority: "Medium",
-    category: "Financial Literacy",
-    progress: 40,
-  },
-  {
-    task: "Master Program Application",
-    status: "Released",
-    priority: "High",
-    category: "Academic Growth",
-  },
-  {
-    task: "Electricity Price Hybrid Forecaster (XGBoost/LGBM)",
-    status: "Released",
-    priority: "High",
-    category: "Machine Learning",
-  },
-  {
-    task: "Capital One: NLP Feedback Categorization",
-    status: "Released",
-    priority: "High",
-    category: "Machine Learning",
-  },
+const current = [
+  { title: "Finding my next team", label: "Career", icon: Compass, description: "Full-time product management recruiting for the Fall 2026 cycle.", note: "Looking ahead", href: "#contact", action: "Let’s connect" },
+  { title: "A little deeper into the cloud", label: "Learning", icon: Cloud, description: "Working toward the AWS Certified Solutions Architect – Associate certification.", note: "In progress" },
+  { title: "Getting to know the markets", label: "Learning", icon: ChartNoAxesCombined, description: "Making my way through Bloomberg Market Concepts.", note: "In progress" },
 ];
+const completed = ["Master’s program application", "Electricity Price Hybrid Forecaster (XGBoost / LightGBM)", "Capital One: NLP Feedback Categorization"];
 
 export default function Roadmap() {
-  const columns = ["Backlog", "In Progress", "Released"] as const;
-
   return (
-    <section id="roadmap" className="py-24 px-8 max-w-6xl mx-auto">
-      <div className="text-center mb-16">
-        <h2 className="text-5xl font-bold mb-4 tracking-tight">
-          Career <span className="text-[var(--accent)]">Roadmap</span>
-        </h2>
-        <p className="text-[var(--muted)]">
-          Live tracking of professional velocity and product delivery.
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {columns.map((col) => (
-          <div key={col} className="flex flex-col gap-4">
-            <div className="flex items-center gap-2 mb-2 px-2">
-              {col === "Backlog" && <FaRocket className="text-blue-400" />}
-              {col === "In Progress" && (
-                <FaSpinner className="text-yellow-400 animate-[spin_3s_linear_infinite]" />
-              )}
-              {col === "Released" && (
-                <FaCheckCircle className="text-green-400" />
-              )}
-              <h3 className="font-bold uppercase tracking-widest text-sm opacity-80">
-                {col}
-              </h3>
-            </div>
-
-            <div className="bg-[var(--foreground)]/5 rounded-2xl p-4 border border-[var(--accent)]/5 h-[520px] flex flex-col gap-4 overflow-y-auto">
-              {roadmapData
-                .filter((item) => item.status === col)
-                .map((item, idx) => (
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: idx * 0.1 }}
-                    className={`bg-[var(--background)] p-4 rounded-xl border border-[var(--accent)]/10 shadow-sm transition-all duration-300 group ${
-                      item.status === "Released"
-                        ? "hover:shadow-[0_0_15px_rgba(34,197,94,0.15)] hover:border-green-500/30"
-                        : item.status === "In Progress"
-                        ? "hover:shadow-[0_0_15px_rgba(234,179,8,0.15)] hover:border-yellow-500/30"
-                        : "hover:shadow-[0_0_15px_rgba(59,130,246,0.15)] hover:border-blue-500/30"
-                    }`}
-                  >
-                    <div className="flex justify-between items-start mb-2">
-                      <span
-                        className={`text-[9px] px-2 py-0.5 rounded-full font-bold uppercase ${
-                          item.priority === "High"
-                            ? "bg-red-500/10 text-red-500"
-                            : "bg-blue-500/10 text-blue-500"
-                        }`}
-                      >
-                        {item.priority}
-                      </span>
-                      <span className="text-[9px] text-[var(--muted)] font-mono uppercase">
-                        {item.category}
-                      </span>
-                    </div>
-                    <p className="text-sm font-semibold leading-tight group-hover:text-[var(--accent)] transition-colors">
-                      {item.task}
-                    </p>
-
-                    {/* MANUALLY CONTROLLED PROGRESS BAR */}
-                    {item.status === "In Progress" && (
-                      <div className="mt-4">
-                        <div className="flex justify-between items-center mb-1">
-                          <span className="text-[8px] font-bold text-[var(--muted)] uppercase tracking-tighter">
-                            Current Sprint
-                          </span>
-                          <span className="text-[8px] font-bold text-[var(--accent)]">
-                            {item.progress}%
-                          </span>
-                        </div>
-                        <div className="w-full h-1 bg-[var(--accent)]/10 rounded-full overflow-hidden">
-                          <motion.div
-                            initial={{ width: "0%" }}
-                            whileInView={{ width: `${item.progress}%` }}
-                            transition={{
-                              duration: 1.5,
-                              ease: "easeOut",
-                              delay: 0.2,
-                            }}
-                            className="h-full bg-[var(--accent)] shadow-[0_0_8px_rgba(var(--accent-rgb),0.6)]"
-                          />
-                        </div>
-                      </div>
-                    )}
-                  </motion.div>
-                ))}
-            </div>
-          </div>
-        ))}
-      </div>
+    <section id="roadmap" className="personal-now">
+      <header className="chapter-heading"><p className="work-eyebrow">06 / A little life update</p><h2>What I’m <span>up to.</span></h2><p>A few things on my desk, a few things on the horizon.</p></header>
+      <div className="now-notes">{current.map((item) => <article key={item.title} className="now-note"><p className="now-note-label"><item.icon size={18} aria-hidden="true" />{item.label}</p><h3>{item.title}</h3><p>{item.description}</p><div className="now-note-footer"><span>{item.note}</span>{item.href && <a href={item.href}>{item.action}<ArrowUpRight size={15} aria-hidden="true" /></a>}</div></article>)}</div>
+      <div className="now-bottom"><details className="now-completed"><summary>A few things checked off <span>{completed.length}</span></summary><ul>{completed.map((item) => <li key={item}><Check size={16} aria-hidden="true" />{item}</li>)}</ul></details><p className="now-life-note"><span aria-hidden="true">☺</span> Adulthood? Still in the backlog.</p></div>
     </section>
   );
 }

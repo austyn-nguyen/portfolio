@@ -1,353 +1,97 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import {
-  FaArrowLeft,
-  FaArrowRight,
-  FaTimes,
-  FaLinkedin,
-  FaGithub,
-} from "react-icons/fa";
-import { SiDevpost, SiGoogledrive } from "react-icons/si";
-
-interface Project {
-  title: string;
-  affiliation: string;
-  date: string;
-  description: string;
-  longDescription: string;
-  tags: string[];
-  link: string;
-  driveLink?: string;
-  githubLink?: string;
-  devpostLink?: string;
-  image: string;
-}
-
-const projects: Project[] = [
-  {
-    title: "To Drink or Not to Drink",
-    affiliation: "Policy & Economic Analysis",
-    date: "Feb 2026",
-    description:
-      "A structured policy and economic analysis assessing the impact of Maryland's alcohol retail restrictions on state revenue and consumer behavior",
-    longDescription:
-      "Conducted a structured policy and economic analysis evaluating Maryland's Alcoholic Beverages Section 4-205 through cross-state benchmarking, per-capita tax revenue analysis, licensing data, and public testimony. Identified over $1.6M in unrealized annual revenue driven by cross-border purchasing and constrained retail access. Synthesized findings into an executive-ready narrative linking policy outcomes to key state budget priorities — including healthcare, education, transportation, and public safety — and delivered a data-backed recommendation to modernize alcohol retail policy while balancing regulatory and public health considerations.",
-    tags: ["Policy Analysis", "Economic Research", "Data Analysis", "Public Health"],
-    link: "https://www.linkedin.com/in/austyn-an-nguyen/",
-    driveLink: "https://docs.google.com/presentation/d/1gM40ZbfNSMu-udQki7lpNhiOmLe5R0KdEg9f332_0GI/edit?usp=sharing",
-    image: "/projects/maryland_alcohol.png",
-  },
-  {
-    title: "Personal Portfolio",
-    affiliation: "~Me, Myself, and I!~",
-    date: "Dec 2025 – Present",
-    description:
-      "A high-performance, theme-aware professional portfolio featuring custom interactive galleries and musical journey timelines",
-    longDescription:
-      "A bespoke digital portfolio built to showcase technical and creative milestones. This project features a custom-engineered 'Musical Journey' timeline, a hybrid lightbox gallery system for projects and photos, and a sophisticated theme engine that swaps between 'Space' and 'Light' modes using CSS variables and LocalStorage. The site is optimized for performance with Next.js App Router and utilizes Framer Motion for hardware-accelerated animations.",
-    tags: [
-      "Next.js",
-      "TypeScript",
-      "React",
-      "Tailwind CSS",
-      "Framer Motion",
-      "Vercel",
-    ],
-    link: "https://www.linkedin.com/in/austyn-an-nguyen/",
-    githubLink: "https://github.com/austyn-nguyen/portfolio",
-    image: "/projects/portfolio.png",
-  },
-  {
-    title: "Electricity Price Hybrid Forecaster",
-    affiliation: "ElectricFish",
-    date: "Aug 2025 – Dec 2025",
-    description:
-      "A three-tier hybrid model using XGBoost, LGBM, and NGBoost to predict CAISO market pricing with high accuracy",
-    longDescription:
-      "Developed a robust Day-Ahead Price Forecasting Model focusing on Locational Marginal Price (LMP) in the CAISO region. The system incorporates a three-tier hybrid architecture: LightGBM for spike classification, NGBoost for uncertainty estimation, and XGBoost for baselines. We pivoted to city-level data for nine major load centers to capture localized pricing required for operational needs.",
-    tags: ["Python", "Machine Learning", "XGBoost", "Data Science"],
-    link: "https://www.linkedin.com/in/austyn-an-nguyen/",
-    image: "/projects/ef.png",
-  },
-  {
-    title: "Infusion Workflow Optimization",
-    affiliation: "CHEPS / Brighton Center for Specialty Care",
-    date: "Aug 2025 – Oct 2025",
-    description:
-      "Process mapping and data collection to identify bottlenecks in medication order checking for infusion nurses",
-    longDescription:
-      "The nurses at Brighton Center for Specialty Care (BCSC) Infusion Clinic flagged delays caused by unactionable medication orders. Using process mapping, shadowing, and intensive data collection, I documented the infusion order checking workflow. This documentation identified critical bottlenecks and provided data-driven opportunities to streamline patient care.",
-    tags: ["Healthcare Engineering", "Process Mapping", "Data Collection"],
-    link: "https://www.linkedin.com/in/austyn-an-nguyen/",
-    image: "/projects/ecco_poster_25.png",
-  },
-  {
-    title: "The WiLi Watch",
-    affiliation: "MHacks (University of Michigan)",
-    date: "Sep 2024",
-    description:
-      "A smart home wristband utilizing cloud-based LLMs for wireless environment control and voice-automated tasks",
-    longDescription:
-      "Collaborated with a team of 3 to develop a wearable device enabling wireless interaction with smart home environments. The system uses a cloud-based LLM to predict user needs based on verbal cues. Integrated a Free WiLi device with an Orange Pi 5 and Arduino Nano, using Groq, Whisper, and Cartesia for speech-to-text interfacing.",
-    tags: ["Python", "LLM", "Arduino", "Hardware"],
-    link: "https://www.linkedin.com/in/austyn-an-nguyen/",
-    devpostLink: "https://devpost.com/software/wili-watch",
-    image: "/projects/wiLi_watch.png",
-  },
-  {
-    title: "Beverage Delivery Robot",
-    affiliation: "University of Michigan",
-    date: "Aug 2024 – Dec 2024",
-    description:
-      "An autonomous omnidirectional robot and Java simulation designed to serve students in the Duderstadt Library",
-    longDescription:
-      "Developed a beverage delivery bot for the Duderstadt Library. Modified a VANLINNY omnidirectional robot for autonomous patrolling and developed a Java-based computer simulation to model robot navigation across various floors of the library. Conducted user interviews and surveys to gain insights into study habits and ethical opinions.",
-    tags: ["Java", "C++", "CAD", "Robotics"],
-    link: "https://www.linkedin.com/in/austyn-an-nguyen/",
-    image: "/projects/robot.png",
-  },
-  {
-    title: "FAIR-Compliant Metadata Standard",
-    affiliation: "National Institute of Standards and Technology (NIST)",
-    date: "May 2024 – Aug 2024",
-    description:
-      "Developing machine-ready RO-Crate standards for phase field simulations to enhance research data portability",
-    longDescription:
-      "Discusses the adoption of the RO-Crate standard to describe phase field simulations in computational materials science. Used software libraries to demonstrate how simulations can be packaged with metadata including computational environments, numerical schemes, and problem specifications, addressing deficiencies in machine-ready semantic web standards.",
-    tags: [
-      "Python",
-      "Shell Scripting",
-      "Unix/Linux",
-      "Pandas",
-      "Matplotlib",
-      "Git",
-      "GitHub",
-    ],
-    link: "https://www.linkedin.com/in/austyn-an-nguyen/",
-    githubLink: "https://github.com/austyn-nguyen/RO-Crate",
-    image: "/projects/pfhub.png",
-  },
-  {
-    title: "Manduca sexta Feeding Inductions",
-    affiliation: "Howard Community College",
-    date: "Aug 2023 – Dec 2023",
-    description:
-      "An investigation into the dietary flexibility and adaptability of tobacco hornworm larvae across different plant families",
-    longDescription:
-      "Investigated feeding inductions by rearing larvae on non-solanaceous plants from the Fabaceae and Cruciferae families. The study explores the dietary versatility of Manduca sexta to better understand extent of their adaptability when raised on different plant families outside their typical host range.",
-    tags: ["LaTeX", "Biology Research"],
-    link: "https://www.linkedin.com/in/austyn-an-nguyen/",
-    image: "/projects/manduca_sexta.png",
-  },
-];
+import { ArrowUpRight, ArrowLeft, ArrowRight, X } from "lucide-react";
+import { projects, type Project } from "@/src/data/projects";
 
 interface ProjectsProps {
   onToggle?: (isOpen: boolean) => void;
 }
 
+function ProjectLinks({ project }: { project: Project }) {
+  const links = [
+    { label: "Visit live page", href: project.liveLink },
+    { label: "View presentation", href: project.driveLink },
+    { label: "GitHub", href: project.githubLink },
+    { label: "Devpost", href: project.devpostLink },
+    { label: "LinkedIn", href: project.link },
+  ];
+  return <div className="project-links">{links.filter((link) => link.href).map((link) => (
+    <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer">{link.label}<ArrowUpRight size={16} aria-hidden="true" /></a>
+  ))}</div>;
+}
+
 export default function Projects({ onToggle }: ProjectsProps) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const dialog = useRef<HTMLDialogElement>(null);
+  const selected = selectedIndex === null ? null : projects[selectedIndex];
+  const featured = projects.filter((project) => project.featured);
+  const more = projects.filter((project) => !project.featured);
 
-  // Sync with main page for Navbar hiding
+  const isOpen = selectedIndex !== null;
   useEffect(() => {
-    onToggle?.(selectedIndex !== null);
-  }, [selectedIndex, onToggle]);
+    onToggle?.(isOpen);
+    if (!isOpen) return;
+    const element = dialog.current;
+    element?.showModal();
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      element?.close();
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isOpen, onToggle]); // Keep the dialog open while paging through projects.
 
+  const openProject = (project: Project) => setSelectedIndex(projects.indexOf(project));
+  const closeProject = () => setSelectedIndex(null);
   const paginate = (direction: number) => {
-    setSelectedIndex((prev) => {
-      if (prev === null) return null;
-      let next = prev + direction;
-      if (next < 0) next = projects.length - 1;
-      if (next >= projects.length) next = 0;
-      return next;
-    });
+    setSelectedIndex((index) => index === null ? null : (index + direction + projects.length) % projects.length);
+    if (dialog.current) dialog.current.scrollTop = 0;
   };
 
   return (
-    <section id="projects" className="py-20 px-8 max-w-6xl mx-auto">
-      <h2 className="text-5xl font-bold text-center mb-12">Projects</h2>
+    <section id="projects" className="selected-work">
+      <header className="work-heading">
+        <div><p className="work-eyebrow">01 / A few things I’ve worked on</p><h2>Curiosity, <span>put to work.</span></h2></div>
+        <p>From better banking experiences to better patient workflows. A few problems I’ve loved getting into.</p>
+      </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {projects.map((project, index) => (
-          <motion.div
-            key={index}
-            whileHover={{ y: -5 }}
-            onClick={() => setSelectedIndex(index)}
-            className="group p-6 rounded-xl bg-[var(--foreground)]/5 border border-[var(--accent)]/20 backdrop-blur-sm cursor-pointer flex flex-col h-full"
-          >
-            <div className="flex justify-between items-start mb-2">
-              <h3 className="text-xl font-bold group-hover:text-[var(--accent)] transition-colors leading-tight mr-2">
-                {project.title}
-              </h3>
-              <span className="text-[10px] font-mono text-[var(--muted)] whitespace-nowrap pt-1">
-                {project.date.split(" – ")[0]}
-              </span>
+      <div className="featured-projects">
+        {featured.map((project, index) => (
+          <article key={project.title} className={`featured-project ${index === 0 ? "project-lead" : ""}`}>
+            <button type="button" className={`project-preview project-preview-${index}`} onClick={() => openProject(project)} aria-label={`Read about ${project.title}`}>
+              <span className="project-preview-label">{index === 0 ? "Out in the world ↗" : index === 1 ? "Finding patterns" : "Connecting the dots"}</span>
+              <div className="project-image-frame"><Image src={project.image} alt={project.title} fill sizes={index === 0 ? "(max-width: 767px) 90vw, 600px" : "(max-width: 767px) 90vw, 520px"} className="project-image" /></div>
+              <span className="project-preview-caption">{index === 0 ? "A little less friction. A lot more clarity." : index === 1 ? "Making sense of an unpredictable market." : "Better processes, with people at the center."}</span>
+            </button>
+            <div className="featured-project-copy">
+              <p className="project-kicker"><span>0{index + 1}</span> {project.affiliation}</p>
+              <h3><button onClick={() => openProject(project)}>{project.title}</button></h3>
+              <p className="project-summary">{project.description}</p>
+              <dl className="project-facts"><div><dt>My focus</dt><dd>{project.role}</dd></div><div><dt>What came out of it</dt><dd>{project.outcome}</dd></div></dl>
+              <div className="project-card-actions"><button onClick={() => openProject(project)} className="project-read">The project story <ArrowUpRight size={18} aria-hidden="true" /></button>{project.liveLink && <a href={project.liveLink} target="_blank" rel="noopener noreferrer">Visit live page <ArrowUpRight size={16} aria-hidden="true" /></a>}</div>
             </div>
-
-            <p className="text-xs font-semibold text-[var(--accent)] mb-4 italic">
-              {project.affiliation}
-            </p>
-
-            <div className="relative w-full h-40 mb-4 overflow-hidden rounded-lg border border-[var(--accent)]/10">
-              <Image
-                src={project.image}
-                alt={project.title}
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-
-            <p className="text-[var(--muted)] text-sm mb-4 flex-grow leading-relaxed">
-              {project.description}...{" "}
-              <span className="text-[var(--accent)] text-xs font-bold underline decoration-dotted">
-                Learn More
-              </span>
-            </p>
-
-            <div className="flex gap-2 flex-wrap">
-              {project.tags.slice(0, 3).map((tag) => (
-                <span
-                  key={tag}
-                  className="px-2 py-1 text-[10px] font-medium rounded bg-[var(--accent)]/10 text-[var(--accent)] border border-[var(--accent)]/20"
-                >
-                  {tag}
-                </span>
-              ))}
-              {project.tags.length > 3 && (
-                <span className="text-[10px] text-[var(--muted)] pt-1">
-                  +{project.tags.length - 3}
-                </span>
-              )}
-            </div>
-          </motion.div>
+          </article>
         ))}
       </div>
 
-      <AnimatePresence>
-        {selectedIndex !== null && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] bg-[var(--background)]/95 backdrop-blur-md flex items-center justify-center p-4"
-            onClick={() => setSelectedIndex(null)}
-          >
-            <motion.button
-              className="absolute top-6 right-6 text-[var(--foreground)] z-[110] p-2 hover:bg-[var(--foreground)]/10 rounded-full transition-colors"
-              onClick={() => setSelectedIndex(null)}
-              whileHover={{ scale: 1.1, rotate: 90 }}
-            >
-              <FaTimes size={32} />
-            </motion.button>
+      <div className="more-work-heading"><h3>More from the workbench<span aria-hidden="true"> ✳</span></h3><p>A few more experiments, builds, and deep dives.</p></div>
+      <div className="more-projects">{more.map((project) => (
+        <article key={project.title} className="compact-project">
+          <button className="compact-project-image" onClick={() => openProject(project)} aria-label={`Read about ${project.title}`}><Image src={project.image} alt={project.title} fill sizes="(max-width: 767px) 90vw, 350px" /></button>
+          <div className="compact-project-copy"><p className="project-kicker">{project.affiliation}</p><h4><button onClick={() => openProject(project)}>{project.title}</button></h4><p>{project.description}</p><button className="project-read" onClick={() => openProject(project)}>Take a look <ArrowUpRight size={16} aria-hidden="true" /></button></div>
+        </article>
+      ))}</div>
 
-            {/* Navigation Arrows */}
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                paginate(-1);
-              }}
-              className="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 text-[var(--foreground)]/50 hover:text-[var(--foreground)] z-[110] transition-colors p-2"
-            >
-              <FaArrowLeft size={36} />
-            </button>
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                paginate(1);
-              }}
-              className="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 text-[var(--foreground)]/50 hover:text-[var(--foreground)] z-[110] transition-colors p-2"
-            >
-              <FaArrowRight size={36} />
-            </button>
-
-            {/* Lightbox Modal */}
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-[var(--background)] border border-[var(--accent)]/30 rounded-3xl max-w-5xl w-full shadow-2xl relative overflow-hidden flex flex-col md:flex-row max-h-[90vh]"
-              onClick={(e) => e.stopPropagation()}
-            >
-              {/* Left Side: Image */}
-              <div className="relative w-full md:w-1/2 h-64 md:h-auto bg-black/20">
-                <Image
-                  src={projects[selectedIndex].image}
-                  alt={projects[selectedIndex].title}
-                  fill
-                  className="object-contain p-4 md:p-8"
-                  priority
-                />
-              </div>
-
-              {/* Right Side: Text & Actions */}
-              <div className="w-full md:w-1/2 p-8 md:p-12 overflow-y-auto custom-scrollbar">
-                <div className="mb-6">
-                  <span className="text-[var(--accent)] font-bold tracking-widest uppercase text-xs">
-                    {projects[selectedIndex].affiliation} •{" "}
-                    {projects[selectedIndex].date}
-                  </span>
-                  <h2 className="text-3xl md:text-4xl font-bold mt-2 leading-tight">
-                    {projects[selectedIndex].title}
-                  </h2>
-                </div>
-
-                <div className="space-y-6">
-                  <p className="text-base md:text-lg text-[var(--muted)] leading-relaxed">
-                    {projects[selectedIndex].longDescription}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2">
-                    {projects[selectedIndex].tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-3 py-1 text-xs rounded-full bg-[var(--foreground)]/5 border border-[var(--accent)]/30 text-[var(--foreground)]"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="flex flex-wrap gap-4 pt-4">
-                    <a
-                      href={projects[selectedIndex].link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-[#0077b5] text-white font-bold hover:scale-105 transition-transform shadow-lg"
-                    >
-                      LinkedIn <FaLinkedin size={18} />
-                    </a>
-
-                    {projects[selectedIndex].githubLink && (
-                      <a
-                        href={projects[selectedIndex].githubLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-[#333] text-white font-bold hover:scale-105 transition-transform border border-white/10 shadow-lg"
-                      >
-                        GitHub <FaGithub size={18} />
-                      </a>
-                    )}
-
-                    {projects[selectedIndex].devpostLink && (
-                      <a
-                        href={projects[selectedIndex].devpostLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-[#003E54] text-white font-bold hover:scale-105 transition-transform border border-white/10 shadow-lg"
-                      >
-                        Devpost <SiDevpost size={18} />
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <dialog ref={dialog} className="project-dialog" aria-labelledby="project-dialog-title" onCancel={closeProject} onClose={() => { if (!dialog.current?.open) closeProject(); }} onClick={(event) => { if (event.target === event.currentTarget) closeProject(); }}>
+        {selected && <div className="project-dialog-content">
+          <div className="project-dialog-toolbar"><span>From the workbench</span><button onClick={closeProject} aria-label="Close project" autoFocus><X size={22} /></button></div>
+          <div className="project-dialog-image"><Image src={selected.image} alt={selected.title} fill sizes="(max-width: 767px) 90vw, 850px" className="object-contain" /></div>
+          <div className="project-dialog-copy"><p className="project-kicker">{selected.affiliation} · {selected.date}</p><h2 id="project-dialog-title">{selected.title}</h2><p>{selected.longDescription}</p><div className="project-tags">{selected.tags.map((tag) => <span key={tag}>{tag}</span>)}</div><ProjectLinks project={selected} /></div>
+          <div className="project-dialog-pagination"><button onClick={() => paginate(-1)}><ArrowLeft size={18} aria-hidden="true" />Previous</button><span aria-live="polite">{(selectedIndex ?? 0) + 1} / {projects.length}</span><button onClick={() => paginate(1)}>Next<ArrowRight size={18} aria-hidden="true" /></button></div>
+        </div>}
+      </dialog>
     </section>
   );
 }

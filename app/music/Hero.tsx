@@ -19,7 +19,7 @@ export default function Hero() {
       >
         <div className="absolute inset-0 rounded-full bg-[var(--accent)]/10 animate-pulse" />
         <Image
-          src="/me_2.png"
+          src="/images/portraits/austyn-nguyen-music.png"
           alt="Musical Journey Portrait"
           fill
           className="rounded-full object-cover object-top border-4 border-[var(--accent)] shadow-2xl"

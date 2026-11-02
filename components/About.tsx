@@ -1,152 +1,46 @@
-"use client";
-
 import Image from "next/image";
-import { SiRiotgames, SiRoblox } from "react-icons/si";
-import { motion } from "framer-motion";
+import Link from "next/link";
+import { ArrowUpRight, Gamepad2, Music2, Utensils } from "lucide-react";
 
 export default function About() {
-  // Animation variants for staggering the text elements
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2 },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  };
-
   return (
-    <section
-      id="about"
-      className="min-h-screen flex flex-col md:flex-row items-center justify-center gap-16 px-8 max-w-6xl mx-auto py-20"
-    >
-      {/* Headshot Section with Floating Animation */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="w-64 h-64 md:w-80 md:h-80 lg:w-[400px] lg:h-[400px] relative flex-shrink-0"
-      >
-        <motion.div
-          animate={{ y: [-10, 10, -10] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          className="w-full h-full relative"
-        >
-          <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[var(--accent)] to-transparent opacity-20 blur-2xl" />
-          <Image
-            src="/me.png"
-            alt="Photo of Austyn Nguyen"
-            fill
-            className="rounded-full object-cover shadow-2xl ring-4 ring-[var(--accent)]/40 transition-transform duration-500 hover:scale-[1.02]"
-            priority
-          />
-        </motion.div>
-      </motion.div>
+    <section id="about" className="personal-about">
+      <header className="about-heading">
+        <p className="work-eyebrow">02 / The person behind the projects</p>
+        <h2>A few things <span>that make me, me.</span></h2>
+      </header>
 
-      {/* Text Section with Staggered Fade-in */}
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        className="max-w-xl text-center md:text-left"
-      >
-        <motion.h2
-          variants={itemVariants}
-          className="text-4xl md:text-5xl font-black tracking-tight mb-8"
-        >
-          About <span className="text-[var(--accent)]">Me</span>
-        </motion.h2>
+      <div className="about-introduction">
+        <div className="about-story">
+          <p className="about-opening">I like figuring out how things work.<br /><span>Especially when people are part of the puzzle.</span></p>
+          <p>I’m studying Computer Science at Michigan, with an M.S.E. in Industrial &amp; Operations Engineering up next. Product management brings together the things I enjoy most: understanding people, untangling tricky problems, and building something useful.</p>
+          <p>That curiosity has taken me from banking experiences to hospital workflows to AI for economic policy. Different problems, same starting point: <strong>who are we trying to help, and what’s getting in their way?</strong></p>
+          <a href="#experiences" className="about-story-link">A few places that curiosity has taken me <ArrowUpRight size={17} aria-hidden="true" /></a>
+        </div>
+        <aside className="about-note" aria-label="A little about me">
+          <span className="about-note-pin" aria-hidden="true">✳</span>
+          <p className="about-note-heading">A little introduction</p>
+          <ul>
+            <li><span>Studying</span>Computer Science @ Michigan</li>
+            <li><span>Up next</span>Operations Research</li>
+            <li><span>Drawn to</span>Products with people at the center</li>
+          </ul>
+          <p className="about-note-signoff">Always a little curious.<span aria-hidden="true">☺</span></p>
+        </aside>
+      </div>
 
-        <motion.p
-          variants={itemVariants}
-          className="text-[var(--foreground)]/90 text-lg leading-relaxed mb-6"
-        >
-          Hi! I'm Austyn, a{" "}
-          <span className="font-bold text-[var(--accent)]">
-            Computer Science
-          </span>{" "}
-          student at the{" "}
-          <span className="font-bold text-[var(--accent)]">
-            University of Michigan
-          </span>{" "}
-          and an incoming M.S.E. student for UMich{" "}
-          <span className="font-bold text-[var(--accent)]">
-            IOE
-          </span>{" "}
-          focusing on{" "}
-          <span className="font-bold text-[var(--accent)]">
-            Operations Research
-          </span>
-          . I have a deep passion for{" "}
-          <span className="font-bold text-[var(--accent)]">
-            Product Management
-          </span>{" "}
-          and{" "}
-          <span className="font-bold text-[var(--accent)]">
-            AI-Driven Strategy
-          </span>
-          . I thrive at the intersection of user empathy and technical execution—turning complex constraints into scalable, impactful experiences.
-        </motion.p>
-
-        <motion.p
-          variants={itemVariants}
-          className="text-[var(--foreground)]/90 text-lg leading-relaxed mb-6"
-        >
-          From spearheading FinTech modernization for millions of users at <span className="font-bold">Capital One</span> to architecting agentic AI workflows for economic policy, I love bridging the gap between engineering sprints and go-to-market strategy. Whether I'm mapping clinical bottlenecks or defining API requirements, I’m driven by{" "}
-          <span className="font-semibold text-[var(--foreground)] border-b-2 border-[var(--accent)]/50 pb-0.5">
-            high-stakes problem solving
-          </span>
-          .
-        </motion.p>
-        
-        <motion.p 
-          variants={itemVariants}
-          className="text-[var(--foreground)]/90 text-lg leading-relaxed mb-10"
-        >
-          I also love playing the viola—dive into my{" "}
-          <a
-            href="/musical-journey"
-            className="font-bold text-[var(--accent)] hover:text-[var(--accent)]/80 transition-colors underline decoration-2 underline-offset-4"
-          >
-            Musical Journey
-          </a>{" "}
-          to hear more!
-        </motion.p>
-
-        {/* Hobbies/Links styled as interactive pills */}
-        <motion.div variants={itemVariants} className="mt-8">
-          <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-[var(--muted)] mb-5">
-            When I'm offline...
-          </h3>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <a
-              href="https://op.gg/lol/summoners/na/Cubaaash-NA1"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-3 bg-[var(--foreground)]/5 border border-[var(--accent)]/20 px-5 py-3 rounded-xl hover:bg-[var(--accent)]/10 hover:border-[var(--accent)]/50 transition-all duration-300 hover:-translate-y-1"
-            >
-              <SiRiotgames size={22} className="text-[#D3A755] group-hover:scale-110 transition-transform" />
-              <span className="font-medium text-sm">League of Legends</span>
-            </a>
-            
-            <a
-              href="https://www.roblox.com/user.aspx?username=GamerBoy321"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-3 bg-[var(--foreground)]/5 border border-[var(--accent)]/20 px-5 py-3 rounded-xl hover:bg-[var(--accent)]/10 hover:border-[var(--accent)]/50 transition-all duration-300 hover:-translate-y-1"
-            >
-              <SiRoblox size={22} className="text-white group-hover:scale-110 transition-transform" />
-              <span className="font-medium text-sm">Roblox Profile</span>
-            </a>
-          </div>
-        </motion.div>
-      </motion.div>
+      <div className="about-offline-heading"><h3>And when the laptop closes…</h3><span aria-hidden="true">↘</span></div>
+      <div className="about-postcards">
+        <Link href="/music" className="about-postcard about-postcard-music">
+          <div className="about-postcard-image"><Image src="/images/portraits/austyn-nguyen-music.png" alt="Austyn holding his viola on campus" fill sizes="(max-width: 767px) 90vw, 530px" /></div>
+          <div className="about-postcard-copy"><p className="about-postcard-label"><Music2 size={16} aria-hidden="true" /> A different kind of keyboard break</p><h4>There’s usually a viola involved.<ArrowUpRight size={23} aria-hidden="true" /></h4><p>Principal violist with the Michigan Pops Orchestra, and always happy to talk repertoire.</p><span className="about-postcard-cta">Come hear a little more</span></div>
+        </Link>
+        <Link href="/travel" className="about-postcard about-postcard-travel">
+          <div className="about-postcard-image"><Image src="/images/travel/travel-img-9023.jpg" alt="A bowl of pasta from Austyn’s food and travel photo collection" fill sizes="(max-width: 767px) 90vw, 530px" /></div>
+          <div className="about-postcard-copy"><p className="about-postcard-label"><Utensils size={16} aria-hidden="true" /> A camera roll full of good food</p><h4>Or something good to eat.<ArrowUpRight size={23} aria-hidden="true" /></h4><p>Local bites, new places, and a growing collection of food adventures. Yes, there’s a map.</p><span className="about-postcard-cta">Follow the food trail</span></div>
+        </Link>
+      </div>
+      <div className="about-gaming"><p><Gamepad2 size={22} aria-hidden="true" /><span>And sometimes, just one more game.</span></p><div><a href="https://op.gg/lol/summoners/na/Cubaaash-NA1" target="_blank" rel="noopener noreferrer">League of Legends <ArrowUpRight size={15} aria-hidden="true" /></a><a href="https://www.roblox.com/user.aspx?username=GamerBoy321" target="_blank" rel="noopener noreferrer">Roblox <ArrowUpRight size={15} aria-hidden="true" /></a></div></div>
     </section>
   );
 }

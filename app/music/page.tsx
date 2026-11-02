@@ -14,7 +14,7 @@ const timelineEvents: TimelineEvent[] = [
     description:
       "Began playing the viola in 5th grade at Woodbridge Elementary School in Catonsville, Maryland. What started as curiosity blossomed into a lifelong passion.",
     location: "Woodbridge Elementary, Catonsville, MD",
-    images: ["/timeline/cms.jpg"],
+    images: ["/images/music/timeline/woodbridge-elementary.jpg"],
   },
   {
     year: "2019-2020",
@@ -22,7 +22,7 @@ const timelineEvents: TimelineEvent[] = [
     description:
       "Moved to Ellicott City, Maryland in 8th grade and was placed into the Gifted and Talented (G/T) Dunloggin Middle School orchestra.",
     location: "Dunloggin Middle School, Ellicott City, MD",
-    images: ["/timeline/dms.png"],
+    images: ["/images/music/timeline/dunloggin-middle-school.png"],
   },
   {
     year: "2020",
@@ -30,7 +30,7 @@ const timelineEvents: TimelineEvent[] = [
     description:
       "Entered high school in September 2020. Initially considered quitting after one year, but found renewed inspiration.",
     location: "Centennial High School, Ellicott City, MD",
-    images: ["/timeline/chs.png"],
+    images: ["/images/music/timeline/centennial-high-school.png"],
   },
   {
     year: "2021",
@@ -52,7 +52,7 @@ const timelineEvents: TimelineEvent[] = [
     description:
       "Part of my high school's Music Mentors club to mentor middle school musicians. Served as an online viola tutor through the nonprofit Do Re Mi Project, guiding aspiring musicians into prestigious youth orchestras.",
     location: "Burleigh Manor Middle School & Online, Ellicott City, MD",
-    images: ["/timeline/doremi.png", "/timeline/music_mentors.png"],
+    images: ["/images/music/timeline/do-re-mi-project.png", "/images/music/timeline/music-mentors.png"],
   },
   {
     year: "2022-2024",
@@ -61,7 +61,7 @@ const timelineEvents: TimelineEvent[] = [
       "Started playing in chamber experiences for retirement centers. Became president of the Centennial Music Outreach Club in my senior year of high school.",
     location:
       "Centennial High School & Local Retirement Centers, Ellicott City, MD",
-    images: ["/timeline/cmop.png"],
+    images: ["/images/music/timeline/centennial-music-outreach.png"],
   },
   {
     year: "2025 and Beyond",
@@ -69,7 +69,7 @@ const timelineEvents: TimelineEvent[] = [
     description:
       "Continuing my musical journey at UMich studying under Zoie Hightower. Principal Viola of the UMich Pops Orchestra and substitute violist for Adrian Symphony Orchestra.",
     location: "Ann Arbor, MI",
-    images: ["/timeline/mpo.png", "/timeline/aso.png"],
+    images: ["/images/music/timeline/michigan-pops-orchestra.png", "/images/music/timeline/adrian-symphony-orchestra.png"],
   },
 ];
 
@@ -103,7 +103,7 @@ export default function MusicalJourneyPage() {
 
         {/* Photo Gallery Grid */}
         <Gallery
-          imagesUrl="/gallery/gallery.json"
+          imagesUrl="/data/music-gallery.json"
           onToggle={(isOpen) => setIsLightboxOpen(isOpen)}
         />
       </div>

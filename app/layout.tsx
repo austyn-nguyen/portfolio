@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-[var(--background)] text-[var(--foreground)] transition-colors duration-300">
         <script
           dangerouslySetInnerHTML={{
-            __html: `document.documentElement.classList.add(localStorage.getItem('theme') || 'light');`,
+            __html: `try { document.documentElement.classList.add(localStorage.getItem('theme') === 'dark' ? 'dark' : 'light'); } catch { document.documentElement.classList.add('light'); }`,
           }}
         />
         <ScrollRestoration />

@@ -1,44 +1,30 @@
 "use client";
 
 import { Moon, Sun } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
+
+function subscribe(callback: () => void) {
+  const observer = new MutationObserver(callback);
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+  return () => observer.disconnect();
+}
+function getTheme() {
+  return document.documentElement.classList.contains("dark") ? "dark" : "light";
+}
+function getServerTheme() { return "light"; }
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
-
-    const html = document.documentElement;
-
-    html.classList.remove("light", "dark");
-
-    if (savedTheme) {
-      html.classList.add(savedTheme);
-      setTheme(savedTheme);
-    } else {
-      html.classList.add("light");
-    }
-  }, []);
-
+  const theme = useSyncExternalStore(subscribe, getTheme, getServerTheme);
   const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    const html = document.documentElement;
-
-    html.classList.remove("light", "dark");
-    html.classList.add(newTheme);
-
-    setTheme(newTheme);
-    localStorage.setItem("theme", newTheme);
+    const nextTheme = theme === "light" ? "dark" : "light";
+    document.documentElement.classList.remove("light", "dark");
+    document.documentElement.classList.add(nextTheme);
+    try { localStorage.setItem("theme", nextTheme); } catch { /* Theme still works when storage is unavailable. */ }
   };
 
   return (
-    <button
-      onClick={toggleTheme}
-      aria-label="Toggle theme"
-      className="rounded-full p-3 bg-[var(--accent)] text-gray-900 shadow-lg hover:scale-110 transition"
-    >
-      {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
+    <button type="button" onClick={toggleTheme} aria-label={`Switch to ${theme === "light" ? "dark" : "light"} theme`} className="theme-toggle">
+      {theme === "light" ? <Moon size={20} aria-hidden="true" /> : <Sun size={20} aria-hidden="true" />}
     </button>
   );
 }

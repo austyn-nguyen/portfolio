@@ -10,12 +10,14 @@ import Experiences from "@/components/Experiences";
 import Education from "@/components/Education"; 
 import Contact from "@/components/Contacts";
 import Roadmap from "@/components/Roadmap";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
   return (
     <div className="relative min-h-screen">
+      <a className="skip-link" href="#main-content">Skip to content</a>
       <div
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
           isLightboxOpen
@@ -26,16 +28,17 @@ export default function Home() {
         <Navbar page="portfolio" />
       </div>
 
-      <main className="pt-16">
+      <main id="main-content" className="portfolio-main" tabIndex={-1}>
         <Hero />
+        <Projects onToggle={setIsLightboxOpen} />
         <About />
-        <Education />
         <Experiences />
-        <Projects onToggle={(isOpen) => setIsLightboxOpen(isOpen)} />
-        <Roadmap />
+        <Education />
         <Skills />
+        <Roadmap />
         <Contact />
       </main>
+      <Footer />
     </div>
   );
 }

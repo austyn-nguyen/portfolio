@@ -99,10 +99,14 @@ async function syncDropboxMap() {
                 mode: 'bestfit'       // Maintain aspect ratio
             });
 
-            // 4. Save file with new .jpg extension
-            // Removes old extension, adds .jpg
-            const safeName = entry.name.replace(/\.[^/.]+$/, "") + ".jpg";
+            // 4. Match the local library's lowercase, hyphenated filenames.
+            const safeName = "travel-" + entry.name.replace(/\.[^/.]+$/, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") + ".jpg";
             const localPath = path.join(IMAGE_DIR, safeName);
+            if (existsSync(localPath)) {
+              console.warn(`Skipping filename collision: ${entry.name} -> ${safeName}`);
+              skippedCount++;
+              continue;
+            }
             
             // @ts-ignore
             await fs.writeFile(localPath, thumbData.result.fileBinary);
@@ -120,6 +124,7 @@ async function syncDropboxMap() {
                 date: exif.DateTimeOriginal || new Date().toISOString(),
               },
             });
+            existingNames.add(entry.name);
             console.log(`   ✅ Converted & Saved: ${safeName}`);
             newCount++;
           } else {
