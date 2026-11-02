@@ -1,9 +1,6 @@
-"use client";
-
-import { useState } from "react";
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Timeline, { TimelineEvent } from "./Timeline";
-import Gallery from "./Gallery";
 import PerformanceShowcase from "./PerformanceShowcase";
 import Hero from "./Hero";
 
@@ -74,39 +71,19 @@ const timelineEvents: TimelineEvent[] = [
 ];
 
 export default function MusicalJourneyPage() {
-  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
-
   return (
     <div className="relative min-h-screen overflow-x-hidden">
-      {/* Navbar fades out when the Gallery Lightbox is open to avoid overlapping */}
-      <div
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-          isLightboxOpen
-            ? "opacity-0 -translate-y-full pointer-events-none"
-            : "opacity-100 translate-y-0"
-        }`}
-      >
+      <div className="fixed top-0 left-0 w-full z-50">
         <Navbar page="music" />
       </div>
 
-      {/* NEW: Modular Hero Section (Centering your image and title) */}
-      <Hero />
-
-      <div className="px-8 py-20 max-w-5xl mx-auto relative z-10">
-        {/* Performance Showcase with an ID for smooth-scroll targets */}
-        <div id="performances">
-          <PerformanceShowcase />
-        </div>
-
-        {/* Chronological Journey */}
+      <a className="skip-link" href="#music-content">Skip to content</a>
+      <main id="music-content" className="music-main" tabIndex={-1}>
+        <Hero />
+        <PerformanceShowcase />
         <Timeline events={timelineEvents} />
-
-        {/* Photo Gallery Grid */}
-        <Gallery
-          imagesUrl="/data/music-gallery.json"
-          onToggle={(isOpen) => setIsLightboxOpen(isOpen)}
-        />
-      </div>
+      </main>
+      <Footer page="music" />
     </div>
   );
 }

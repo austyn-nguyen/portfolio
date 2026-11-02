@@ -23,8 +23,9 @@ export default function ThemeToggle() {
   };
 
   return (
-    <button type="button" onClick={toggleTheme} aria-label={`Switch to ${theme === "light" ? "dark" : "light"} theme`} className="theme-toggle">
-      {theme === "light" ? <Moon size={20} aria-hidden="true" /> : <Sun size={20} aria-hidden="true" />}
+    <button type="button" onClick={toggleTheme} aria-label={`Switch to ${theme === "light" ? "dark" : "light"} theme`} className="theme-toggle" data-theme={theme}>
+      <Moon className="theme-icon theme-icon-moon" size={20} aria-hidden="true" />
+      <Sun className="theme-icon theme-icon-sun" size={20} aria-hidden="true" />
     </button>
   );
 }

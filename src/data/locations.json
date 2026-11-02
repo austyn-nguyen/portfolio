@@ -13,7 +13,9 @@
       "properties": {
         "src": "/images/travel/travel-1386.jpg",
         "name": "1386.jpeg",
-        "date": "2022-06-02T19:24:17.000Z"
+        "date": "2022-06-02T19:24:17.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -28,7 +30,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9023.jpg",
         "name": "IMG_9023.HEIC",
-        "date": "2026-01-06T20:02:28.000Z"
+        "date": "2026-01-06T20:02:28.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -43,7 +47,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1259.jpg",
         "name": "IMG_1259.heic",
-        "date": "2026-01-09T05:13:13.000Z"
+        "date": "2026-01-09T05:13:13.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -58,7 +64,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9077.jpg",
         "name": "IMG_9077.HEIC",
-        "date": "2026-01-13T04:22:19.000Z"
+        "date": "2026-01-13T04:22:19.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -73,7 +81,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9103.jpg",
         "name": "IMG_9103.HEIC",
-        "date": "2026-01-16T13:55:28.000Z"
+        "date": "2026-01-16T13:55:28.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -88,7 +98,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9104.jpg",
         "name": "IMG_9104.HEIC",
-        "date": "2026-01-16T13:55:32.000Z"
+        "date": "2026-01-16T13:55:32.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -103,7 +115,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9111.jpg",
         "name": "IMG_9111.HEIC",
-        "date": "2026-01-16T21:01:01.000Z"
+        "date": "2026-01-16T21:01:01.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -118,7 +132,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9113.jpg",
         "name": "IMG_9113.HEIC",
-        "date": "2026-01-17T01:38:23.000Z"
+        "date": "2026-01-17T01:38:23.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -133,7 +149,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9118.jpg",
         "name": "IMG_9118.HEIC",
-        "date": "2026-01-17T03:28:43.000Z"
+        "date": "2026-01-17T03:28:43.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -148,7 +166,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9119.jpg",
         "name": "IMG_9119.HEIC",
-        "date": "2026-01-17T03:28:52.000Z"
+        "date": "2026-01-17T03:28:52.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -163,7 +183,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9120.jpg",
         "name": "IMG_9120.HEIC",
-        "date": "2026-01-17T18:28:42.000Z"
+        "date": "2026-01-17T18:28:42.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -178,7 +200,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9126.jpg",
         "name": "IMG_9126.HEIC",
-        "date": "2026-01-18T00:24:14.000Z"
+        "date": "2026-01-18T00:24:14.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -193,7 +217,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9128.jpg",
         "name": "IMG_9128.HEIC",
-        "date": "2026-01-18T00:37:37.000Z"
+        "date": "2026-01-18T00:37:37.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -208,7 +234,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9129.jpg",
         "name": "IMG_9129.HEIC",
-        "date": "2026-01-18T01:05:00.000Z"
+        "date": "2026-01-18T01:05:00.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -223,7 +251,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9135.jpg",
         "name": "IMG_9135.HEIC",
-        "date": "2026-01-18T06:02:07.000Z"
+        "date": "2026-01-18T06:02:07.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -238,7 +268,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2304.jpg",
         "name": "IMG_2304.HEIC",
-        "date": "2026-01-23T03:21:01.000Z"
+        "date": "2026-01-23T03:21:01.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -253,7 +285,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9136.jpg",
         "name": "IMG_9136.HEIC",
-        "date": "2026-01-18T06:02:11.000Z"
+        "date": "2026-01-18T06:02:11.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -268,7 +302,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9139.jpg",
         "name": "IMG_9139.HEIC",
-        "date": "2026-01-18T23:13:37.000Z"
+        "date": "2026-01-18T23:13:37.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -283,7 +319,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9140.jpg",
         "name": "IMG_9140.HEIC",
-        "date": "2026-01-18T23:13:40.000Z"
+        "date": "2026-01-18T23:13:40.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -298,7 +336,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9148.jpg",
         "name": "IMG_9148.HEIC",
-        "date": "2026-01-19T17:36:51.000Z"
+        "date": "2026-01-19T17:36:51.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -313,7 +353,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7128.jpg",
         "name": "IMG_7128.HEIC",
-        "date": "2025-08-08T10:58:41.000Z"
+        "date": "2025-08-08T10:58:41.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -328,7 +370,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7135.jpg",
         "name": "IMG_7135.HEIC",
-        "date": "2025-08-08T16:23:50.000Z"
+        "date": "2025-08-08T16:23:50.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -343,7 +387,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7136.jpg",
         "name": "IMG_7136.HEIC",
-        "date": "2025-08-08T16:25:49.000Z"
+        "date": "2025-08-08T16:25:49.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -358,7 +404,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9202.jpg",
         "name": "IMG_9202.HEIC",
-        "date": "2026-01-23T07:08:56.000Z"
+        "date": "2026-01-23T07:08:56.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -373,7 +421,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7138.jpg",
         "name": "IMG_7138.HEIC",
-        "date": "2025-08-08T16:26:01.000Z"
+        "date": "2025-08-08T16:26:01.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -388,7 +438,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7149.jpg",
         "name": "IMG_7149.HEIC",
-        "date": "2025-08-08T23:14:43.000Z"
+        "date": "2025-08-08T23:14:43.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -403,7 +455,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7168.jpg",
         "name": "IMG_7168.HEIC",
-        "date": "2025-08-09T17:36:07.000Z"
+        "date": "2025-08-09T17:36:07.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -418,7 +472,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7171.jpg",
         "name": "IMG_7171.HEIC",
-        "date": "2025-08-09T20:07:50.000Z"
+        "date": "2025-08-09T20:07:50.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -433,7 +489,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7185.jpg",
         "name": "IMG_7185.HEIC",
-        "date": "2025-08-11T14:12:45.000Z"
+        "date": "2025-08-11T14:12:45.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -448,7 +506,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7206.jpg",
         "name": "IMG_7206.HEIC",
-        "date": "2025-08-11T19:25:08.000Z"
+        "date": "2025-08-11T19:25:08.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -463,7 +523,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7207.jpg",
         "name": "IMG_7207.HEIC",
-        "date": "2025-08-11T19:28:00.000Z"
+        "date": "2025-08-11T19:28:00.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -478,7 +540,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7221.jpg",
         "name": "IMG_7221.HEIC",
-        "date": "2025-08-11T23:25:08.000Z"
+        "date": "2025-08-11T23:25:08.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -493,7 +557,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7222.jpg",
         "name": "IMG_7222.HEIC",
-        "date": "2025-08-11T23:25:55.000Z"
+        "date": "2025-08-11T23:25:55.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -508,7 +574,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7223.jpg",
         "name": "IMG_7223.HEIC",
-        "date": "2025-08-11T23:25:59.000Z"
+        "date": "2025-08-11T23:25:59.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -523,7 +591,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7224.jpg",
         "name": "IMG_7224.HEIC",
-        "date": "2025-08-11T23:26:00.000Z"
+        "date": "2025-08-11T23:26:00.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -538,7 +608,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7231.jpg",
         "name": "IMG_7231.HEIC",
-        "date": "2025-08-12T13:46:58.000Z"
+        "date": "2025-08-12T13:46:58.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -553,7 +625,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7236.jpg",
         "name": "IMG_7236.HEIC",
-        "date": "2025-08-12T13:49:08.000Z"
+        "date": "2025-08-12T13:49:08.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -568,7 +642,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7259.jpg",
         "name": "IMG_7259.HEIC",
-        "date": "2025-08-12T17:51:50.000Z"
+        "date": "2025-08-12T17:51:50.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -583,7 +659,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7261.jpg",
         "name": "IMG_7261.HEIC",
-        "date": "2025-08-12T17:52:01.000Z"
+        "date": "2025-08-12T17:52:01.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -598,7 +676,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7278.jpg",
         "name": "IMG_7278.HEIC",
-        "date": "2025-08-12T21:36:46.000Z"
+        "date": "2025-08-12T21:36:46.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -613,7 +693,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7279.jpg",
         "name": "IMG_7279.HEIC",
-        "date": "2025-08-12T21:38:46.000Z"
+        "date": "2025-08-12T21:38:46.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -628,7 +710,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7280.jpg",
         "name": "IMG_7280.HEIC",
-        "date": "2025-08-12T21:43:46.000Z"
+        "date": "2025-08-12T21:43:46.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -643,7 +727,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7281.jpg",
         "name": "IMG_7281.HEIC",
-        "date": "2025-08-12T21:48:24.000Z"
+        "date": "2025-08-12T21:48:24.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -658,7 +744,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7282.jpg",
         "name": "IMG_7282.HEIC",
-        "date": "2025-08-12T21:57:11.000Z"
+        "date": "2025-08-12T21:57:11.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -673,7 +761,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7286.jpg",
         "name": "IMG_7286.HEIC",
-        "date": "2025-08-12T23:08:59.000Z"
+        "date": "2025-08-12T23:08:59.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -688,7 +778,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7326.jpg",
         "name": "IMG_7326.HEIC",
-        "date": "2025-08-13T03:39:22.000Z"
+        "date": "2025-08-13T03:39:22.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -703,7 +795,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7327.jpg",
         "name": "IMG_7327.HEIC",
-        "date": "2025-08-13T03:39:24.000Z"
+        "date": "2025-08-13T03:39:24.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -718,7 +812,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7339.jpg",
         "name": "IMG_7339.HEIC",
-        "date": "2025-08-14T16:13:53.000Z"
+        "date": "2025-08-14T16:13:53.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -733,7 +829,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7344.jpg",
         "name": "IMG_7344.HEIC",
-        "date": "2025-08-14T19:56:09.000Z"
+        "date": "2025-08-14T19:56:09.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -748,7 +846,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7414.jpg",
         "name": "IMG_7414.HEIC",
-        "date": "2025-08-20T22:38:33.000Z"
+        "date": "2025-08-20T22:38:33.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -763,7 +863,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7471.jpg",
         "name": "IMG_7471.HEIC",
-        "date": "2025-08-24T18:54:40.000Z"
+        "date": "2025-08-24T18:54:40.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -778,7 +880,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7512.jpg",
         "name": "IMG_7512.HEIC",
-        "date": "2025-08-29T01:50:14.000Z"
+        "date": "2025-08-29T01:50:14.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -793,7 +897,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7537.jpg",
         "name": "IMG_7537.HEIC",
-        "date": "2025-08-30T21:01:47.000Z"
+        "date": "2025-08-30T21:01:47.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -808,7 +914,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7548.jpg",
         "name": "IMG_7548.HEIC",
-        "date": "2025-09-01T02:59:30.000Z"
+        "date": "2025-09-01T02:59:30.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -823,7 +931,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7549.jpg",
         "name": "IMG_7549.HEIC",
-        "date": "2025-09-01T16:26:11.000Z"
+        "date": "2025-09-01T16:26:11.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -838,7 +948,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7600.jpg",
         "name": "IMG_7600.HEIC",
-        "date": "2025-09-07T23:15:52.000Z"
+        "date": "2025-09-07T23:15:52.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -853,7 +965,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7617.jpg",
         "name": "IMG_7617.HEIC",
-        "date": "2025-09-11T22:35:48.000Z"
+        "date": "2025-09-11T22:35:48.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -868,7 +982,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7637.jpg",
         "name": "IMG_7637.HEIC",
-        "date": "2025-09-14T17:29:34.000Z"
+        "date": "2025-09-14T17:29:34.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -883,7 +999,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7645.jpg",
         "name": "IMG_7645.HEIC",
-        "date": "2025-09-14T17:37:44.000Z"
+        "date": "2025-09-14T17:37:44.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -898,7 +1016,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3508.jpg",
         "name": "IMG_3508.HEIC",
-        "date": "2025-09-17T17:17:12.000Z"
+        "date": "2025-09-17T17:17:12.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -913,7 +1033,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7646.jpg",
         "name": "IMG_7646.HEIC",
-        "date": "2025-09-14T17:38:10.000Z"
+        "date": "2025-09-14T17:38:10.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -928,7 +1050,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7648.jpg",
         "name": "IMG_7648.HEIC",
-        "date": "2025-09-14T18:56:18.000Z"
+        "date": "2025-09-14T18:56:18.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -943,7 +1067,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7655.jpg",
         "name": "IMG_7655.HEIC",
-        "date": "2025-09-17T21:28:32.000Z"
+        "date": "2025-09-17T21:28:32.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -958,7 +1084,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7656.jpg",
         "name": "IMG_7656.HEIC",
-        "date": "2025-09-17T21:39:57.000Z"
+        "date": "2025-09-17T21:39:57.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -973,7 +1101,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7657.jpg",
         "name": "IMG_7657.HEIC",
-        "date": "2025-09-17T21:40:03.000Z"
+        "date": "2025-09-17T21:40:03.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -988,7 +1118,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7661.jpg",
         "name": "IMG_7661.HEIC",
-        "date": "2025-09-18T10:04:30.000Z"
+        "date": "2025-09-18T10:04:30.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1003,7 +1135,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7665.jpg",
         "name": "IMG_7665.HEIC",
-        "date": "2025-09-19T20:39:22.000Z"
+        "date": "2025-09-19T20:39:22.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1018,7 +1152,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7669.jpg",
         "name": "IMG_7669.HEIC",
-        "date": "2025-09-20T22:54:36.000Z"
+        "date": "2025-09-20T22:54:36.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1033,7 +1169,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7681.jpg",
         "name": "IMG_7681.HEIC",
-        "date": "2025-09-26T05:33:05.000Z"
+        "date": "2025-09-26T05:33:05.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1048,7 +1186,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7683.jpg",
         "name": "IMG_7683.HEIC",
-        "date": "2025-09-26T16:53:33.000Z"
+        "date": "2025-09-26T16:53:33.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1063,7 +1203,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7727-1.jpg",
         "name": "IMG_7727 (1).HEIC",
-        "date": "2025-10-01T04:31:11.000Z"
+        "date": "2025-10-01T04:31:11.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1078,7 +1220,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7754.jpg",
         "name": "IMG_7754.HEIC",
-        "date": "2025-10-03T04:26:17.000Z"
+        "date": "2025-10-03T04:26:17.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1093,7 +1237,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7760.jpg",
         "name": "IMG_7760.HEIC",
-        "date": "2025-10-04T19:20:03.000Z"
+        "date": "2025-10-04T19:20:03.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1108,7 +1254,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7768.jpg",
         "name": "IMG_7768.HEIC",
-        "date": "2025-10-07T02:18:44.000Z"
+        "date": "2025-10-07T02:18:44.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1123,7 +1271,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7771.jpg",
         "name": "IMG_7771.HEIC",
-        "date": "2025-10-07T02:23:28.000Z"
+        "date": "2025-10-07T02:23:28.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1138,7 +1288,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7779.jpg",
         "name": "IMG_7779.HEIC",
-        "date": "2025-10-10T16:45:35.000Z"
+        "date": "2025-10-10T16:45:35.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1153,7 +1305,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7798.jpg",
         "name": "IMG_7798.HEIC",
-        "date": "2025-10-11T14:18:37.000Z"
+        "date": "2025-10-11T14:18:37.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1168,7 +1322,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7799.jpg",
         "name": "IMG_7799.HEIC",
-        "date": "2025-10-11T14:18:39.000Z"
+        "date": "2025-10-11T14:18:39.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1183,7 +1339,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7800.jpg",
         "name": "IMG_7800.HEIC",
-        "date": "2025-10-11T14:31:24.000Z"
+        "date": "2025-10-11T14:31:24.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1198,7 +1356,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7802.jpg",
         "name": "IMG_7802.HEIC",
-        "date": "2025-10-11T14:31:32.000Z"
+        "date": "2025-10-11T14:31:32.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1213,7 +1373,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7803.jpg",
         "name": "IMG_7803.HEIC",
-        "date": "2025-10-11T14:31:37.000Z"
+        "date": "2025-10-11T14:31:37.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1228,7 +1390,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7934.jpg",
         "name": "IMG_7934.HEIC",
-        "date": "2025-10-13T01:05:51.000Z"
+        "date": "2025-10-13T01:05:51.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1243,7 +1407,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7935.jpg",
         "name": "IMG_7935.HEIC",
-        "date": "2025-10-13T01:06:11.000Z"
+        "date": "2025-10-13T01:06:11.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1258,7 +1424,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8038.jpg",
         "name": "IMG_8038.HEIC",
-        "date": "2025-10-17T04:40:48.000Z"
+        "date": "2025-10-17T04:40:48.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1273,7 +1441,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1284.jpg",
         "name": "IMG_1284.HEIC",
-        "date": "2025-10-19T05:31:01.000Z"
+        "date": "2025-10-19T05:31:01.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -1288,7 +1458,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4079.jpg",
         "name": "IMG_4079.HEIC",
-        "date": "2025-10-22T00:50:20.000Z"
+        "date": "2025-10-22T00:50:20.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1303,7 +1475,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8118.jpg",
         "name": "IMG_8118.HEIC",
-        "date": "2025-10-27T18:47:36.000Z"
+        "date": "2025-10-27T18:47:36.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1318,7 +1492,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8129.jpg",
         "name": "IMG_8129.HEIC",
-        "date": "2025-10-31T18:54:06.000Z"
+        "date": "2025-10-31T18:54:06.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1333,7 +1509,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8161.jpg",
         "name": "IMG_8161.HEIC",
-        "date": "2025-11-08T20:51:05.000Z"
+        "date": "2025-11-08T20:51:05.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1348,7 +1526,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8168.jpg",
         "name": "IMG_8168.HEIC",
-        "date": "2025-11-12T04:23:38.000Z"
+        "date": "2025-11-12T04:23:38.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1363,7 +1543,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8185.jpg",
         "name": "IMG_8185.HEIC",
-        "date": "2025-11-15T19:39:57.000Z"
+        "date": "2025-11-15T19:39:57.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1378,7 +1560,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8239.jpg",
         "name": "IMG_8239.HEIC",
-        "date": "2025-11-19T01:29:29.000Z"
+        "date": "2025-11-19T01:29:29.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1393,7 +1577,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8242.jpg",
         "name": "IMG_8242.HEIC",
-        "date": "2025-11-19T01:46:01.000Z"
+        "date": "2025-11-19T01:46:01.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1408,7 +1594,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8256.jpg",
         "name": "IMG_8256.HEIC",
-        "date": "2025-11-22T01:25:31.000Z"
+        "date": "2025-11-22T01:25:31.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1423,7 +1611,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7333.jpg",
         "name": "IMG_7333.heic",
-        "date": "2025-11-23T01:11:55.000Z"
+        "date": "2025-11-23T01:11:55.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1438,7 +1628,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8270.jpg",
         "name": "IMG_8270.HEIC",
-        "date": "2025-11-22T19:26:13.000Z"
+        "date": "2025-11-22T19:26:13.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1453,7 +1645,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8283.jpg",
         "name": "IMG_8283.HEIC",
-        "date": "2025-11-23T01:12:02.000Z"
+        "date": "2025-11-23T01:12:02.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1468,7 +1662,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8285.jpg",
         "name": "IMG_8285.HEIC",
-        "date": "2025-11-23T01:22:13.000Z"
+        "date": "2025-11-23T01:22:13.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1483,7 +1679,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8302.jpg",
         "name": "IMG_8302.HEIC",
-        "date": "2025-11-23T20:12:47.000Z"
+        "date": "2025-11-23T20:12:47.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1498,7 +1696,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8371.jpg",
         "name": "IMG_8371.HEIC",
-        "date": "2025-11-25T14:28:10.000Z"
+        "date": "2025-11-25T14:28:10.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1513,7 +1713,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8434.jpg",
         "name": "IMG_8434.HEIC",
-        "date": "2025-11-25T21:11:58.000Z"
+        "date": "2025-11-25T21:11:58.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1528,7 +1730,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8437.jpg",
         "name": "IMG_8437.HEIC",
-        "date": "2025-11-25T21:13:19.000Z"
+        "date": "2025-11-25T21:13:19.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1543,7 +1747,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4843.jpg",
         "name": "IMG_4843.HEIC",
-        "date": "2025-11-25T21:13:22.000Z"
+        "date": "2025-11-25T21:13:22.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1558,7 +1764,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8235.jpg",
         "name": "IMG_8235.heic",
-        "date": "2025-11-27T00:49:19.000Z"
+        "date": "2025-11-27T00:49:19.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1573,7 +1781,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8446.jpg",
         "name": "IMG_8446.HEIC",
-        "date": "2025-11-26T02:32:09.000Z"
+        "date": "2025-11-26T02:32:09.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1588,7 +1798,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8485.jpg",
         "name": "IMG_8485.HEIC",
-        "date": "2025-11-27T00:49:32.000Z"
+        "date": "2025-11-27T00:49:32.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1603,7 +1815,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8486.jpg",
         "name": "IMG_8486.HEIC",
-        "date": "2025-11-27T00:49:37.000Z"
+        "date": "2025-11-27T00:49:37.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1618,7 +1832,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8487.jpg",
         "name": "IMG_8487.HEIC",
-        "date": "2025-11-27T00:58:12.000Z"
+        "date": "2025-11-27T00:58:12.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1633,7 +1849,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8488.jpg",
         "name": "IMG_8488.HEIC",
-        "date": "2025-11-27T00:58:17.000Z"
+        "date": "2025-11-27T00:58:17.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1648,7 +1866,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8489.jpg",
         "name": "IMG_8489.HEIC",
-        "date": "2025-11-27T00:58:22.000Z"
+        "date": "2025-11-27T00:58:22.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1663,7 +1883,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8491.jpg",
         "name": "IMG_8491.HEIC",
-        "date": "2025-11-27T01:01:30.000Z"
+        "date": "2025-11-27T01:01:30.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1678,7 +1900,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8492.jpg",
         "name": "IMG_8492.HEIC",
-        "date": "2025-11-27T01:01:36.000Z"
+        "date": "2025-11-27T01:01:36.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1693,7 +1917,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8515.jpg",
         "name": "IMG_8515.HEIC",
-        "date": "2025-11-27T03:40:35.000Z"
+        "date": "2025-11-27T03:40:35.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1708,7 +1934,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8516.jpg",
         "name": "IMG_8516.HEIC",
-        "date": "2025-11-27T03:57:33.000Z"
+        "date": "2025-11-27T03:57:33.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1723,7 +1951,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8526.jpg",
         "name": "IMG_8526.HEIC",
-        "date": "2025-11-27T09:45:51.000Z"
+        "date": "2025-11-27T09:45:51.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1738,7 +1968,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8530.jpg",
         "name": "IMG_8530.HEIC",
-        "date": "2025-11-27T17:16:01.000Z"
+        "date": "2025-11-27T17:16:01.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1753,7 +1985,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8561.jpg",
         "name": "IMG_8561.HEIC",
-        "date": "2025-11-28T01:50:03.000Z"
+        "date": "2025-11-28T01:50:03.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1768,7 +2002,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8562.jpg",
         "name": "IMG_8562.HEIC",
-        "date": "2025-11-28T01:50:06.000Z"
+        "date": "2025-11-28T01:50:06.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1783,7 +2019,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8564.jpg",
         "name": "IMG_8564.HEIC",
-        "date": "2025-11-28T01:50:16.000Z"
+        "date": "2025-11-28T01:50:16.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1798,7 +2036,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7291.jpg",
         "name": "IMG_7291.HEIC",
-        "date": "2025-11-29T00:41:41.000Z"
+        "date": "2025-11-29T00:41:41.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1813,7 +2053,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8571.jpg",
         "name": "IMG_8571.HEIC",
-        "date": "2025-11-28T13:35:37.000Z"
+        "date": "2025-11-28T13:35:37.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1828,7 +2070,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8590.jpg",
         "name": "IMG_8590.HEIC",
-        "date": "2025-11-29T17:16:35.000Z"
+        "date": "2025-11-29T17:16:35.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1843,7 +2087,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8618.jpg",
         "name": "IMG_8618.HEIC",
-        "date": "2025-12-03T07:54:59.000Z"
+        "date": "2025-12-03T07:54:59.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1858,7 +2104,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8629.jpg",
         "name": "IMG_8629.HEIC",
-        "date": "2025-12-06T00:21:05.000Z"
+        "date": "2025-12-06T00:21:05.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1873,7 +2121,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8630.jpg",
         "name": "IMG_8630.HEIC",
-        "date": "2025-12-06T00:21:19.000Z"
+        "date": "2025-12-06T00:21:19.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1888,7 +2138,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8657.jpg",
         "name": "IMG_8657.HEIC",
-        "date": "2025-12-08T00:15:39.000Z"
+        "date": "2025-12-08T00:15:39.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1903,7 +2155,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8658.jpg",
         "name": "IMG_8658.HEIC",
-        "date": "2025-12-08T00:17:23.000Z"
+        "date": "2025-12-08T00:17:23.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1918,7 +2172,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8659.jpg",
         "name": "IMG_8659.HEIC",
-        "date": "2025-12-08T00:21:53.000Z"
+        "date": "2025-12-08T00:21:53.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1933,7 +2189,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8673.jpg",
         "name": "IMG_8673.HEIC",
-        "date": "2025-12-08T23:07:23.000Z"
+        "date": "2025-12-08T23:07:23.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1948,7 +2206,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8677-1.jpg",
         "name": "IMG_8677 (1).HEIC",
-        "date": "2025-12-09T03:32:48.000Z"
+        "date": "2025-12-09T03:32:48.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1963,7 +2223,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8678-1.jpg",
         "name": "IMG_8678 (1).HEIC",
-        "date": "2025-12-09T03:42:19.000Z"
+        "date": "2025-12-09T03:42:19.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1978,7 +2240,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8689.jpg",
         "name": "IMG_8689.HEIC",
-        "date": "2025-12-09T21:24:57.000Z"
+        "date": "2025-12-09T21:24:57.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -1993,7 +2257,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8690-1.jpg",
         "name": "IMG_8690 (1).HEIC",
-        "date": "2025-12-09T21:25:02.000Z"
+        "date": "2025-12-09T21:25:02.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2008,7 +2274,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8775.jpg",
         "name": "IMG_8775.HEIC",
-        "date": "2025-12-14T06:30:10.000Z"
+        "date": "2025-12-14T06:30:10.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2023,7 +2291,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7698.jpg",
         "name": "IMG_7698.HEIC",
-        "date": "2025-12-21T17:09:14.000Z"
+        "date": "2025-12-21T17:09:14.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2038,7 +2308,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7699.jpg",
         "name": "IMG_7699.heic",
-        "date": "2025-12-21T17:15:12.000Z"
+        "date": "2025-12-21T17:15:12.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2053,7 +2325,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8691-1.jpg",
         "name": "IMG_8691 (1).HEIC",
-        "date": "2025-12-09T21:25:05.000Z"
+        "date": "2025-12-09T21:25:05.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2068,7 +2342,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8869.jpg",
         "name": "IMG_8869.HEIC",
-        "date": "2025-12-21T17:19:43.000Z"
+        "date": "2025-12-21T17:19:43.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2083,7 +2359,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8880.jpg",
         "name": "IMG_8880.HEIC",
-        "date": "2025-12-22T18:32:24.000Z"
+        "date": "2025-12-22T18:32:24.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2098,7 +2376,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8881.jpg",
         "name": "IMG_8881.HEIC",
-        "date": "2025-12-22T18:33:17.000Z"
+        "date": "2025-12-22T18:33:17.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2113,7 +2393,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8882.jpg",
         "name": "IMG_8882.HEIC",
-        "date": "2025-12-22T18:35:15.000Z"
+        "date": "2025-12-22T18:35:15.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2128,7 +2410,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8885.jpg",
         "name": "IMG_8885.HEIC",
-        "date": "2025-12-23T16:22:23.000Z"
+        "date": "2025-12-23T16:22:23.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2143,7 +2427,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8889.jpg",
         "name": "IMG_8889.HEIC",
-        "date": "2025-12-24T15:58:03.000Z"
+        "date": "2025-12-24T15:58:03.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2158,7 +2444,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8899.jpg",
         "name": "IMG_8899.HEIC",
-        "date": "2025-12-24T23:31:05.000Z"
+        "date": "2025-12-24T23:31:05.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2173,7 +2461,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8911.jpg",
         "name": "IMG_8911.HEIC",
-        "date": "2025-12-25T17:41:17.000Z"
+        "date": "2025-12-25T17:41:17.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2188,7 +2478,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8912.jpg",
         "name": "IMG_8912.HEIC",
-        "date": "2025-12-25T17:41:19.000Z"
+        "date": "2025-12-25T17:41:19.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2203,7 +2495,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8917.jpg",
         "name": "IMG_8917.HEIC",
-        "date": "2025-12-26T15:34:44.000Z"
+        "date": "2025-12-26T15:34:44.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2218,7 +2512,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8918.jpg",
         "name": "IMG_8918.HEIC",
-        "date": "2025-12-26T15:34:50.000Z"
+        "date": "2025-12-26T15:34:50.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2233,7 +2529,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8919.jpg",
         "name": "IMG_8919.HEIC",
-        "date": "2025-12-26T15:34:55.000Z"
+        "date": "2025-12-26T15:34:55.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2248,7 +2546,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8921.jpg",
         "name": "IMG_8921.HEIC",
-        "date": "2025-12-26T15:35:07.000Z"
+        "date": "2025-12-26T15:35:07.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2263,7 +2563,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8924.jpg",
         "name": "IMG_8924.HEIC",
-        "date": "2025-12-26T23:23:39.000Z"
+        "date": "2025-12-26T23:23:39.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2278,7 +2580,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8925.jpg",
         "name": "IMG_8925.HEIC",
-        "date": "2025-12-26T23:50:42.000Z"
+        "date": "2025-12-26T23:50:42.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2293,7 +2597,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8927.jpg",
         "name": "IMG_8927.HEIC",
-        "date": "2025-12-26T23:51:05.000Z"
+        "date": "2025-12-26T23:51:05.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2308,7 +2614,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8954.jpg",
         "name": "IMG_8954.HEIC",
-        "date": "2025-12-27T18:28:09.000Z"
+        "date": "2025-12-27T18:28:09.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2323,7 +2631,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8971.jpg",
         "name": "IMG_8971.HEIC",
-        "date": "2025-12-30T22:30:39.000Z"
+        "date": "2025-12-30T22:30:39.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2338,7 +2648,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8984.jpg",
         "name": "IMG_8984.HEIC",
-        "date": "2026-01-04T04:30:58.000Z"
+        "date": "2026-01-04T04:30:58.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2353,7 +2665,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8985.jpg",
         "name": "IMG_8985.HEIC",
-        "date": "2026-01-04T04:45:59.000Z"
+        "date": "2026-01-04T04:45:59.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2368,7 +2682,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5642.jpg",
         "name": "IMG_5642.HEIC",
-        "date": "2025-05-30T01:07:14.000Z"
+        "date": "2025-05-30T01:07:14.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2383,7 +2699,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5788.jpg",
         "name": "IMG_5788.HEIC",
-        "date": "2025-06-02T17:51:08.000Z"
+        "date": "2025-06-02T17:51:08.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2398,7 +2716,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5832.jpg",
         "name": "IMG_5832.HEIC",
-        "date": "2025-06-02T16:17:04.000Z"
+        "date": "2025-06-02T16:17:04.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2413,7 +2733,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5835.jpg",
         "name": "IMG_5835.HEIC",
-        "date": "2025-06-03T01:01:43.000Z"
+        "date": "2025-06-03T01:01:43.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2428,7 +2750,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5840.jpg",
         "name": "IMG_5840.heic",
-        "date": "2025-06-03T01:02:27.000Z"
+        "date": "2025-06-03T01:02:27.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2443,7 +2767,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5824.jpg",
         "name": "IMG_5824.HEIC",
-        "date": "2025-06-12T23:53:19.000Z"
+        "date": "2025-06-12T23:53:19.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2458,7 +2784,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5898.jpg",
         "name": "IMG_5898.HEIC",
-        "date": "2025-06-20T22:01:46.000Z"
+        "date": "2025-06-20T22:01:46.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2473,7 +2801,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5879.jpg",
         "name": "IMG_5879.HEIC",
-        "date": "2025-06-19T01:25:31.000Z"
+        "date": "2025-06-19T01:25:31.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2488,7 +2818,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5906.jpg",
         "name": "IMG_5906.HEIC",
-        "date": "2025-06-21T15:52:49.000Z"
+        "date": "2025-06-21T15:52:49.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2503,7 +2835,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5917.jpg",
         "name": "IMG_5917.HEIC",
-        "date": "2025-06-21T22:20:24.000Z"
+        "date": "2025-06-21T22:20:24.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2518,7 +2852,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5962.jpg",
         "name": "IMG_5962.HEIC",
-        "date": "2025-06-22T19:56:47.000Z"
+        "date": "2025-06-22T19:56:47.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2533,7 +2869,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5965.jpg",
         "name": "IMG_5965.HEIC",
-        "date": "2025-06-23T02:12:21.000Z"
+        "date": "2025-06-23T02:12:21.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2548,7 +2886,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5966.jpg",
         "name": "IMG_5966.HEIC",
-        "date": "2025-06-23T02:18:59.000Z"
+        "date": "2025-06-23T02:18:59.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2563,7 +2903,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5967.jpg",
         "name": "IMG_5967.HEIC",
-        "date": "2025-06-23T17:59:56.000Z"
+        "date": "2025-06-23T17:59:56.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2578,7 +2920,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5970.jpg",
         "name": "IMG_5970.HEIC",
-        "date": "2025-06-23T18:27:08.000Z"
+        "date": "2025-06-23T18:27:08.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2593,7 +2937,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5974.jpg",
         "name": "IMG_5974.HEIC",
-        "date": "2025-06-24T02:08:06.000Z"
+        "date": "2025-06-24T02:08:06.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2608,7 +2954,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5981.jpg",
         "name": "IMG_5981.HEIC",
-        "date": "2025-06-24T17:58:09.000Z"
+        "date": "2025-06-24T17:58:09.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2623,7 +2971,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5982.jpg",
         "name": "IMG_5982.HEIC",
-        "date": "2025-06-24T17:58:12.000Z"
+        "date": "2025-06-24T17:58:12.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2638,7 +2988,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5983.jpg",
         "name": "IMG_5983.HEIC",
-        "date": "2025-06-24T18:00:02.000Z"
+        "date": "2025-06-24T18:00:02.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2653,7 +3005,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5988.jpg",
         "name": "IMG_5988.HEIC",
-        "date": "2025-06-24T23:09:31.000Z"
+        "date": "2025-06-24T23:09:31.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2668,7 +3022,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5989.jpg",
         "name": "IMG_5989.HEIC",
-        "date": "2025-06-24T23:21:43.000Z"
+        "date": "2025-06-24T23:21:43.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2683,7 +3039,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5994.jpg",
         "name": "IMG_5994.HEIC",
-        "date": "2025-06-25T16:50:37.000Z"
+        "date": "2025-06-25T16:50:37.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2698,7 +3056,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5995.jpg",
         "name": "IMG_5995.HEIC",
-        "date": "2025-06-25T22:18:40.000Z"
+        "date": "2025-06-25T22:18:40.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2713,7 +3073,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6037.jpg",
         "name": "IMG_6037.HEIC",
-        "date": "2025-06-27T21:53:34.000Z"
+        "date": "2025-06-27T21:53:34.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2728,7 +3090,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6040.jpg",
         "name": "IMG_6040.HEIC",
-        "date": "2025-06-28T05:06:21.000Z"
+        "date": "2025-06-28T05:06:21.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2743,7 +3107,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6041.jpg",
         "name": "IMG_6041.HEIC",
-        "date": "2025-06-28T05:06:23.000Z"
+        "date": "2025-06-28T05:06:23.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2758,7 +3124,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6042.jpg",
         "name": "IMG_6042.HEIC",
-        "date": "2025-06-28T05:09:19.000Z"
+        "date": "2025-06-28T05:09:19.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2773,7 +3141,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6054.jpg",
         "name": "IMG_6054.HEIC",
-        "date": "2025-06-28T19:09:05.000Z"
+        "date": "2025-06-28T19:09:05.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2788,7 +3158,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6074.jpg",
         "name": "IMG_6074.HEIC",
-        "date": "2025-06-29T00:05:48.000Z"
+        "date": "2025-06-29T00:05:48.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2803,7 +3175,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6089.jpg",
         "name": "IMG_6089.HEIC",
-        "date": "2025-06-29T22:39:29.000Z"
+        "date": "2025-06-29T22:39:29.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2818,7 +3192,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6111.jpg",
         "name": "IMG_6111.HEIC",
-        "date": "2025-06-30T19:50:00.000Z"
+        "date": "2025-06-30T19:50:00.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2833,7 +3209,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6112.jpg",
         "name": "IMG_6112.HEIC",
-        "date": "2025-06-30T19:53:15.000Z"
+        "date": "2025-06-30T19:53:15.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2848,7 +3226,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6115.jpg",
         "name": "IMG_6115.HEIC",
-        "date": "2025-07-01T17:16:51.000Z"
+        "date": "2025-07-01T17:16:51.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2863,7 +3243,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6125.jpg",
         "name": "IMG_6125.HEIC",
-        "date": "2025-07-02T00:23:53.000Z"
+        "date": "2025-07-02T00:23:53.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2878,7 +3260,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6126.jpg",
         "name": "IMG_6126.HEIC",
-        "date": "2025-07-02T00:32:58.000Z"
+        "date": "2025-07-02T00:32:58.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2893,7 +3277,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6135.jpg",
         "name": "IMG_6135.HEIC",
-        "date": "2025-07-02T18:18:17.000Z"
+        "date": "2025-07-02T18:18:17.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2908,7 +3294,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6136.jpg",
         "name": "IMG_6136.HEIC",
-        "date": "2025-07-02T18:19:31.000Z"
+        "date": "2025-07-02T18:19:31.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2923,7 +3311,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6145.jpg",
         "name": "IMG_6145.HEIC",
-        "date": "2025-07-03T05:28:28.000Z"
+        "date": "2025-07-03T05:28:28.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2938,7 +3328,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6147.jpg",
         "name": "IMG_6147.HEIC",
-        "date": "2025-07-03T16:35:15.000Z"
+        "date": "2025-07-03T16:35:15.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2953,7 +3345,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6151.jpg",
         "name": "IMG_6151.HEIC",
-        "date": "2025-07-03T20:31:35.000Z"
+        "date": "2025-07-03T20:31:35.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2968,7 +3362,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6155.jpg",
         "name": "IMG_6155.HEIC",
-        "date": "2025-07-04T03:22:22.000Z"
+        "date": "2025-07-04T03:22:22.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2983,7 +3379,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6157.jpg",
         "name": "IMG_6157.HEIC",
-        "date": "2025-07-04T03:22:33.000Z"
+        "date": "2025-07-04T03:22:33.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -2998,7 +3396,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6160.jpg",
         "name": "IMG_6160.HEIC",
-        "date": "2025-07-04T04:02:19.000Z"
+        "date": "2025-07-04T04:02:19.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3013,7 +3413,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6164.jpg",
         "name": "IMG_6164.HEIC",
-        "date": "2025-07-04T19:17:55.000Z"
+        "date": "2025-07-04T19:17:55.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3028,7 +3430,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6167.jpg",
         "name": "IMG_6167.HEIC",
-        "date": "2025-07-04T22:33:56.000Z"
+        "date": "2025-07-04T22:33:56.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3043,7 +3447,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6168.jpg",
         "name": "IMG_6168.HEIC",
-        "date": "2025-07-04T22:35:17.000Z"
+        "date": "2025-07-04T22:35:17.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3058,7 +3464,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6169.jpg",
         "name": "IMG_6169.HEIC",
-        "date": "2025-07-04T22:36:16.000Z"
+        "date": "2025-07-04T22:36:16.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3073,7 +3481,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6170.jpg",
         "name": "IMG_6170.HEIC",
-        "date": "2025-07-04T22:36:23.000Z"
+        "date": "2025-07-04T22:36:23.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3088,7 +3498,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6265.jpg",
         "name": "IMG_6265.HEIC",
-        "date": "2025-07-05T05:19:24.000Z"
+        "date": "2025-07-05T05:19:24.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3103,7 +3515,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6266.jpg",
         "name": "IMG_6266.HEIC",
-        "date": "2025-07-05T05:29:53.000Z"
+        "date": "2025-07-05T05:29:53.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3118,7 +3532,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6269.jpg",
         "name": "IMG_6269.HEIC",
-        "date": "2025-07-05T05:31:25.000Z"
+        "date": "2025-07-05T05:31:25.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3133,7 +3549,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6278.jpg",
         "name": "IMG_6278.HEIC",
-        "date": "2025-07-05T18:58:35.000Z"
+        "date": "2025-07-05T18:58:35.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3148,7 +3566,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6279.jpg",
         "name": "IMG_6279.HEIC",
-        "date": "2025-07-05T19:19:21.000Z"
+        "date": "2025-07-05T19:19:21.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3163,7 +3583,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6280.jpg",
         "name": "IMG_6280.HEIC",
-        "date": "2025-07-05T19:19:25.000Z"
+        "date": "2025-07-05T19:19:25.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3178,7 +3600,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6286.jpg",
         "name": "IMG_6286.HEIC",
-        "date": "2025-07-06T00:59:58.000Z"
+        "date": "2025-07-06T00:59:58.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3193,7 +3617,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6287.jpg",
         "name": "IMG_6287.HEIC",
-        "date": "2025-07-06T02:40:32.000Z"
+        "date": "2025-07-06T02:40:32.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3208,7 +3634,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6288.jpg",
         "name": "IMG_6288.HEIC",
-        "date": "2025-07-06T17:25:29.000Z"
+        "date": "2025-07-06T17:25:29.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -3223,7 +3651,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6304.jpg",
         "name": "IMG_6304.HEIC",
-        "date": "2025-07-07T00:24:45.000Z"
+        "date": "2025-07-07T00:24:45.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3238,7 +3668,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6316.jpg",
         "name": "IMG_6316.HEIC",
-        "date": "2025-07-07T00:44:19.000Z"
+        "date": "2025-07-07T00:44:19.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3253,7 +3685,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6343.jpg",
         "name": "IMG_6343.HEIC",
-        "date": "2025-07-07T17:15:22.000Z"
+        "date": "2025-07-07T17:15:22.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3268,7 +3702,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6344.jpg",
         "name": "IMG_6344.HEIC",
-        "date": "2025-07-08T16:46:03.000Z"
+        "date": "2025-07-08T16:46:03.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3283,7 +3719,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6345.jpg",
         "name": "IMG_6345.HEIC",
-        "date": "2025-07-09T17:01:57.000Z"
+        "date": "2025-07-09T17:01:57.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3298,7 +3736,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6346.jpg",
         "name": "IMG_6346.HEIC",
-        "date": "2025-07-09T17:11:36.000Z"
+        "date": "2025-07-09T17:11:36.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3313,7 +3753,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6347.jpg",
         "name": "IMG_6347.HEIC",
-        "date": "2025-07-09T17:11:41.000Z"
+        "date": "2025-07-09T17:11:41.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3328,7 +3770,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6353.jpg",
         "name": "IMG_6353.HEIC",
-        "date": "2025-07-09T23:32:26.000Z"
+        "date": "2025-07-09T23:32:26.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3343,7 +3787,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6354.jpg",
         "name": "IMG_6354.HEIC",
-        "date": "2025-07-09T23:32:30.000Z"
+        "date": "2025-07-09T23:32:30.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3358,7 +3804,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6359.jpg",
         "name": "IMG_6359.HEIC",
-        "date": "2025-07-11T00:08:37.000Z"
+        "date": "2025-07-11T00:08:37.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3373,7 +3821,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6364.jpg",
         "name": "IMG_6364.HEIC",
-        "date": "2025-07-11T20:58:48.000Z"
+        "date": "2025-07-11T20:58:48.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3388,7 +3838,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6378.jpg",
         "name": "IMG_6378.HEIC",
-        "date": "2025-07-12T17:39:10.000Z"
+        "date": "2025-07-12T17:39:10.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3403,7 +3855,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6379.jpg",
         "name": "IMG_6379.HEIC",
-        "date": "2025-07-12T17:42:02.000Z"
+        "date": "2025-07-12T17:42:02.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3418,7 +3872,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6406.jpg",
         "name": "IMG_6406.HEIC",
-        "date": "2025-07-13T22:50:48.000Z"
+        "date": "2025-07-13T22:50:48.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3433,7 +3889,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6407.jpg",
         "name": "IMG_6407.HEIC",
-        "date": "2025-07-13T22:50:52.000Z"
+        "date": "2025-07-13T22:50:52.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3448,7 +3906,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6408.jpg",
         "name": "IMG_6408.HEIC",
-        "date": "2025-07-13T22:50:56.000Z"
+        "date": "2025-07-13T22:50:56.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3463,7 +3923,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6427.jpg",
         "name": "IMG_6427.HEIC",
-        "date": "2025-07-16T03:20:08.000Z"
+        "date": "2025-07-16T03:20:08.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3478,7 +3940,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6435.jpg",
         "name": "IMG_6435.HEIC",
-        "date": "2025-07-16T17:06:06.000Z"
+        "date": "2025-07-16T17:06:06.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3493,7 +3957,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6436.jpg",
         "name": "IMG_6436.HEIC",
-        "date": "2025-07-16T17:46:16.000Z"
+        "date": "2025-07-16T17:46:16.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3508,7 +3974,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6454.jpg",
         "name": "IMG_6454.HEIC",
-        "date": "2025-07-17T15:56:40.000Z"
+        "date": "2025-07-17T15:56:40.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3523,7 +3991,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6459.jpg",
         "name": "IMG_6459.HEIC",
-        "date": "2025-07-17T17:13:00.000Z"
+        "date": "2025-07-17T17:13:00.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3538,7 +4008,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6488.jpg",
         "name": "IMG_6488.HEIC",
-        "date": "2025-07-18T01:12:54.000Z"
+        "date": "2025-07-18T01:12:54.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3553,7 +4025,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6515.jpg",
         "name": "IMG_6515.HEIC",
-        "date": "2025-07-18T16:58:02.000Z"
+        "date": "2025-07-18T16:58:02.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3568,7 +4042,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6510.jpg",
         "name": "IMG_6510.HEIC",
-        "date": "2025-07-18T14:02:38.000Z"
+        "date": "2025-07-18T14:02:38.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -3583,7 +4059,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6544.jpg",
         "name": "IMG_6544.HEIC",
-        "date": "2025-07-18T22:52:59.000Z"
+        "date": "2025-07-18T22:52:59.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3598,7 +4076,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6558.jpg",
         "name": "IMG_6558.HEIC",
-        "date": "2025-07-19T15:33:00.000Z"
+        "date": "2025-07-19T15:33:00.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3613,7 +4093,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6559.jpg",
         "name": "IMG_6559.HEIC",
-        "date": "2025-07-19T15:33:08.000Z"
+        "date": "2025-07-19T15:33:08.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3628,7 +4110,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6725.jpg",
         "name": "IMG_6725.HEIC",
-        "date": "2025-07-19T22:31:57.000Z"
+        "date": "2025-07-19T22:31:57.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3643,7 +4127,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6825.jpg",
         "name": "IMG_6825.HEIC",
-        "date": "2025-07-22T20:14:36.000Z"
+        "date": "2025-07-22T20:14:36.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3658,7 +4144,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6826.jpg",
         "name": "IMG_6826.HEIC",
-        "date": "2025-07-22T20:20:42.000Z"
+        "date": "2025-07-22T20:20:42.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3673,7 +4161,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6827.jpg",
         "name": "IMG_6827.HEIC",
-        "date": "2025-07-23T16:44:08.000Z"
+        "date": "2025-07-23T16:44:08.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3688,7 +4178,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6829.jpg",
         "name": "IMG_6829.HEIC",
-        "date": "2025-07-25T04:06:18.000Z"
+        "date": "2025-07-25T04:06:18.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3703,7 +4195,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6831.jpg",
         "name": "IMG_6831.HEIC",
-        "date": "2025-07-25T19:49:03.000Z"
+        "date": "2025-07-25T19:49:03.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3718,7 +4212,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6833.jpg",
         "name": "IMG_6833.HEIC",
-        "date": "2025-07-26T03:50:11.000Z"
+        "date": "2025-07-26T03:50:11.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3733,7 +4229,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6834.jpg",
         "name": "IMG_6834.HEIC",
-        "date": "2025-07-26T03:50:16.000Z"
+        "date": "2025-07-26T03:50:16.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3748,7 +4246,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6836.jpg",
         "name": "IMG_6836.HEIC",
-        "date": "2025-07-26T03:58:23.000Z"
+        "date": "2025-07-26T03:58:23.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3763,7 +4263,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6837.jpg",
         "name": "IMG_6837.HEIC",
-        "date": "2025-07-26T04:01:07.000Z"
+        "date": "2025-07-26T04:01:07.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3778,7 +4280,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6861.jpg",
         "name": "IMG_6861.HEIC",
-        "date": "2025-07-26T19:40:13.000Z"
+        "date": "2025-07-26T19:40:13.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3793,7 +4297,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6863.jpg",
         "name": "IMG_6863.HEIC",
-        "date": "2025-07-26T19:40:37.000Z"
+        "date": "2025-07-26T19:40:37.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3808,7 +4314,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6864.jpg",
         "name": "IMG_6864.HEIC",
-        "date": "2025-07-26T19:41:21.000Z"
+        "date": "2025-07-26T19:41:21.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3823,7 +4331,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6875.jpg",
         "name": "IMG_6875.HEIC",
-        "date": "2025-07-27T00:43:34.000Z"
+        "date": "2025-07-27T00:43:34.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3838,7 +4348,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6876.jpg",
         "name": "IMG_6876.HEIC",
-        "date": "2025-07-27T00:46:11.000Z"
+        "date": "2025-07-27T00:46:11.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3853,7 +4365,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6884.jpg",
         "name": "IMG_6884.HEIC",
-        "date": "2025-07-27T23:34:35.000Z"
+        "date": "2025-07-27T23:34:35.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3868,7 +4382,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6898.jpg",
         "name": "IMG_6898.HEIC",
-        "date": "2025-07-28T21:08:07.000Z"
+        "date": "2025-07-28T21:08:07.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3883,7 +4399,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6903.jpg",
         "name": "IMG_6903.HEIC",
-        "date": "2025-07-30T04:14:27.000Z"
+        "date": "2025-07-30T04:14:27.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3898,7 +4416,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6910.jpg",
         "name": "IMG_6910.HEIC",
-        "date": "2025-07-30T16:52:10.000Z"
+        "date": "2025-07-30T16:52:10.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3913,7 +4433,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6911.jpg",
         "name": "IMG_6911.HEIC",
-        "date": "2025-07-30T16:55:36.000Z"
+        "date": "2025-07-30T16:55:36.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3928,7 +4450,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6912.jpg",
         "name": "IMG_6912.HEIC",
-        "date": "2025-07-30T17:42:58.000Z"
+        "date": "2025-07-30T17:42:58.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3943,7 +4467,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6918.jpg",
         "name": "IMG_6918.HEIC",
-        "date": "2025-07-31T01:46:05.000Z"
+        "date": "2025-07-31T01:46:05.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3958,7 +4484,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6922.jpg",
         "name": "IMG_6922.HEIC",
-        "date": "2025-07-31T17:30:36.000Z"
+        "date": "2025-07-31T17:30:36.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3973,7 +4501,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6925.jpg",
         "name": "IMG_6925.HEIC",
-        "date": "2025-08-01T17:18:44.000Z"
+        "date": "2025-08-01T17:18:44.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -3988,7 +4518,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6926.jpg",
         "name": "IMG_6926.HEIC",
-        "date": "2025-08-01T17:18:47.000Z"
+        "date": "2025-08-01T17:18:47.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4003,7 +4535,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6932.jpg",
         "name": "IMG_6932.HEIC",
-        "date": "2025-08-02T04:41:26.000Z"
+        "date": "2025-08-02T04:41:26.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4018,7 +4552,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6950.jpg",
         "name": "IMG_6950.HEIC",
-        "date": "2025-08-02T23:22:23.000Z"
+        "date": "2025-08-02T23:22:23.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4033,7 +4569,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6951.jpg",
         "name": "IMG_6951.HEIC",
-        "date": "2025-08-03T00:45:02.000Z"
+        "date": "2025-08-03T00:45:02.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4048,7 +4586,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6954.jpg",
         "name": "IMG_6954.HEIC",
-        "date": "2025-08-03T22:03:47.000Z"
+        "date": "2025-08-03T22:03:47.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4063,7 +4603,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6972.jpg",
         "name": "IMG_6972.HEIC",
-        "date": "2025-08-04T17:11:07.000Z"
+        "date": "2025-08-04T17:11:07.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4078,7 +4620,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6973.jpg",
         "name": "IMG_6973.HEIC",
-        "date": "2025-08-04T23:03:41.000Z"
+        "date": "2025-08-04T23:03:41.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4093,7 +4637,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7050.jpg",
         "name": "IMG_7050.HEIC",
-        "date": "2025-08-06T23:40:46.000Z"
+        "date": "2025-08-06T23:40:46.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4108,7 +4654,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7062.jpg",
         "name": "IMG_7062.HEIC",
-        "date": "2025-08-07T00:24:55.000Z"
+        "date": "2025-08-07T00:24:55.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4123,7 +4671,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7081.jpg",
         "name": "IMG_7081.HEIC",
-        "date": "2025-08-07T03:14:54.000Z"
+        "date": "2025-08-07T03:14:54.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4138,7 +4688,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7087.jpg",
         "name": "IMG_7087.HEIC",
-        "date": "2025-08-07T03:40:35.000Z"
+        "date": "2025-08-07T03:40:35.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4153,7 +4705,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7095.jpg",
         "name": "IMG_7095.HEIC",
-        "date": "2025-08-07T16:24:36.000Z"
+        "date": "2025-08-07T16:24:36.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4168,7 +4722,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7096.jpg",
         "name": "IMG_7096.HEIC",
-        "date": "2025-08-07T16:24:43.000Z"
+        "date": "2025-08-07T16:24:43.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4183,7 +4739,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7102.jpg",
         "name": "IMG_7102.HEIC",
-        "date": "2025-08-07T21:25:27.000Z"
+        "date": "2025-08-07T21:25:27.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4198,7 +4756,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7103.jpg",
         "name": "IMG_7103.HEIC",
-        "date": "2025-08-07T21:25:30.000Z"
+        "date": "2025-08-07T21:25:30.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4213,7 +4773,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7110.jpg",
         "name": "IMG_7110.HEIC",
-        "date": "2025-08-08T04:32:45.000Z"
+        "date": "2025-08-08T04:32:45.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4228,7 +4790,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4719.jpg",
         "name": "IMG_4719.HEIC",
-        "date": "2025-05-12T00:38:00.000Z"
+        "date": "2025-05-12T00:38:00.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4243,7 +4807,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4718.jpg",
         "name": "IMG_4718.HEIC",
-        "date": "2025-05-12T00:37:00.000Z"
+        "date": "2025-05-12T00:37:00.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4258,7 +4824,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4723.jpg",
         "name": "IMG_4723.HEIC",
-        "date": "2025-05-12T00:39:57.000Z"
+        "date": "2025-05-12T00:39:57.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4273,7 +4841,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4725.jpg",
         "name": "IMG_4725.HEIC",
-        "date": "2025-05-12T00:40:24.000Z"
+        "date": "2025-05-12T00:40:24.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4288,7 +4858,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4726.jpg",
         "name": "IMG_4726.HEIC",
-        "date": "2025-05-12T00:53:16.000Z"
+        "date": "2025-05-12T00:53:16.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4303,7 +4875,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6033.jpg",
         "name": "IMG_6033.JPG",
-        "date": "2025-05-12T13:20:06.000Z"
+        "date": "2025-05-12T13:20:06.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4318,7 +4892,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7127.jpg",
         "name": "IMG_7127.HEIC",
-        "date": "2025-08-08T10:58:39.000Z"
+        "date": "2025-08-08T10:58:39.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4333,7 +4909,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4795.jpg",
         "name": "IMG_4795.JPG",
-        "date": "2025-05-12T15:22:57.000Z"
+        "date": "2025-05-12T15:22:57.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -4348,7 +4926,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4832.jpg",
         "name": "IMG_4832.HEIC",
-        "date": "2025-05-12T17:48:07.000Z"
+        "date": "2025-05-12T17:48:07.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4363,7 +4943,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4833-1.jpg",
         "name": "IMG_4833 (1).HEIC",
-        "date": "2025-05-12T17:48:21.000Z"
+        "date": "2025-05-12T17:48:21.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4378,7 +4960,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6056.jpg",
         "name": "IMG_6056.JPG",
-        "date": "2025-05-12T14:18:56.000Z"
+        "date": "2025-05-12T14:18:56.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4393,7 +4977,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4834.jpg",
         "name": "IMG_4834.HEIC",
-        "date": "2025-05-12T17:48:28.000Z"
+        "date": "2025-05-12T17:48:28.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4408,7 +4994,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4835.jpg",
         "name": "IMG_4835.HEIC",
-        "date": "2025-05-12T17:48:41.000Z"
+        "date": "2025-05-12T17:48:41.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4423,7 +5011,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4944.jpg",
         "name": "IMG_4944.HEIC",
-        "date": "2025-05-13T00:08:53.000Z"
+        "date": "2025-05-13T00:08:53.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4438,7 +5028,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4945.jpg",
         "name": "IMG_4945.HEIC",
-        "date": "2025-05-13T00:09:08.000Z"
+        "date": "2025-05-13T00:09:08.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4453,7 +5045,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4951.jpg",
         "name": "IMG_4951.HEIC",
-        "date": "2025-05-13T00:43:20.000Z"
+        "date": "2025-05-13T00:43:20.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4468,7 +5062,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4990.jpg",
         "name": "IMG_4990.HEIC",
-        "date": "2025-05-13T18:51:29.000Z"
+        "date": "2025-05-13T18:51:29.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4483,7 +5079,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6420.jpg",
         "name": "IMG_6420.HEIC",
-        "date": "2025-05-13T18:48:35.000Z"
+        "date": "2025-05-13T18:48:35.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4498,7 +5096,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4991.jpg",
         "name": "IMG_4991.HEIC",
-        "date": "2025-05-13T18:51:33.000Z"
+        "date": "2025-05-13T18:51:33.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4513,7 +5113,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4996.jpg",
         "name": "IMG_4996.HEIC",
-        "date": "2025-05-13T18:53:26.000Z"
+        "date": "2025-05-13T18:53:26.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4528,7 +5130,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5027.jpg",
         "name": "IMG_5027.HEIC",
-        "date": "2025-05-13T20:43:02.000Z"
+        "date": "2025-05-13T20:43:02.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4543,7 +5147,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5028.jpg",
         "name": "IMG_5028.HEIC",
-        "date": "2025-05-13T20:48:10.000Z"
+        "date": "2025-05-13T20:48:10.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4558,7 +5164,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5035.jpg",
         "name": "IMG_5035.HEIC",
-        "date": "2025-05-13T20:57:47.000Z"
+        "date": "2025-05-13T20:57:47.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4573,7 +5181,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5037.jpg",
         "name": "IMG_5037.HEIC",
-        "date": "2025-05-13T21:02:00.000Z"
+        "date": "2025-05-13T21:02:00.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4588,7 +5198,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5039.jpg",
         "name": "IMG_5039.HEIC",
-        "date": "2025-05-13T21:02:11.000Z"
+        "date": "2025-05-13T21:02:11.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4603,7 +5215,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5051.jpg",
         "name": "IMG_5051.HEIC",
-        "date": "2025-05-14T13:28:48.000Z"
+        "date": "2025-05-14T13:28:48.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4618,7 +5232,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6645.jpg",
         "name": "IMG_6645.HEIC",
-        "date": "2025-05-14T14:07:18.000Z"
+        "date": "2025-05-14T14:07:18.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4633,7 +5249,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5071.jpg",
         "name": "IMG_5071.HEIC",
-        "date": "2025-05-14T14:07:46.000Z"
+        "date": "2025-05-14T14:07:46.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4648,7 +5266,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5072.jpg",
         "name": "IMG_5072.HEIC",
-        "date": "2025-05-14T14:07:49.000Z"
+        "date": "2025-05-14T14:07:49.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4663,7 +5283,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5084.jpg",
         "name": "IMG_5084.HEIC",
-        "date": "2025-05-14T15:32:11.000Z"
+        "date": "2025-05-14T15:32:11.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4678,7 +5300,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5088.jpg",
         "name": "IMG_5088.HEIC",
-        "date": "2025-05-14T18:11:51.000Z"
+        "date": "2025-05-14T18:11:51.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4693,7 +5317,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5089.jpg",
         "name": "IMG_5089.HEIC",
-        "date": "2025-05-14T18:12:48.000Z"
+        "date": "2025-05-14T18:12:48.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4708,7 +5334,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6809.jpg",
         "name": "IMG_6809.HEIC",
-        "date": "2025-05-14T18:08:46.000Z"
+        "date": "2025-05-14T18:08:46.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4723,7 +5351,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5096.jpg",
         "name": "IMG_5096.HEIC",
-        "date": "2025-05-14T18:16:09.000Z"
+        "date": "2025-05-14T18:16:09.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4738,7 +5368,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5097.jpg",
         "name": "IMG_5097.HEIC",
-        "date": "2025-05-14T18:46:16.000Z"
+        "date": "2025-05-14T18:46:16.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4753,7 +5385,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6842.jpg",
         "name": "IMG_6842.HEIC",
-        "date": "2025-05-14T19:33:37.000Z"
+        "date": "2025-05-14T19:33:37.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4768,7 +5402,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5112.jpg",
         "name": "IMG_5112.HEIC",
-        "date": "2025-05-15T14:03:50.000Z"
+        "date": "2025-05-15T14:03:50.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4783,7 +5419,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5113.jpg",
         "name": "IMG_5113.HEIC",
-        "date": "2025-05-15T14:03:54.000Z"
+        "date": "2025-05-15T14:03:54.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4798,7 +5436,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5114.jpg",
         "name": "IMG_5114.HEIC",
-        "date": "2025-05-15T14:03:58.000Z"
+        "date": "2025-05-15T14:03:58.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4813,7 +5453,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5138.jpg",
         "name": "IMG_5138.HEIC",
-        "date": "2025-05-15T15:20:17.000Z"
+        "date": "2025-05-15T15:20:17.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4828,7 +5470,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5139.jpg",
         "name": "IMG_5139.HEIC",
-        "date": "2025-05-15T15:21:17.000Z"
+        "date": "2025-05-15T15:21:17.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4843,7 +5487,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5145.jpg",
         "name": "IMG_5145.HEIC",
-        "date": "2025-05-15T21:16:25.000Z"
+        "date": "2025-05-15T21:16:25.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4858,7 +5504,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5147-1.jpg",
         "name": "IMG_5147 (1).HEIC",
-        "date": "2025-05-15T23:14:24.000Z"
+        "date": "2025-05-15T23:14:24.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4873,7 +5521,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5149.jpg",
         "name": "IMG_5149.HEIC",
-        "date": "2025-05-15T23:14:38.000Z"
+        "date": "2025-05-15T23:14:38.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4888,7 +5538,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5150.jpg",
         "name": "IMG_5150.HEIC",
-        "date": "2025-05-15T23:46:59.000Z"
+        "date": "2025-05-15T23:46:59.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4903,7 +5555,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5151.jpg",
         "name": "IMG_5151.HEIC",
-        "date": "2025-05-15T23:47:01.000Z"
+        "date": "2025-05-15T23:47:01.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4918,7 +5572,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5153.jpg",
         "name": "IMG_5153.HEIC",
-        "date": "2025-05-16T14:06:41.000Z"
+        "date": "2025-05-16T14:06:41.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4933,7 +5589,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5167.jpg",
         "name": "IMG_5167.HEIC",
-        "date": "2025-05-16T15:45:23.000Z"
+        "date": "2025-05-16T15:45:23.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4948,7 +5606,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5169.jpg",
         "name": "IMG_5169.HEIC",
-        "date": "2025-05-16T15:45:31.000Z"
+        "date": "2025-05-16T15:45:31.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4963,7 +5623,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5172.jpg",
         "name": "IMG_5172.HEIC",
-        "date": "2025-05-16T15:48:01.000Z"
+        "date": "2025-05-16T15:48:01.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4978,7 +5640,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5182.jpg",
         "name": "IMG_5182.HEIC",
-        "date": "2025-05-16T18:46:55.000Z"
+        "date": "2025-05-16T18:46:55.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -4993,7 +5657,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5187.jpg",
         "name": "IMG_5187.HEIC",
-        "date": "2025-05-16T22:18:59.000Z"
+        "date": "2025-05-16T22:18:59.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5008,7 +5674,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5190.jpg",
         "name": "IMG_5190.HEIC",
-        "date": "2025-05-16T22:19:05.000Z"
+        "date": "2025-05-16T22:19:05.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5023,7 +5691,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5191.jpg",
         "name": "IMG_5191.HEIC",
-        "date": "2025-05-16T22:19:12.000Z"
+        "date": "2025-05-16T22:19:12.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5038,7 +5708,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5192.jpg",
         "name": "IMG_5192.HEIC",
-        "date": "2025-05-16T22:24:29.000Z"
+        "date": "2025-05-16T22:24:29.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5053,7 +5725,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5199.jpg",
         "name": "IMG_5199.HEIC",
-        "date": "2025-05-17T13:38:24.000Z"
+        "date": "2025-05-17T13:38:24.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5068,7 +5742,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5210.jpg",
         "name": "IMG_5210.HEIC",
-        "date": "2025-05-17T15:53:25.000Z"
+        "date": "2025-05-17T15:53:25.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5083,7 +5759,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5217.jpg",
         "name": "IMG_5217.HEIC",
-        "date": "2025-05-17T21:44:12.000Z"
+        "date": "2025-05-17T21:44:12.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5098,7 +5776,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5226.jpg",
         "name": "IMG_5226.HEIC",
-        "date": "2025-05-17T22:10:06.000Z"
+        "date": "2025-05-17T22:10:06.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5113,7 +5793,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5228.jpg",
         "name": "IMG_5228.HEIC",
-        "date": "2025-05-17T22:14:27.000Z"
+        "date": "2025-05-17T22:14:27.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5128,7 +5810,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5232.jpg",
         "name": "IMG_5232.HEIC",
-        "date": "2025-05-18T14:43:38.000Z"
+        "date": "2025-05-18T14:43:38.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5143,7 +5827,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5233.jpg",
         "name": "IMG_5233.HEIC",
-        "date": "2025-05-18T14:43:42.000Z"
+        "date": "2025-05-18T14:43:42.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5158,7 +5844,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5234.jpg",
         "name": "IMG_5234.HEIC",
-        "date": "2025-05-18T14:47:19.000Z"
+        "date": "2025-05-18T14:47:19.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5173,7 +5861,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5237.jpg",
         "name": "IMG_5237.HEIC",
-        "date": "2025-05-18T14:47:29.000Z"
+        "date": "2025-05-18T14:47:29.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5188,7 +5878,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5246.jpg",
         "name": "IMG_5246.HEIC",
-        "date": "2025-05-18T21:36:16.000Z"
+        "date": "2025-05-18T21:36:16.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5203,7 +5895,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5248.jpg",
         "name": "IMG_5248.HEIC",
-        "date": "2025-05-18T21:36:24.000Z"
+        "date": "2025-05-18T21:36:24.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5218,7 +5912,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5249.jpg",
         "name": "IMG_5249.HEIC",
-        "date": "2025-05-18T21:36:27.000Z"
+        "date": "2025-05-18T21:36:27.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5233,7 +5929,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5256.jpg",
         "name": "IMG_5256.HEIC",
-        "date": "2025-05-19T02:03:28.000Z"
+        "date": "2025-05-19T02:03:28.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5248,7 +5946,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5262.jpg",
         "name": "IMG_5262.HEIC",
-        "date": "2025-05-19T02:05:50.000Z"
+        "date": "2025-05-19T02:05:50.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5263,7 +5963,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5266.jpg",
         "name": "IMG_5266.HEIC",
-        "date": "2025-05-19T16:29:04.000Z"
+        "date": "2025-05-19T16:29:04.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5278,7 +5980,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5281.jpg",
         "name": "IMG_5281.HEIC",
-        "date": "2025-05-19T20:14:25.000Z"
+        "date": "2025-05-19T20:14:25.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5293,7 +5997,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5282.jpg",
         "name": "IMG_5282.HEIC",
-        "date": "2025-05-19T20:14:30.000Z"
+        "date": "2025-05-19T20:14:30.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5308,7 +6014,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5284.jpg",
         "name": "IMG_5284.HEIC",
-        "date": "2025-05-19T20:14:40.000Z"
+        "date": "2025-05-19T20:14:40.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5323,7 +6031,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5286.jpg",
         "name": "IMG_5286.HEIC",
-        "date": "2025-05-19T20:14:58.000Z"
+        "date": "2025-05-19T20:14:58.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5338,7 +6048,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5288.jpg",
         "name": "IMG_5288.HEIC",
-        "date": "2025-05-19T20:21:10.000Z"
+        "date": "2025-05-19T20:21:10.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5353,7 +6065,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5291.jpg",
         "name": "IMG_5291.HEIC",
-        "date": "2025-05-19T20:28:55.000Z"
+        "date": "2025-05-19T20:28:55.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5368,7 +6082,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5294.jpg",
         "name": "IMG_5294.HEIC",
-        "date": "2025-05-19T20:54:01.000Z"
+        "date": "2025-05-19T20:54:01.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5383,7 +6099,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5299.jpg",
         "name": "IMG_5299.HEIC",
-        "date": "2025-05-19T22:07:33.000Z"
+        "date": "2025-05-19T22:07:33.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5398,7 +6116,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5303.jpg",
         "name": "IMG_5303.HEIC",
-        "date": "2025-05-19T22:11:29.000Z"
+        "date": "2025-05-19T22:11:29.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5413,7 +6133,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5305.jpg",
         "name": "IMG_5305.HEIC",
-        "date": "2025-05-20T00:16:10.000Z"
+        "date": "2025-05-20T00:16:10.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5428,7 +6150,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5310.jpg",
         "name": "IMG_5310.HEIC",
-        "date": "2025-05-20T00:54:36.000Z"
+        "date": "2025-05-20T00:54:36.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5443,7 +6167,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5318.jpg",
         "name": "IMG_5318.HEIC",
-        "date": "2025-05-20T16:08:19.000Z"
+        "date": "2025-05-20T16:08:19.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5458,7 +6184,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5319.jpg",
         "name": "IMG_5319.HEIC",
-        "date": "2025-05-20T16:08:21.000Z"
+        "date": "2025-05-20T16:08:21.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5473,7 +6201,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5323.jpg",
         "name": "IMG_5323.HEIC",
-        "date": "2025-05-20T16:53:12.000Z"
+        "date": "2025-05-20T16:53:12.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5488,7 +6218,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5324.jpg",
         "name": "IMG_5324.HEIC",
-        "date": "2025-05-20T16:53:15.000Z"
+        "date": "2025-05-20T16:53:15.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5503,7 +6235,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5327.jpg",
         "name": "IMG_5327.HEIC",
-        "date": "2025-05-20T20:23:25.000Z"
+        "date": "2025-05-20T20:23:25.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5518,7 +6252,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5328.jpg",
         "name": "IMG_5328.HEIC",
-        "date": "2025-05-21T00:14:32.000Z"
+        "date": "2025-05-21T00:14:32.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5533,7 +6269,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5336.jpg",
         "name": "IMG_5336.HEIC",
-        "date": "2025-05-21T00:17:23.000Z"
+        "date": "2025-05-21T00:17:23.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5548,7 +6286,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5339.jpg",
         "name": "IMG_5339.HEIC",
-        "date": "2025-05-21T16:07:20.000Z"
+        "date": "2025-05-21T16:07:20.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5563,7 +6303,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5343.jpg",
         "name": "IMG_5343.HEIC",
-        "date": "2025-05-21T16:09:03.000Z"
+        "date": "2025-05-21T16:09:03.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5578,7 +6320,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5347.jpg",
         "name": "IMG_5347.HEIC",
-        "date": "2025-05-21T16:15:16.000Z"
+        "date": "2025-05-21T16:15:16.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5593,7 +6337,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5350.jpg",
         "name": "IMG_5350.HEIC",
-        "date": "2025-05-21T16:22:06.000Z"
+        "date": "2025-05-21T16:22:06.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5608,7 +6354,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5362.jpg",
         "name": "IMG_5362.HEIC",
-        "date": "2025-05-21T22:57:14.000Z"
+        "date": "2025-05-21T22:57:14.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5623,7 +6371,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5363.jpg",
         "name": "IMG_5363.HEIC",
-        "date": "2025-05-21T22:57:17.000Z"
+        "date": "2025-05-21T22:57:17.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5638,7 +6388,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5364-1.jpg",
         "name": "IMG_5364 (1).HEIC",
-        "date": "2025-05-22T00:15:18.000Z"
+        "date": "2025-05-22T00:15:18.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5653,7 +6405,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5365.jpg",
         "name": "IMG_5365.HEIC",
-        "date": "2025-05-22T00:28:42.000Z"
+        "date": "2025-05-22T00:28:42.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5668,7 +6422,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5367.jpg",
         "name": "IMG_5367.HEIC",
-        "date": "2025-05-22T00:30:48.000Z"
+        "date": "2025-05-22T00:30:48.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5683,7 +6439,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5370.jpg",
         "name": "IMG_5370.HEIC",
-        "date": "2025-05-22T00:31:02.000Z"
+        "date": "2025-05-22T00:31:02.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5698,7 +6456,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5374.jpg",
         "name": "IMG_5374.HEIC",
-        "date": "2025-05-22T00:49:47.000Z"
+        "date": "2025-05-22T00:49:47.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5713,7 +6473,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5378.jpg",
         "name": "IMG_5378.HEIC",
-        "date": "2025-05-22T17:12:56.000Z"
+        "date": "2025-05-22T17:12:56.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5728,7 +6490,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5382.jpg",
         "name": "IMG_5382.HEIC",
-        "date": "2025-05-22T17:14:18.000Z"
+        "date": "2025-05-22T17:14:18.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5743,7 +6507,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5441.jpg",
         "name": "IMG_5441.HEIC",
-        "date": "2025-05-23T00:15:09.000Z"
+        "date": "2025-05-23T00:15:09.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5758,7 +6524,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5385.jpg",
         "name": "IMG_5385.HEIC",
-        "date": "2025-05-22T17:15:07.000Z"
+        "date": "2025-05-22T17:15:07.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5773,7 +6541,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5388.jpg",
         "name": "IMG_5388.HEIC",
-        "date": "2025-05-22T19:53:23.000Z"
+        "date": "2025-05-22T19:53:23.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5788,7 +6558,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5459.jpg",
         "name": "IMG_5459.HEIC",
-        "date": "2025-05-23T00:36:44.000Z"
+        "date": "2025-05-23T00:36:44.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5803,7 +6575,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5462.jpg",
         "name": "IMG_5462.HEIC",
-        "date": "2025-05-23T16:56:17.000Z"
+        "date": "2025-05-23T16:56:17.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5818,7 +6592,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5463.jpg",
         "name": "IMG_5463.HEIC",
-        "date": "2025-05-23T17:01:54.000Z"
+        "date": "2025-05-23T17:01:54.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5833,7 +6609,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5465.jpg",
         "name": "IMG_5465.HEIC",
-        "date": "2025-05-23T17:07:05.000Z"
+        "date": "2025-05-23T17:07:05.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5848,7 +6626,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5469-1.jpg",
         "name": "IMG_5469 (1).HEIC",
-        "date": "2025-05-23T17:54:18.000Z"
+        "date": "2025-05-23T17:54:18.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5863,7 +6643,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5477.jpg",
         "name": "IMG_5477.HEIC",
-        "date": "2025-05-24T00:10:18.000Z"
+        "date": "2025-05-24T00:10:18.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5878,7 +6660,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5496.jpg",
         "name": "IMG_5496.HEIC",
-        "date": "2025-05-24T00:11:25.000Z"
+        "date": "2025-05-24T00:11:25.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -5893,7 +6677,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5534.jpg",
         "name": "IMG_5534.HEIC",
-        "date": "2025-05-24T00:39:59.000Z"
+        "date": "2025-05-24T00:39:59.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5908,7 +6694,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5535.jpg",
         "name": "IMG_5535.HEIC",
-        "date": "2025-05-24T00:40:03.000Z"
+        "date": "2025-05-24T00:40:03.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5923,7 +6711,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5536.jpg",
         "name": "IMG_5536.HEIC",
-        "date": "2025-05-24T01:22:57.000Z"
+        "date": "2025-05-24T01:22:57.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5938,7 +6728,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5537.jpg",
         "name": "IMG_5537.HEIC",
-        "date": "2025-05-24T16:39:30.000Z"
+        "date": "2025-05-24T16:39:30.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5953,7 +6745,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5538.jpg",
         "name": "IMG_5538.HEIC",
-        "date": "2025-05-24T17:19:39.000Z"
+        "date": "2025-05-24T17:19:39.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5968,7 +6762,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5567.jpg",
         "name": "IMG_5567.HEIC",
-        "date": "2025-05-25T17:34:50.000Z"
+        "date": "2025-05-25T17:34:50.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5983,7 +6779,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5575.jpg",
         "name": "IMG_5575.HEIC",
-        "date": "2025-05-28T16:00:59.000Z"
+        "date": "2025-05-28T16:00:59.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -5998,7 +6796,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5576.jpg",
         "name": "IMG_5576.HEIC",
-        "date": "2025-05-28T16:01:03.000Z"
+        "date": "2025-05-28T16:01:03.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6013,7 +6813,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5577.jpg",
         "name": "IMG_5577.HEIC",
-        "date": "2025-05-28T16:01:06.000Z"
+        "date": "2025-05-28T16:01:06.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6028,7 +6830,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5578.jpg",
         "name": "IMG_5578.HEIC",
-        "date": "2025-05-28T16:01:12.000Z"
+        "date": "2025-05-28T16:01:12.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6043,7 +6847,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5616.jpg",
         "name": "IMG_5616.HEIC",
-        "date": "2025-05-29T00:02:42.000Z"
+        "date": "2025-05-29T00:02:42.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6058,7 +6864,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5617.jpg",
         "name": "IMG_5617.HEIC",
-        "date": "2025-05-29T00:07:10.000Z"
+        "date": "2025-05-29T00:07:10.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6073,7 +6881,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5618.jpg",
         "name": "IMG_5618.HEIC",
-        "date": "2025-05-29T00:07:27.000Z"
+        "date": "2025-05-29T00:07:27.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6088,7 +6898,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5620.jpg",
         "name": "IMG_5620.HEIC",
-        "date": "2025-05-29T00:07:32.000Z"
+        "date": "2025-05-29T00:07:32.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6103,7 +6915,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3324.jpg",
         "name": "IMG_3324.HEIC",
-        "date": "2025-03-02T17:47:21.000Z"
+        "date": "2025-03-02T17:47:21.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6118,7 +6932,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5638.jpg",
         "name": "IMG_5638.HEIC",
-        "date": "2025-05-29T23:40:38.000Z"
+        "date": "2025-05-29T23:40:38.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6133,7 +6949,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0512.jpg",
         "name": "IMG_0512.JPG",
-        "date": "2025-03-03T05:37:11.000Z"
+        "date": "2025-03-03T05:37:11.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6148,7 +6966,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3451.jpg",
         "name": "IMG_3451.HEIC",
-        "date": "2025-03-03T01:41:14.000Z"
+        "date": "2025-03-03T01:41:14.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6163,7 +6983,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3473.jpg",
         "name": "IMG_3473.HEIC",
-        "date": "2025-03-03T04:06:41.000Z"
+        "date": "2025-03-03T04:06:41.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6178,7 +7000,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3494.jpg",
         "name": "IMG_3494.HEIC",
-        "date": "2025-03-03T05:26:40.000Z"
+        "date": "2025-03-03T05:26:40.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6193,7 +7017,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3501.jpg",
         "name": "IMG_3501.HEIC",
-        "date": "2025-03-03T17:01:18.000Z"
+        "date": "2025-03-03T17:01:18.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6208,7 +7034,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3602.jpg",
         "name": "IMG_3602.HEIC",
-        "date": "2025-03-03T23:02:36.000Z"
+        "date": "2025-03-03T23:02:36.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6223,7 +7051,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3792.jpg",
         "name": "IMG_3792.HEIC",
-        "date": "2025-03-05T03:25:34.000Z"
+        "date": "2025-03-05T03:25:34.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6238,7 +7068,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3786.jpg",
         "name": "IMG_3786.HEIC",
-        "date": "2025-03-05T02:10:24.000Z"
+        "date": "2025-03-05T02:10:24.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6253,7 +7085,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3800-1.jpg",
         "name": "IMG_3800 (1).heic",
-        "date": "2025-03-05T02:40:06.000Z"
+        "date": "2025-03-05T02:40:06.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6268,7 +7102,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3793.jpg",
         "name": "IMG_3793.HEIC",
-        "date": "2025-03-05T03:25:37.000Z"
+        "date": "2025-03-05T03:25:37.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6283,7 +7119,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3794.jpg",
         "name": "IMG_3794.HEIC",
-        "date": "2025-03-05T03:33:46.000Z"
+        "date": "2025-03-05T03:33:46.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6298,7 +7136,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3796.jpg",
         "name": "IMG_3796.HEIC",
-        "date": "2025-03-05T03:33:52.000Z"
+        "date": "2025-03-05T03:33:52.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6313,7 +7153,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3800.jpg",
         "name": "IMG_3800.HEIC",
-        "date": "2025-03-05T04:03:39.000Z"
+        "date": "2025-03-05T04:03:39.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6328,7 +7170,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3820.jpg",
         "name": "IMG_3820.HEIC",
-        "date": "2025-03-05T18:41:37.000Z"
+        "date": "2025-03-05T18:41:37.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6343,7 +7187,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3889.jpg",
         "name": "IMG_3889.HEIC",
-        "date": "2025-03-08T00:06:13.000Z"
+        "date": "2025-03-08T00:06:13.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6358,7 +7204,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3892.jpg",
         "name": "IMG_3892.HEIC",
-        "date": "2025-03-08T07:03:01.000Z"
+        "date": "2025-03-08T07:03:01.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6373,7 +7221,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3893.jpg",
         "name": "IMG_3893.HEIC",
-        "date": "2025-03-08T07:18:33.000Z"
+        "date": "2025-03-08T07:18:33.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6388,7 +7238,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3920.jpg",
         "name": "IMG_3920.heic",
-        "date": "2025-03-09T16:44:12.000Z"
+        "date": "2025-03-09T16:44:12.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6403,7 +7255,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3588.jpg",
         "name": "IMG_3588.jpeg",
-        "date": "2025-03-10T01:38:16.000Z"
+        "date": "2025-03-10T01:38:16.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6418,7 +7272,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3905.jpg",
         "name": "IMG_3905.HEIC",
-        "date": "2025-03-12T20:07:10.000Z"
+        "date": "2025-03-12T20:07:10.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6433,7 +7289,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3946.jpg",
         "name": "IMG_3946.heic",
-        "date": "2025-03-10T00:08:42.000Z"
+        "date": "2025-03-10T00:08:42.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6448,7 +7306,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3968.jpg",
         "name": "IMG_3968.heic",
-        "date": "2025-03-11T00:38:24.000Z"
+        "date": "2025-03-11T00:38:24.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6463,7 +7323,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4035.jpg",
         "name": "IMG_4035.heic",
-        "date": "2025-03-12T23:30:18.000Z"
+        "date": "2025-03-12T23:30:18.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6478,7 +7340,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3914.jpg",
         "name": "IMG_3914.HEIC",
-        "date": "2025-03-13T22:19:12.000Z"
+        "date": "2025-03-13T22:19:12.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6493,7 +7357,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3988.jpg",
         "name": "IMG_3988.HEIC",
-        "date": "2025-03-18T00:59:26.000Z"
+        "date": "2025-03-18T00:59:26.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6508,7 +7374,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4010.jpg",
         "name": "IMG_4010.HEIC",
-        "date": "2025-03-19T23:12:41.000Z"
+        "date": "2025-03-19T23:12:41.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6523,7 +7391,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4046.jpg",
         "name": "IMG_4046.HEIC",
-        "date": "2025-03-23T02:45:43.000Z"
+        "date": "2025-03-23T02:45:43.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6538,7 +7408,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4051.jpg",
         "name": "IMG_4051.HEIC",
-        "date": "2025-03-23T21:00:50.000Z"
+        "date": "2025-03-23T21:00:50.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6553,7 +7425,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5044.jpg",
         "name": "IMG_5044.heic",
-        "date": "2025-03-23T16:42:43.000Z"
+        "date": "2025-03-23T16:42:43.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6568,7 +7442,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4086.jpg",
         "name": "IMG_4086.HEIC",
-        "date": "2025-03-28T06:35:43.000Z"
+        "date": "2025-03-28T06:35:43.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6583,7 +7459,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4090.jpg",
         "name": "IMG_4090.HEIC",
-        "date": "2025-03-28T11:35:25.000Z"
+        "date": "2025-03-28T11:35:25.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6598,7 +7476,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4091.jpg",
         "name": "IMG_4091.HEIC",
-        "date": "2025-03-28T11:35:28.000Z"
+        "date": "2025-03-28T11:35:28.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6613,7 +7493,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4092.jpg",
         "name": "IMG_4092.HEIC",
-        "date": "2025-03-29T21:50:23.000Z"
+        "date": "2025-03-29T21:50:23.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6628,7 +7510,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4096.jpg",
         "name": "IMG_4096.HEIC",
-        "date": "2025-03-30T03:04:46.000Z"
+        "date": "2025-03-30T03:04:46.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6643,7 +7527,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4107.jpg",
         "name": "IMG_4107.HEIC",
-        "date": "2025-04-02T01:15:45.000Z"
+        "date": "2025-04-02T01:15:45.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -6658,7 +7544,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4112.jpg",
         "name": "IMG_4112.HEIC",
-        "date": "2025-04-03T21:46:19.000Z"
+        "date": "2025-04-03T21:46:19.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6673,7 +7561,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4230.jpg",
         "name": "IMG_4230.HEIC",
-        "date": "2025-04-07T02:21:17.000Z"
+        "date": "2025-04-07T02:21:17.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -6688,7 +7578,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4239.jpg",
         "name": "IMG_4239.HEIC",
-        "date": "2025-04-09T05:07:47.000Z"
+        "date": "2025-04-09T05:07:47.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6703,7 +7595,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4257.jpg",
         "name": "IMG_4257.HEIC",
-        "date": "2025-04-12T20:00:28.000Z"
+        "date": "2025-04-12T20:00:28.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6718,7 +7612,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4286.jpg",
         "name": "IMG_4286.HEIC",
-        "date": "2025-04-13T08:18:51.000Z"
+        "date": "2025-04-13T08:18:51.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6733,7 +7629,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4325.jpg",
         "name": "IMG_4325.HEIC",
-        "date": "2025-04-17T00:26:58.000Z"
+        "date": "2025-04-17T00:26:58.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6748,7 +7646,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4369.jpg",
         "name": "IMG_4369.HEIC",
-        "date": "2025-04-19T02:41:21.000Z"
+        "date": "2025-04-19T02:41:21.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -6763,7 +7663,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4460.jpg",
         "name": "IMG_4460.HEIC",
-        "date": "2025-04-23T02:08:08.000Z"
+        "date": "2025-04-23T02:08:08.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6778,7 +7680,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4468.jpg",
         "name": "IMG_4468.HEIC",
-        "date": "2025-04-24T01:17:31.000Z"
+        "date": "2025-04-24T01:17:31.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6793,7 +7697,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4493.jpg",
         "name": "IMG_4493.HEIC",
-        "date": "2025-04-26T02:29:41.000Z"
+        "date": "2025-04-26T02:29:41.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6808,7 +7714,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4496.jpg",
         "name": "IMG_4496.HEIC",
-        "date": "2025-04-26T02:54:59.000Z"
+        "date": "2025-04-26T02:54:59.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6823,7 +7731,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4556.jpg",
         "name": "IMG_4556.HEIC",
-        "date": "2025-04-29T03:32:57.000Z"
+        "date": "2025-04-29T03:32:57.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -6838,7 +7748,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4568.jpg",
         "name": "IMG_4568.HEIC",
-        "date": "2025-04-30T04:26:14.000Z"
+        "date": "2025-04-30T04:26:14.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6853,7 +7765,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4574.jpg",
         "name": "IMG_4574.HEIC",
-        "date": "2025-04-30T18:45:35.000Z"
+        "date": "2025-04-30T18:45:35.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6868,7 +7782,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4632.jpg",
         "name": "IMG_4632.HEIC",
-        "date": "2025-05-03T22:45:01.000Z"
+        "date": "2025-05-03T22:45:01.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -6883,7 +7799,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4641.jpg",
         "name": "IMG_4641.HEIC",
-        "date": "2025-05-04T16:01:11.000Z"
+        "date": "2025-05-04T16:01:11.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6898,7 +7816,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4642.jpg",
         "name": "IMG_4642.HEIC",
-        "date": "2025-05-05T21:44:01.000Z"
+        "date": "2025-05-05T21:44:01.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6913,7 +7833,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4671.jpg",
         "name": "IMG_4671.HEIC",
-        "date": "2025-05-09T00:59:59.000Z"
+        "date": "2025-05-09T00:59:59.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -6928,7 +7850,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9167.jpg",
         "name": "IMG_9167.HEIC",
-        "date": "2024-08-12T01:58:27.000Z"
+        "date": "2024-08-12T01:58:27.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6943,7 +7867,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9266.jpg",
         "name": "IMG_9266.HEIC",
-        "date": "2024-08-13T01:22:44.000Z"
+        "date": "2024-08-13T01:22:44.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -6958,7 +7884,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9494.jpg",
         "name": "IMG_9494.HEIC",
-        "date": "2024-08-19T17:31:29.000Z"
+        "date": "2024-08-19T17:31:29.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6973,7 +7901,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9565.jpg",
         "name": "IMG_9565.HEIC",
-        "date": "2024-08-22T17:14:09.000Z"
+        "date": "2024-08-22T17:14:09.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -6988,7 +7918,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9571.jpg",
         "name": "IMG_9571.HEIC",
-        "date": "2024-08-22T22:10:55.000Z"
+        "date": "2024-08-22T22:10:55.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7003,7 +7935,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9577.jpg",
         "name": "IMG_9577.HEIC",
-        "date": "2024-08-22T23:39:47.000Z"
+        "date": "2024-08-22T23:39:47.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7018,7 +7952,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9636.jpg",
         "name": "IMG_9636.HEIC",
-        "date": "2024-08-23T11:48:43.000Z"
+        "date": "2024-08-23T11:48:43.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -7033,7 +7969,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9661.jpg",
         "name": "IMG_9661.HEIC",
-        "date": "2024-08-23T22:36:38.000Z"
+        "date": "2024-08-23T22:36:38.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -7048,7 +7986,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9724.jpg",
         "name": "IMG_9724.HEIC",
-        "date": "2024-08-24T16:03:50.000Z"
+        "date": "2024-08-24T16:03:50.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7063,7 +8003,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9726.jpg",
         "name": "IMG_9726.HEIC",
-        "date": "2024-08-24T16:17:07.000Z"
+        "date": "2024-08-24T16:17:07.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7078,7 +8020,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9849.jpg",
         "name": "IMG_9849.HEIC",
-        "date": "2024-08-25T22:18:04.000Z"
+        "date": "2024-08-25T22:18:04.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7093,7 +8037,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9899.jpg",
         "name": "IMG_9899.HEIC",
-        "date": "2024-08-26T17:08:45.000Z"
+        "date": "2024-08-26T17:08:45.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7108,7 +8054,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9940.jpg",
         "name": "IMG_9940.HEIC",
-        "date": "2024-08-27T02:35:41.000Z"
+        "date": "2024-08-27T02:35:41.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7123,7 +8071,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9945.jpg",
         "name": "IMG_9945.HEIC",
-        "date": "2024-08-27T18:29:10.000Z"
+        "date": "2024-08-27T18:29:10.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7138,7 +8088,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9946.jpg",
         "name": "IMG_9946.HEIC",
-        "date": "2024-08-27T18:52:56.000Z"
+        "date": "2024-08-27T18:52:56.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7153,7 +8105,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9979.jpg",
         "name": "IMG_9979.HEIC",
-        "date": "2024-08-29T23:06:57.000Z"
+        "date": "2024-08-29T23:06:57.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7168,7 +8122,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0021.jpg",
         "name": "IMG_0021.HEIC",
-        "date": "2024-08-30T16:02:56.000Z"
+        "date": "2024-08-30T16:02:56.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7183,7 +8139,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9980.jpg",
         "name": "IMG_9980.HEIC",
-        "date": "2024-08-29T23:07:01.000Z"
+        "date": "2024-08-29T23:07:01.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7198,7 +8156,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0041.jpg",
         "name": "IMG_0041.HEIC",
-        "date": "2024-08-31T03:28:07.000Z"
+        "date": "2024-08-31T03:28:07.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7213,7 +8173,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0042.jpg",
         "name": "IMG_0042.HEIC",
-        "date": "2024-08-31T03:28:09.000Z"
+        "date": "2024-08-31T03:28:09.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7228,7 +8190,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0048.jpg",
         "name": "IMG_0048.HEIC",
-        "date": "2024-08-31T20:46:00.000Z"
+        "date": "2024-08-31T20:46:00.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7243,7 +8207,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0149.jpg",
         "name": "IMG_0149.HEIC",
-        "date": "2024-09-04T00:57:51.000Z"
+        "date": "2024-09-04T00:57:51.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7258,7 +8224,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0121.jpg",
         "name": "IMG_0121.HEIC",
-        "date": "2024-09-01T23:35:18.000Z"
+        "date": "2024-09-01T23:35:18.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -7273,7 +8241,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0256.jpg",
         "name": "IMG_0256.HEIC",
-        "date": "2024-09-08T20:51:59.000Z"
+        "date": "2024-09-08T20:51:59.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -7288,7 +8258,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0302.jpg",
         "name": "IMG_0302.HEIC",
-        "date": "2024-09-13T00:11:39.000Z"
+        "date": "2024-09-13T00:11:39.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7303,7 +8275,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0346.jpg",
         "name": "IMG_0346.HEIC",
-        "date": "2024-09-14T19:05:26.000Z"
+        "date": "2024-09-14T19:05:26.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7318,7 +8292,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0347.jpg",
         "name": "IMG_0347.HEIC",
-        "date": "2024-09-14T19:05:36.000Z"
+        "date": "2024-09-14T19:05:36.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7333,7 +8309,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0348.jpg",
         "name": "IMG_0348.HEIC",
-        "date": "2024-09-14T19:05:38.000Z"
+        "date": "2024-09-14T19:05:38.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7348,7 +8326,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0372.jpg",
         "name": "IMG_0372.HEIC",
-        "date": "2024-09-14T19:06:39.000Z"
+        "date": "2024-09-14T19:06:39.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7363,7 +8343,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0376.jpg",
         "name": "IMG_0376.HEIC",
-        "date": "2024-09-15T19:41:56.000Z"
+        "date": "2024-09-15T19:41:56.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7378,7 +8360,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0387.jpg",
         "name": "IMG_0387.HEIC",
-        "date": "2024-09-16T01:37:41.000Z"
+        "date": "2024-09-16T01:37:41.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7393,7 +8377,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0409.jpg",
         "name": "IMG_0409.HEIC",
-        "date": "2024-09-20T18:02:50.000Z"
+        "date": "2024-09-20T18:02:50.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7408,7 +8394,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0414.jpg",
         "name": "IMG_0414.HEIC",
-        "date": "2024-09-20T23:46:41.000Z"
+        "date": "2024-09-20T23:46:41.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7423,7 +8411,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0452.jpg",
         "name": "IMG_0452.HEIC",
-        "date": "2024-09-21T03:03:29.000Z"
+        "date": "2024-09-21T03:03:29.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7438,7 +8428,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0465.jpg",
         "name": "IMG_0465.HEIC",
-        "date": "2024-09-21T15:03:18.000Z"
+        "date": "2024-09-21T15:03:18.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7453,7 +8445,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0511.jpg",
         "name": "IMG_0511.HEIC",
-        "date": "2024-09-22T16:02:11.000Z"
+        "date": "2024-09-22T16:02:11.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7468,22 +8462,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0513.jpg",
         "name": "IMG_0513.HEIC",
-        "date": "2024-09-22T16:02:17.000Z"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -83.78054722222222,
-          42.295474999999996
-        ]
-      },
-      "properties": {
-        "src": "/images/travel/travel-img-0512.jpg",
-        "name": "IMG_0512.HEIC",
-        "date": "2024-09-22T16:02:14.000Z"
+        "date": "2024-09-22T16:02:17.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7498,7 +8479,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0551.jpg",
         "name": "IMG_0551.HEIC",
-        "date": "2024-09-24T20:16:48.000Z"
+        "date": "2024-09-24T20:16:48.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7513,7 +8496,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0585.jpg",
         "name": "IMG_0585.HEIC",
-        "date": "2024-09-27T00:32:05.000Z"
+        "date": "2024-09-27T00:32:05.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7528,7 +8513,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0634.jpg",
         "name": "IMG_0634.HEIC",
-        "date": "2024-09-29T05:55:20.000Z"
+        "date": "2024-09-29T05:55:20.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7543,7 +8530,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0692.jpg",
         "name": "IMG_0692.HEIC",
-        "date": "2024-10-01T23:03:48.000Z"
+        "date": "2024-10-01T23:03:48.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7558,7 +8547,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0698.jpg",
         "name": "IMG_0698.HEIC",
-        "date": "2024-10-02T21:37:35.000Z"
+        "date": "2024-10-02T21:37:35.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7573,7 +8564,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0709.jpg",
         "name": "IMG_0709.HEIC",
-        "date": "2024-10-03T04:27:14.000Z"
+        "date": "2024-10-03T04:27:14.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7588,7 +8581,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0711.jpg",
         "name": "IMG_0711.HEIC",
-        "date": "2024-10-03T14:09:08.000Z"
+        "date": "2024-10-03T14:09:08.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7603,7 +8598,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0717.jpg",
         "name": "IMG_0717.HEIC",
-        "date": "2024-10-04T23:09:57.000Z"
+        "date": "2024-10-04T23:09:57.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -7618,7 +8615,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0720.jpg",
         "name": "IMG_0720.HEIC",
-        "date": "2024-10-05T19:40:06.000Z"
+        "date": "2024-10-05T19:40:06.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7633,7 +8632,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0769.jpg",
         "name": "IMG_0769.HEIC",
-        "date": "2024-10-08T00:34:19.000Z"
+        "date": "2024-10-08T00:34:19.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7648,7 +8649,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0802.jpg",
         "name": "IMG_0802.HEIC",
-        "date": "2024-10-09T03:19:52.000Z"
+        "date": "2024-10-09T03:19:52.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7663,7 +8666,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0804.jpg",
         "name": "IMG_0804.HEIC",
-        "date": "2024-10-09T03:21:15.000Z"
+        "date": "2024-10-09T03:21:15.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7678,7 +8683,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0822.jpg",
         "name": "IMG_0822.HEIC",
-        "date": "2024-10-09T05:11:19.000Z"
+        "date": "2024-10-09T05:11:19.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7693,7 +8700,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0881.jpg",
         "name": "IMG_0881.HEIC",
-        "date": "2024-10-11T00:31:39.000Z"
+        "date": "2024-10-11T00:31:39.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7708,7 +8717,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0945.jpg",
         "name": "IMG_0945.HEIC",
-        "date": "2024-10-12T16:17:56.000Z"
+        "date": "2024-10-12T16:17:56.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7723,7 +8734,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0957.jpg",
         "name": "IMG_0957.HEIC",
-        "date": "2024-10-12T16:56:15.000Z"
+        "date": "2024-10-12T16:56:15.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7738,7 +8751,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1048.jpg",
         "name": "IMG_1048.HEIC",
-        "date": "2024-10-12T20:27:29.000Z"
+        "date": "2024-10-12T20:27:29.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7753,7 +8768,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1179.jpg",
         "name": "IMG_1179.HEIC",
-        "date": "2024-10-19T03:49:04.000Z"
+        "date": "2024-10-19T03:49:04.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7768,7 +8785,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1180.jpg",
         "name": "IMG_1180.HEIC",
-        "date": "2024-10-19T03:49:07.000Z"
+        "date": "2024-10-19T03:49:07.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7783,7 +8802,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1223.jpg",
         "name": "IMG_1223.HEIC",
-        "date": "2024-10-22T22:43:56.000Z"
+        "date": "2024-10-22T22:43:56.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7798,7 +8819,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1228.jpg",
         "name": "IMG_1228.HEIC",
-        "date": "2024-10-23T20:53:06.000Z"
+        "date": "2024-10-23T20:53:06.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -7813,7 +8836,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1241.jpg",
         "name": "IMG_1241.HEIC",
-        "date": "2024-10-24T16:01:18.000Z"
+        "date": "2024-10-24T16:01:18.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7828,7 +8853,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1243.jpg",
         "name": "IMG_1243.HEIC",
-        "date": "2024-10-24T20:31:47.000Z"
+        "date": "2024-10-24T20:31:47.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7843,7 +8870,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1268.jpg",
         "name": "IMG_1268.HEIC",
-        "date": "2024-10-25T17:20:45.000Z"
+        "date": "2024-10-25T17:20:45.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -7858,7 +8887,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1332.jpg",
         "name": "IMG_1332.HEIC",
-        "date": "2024-10-27T00:08:12.000Z"
+        "date": "2024-10-27T00:08:12.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7873,7 +8904,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1352.jpg",
         "name": "IMG_1352.HEIC",
-        "date": "2024-10-29T02:18:26.000Z"
+        "date": "2024-10-29T02:18:26.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7888,7 +8921,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1391.jpg",
         "name": "IMG_1391.HEIC",
-        "date": "2024-11-01T15:38:33.000Z"
+        "date": "2024-11-01T15:38:33.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -7903,7 +8938,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1424.jpg",
         "name": "IMG_1424.HEIC",
-        "date": "2024-11-02T00:49:41.000Z"
+        "date": "2024-11-02T00:49:41.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -7918,7 +8955,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1467.jpg",
         "name": "IMG_1467.HEIC",
-        "date": "2024-11-02T02:16:08.000Z"
+        "date": "2024-11-02T02:16:08.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7933,7 +8972,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1520.jpg",
         "name": "IMG_1520.HEIC",
-        "date": "2024-11-05T21:29:32.000Z"
+        "date": "2024-11-05T21:29:32.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7948,7 +8989,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1522.jpg",
         "name": "IMG_1522.HEIC",
-        "date": "2024-11-06T04:30:18.000Z"
+        "date": "2024-11-06T04:30:18.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7963,7 +9006,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1526.jpg",
         "name": "IMG_1526.HEIC",
-        "date": "2024-11-06T20:47:45.000Z"
+        "date": "2024-11-06T20:47:45.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7978,7 +9023,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1530.jpg",
         "name": "IMG_1530.HEIC",
-        "date": "2024-11-07T01:05:36.000Z"
+        "date": "2024-11-07T01:05:36.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -7993,7 +9040,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1531.jpg",
         "name": "IMG_1531.HEIC",
-        "date": "2024-11-07T01:06:39.000Z"
+        "date": "2024-11-07T01:06:39.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8008,7 +9057,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1532.jpg",
         "name": "IMG_1532.HEIC",
-        "date": "2024-11-07T01:07:30.000Z"
+        "date": "2024-11-07T01:07:30.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8023,7 +9074,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1533.jpg",
         "name": "IMG_1533.HEIC",
-        "date": "2024-11-07T01:14:40.000Z"
+        "date": "2024-11-07T01:14:40.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8038,7 +9091,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1534.jpg",
         "name": "IMG_1534.HEIC",
-        "date": "2024-11-07T01:15:38.000Z"
+        "date": "2024-11-07T01:15:38.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8053,7 +9108,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1536.jpg",
         "name": "IMG_1536.HEIC",
-        "date": "2024-11-07T01:15:44.000Z"
+        "date": "2024-11-07T01:15:44.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -8068,7 +9125,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1567.jpg",
         "name": "IMG_1567.HEIC",
-        "date": "2024-11-08T22:44:24.000Z"
+        "date": "2024-11-08T22:44:24.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8083,7 +9142,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1569.jpg",
         "name": "IMG_1569.HEIC",
-        "date": "2024-11-09T04:32:49.000Z"
+        "date": "2024-11-09T04:32:49.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8098,7 +9159,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1594.jpg",
         "name": "IMG_1594.HEIC",
-        "date": "2024-11-13T08:19:30.000Z"
+        "date": "2024-11-13T08:19:30.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8113,7 +9176,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1609.jpg",
         "name": "IMG_1609.HEIC",
-        "date": "2024-11-14T04:18:37.000Z"
+        "date": "2024-11-14T04:18:37.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8128,7 +9193,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1621.jpg",
         "name": "IMG_1621.HEIC",
-        "date": "2024-11-15T13:32:17.000Z"
+        "date": "2024-11-15T13:32:17.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8143,7 +9210,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1643.jpg",
         "name": "IMG_1643.HEIC",
-        "date": "2024-11-17T04:53:45.000Z"
+        "date": "2024-11-17T04:53:45.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8158,7 +9227,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1662.jpg",
         "name": "IMG_1662.HEIC",
-        "date": "2024-11-18T02:41:11.000Z"
+        "date": "2024-11-18T02:41:11.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8173,7 +9244,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1693.jpg",
         "name": "IMG_1693.HEIC",
-        "date": "2024-11-20T01:57:17.000Z"
+        "date": "2024-11-20T01:57:17.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8188,7 +9261,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1700.jpg",
         "name": "IMG_1700.HEIC",
-        "date": "2024-11-20T21:46:03.000Z"
+        "date": "2024-11-20T21:46:03.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8203,7 +9278,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1105.jpg",
         "name": "IMG_1105.HEIC",
-        "date": "2024-11-25T04:59:04.000Z"
+        "date": "2024-11-25T04:59:04.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -8218,7 +9295,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1711.jpg",
         "name": "IMG_1711.HEIC",
-        "date": "2024-11-21T03:23:14.000Z"
+        "date": "2024-11-21T03:23:14.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8233,7 +9312,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1730.jpg",
         "name": "IMG_1730.HEIC",
-        "date": "2024-11-22T18:58:34.000Z"
+        "date": "2024-11-22T18:58:34.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -8248,7 +9329,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1818.jpg",
         "name": "IMG_1818.HEIC",
-        "date": "2024-11-25T16:46:24.000Z"
+        "date": "2024-11-25T16:46:24.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8263,7 +9346,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1835.jpg",
         "name": "IMG_1835.HEIC",
-        "date": "2024-11-26T23:37:26.000Z"
+        "date": "2024-11-26T23:37:26.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -8278,7 +9363,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1893.jpg",
         "name": "IMG_1893.HEIC",
-        "date": "2024-11-29T00:03:49.000Z"
+        "date": "2024-11-29T00:03:49.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8293,7 +9380,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1932.jpg",
         "name": "IMG_1932.HEIC",
-        "date": "2024-11-30T23:25:21.000Z"
+        "date": "2024-11-30T23:25:21.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8308,7 +9397,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1940.jpg",
         "name": "IMG_1940.HEIC",
-        "date": "2024-12-01T00:34:23.000Z"
+        "date": "2024-12-01T00:34:23.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -8323,7 +9414,9 @@
       "properties": {
         "src": "/images/travel/travel-img-1941.jpg",
         "name": "IMG_1941.HEIC",
-        "date": "2024-12-01T00:34:28.000Z"
+        "date": "2024-12-01T00:34:28.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -8338,7 +9431,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2006.jpg",
         "name": "IMG_2006.HEIC",
-        "date": "2024-12-06T01:30:47.000Z"
+        "date": "2024-12-06T01:30:47.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8353,7 +9448,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2008.jpg",
         "name": "IMG_2008.HEIC",
-        "date": "2024-12-06T01:31:01.000Z"
+        "date": "2024-12-06T01:31:01.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8368,7 +9465,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2360.jpg",
         "name": "IMG_2360.HEIC",
-        "date": "2024-12-06T01:34:55.000Z"
+        "date": "2024-12-06T01:34:55.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -8383,7 +9482,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2020.jpg",
         "name": "IMG_2020.HEIC",
-        "date": "2024-12-06T02:32:24.000Z"
+        "date": "2024-12-06T02:32:24.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8398,7 +9499,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2024.jpg",
         "name": "IMG_2024.HEIC",
-        "date": "2024-12-06T02:37:05.000Z"
+        "date": "2024-12-06T02:37:05.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8413,7 +9516,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2065.jpg",
         "name": "IMG_2065.HEIC",
-        "date": "2024-12-10T03:14:11.000Z"
+        "date": "2024-12-10T03:14:11.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8428,7 +9533,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2085.jpg",
         "name": "IMG_2085.HEIC",
-        "date": "2024-12-12T01:41:06.000Z"
+        "date": "2024-12-12T01:41:06.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8443,7 +9550,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5773.jpg",
         "name": "IMG_5773.jpeg",
-        "date": "2024-12-14T02:50:02.000Z"
+        "date": "2024-12-14T02:50:02.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8458,7 +9567,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2152.jpg",
         "name": "IMG_2152.HEIC",
-        "date": "2024-12-14T21:28:00.000Z"
+        "date": "2024-12-14T21:28:00.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8473,7 +9584,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5774.jpg",
         "name": "IMG_5774.jpeg",
-        "date": "2024-12-14T03:49:29.000Z"
+        "date": "2024-12-14T03:49:29.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8488,7 +9601,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2185.jpg",
         "name": "IMG_2185.HEIC",
-        "date": "2024-12-15T01:37:15.000Z"
+        "date": "2024-12-15T01:37:15.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8503,7 +9618,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2207.jpg",
         "name": "IMG_2207.HEIC",
-        "date": "2024-12-17T12:14:41.000Z"
+        "date": "2024-12-17T12:14:41.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8518,7 +9635,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2235.jpg",
         "name": "IMG_2235.HEIC",
-        "date": "2024-12-19T19:10:26.000Z"
+        "date": "2024-12-19T19:10:26.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8533,7 +9652,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2236.jpg",
         "name": "IMG_2236.HEIC",
-        "date": "2024-12-19T23:32:51.000Z"
+        "date": "2024-12-19T23:32:51.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8548,7 +9669,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2239.jpg",
         "name": "IMG_2239.HEIC",
-        "date": "2024-12-20T23:08:12.000Z"
+        "date": "2024-12-20T23:08:12.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8563,7 +9686,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2260.jpg",
         "name": "IMG_2260.HEIC",
-        "date": "2024-12-23T19:41:05.000Z"
+        "date": "2024-12-23T19:41:05.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8578,7 +9703,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2261.jpg",
         "name": "IMG_2261.HEIC",
-        "date": "2024-12-23T19:41:09.000Z"
+        "date": "2024-12-23T19:41:09.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8593,7 +9720,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2264.jpg",
         "name": "IMG_2264.HEIC",
-        "date": "2024-12-23T19:41:17.000Z"
+        "date": "2024-12-23T19:41:17.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8608,7 +9737,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2265.jpg",
         "name": "IMG_2265.HEIC",
-        "date": "2024-12-23T19:41:19.000Z"
+        "date": "2024-12-23T19:41:19.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8623,7 +9754,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2221.jpg",
         "name": "IMG_2221.heic",
-        "date": "2024-12-27T17:48:42.000Z"
+        "date": "2024-12-27T17:48:42.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8638,7 +9771,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2315.jpg",
         "name": "IMG_2315.HEIC",
-        "date": "2024-12-27T16:57:50.000Z"
+        "date": "2024-12-27T16:57:50.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8653,7 +9788,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2333.jpg",
         "name": "IMG_2333.HEIC",
-        "date": "2024-12-28T02:39:32.000Z"
+        "date": "2024-12-28T02:39:32.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8668,7 +9805,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4388.jpg",
         "name": "IMG_4388.heic",
-        "date": "2025-01-03T17:09:10.000Z"
+        "date": "2025-01-03T17:09:10.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8683,7 +9822,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2503.jpg",
         "name": "IMG_2503.HEIC",
-        "date": "2025-01-03T17:09:13.000Z"
+        "date": "2025-01-03T17:09:13.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8698,7 +9839,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4862.jpg",
         "name": "IMG_4862.heic",
-        "date": "2025-01-03T23:28:08.000Z"
+        "date": "2025-01-03T23:28:08.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8713,7 +9856,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2569.jpg",
         "name": "IMG_2569.HEIC",
-        "date": "2025-01-08T02:18:11.000Z"
+        "date": "2025-01-08T02:18:11.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8728,7 +9873,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2571.jpg",
         "name": "IMG_2571.HEIC",
-        "date": "2025-01-08T02:18:22.000Z"
+        "date": "2025-01-08T02:18:22.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8743,7 +9890,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2668.jpg",
         "name": "IMG_2668.HEIC",
-        "date": "2025-01-12T01:36:19.000Z"
+        "date": "2025-01-12T01:36:19.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -8758,7 +9907,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2710.jpg",
         "name": "IMG_2710.HEIC",
-        "date": "2025-01-14T05:05:03.000Z"
+        "date": "2025-01-14T05:05:03.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8773,7 +9924,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2725.jpg",
         "name": "IMG_2725.HEIC",
-        "date": "2025-01-17T22:49:49.000Z"
+        "date": "2025-01-17T22:49:49.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8788,7 +9941,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2737.jpg",
         "name": "IMG_2737.HEIC",
-        "date": "2025-01-19T06:26:41.000Z"
+        "date": "2025-01-19T06:26:41.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8803,7 +9958,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2742.jpg",
         "name": "IMG_2742.HEIC",
-        "date": "2025-01-19T21:16:37.000Z"
+        "date": "2025-01-19T21:16:37.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8818,7 +9975,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2744.jpg",
         "name": "IMG_2744.HEIC",
-        "date": "2025-01-20T00:36:36.000Z"
+        "date": "2025-01-20T00:36:36.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8833,7 +9992,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2756.jpg",
         "name": "IMG_2756.HEIC",
-        "date": "2025-01-21T04:28:34.000Z"
+        "date": "2025-01-21T04:28:34.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8848,7 +10009,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2876.jpg",
         "name": "IMG_2876.HEIC",
-        "date": "2025-01-27T05:59:16.000Z"
+        "date": "2025-01-27T05:59:16.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8863,7 +10026,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2938.jpg",
         "name": "IMG_2938.HEIC",
-        "date": "2025-02-06T03:54:52.000Z"
+        "date": "2025-02-06T03:54:52.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8878,7 +10043,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2902.jpg",
         "name": "IMG_2902.HEIC",
-        "date": "2025-02-02T04:17:23.000Z"
+        "date": "2025-02-02T04:17:23.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8893,7 +10060,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2965.jpg",
         "name": "IMG_2965.HEIC",
-        "date": "2025-02-09T22:10:25.000Z"
+        "date": "2025-02-09T22:10:25.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8908,7 +10077,9 @@
       "properties": {
         "src": "/images/travel/travel-img-2978.jpg",
         "name": "IMG_2978.HEIC",
-        "date": "2025-02-12T06:10:17.000Z"
+        "date": "2025-02-12T06:10:17.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8923,7 +10094,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3031.jpg",
         "name": "IMG_3031.HEIC",
-        "date": "2025-02-16T05:09:24.000Z"
+        "date": "2025-02-16T05:09:24.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8938,7 +10111,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3062.jpg",
         "name": "IMG_3062.HEIC",
-        "date": "2025-02-17T03:51:44.000Z"
+        "date": "2025-02-17T03:51:44.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8953,7 +10128,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3074.jpg",
         "name": "IMG_3074.HEIC",
-        "date": "2025-02-18T04:56:31.000Z"
+        "date": "2025-02-18T04:56:31.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8968,7 +10145,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3079.jpg",
         "name": "IMG_3079.HEIC",
-        "date": "2025-02-18T06:12:57.000Z"
+        "date": "2025-02-18T06:12:57.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8983,7 +10162,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3081.jpg",
         "name": "IMG_3081.HEIC",
-        "date": "2025-02-18T06:13:04.000Z"
+        "date": "2025-02-18T06:13:04.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -8998,7 +10179,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3087.jpg",
         "name": "IMG_3087.HEIC",
-        "date": "2025-02-19T05:10:32.000Z"
+        "date": "2025-02-19T05:10:32.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9013,7 +10196,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3089.jpg",
         "name": "IMG_3089.HEIC",
-        "date": "2025-02-19T08:34:27.000Z"
+        "date": "2025-02-19T08:34:27.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9028,7 +10213,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3123.jpg",
         "name": "IMG_3123.HEIC",
-        "date": "2025-02-24T01:35:01.000Z"
+        "date": "2025-02-24T01:35:01.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -9043,7 +10230,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3150.jpg",
         "name": "IMG_3150.HEIC",
-        "date": "2025-02-26T04:46:03.000Z"
+        "date": "2025-02-26T04:46:03.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9058,7 +10247,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3168.jpg",
         "name": "IMG_3168.HEIC",
-        "date": "2025-02-28T03:18:28.000Z"
+        "date": "2025-02-28T03:18:28.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9073,7 +10264,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3239.jpg",
         "name": "IMG_3239.HEIC",
-        "date": "2025-03-01T15:41:41.000Z"
+        "date": "2025-03-01T15:41:41.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9088,7 +10281,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3270.jpg",
         "name": "IMG_3270.HEIC",
-        "date": "2025-03-01T22:23:55.000Z"
+        "date": "2025-03-01T22:23:55.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9103,7 +10298,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3271.jpg",
         "name": "IMG_3271.HEIC",
-        "date": "2025-03-01T22:59:21.000Z"
+        "date": "2025-03-01T22:59:21.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9118,7 +10315,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3274.jpg",
         "name": "IMG_3274.HEIC",
-        "date": "2025-03-01T23:19:50.000Z"
+        "date": "2025-03-01T23:19:50.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9133,7 +10332,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3285.jpg",
         "name": "IMG_3285.HEIC",
-        "date": "2025-03-01T23:37:36.000Z"
+        "date": "2025-03-01T23:37:36.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9148,7 +10349,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3291.jpg",
         "name": "IMG_3291.HEIC",
-        "date": "2025-03-02T01:03:35.000Z"
+        "date": "2025-03-02T01:03:35.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9163,7 +10366,9 @@
       "properties": {
         "src": "/images/travel/travel-1671.jpg",
         "name": "1671.jpg",
-        "date": "2022-06-28T16:44:14.000Z"
+        "date": "2022-06-28T16:44:14.000Z",
+        "width": 1024,
+        "height": 750
       }
     },
     {
@@ -9178,7 +10383,9 @@
       "properties": {
         "src": "/images/travel/travel-1683.jpg",
         "name": "1683.jpg",
-        "date": "2022-06-30T01:48:44.000Z"
+        "date": "2022-06-30T01:48:44.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9193,7 +10400,9 @@
       "properties": {
         "src": "/images/travel/travel-2821.jpg",
         "name": "2821.jpg",
-        "date": "2022-09-10T00:45:37.000Z"
+        "date": "2022-09-10T00:45:37.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9208,7 +10417,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3295.jpg",
         "name": "IMG_3295.HEIC",
-        "date": "2025-03-02T01:11:54.000Z"
+        "date": "2025-03-02T01:11:54.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9223,7 +10434,9 @@
       "properties": {
         "src": "/images/travel/travel-3282.jpg",
         "name": "3282.jpg",
-        "date": "2022-10-04T20:57:05.000Z"
+        "date": "2022-10-04T20:57:05.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -9238,7 +10451,9 @@
       "properties": {
         "src": "/images/travel/travel-1000000139.jpg",
         "name": "1000000139.jpg",
-        "date": "2022-11-18T20:18:30.000Z"
+        "date": "2022-11-18T20:18:30.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9253,7 +10468,9 @@
       "properties": {
         "src": "/images/travel/travel-1000001784.jpg",
         "name": "1000001784.jpg",
-        "date": "2023-01-08T06:21:27.000Z"
+        "date": "2023-01-08T06:21:27.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9268,7 +10485,9 @@
       "properties": {
         "src": "/images/travel/travel-1000002886.jpg",
         "name": "1000002886.jpg",
-        "date": "2023-02-12T03:06:14.000Z"
+        "date": "2023-02-12T03:06:14.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9283,7 +10502,9 @@
       "properties": {
         "src": "/images/travel/travel-3280.jpg",
         "name": "3280.jpg",
-        "date": "2022-10-04T20:56:30.000Z"
+        "date": "2022-10-04T20:56:30.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9298,7 +10519,9 @@
       "properties": {
         "src": "/images/travel/travel-1000003584.jpg",
         "name": "1000003584.jpg",
-        "date": "2023-03-27T00:54:54.000Z"
+        "date": "2023-03-27T00:54:54.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9313,7 +10536,9 @@
       "properties": {
         "src": "/images/travel/travel-1000004303.jpg",
         "name": "1000004303.jpg",
-        "date": "2023-05-04T17:38:26.000Z"
+        "date": "2023-05-04T17:38:26.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -9328,7 +10553,9 @@
       "properties": {
         "src": "/images/travel/travel-1000005352.jpg",
         "name": "1000005352.jpg",
-        "date": "2023-06-29T01:41:17.000Z"
+        "date": "2023-06-29T01:41:17.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9343,7 +10570,9 @@
       "properties": {
         "src": "/images/travel/travel-1000005373.jpg",
         "name": "1000005373.jpg",
-        "date": "2023-06-30T20:33:14.000Z"
+        "date": "2023-06-30T20:33:14.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -9358,7 +10587,9 @@
       "properties": {
         "src": "/images/travel/travel-1000005594.jpg",
         "name": "1000005594.jpg",
-        "date": "2023-07-17T20:06:08.000Z"
+        "date": "2023-07-17T20:06:08.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9373,7 +10604,9 @@
       "properties": {
         "src": "/images/travel/travel-1000005599.jpg",
         "name": "1000005599.jpg",
-        "date": "2023-07-18T01:35:15.000Z"
+        "date": "2023-07-18T01:35:15.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -9388,7 +10621,9 @@
       "properties": {
         "src": "/images/travel/travel-1000005902.jpg",
         "name": "1000005902.jpg",
-        "date": "2023-07-19T22:33:15.000Z"
+        "date": "2023-07-19T22:33:15.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9403,7 +10638,9 @@
       "properties": {
         "src": "/images/travel/travel-1000005904.jpg",
         "name": "1000005904.jpg",
-        "date": "2023-07-19T22:33:21.000Z"
+        "date": "2023-07-19T22:33:21.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9418,7 +10655,9 @@
       "properties": {
         "src": "/images/travel/travel-1000005908.jpg",
         "name": "1000005908.jpg",
-        "date": "2023-07-19T23:36:13.000Z"
+        "date": "2023-07-19T23:36:13.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9433,7 +10672,9 @@
       "properties": {
         "src": "/images/travel/travel-1000005948.jpg",
         "name": "1000005948.jpg",
-        "date": "2023-07-22T15:44:20.000Z"
+        "date": "2023-07-22T15:44:20.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9448,7 +10689,9 @@
       "properties": {
         "src": "/images/travel/travel-1000008325.jpg",
         "name": "1000008325.jpg",
-        "date": "2023-11-12T01:46:01.000Z"
+        "date": "2023-11-12T01:46:01.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -9463,7 +10706,9 @@
       "properties": {
         "src": "/images/travel/travel-1000006197.jpg",
         "name": "1000006197.jpg",
-        "date": "2023-08-05T18:53:49.000Z"
+        "date": "2023-08-05T18:53:49.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9478,7 +10723,9 @@
       "properties": {
         "src": "/images/travel/travel-img-4515.jpg",
         "name": "IMG_4515.HEIC",
-        "date": "2024-01-15T07:37:09.000Z"
+        "date": "2024-01-15T07:37:09.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -9493,7 +10740,9 @@
       "properties": {
         "src": "/images/travel/travel-img-3755.jpg",
         "name": "IMG_3755.HEIC",
-        "date": "2024-02-14T17:58:37.000Z"
+        "date": "2024-02-14T17:58:37.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9508,7 +10757,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0254.jpg",
         "name": "IMG_0254.heic",
-        "date": "2024-03-22T16:09:08.000Z"
+        "date": "2024-03-22T16:09:08.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9523,7 +10774,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5014.jpg",
         "name": "IMG_5014.HEIC",
-        "date": "2024-03-25T19:02:07.000Z"
+        "date": "2024-03-25T19:02:07.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9538,7 +10791,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9303.jpg",
         "name": "IMG_9303.heic",
-        "date": "2024-04-15T00:46:44.000Z"
+        "date": "2024-04-15T00:46:44.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9553,7 +10808,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9305.jpg",
         "name": "IMG_9305.heic",
-        "date": "2024-04-15T01:30:23.000Z"
+        "date": "2024-04-15T01:30:23.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -9568,7 +10825,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5231.jpg",
         "name": "IMG_5231.HEIC",
-        "date": "2024-04-19T01:17:33.000Z"
+        "date": "2024-04-19T01:17:33.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9583,7 +10842,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5379.jpg",
         "name": "IMG_5379.HEIC",
-        "date": "2024-04-28T01:50:11.000Z"
+        "date": "2024-04-28T01:50:11.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9598,7 +10859,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0445.jpg",
         "name": "IMG_0445.heic",
-        "date": "2024-04-30T02:14:32.000Z"
+        "date": "2024-04-30T02:14:32.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -9613,7 +10876,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5625.jpg",
         "name": "IMG_5625.HEIC",
-        "date": "2024-05-10T03:56:05.000Z"
+        "date": "2024-05-10T03:56:05.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9628,7 +10893,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5629.jpg",
         "name": "IMG_5629.HEIC",
-        "date": "2024-05-10T16:50:36.000Z"
+        "date": "2024-05-10T16:50:36.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -9643,7 +10910,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5026.jpg",
         "name": "IMG_5026.jpeg",
-        "date": "2024-05-13T00:42:55.000Z"
+        "date": "2024-05-13T00:42:55.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9658,7 +10927,9 @@
       "properties": {
         "src": "/images/travel/travel-img-5719.jpg",
         "name": "IMG_5719.HEIC",
-        "date": "2024-05-16T15:06:11.000Z"
+        "date": "2024-05-16T15:06:11.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9673,7 +10944,9 @@
       "properties": {
         "src": "/images/travel/travel-img-6191.jpg",
         "name": "IMG_6191.HEIC",
-        "date": "2024-05-26T14:40:13.000Z"
+        "date": "2024-05-26T14:40:13.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9688,7 +10961,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7316.jpg",
         "name": "IMG_7316.HEIC",
-        "date": "2024-06-25T16:52:30.000Z"
+        "date": "2024-06-25T16:52:30.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -9703,7 +10978,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7620.jpg",
         "name": "IMG_7620.HEIC",
-        "date": "2024-06-26T17:37:05.000Z"
+        "date": "2024-06-26T17:37:05.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9718,7 +10995,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8430.jpg",
         "name": "IMG_8430.jpeg",
-        "date": "2024-06-24T16:36:04.000Z"
+        "date": "2024-06-24T16:36:04.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9733,7 +11012,9 @@
       "properties": {
         "src": "/images/travel/travel-img-9944.jpg",
         "name": "IMG_9944.HEIC",
-        "date": "2024-06-01T02:29:38.000Z"
+        "date": "2024-06-01T02:29:38.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9748,7 +11029,9 @@
       "properties": {
         "src": "/images/travel/travel-img-0985.jpg",
         "name": "IMG_0985.HEIC",
-        "date": "2024-07-01T16:29:53.000Z"
+        "date": "2024-07-01T16:29:53.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -9763,7 +11046,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7709.jpg",
         "name": "IMG_7709.HEIC",
-        "date": "2024-07-08T14:43:30.000Z"
+        "date": "2024-07-08T14:43:30.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9778,7 +11063,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7713.jpg",
         "name": "IMG_7713.HEIC",
-        "date": "2024-07-08T18:23:17.000Z"
+        "date": "2024-07-08T18:23:17.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9793,7 +11080,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7727.jpg",
         "name": "IMG_7727.HEIC",
-        "date": "2024-07-12T16:19:56.000Z"
+        "date": "2024-07-12T16:19:56.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9808,7 +11097,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7762.jpg",
         "name": "IMG_7762.HEIC",
-        "date": "2024-07-15T16:43:12.000Z"
+        "date": "2024-07-15T16:43:12.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9823,7 +11114,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7793.jpg",
         "name": "IMG_7793.HEIC",
-        "date": "2024-07-18T01:17:28.000Z"
+        "date": "2024-07-18T01:17:28.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9838,7 +11131,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7812.jpg",
         "name": "IMG_7812.HEIC",
-        "date": "2024-07-18T02:18:05.000Z"
+        "date": "2024-07-18T02:18:05.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9853,7 +11148,9 @@
       "properties": {
         "src": "/images/travel/travel-img-7839.jpg",
         "name": "IMG_7839.HEIC",
-        "date": "2024-07-19T16:05:16.000Z"
+        "date": "2024-07-19T16:05:16.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9868,7 +11165,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8418.jpg",
         "name": "IMG_8418.HEIC",
-        "date": "2024-07-31T18:29:44.000Z"
+        "date": "2024-07-31T18:29:44.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9883,7 +11182,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8419.jpg",
         "name": "IMG_8419.HEIC",
-        "date": "2024-07-31T18:35:00.000Z"
+        "date": "2024-07-31T18:35:00.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9898,7 +11199,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8425.jpg",
         "name": "IMG_8425.HEIC",
-        "date": "2024-08-02T00:48:04.000Z"
+        "date": "2024-08-02T00:48:04.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -9913,7 +11216,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8465.jpg",
         "name": "IMG_8465.HEIC",
-        "date": "2024-08-02T18:09:30.000Z"
+        "date": "2024-08-02T18:09:30.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9928,7 +11233,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8537.jpg",
         "name": "IMG_8537.HEIC",
-        "date": "2024-08-03T23:44:57.000Z"
+        "date": "2024-08-03T23:44:57.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9943,7 +11250,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8676.jpg",
         "name": "IMG_8676.HEIC",
-        "date": "2024-08-04T15:07:50.000Z"
+        "date": "2024-08-04T15:07:50.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9958,7 +11267,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8677.jpg",
         "name": "IMG_8677.HEIC",
-        "date": "2024-08-04T15:41:36.000Z"
+        "date": "2024-08-04T15:41:36.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9973,7 +11284,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8678.jpg",
         "name": "IMG_8678.HEIC",
-        "date": "2024-08-04T16:57:29.000Z"
+        "date": "2024-08-04T16:57:29.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -9988,7 +11301,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8690.jpg",
         "name": "IMG_8690.HEIC",
-        "date": "2024-08-07T16:52:05.000Z"
+        "date": "2024-08-07T16:52:05.000Z",
+        "width": 1024,
+        "height": 768
       }
     },
     {
@@ -10003,7 +11318,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8691.jpg",
         "name": "IMG_8691.HEIC",
-        "date": "2024-08-07T16:55:50.000Z"
+        "date": "2024-08-07T16:55:50.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -10018,7 +11335,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8692.jpg",
         "name": "IMG_8692.HEIC",
-        "date": "2024-08-07T23:25:20.000Z"
+        "date": "2024-08-07T23:25:20.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -10033,7 +11352,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8694.jpg",
         "name": "IMG_8694.HEIC",
-        "date": "2024-08-07T23:47:59.000Z"
+        "date": "2024-08-07T23:47:59.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -10048,7 +11369,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8700.jpg",
         "name": "IMG_8700.HEIC",
-        "date": "2024-08-08T00:32:43.000Z"
+        "date": "2024-08-08T00:32:43.000Z",
+        "width": 768,
+        "height": 1024
       }
     },
     {
@@ -10063,7 +11386,9 @@
       "properties": {
         "src": "/images/travel/travel-img-8701.jpg",
         "name": "IMG_8701.HEIC",
-        "date": "2024-08-08T00:34:09.000Z"
+        "date": "2024-08-08T00:34:09.000Z",
+        "width": 768,
+        "height": 1024
       }
     }
   ]

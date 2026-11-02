@@ -1,3 +1,4 @@
+import DecorativeMark from "./DecorativeMark";
 import { ArrowUpRight, Code2, Compass, Database, Monitor } from "lucide-react";
 import type { CSSProperties } from "react";
 import type { IconType } from "react-icons";
@@ -35,24 +36,24 @@ const skillVisuals: Record<string, { icon: IconType; color: string }> = {
 };
 
 const toolkit = [
-  { title: "From idea to plan", description: "Organizing the work and bringing a team along.", icon: Compass, tools: ["Agile Scrum", "Jira", "Confluence", "Asana", "Figma"] },
-  { title: "From plan to something real", description: "Building, iterating, and keeping track of what changed.", icon: Code2, tools: ["Python", "C++", "C", "Java", "Go", "Git", "GitHub", "DevOps"] },
-  { title: "Making sense of the data", description: "Finding patterns and sharing the story behind the numbers.", icon: Database, tools: ["PostgreSQL", "SQL Server", "NoSQL", "Excel", "PowerPoint", "Power BI"] },
-  { title: "The everyday setup", description: "The platforms and tools that keep things moving.", icon: Monitor, tools: ["AWS", "Microsoft Azure", "Windows", "macOS", "Linux/Unix", "Debian", "Outlook"] },
+  { title: "From idea to plan", icon: Compass, tools: ["Agile Scrum", "Jira", "Confluence", "Asana", "Figma"] },
+  { title: "From plan to something real", icon: Code2, tools: ["Python", "C++", "C", "Java", "Go", "Git", "GitHub", "DevOps"] },
+  { title: "Making sense of the data", icon: Database, tools: ["PostgreSQL", "SQL Server", "NoSQL", "Excel", "PowerPoint", "Power BI"] },
+  { title: "The everyday setup", icon: Monitor, tools: ["AWS", "Microsoft Azure", "Windows", "macOS", "Linux/Unix", "Debian", "Outlook"] },
 ];
 
 export default function Skills() {
   return (
     <section id="skills" className="personal-toolkit">
-      <header className="chapter-heading"><p className="work-eyebrow">05 / Tools of the trade</p><h2>A few things <span>in my toolkit.</span></h2><p>Different problems call for different tools. These are some of the ones I bring to the table.</p></header>
-      <div className="toolkit-rows">{toolkit.map((group) => <div key={group.title} className="toolkit-row"><div className="toolkit-label"><group.icon size={23} aria-hidden="true" /><div><h3>{group.title}</h3><p>{group.description}</p></div></div><ul>{group.tools.map((tool) => {
+      <header className="chapter-heading"><h2>A few things <span>in my toolkit.</span></h2></header>
+      <div className="toolkit-rows">{toolkit.map((group) => <div key={group.title} className="toolkit-row"><div className="toolkit-label"><group.icon size={23} aria-hidden="true" /><div><h3>{group.title}</h3></div></div><ul>{group.tools.map((tool) => {
         const visual = skillVisuals[tool];
         return <li key={tool} style={{ "--skill-color": visual.color } as CSSProperties}>
           <span className="skill-icon-badge"><visual.icon size={28} aria-hidden="true" /></span>
           <span className="skill-name">{tool}</span>
         </li>;
       })}</ul></div>)}</div>
-      <a className="toolkit-credential" href="https://learn.microsoft.com/en-us/users/austynnguyen-2735/credentials/c37b22fdc08bdf5a" target="_blank" rel="noopener noreferrer"><span className="credential-mark" aria-hidden="true">✳</span><span>Power BI certified<span className="credential-caption">A little extra time with the data.</span></span><span className="credential-action">View credential <ArrowUpRight size={17} aria-hidden="true" /></span></a>
+      <a className="toolkit-credential" href="https://learn.microsoft.com/en-us/users/austynnguyen-2735/credentials/c37b22fdc08bdf5a" target="_blank" rel="noopener noreferrer"><span className="credential-mark" aria-hidden="true"><DecorativeMark /></span><span>Power BI certified</span><span className="credential-action">View credential <ArrowUpRight className="link-arrow" size={17} aria-hidden="true" /></span></a>
     </section>
   );
 }

@@ -1,168 +1,83 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import Map, { NavigationControl, MapRef, Source, Layer, Popup } from "react-map-gl/mapbox";
-import "mapbox-gl/dist/mapbox-gl.css";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
+import Map, { NavigationControl, Source, Layer, Popup, type MapRef, type MapMouseEvent } from "react-map-gl/mapbox";
+import type { CircleLayer, SymbolLayer, GeoJSONSource } from "mapbox-gl";
+import type { FeatureCollection, Point } from "geojson";
 import Image from "next/image";
-import locations from "@/src/data/locations.json"; 
-import type { FeatureCollection } from 'geojson';
-import { CircleLayer, SymbolLayer } from "mapbox-gl";
+import "mapbox-gl/dist/mapbox-gl.css";
+import { photos, hasCoordinates, photoDate, photoDescription, type TravelPhoto } from "@/src/data/travel";
 
 const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
-
-// --- FIXED LAYER STYLES ---
-// We added "source: 'locations'" to all of these to satisfy TypeScript
-
+const mapPhotos = photos.filter(hasCoordinates);
+const mapData: FeatureCollection<Point, TravelPhoto["properties"]> = { type: "FeatureCollection", features: mapPhotos };
 const clusterLayer: CircleLayer = {
-  id: 'clusters',
-  type: 'circle',
-  source: 'locations', // <--- Added this
-  filter: ['has', 'point_count'],
-  paint: {
-    'circle-color': ['step', ['get', 'point_count'], '#51bbd6', 10, '#f1f075', 50, '#f28cb1'],
-    'circle-radius': ['step', ['get', 'point_count'], 20, 100, 30, 750, 40]
-  }
+  id: "clusters", type: "circle", source: "locations", filter: ["has", "point_count"],
+  paint: { "circle-color": "#d6b558", "circle-radius": ["step", ["get", "point_count"], 19, 20, 25, 100, 32], "circle-stroke-width": 2, "circle-stroke-color": "#75570f" },
 };
-
 const clusterCountLayer: SymbolLayer = {
-  id: 'cluster-count',
-  type: 'symbol',
-  source: 'locations', // <--- Added this
-  filter: ['has', 'point_count'],
-  layout: {
-    'text-field': '{point_count_abbreviated}',
-    'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
-    'text-size': 12
-  }
+  id: "cluster-count", type: "symbol", source: "locations", filter: ["has", "point_count"],
+  layout: { "text-field": "{point_count_abbreviated}", "text-size": 13 }, paint: { "text-color": "#263a35" },
 };
-
-const unclusteredPointLayer: CircleLayer = {
-  id: 'unclustered-point',
-  type: 'circle',
-  source: 'locations', // <--- Added this
-  filter: ['!', ['has', 'point_count']],
-  paint: {
-    'circle-color': '#ffc107',
-    'circle-radius': 6,
-    'circle-stroke-width': 1,
-    'circle-stroke-color': '#fff'
-  }
+const pointLayer: CircleLayer = {
+  id: "unclustered-point", type: "circle", source: "locations", filter: ["!", ["has", "point_count"]],
+  paint: { "circle-color": "#d6b558", "circle-radius": 7, "circle-stroke-width": 2, "circle-stroke-color": "#75570f" },
 };
-
-interface TravelMapProps {
-  highlightedLocation?: any | null;
+function subscribeTheme(callback: () => void) {
+  const observer = new MutationObserver(callback);
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+  return () => observer.disconnect();
 }
+function getTheme() { return document.documentElement.classList.contains("dark"); }
+function getServerTheme() { return false; }
 
-export default function TravelMap({ highlightedLocation }: TravelMapProps) {
-  const mapRef = useRef<MapRef>(null);
-  const [selectedLocation, setSelectedLocation] = useState<any>(null);
-
-  const [viewState, setViewState] = useState({
-    longitude: -20,
-    latitude: 20,
-    zoom: 1.5,
-  });
-
+export default function TravelMap({ highlightedLocation, onLocationSelect }: {
+  highlightedLocation: TravelPhoto | null; onLocationSelect: (photo: TravelPhoto | null) => void;
+}) {
+  const map = useRef<MapRef>(null);
+  const dark = useSyncExternalStore(subscribeTheme, getTheme, getServerTheme);
+  const [ready, setReady] = useState(false);
+  const [failed, setFailed] = useState(false);
   useEffect(() => {
-    if (highlightedLocation && mapRef.current) {
-      setSelectedLocation(highlightedLocation);
-      mapRef.current.flyTo({
-        center: [
-          highlightedLocation.geometry.coordinates[0],
-          highlightedLocation.geometry.coordinates[1]
-        ],
-        zoom: 10,
-        duration: 2000
-      });
-    }
-  }, [highlightedLocation]);
+    if (!ready || !highlightedLocation || !hasCoordinates(highlightedLocation)) return;
+    map.current?.flyTo({ center: highlightedLocation.geometry.coordinates, zoom: 12,
+      duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 1100 });
+  }, [highlightedLocation, ready]);
 
-  const onClick = (event: any) => {
-    if(!event.features || event.features.length === 0) return;
-
-    const feature = event.features[0];
-    const clusterId = feature.properties.cluster_id;
-
-    if (clusterId) {
-      const mapboxSource = mapRef.current?.getSource('locations') as any;
-      mapboxSource.getClusterExpansionZoom(clusterId, (err: any, zoom: number) => {
-        if (err) return;
-        mapRef.current?.easeTo({
-          center: feature.geometry.coordinates,
-          zoom,
-          duration: 500
+  const onClick = (event: MapMouseEvent) => {
+    const feature = event.features?.[0];
+    if (!feature || feature.geometry.type !== "Point") return;
+    const center = feature.geometry.coordinates as [number, number];
+    if (feature.properties?.cluster_id !== undefined) {
+      try {
+        const source = map.current?.getSource("locations") as GeoJSONSource | undefined;
+        source?.getClusterExpansionZoom(feature.properties.cluster_id, (error, zoom) => {
+          if (!error && zoom !== undefined && zoom !== null) map.current?.easeTo({ center, zoom,
+            duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 450 });
         });
-      });
-      return;
+      } catch { /* A style change may replace the source during a click. */ }
+    } else {
+      onLocationSelect(mapPhotos.find(photo => photo.properties.src === feature.properties?.src) || null);
     }
-
-    setSelectedLocation({
-        geometry: feature.geometry,
-        properties: feature.properties
-    });
   };
 
-  if (!MAPBOX_TOKEN) return null;
-
-  return (
-    <section className="relative w-full h-[60vh] md:h-[70vh] rounded-xl overflow-hidden shadow-2xl border border-white/10 bg-[#0b1020]">
-      <Map
-        ref={mapRef}
-        {...viewState}
-        onMove={evt => setViewState(evt.viewState)}
-        style={{ width: "100%", height: "100%" }}
-        mapStyle="mapbox://styles/mapbox/dark-v11"
-        mapboxAccessToken={MAPBOX_TOKEN}
-        interactiveLayerIds={['clusters', 'unclustered-point']}
-        onClick={onClick}
-      >
-        <NavigationControl position="bottom-right" />
-
-        <Source
-          id="locations"
-          type="geojson"
-          data={locations as FeatureCollection}
-          cluster={true}
-          clusterMaxZoom={14}
-          clusterRadius={50}
-        >
-          <Layer {...clusterLayer} />
-          <Layer {...clusterCountLayer} />
-          <Layer {...unclusteredPointLayer} />
-        </Source>
-
-        {selectedLocation && (
-          <Popup
-            longitude={selectedLocation.geometry.coordinates[0]}
-            latitude={selectedLocation.geometry.coordinates[1]}
-            anchor="top"
-            onClose={() => setSelectedLocation(null)}
-            closeOnClick={false}
-            className="text-black z-50"
-            maxWidth="300px"
-          >
-            <div className="flex flex-col gap-2 min-w-[200px]">
-              <div className="relative w-full h-40 rounded-md overflow-hidden bg-gray-100">
-                <Image 
-                  src={selectedLocation.properties.src} 
-                  alt={selectedLocation.properties.name}
-                  fill
-                  className="object-cover"
-                  sizes="200px"
-                />
-              </div>
-              <div className="flex justify-between items-center px-1">
-                 <p className="text-sm font-bold text-gray-800 truncate max-w-[160px]">
-                    {selectedLocation.properties.name}
-                 </p>
-                 <p className="text-[10px] text-gray-500 font-mono">
-                    {new Date(selectedLocation.properties.date).toLocaleDateString()}
-                 </p>
-              </div>
-            </div>
-          </Popup>
-        )}
-      </Map>
-    </section>
-  );
+  if (!MAPBOX_TOKEN || failed) return <div className="food-map-status" role="status">The map is unavailable right now. All photos are still in the diary above.</div>;
+  return <div className="food-map-canvas">
+    {!ready && <div className="food-map-status food-map-loading" role="status">Unfolding the map…</div>}
+    <Map ref={map} initialViewState={{ longitude: -20, latitude: 20, zoom: 1.5 }}
+      mapStyle={`mapbox://styles/mapbox/${dark ? "dark" : "light"}-v11`} mapboxAccessToken={MAPBOX_TOKEN}
+      style={{ width: "100%", height: "100%" }} onLoad={() => setReady(true)}
+      onError={() => setFailed(true)} onClick={onClick} interactiveLayerIds={["clusters", "unclustered-point"]}>
+      <NavigationControl position="bottom-right" showCompass={false} />
+      <Source id="locations" type="geojson" data={mapData} cluster clusterMaxZoom={14} clusterRadius={45}>
+        <Layer {...clusterLayer} /><Layer {...clusterCountLayer} /><Layer {...pointLayer} />
+      </Source>
+      {highlightedLocation && hasCoordinates(highlightedLocation) && <Popup longitude={highlightedLocation.geometry.coordinates[0]}
+        latitude={highlightedLocation.geometry.coordinates[1]} anchor="bottom" onClose={() => onLocationSelect(null)} closeOnClick={false} maxWidth="240px" className="food-map-popup">
+        <Image src={highlightedLocation.properties.src} alt={photoDescription(highlightedLocation)} width={220} height={165} sizes="220px" />
+        <p>{photoDate(highlightedLocation)}</p>
+      </Popup>}
+    </Map>
+    <p className="food-map-hint">Select a cluster to zoom in, or a dot to see a photo.</p>
+  </div>;
 }

@@ -1,5 +1,7 @@
 "use client";
 
+import DecorativeMark from "./DecorativeMark";
+
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { ArrowUpRight, ArrowLeft, ArrowRight, X } from "lucide-react";
@@ -18,7 +20,7 @@ function ProjectLinks({ project }: { project: Project }) {
     { label: "LinkedIn", href: project.link },
   ];
   return <div className="project-links">{links.filter((link) => link.href).map((link) => (
-    <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer">{link.label}<ArrowUpRight size={16} aria-hidden="true" /></a>
+    <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer">{link.label}<ArrowUpRight className="link-arrow" size={16} aria-hidden="true" /></a>
   ))}</div>;
 }
 
@@ -53,8 +55,7 @@ export default function Projects({ onToggle }: ProjectsProps) {
   return (
     <section id="projects" className="selected-work">
       <header className="work-heading">
-        <div><p className="work-eyebrow">01 / A few things I’ve worked on</p><h2>Curiosity, <span>put to work.</span></h2></div>
-        <p>From better banking experiences to better patient workflows. A few problems I’ve loved getting into.</p>
+        <h2>Curiosity, <span>put to work.</span></h2>
       </header>
 
       <div className="featured-projects">
@@ -70,17 +71,17 @@ export default function Projects({ onToggle }: ProjectsProps) {
               <h3><button onClick={() => openProject(project)}>{project.title}</button></h3>
               <p className="project-summary">{project.description}</p>
               <dl className="project-facts"><div><dt>My focus</dt><dd>{project.role}</dd></div><div><dt>What came out of it</dt><dd>{project.outcome}</dd></div></dl>
-              <div className="project-card-actions"><button onClick={() => openProject(project)} className="project-read">The project story <ArrowUpRight size={18} aria-hidden="true" /></button>{project.liveLink && <a href={project.liveLink} target="_blank" rel="noopener noreferrer">Visit live page <ArrowUpRight size={16} aria-hidden="true" /></a>}</div>
+              <div className="project-card-actions"><button onClick={() => openProject(project)} className="project-read">The project story <ArrowUpRight className="link-arrow" size={18} aria-hidden="true" /></button>{project.liveLink && <a href={project.liveLink} target="_blank" rel="noopener noreferrer">Visit live page <ArrowUpRight className="link-arrow" size={16} aria-hidden="true" /></a>}</div>
             </div>
           </article>
         ))}
       </div>
 
-      <div className="more-work-heading"><h3>More from the workbench<span aria-hidden="true"> ✳</span></h3><p>A few more experiments, builds, and deep dives.</p></div>
+      <div className="more-work-heading"><h3>More from the workbench<span aria-hidden="true"> <DecorativeMark /></span></h3></div>
       <div className="more-projects">{more.map((project) => (
         <article key={project.title} className="compact-project">
           <button className="compact-project-image" onClick={() => openProject(project)} aria-label={`Read about ${project.title}`}><Image src={project.image} alt={project.title} fill sizes="(max-width: 767px) 90vw, 350px" /></button>
-          <div className="compact-project-copy"><p className="project-kicker">{project.affiliation}</p><h4><button onClick={() => openProject(project)}>{project.title}</button></h4><p>{project.description}</p><button className="project-read" onClick={() => openProject(project)}>Take a look <ArrowUpRight size={16} aria-hidden="true" /></button></div>
+          <div className="compact-project-copy"><p className="project-kicker">{project.affiliation}</p><h4><button onClick={() => openProject(project)}>{project.title}</button></h4><p>{project.description}</p><button className="project-read" onClick={() => openProject(project)}>Take a look <ArrowUpRight className="link-arrow" size={16} aria-hidden="true" /></button></div>
         </article>
       ))}</div>
 

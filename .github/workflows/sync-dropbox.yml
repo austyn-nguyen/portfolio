@@ -1,0 +1,74 @@
+name: Sync Dropbox photos
+
+on:
+  schedule:
+    - cron: '7,22,37,52 * * * *'
+  workflow_dispatch:
+  repository_dispatch:
+    types: [dropbox-photos-changed]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dropbox-photo-sync
+  cancel-in-progress: false
+
+jobs:
+  photos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run test:photos
+      - name: Import new and changed photos
+        run: npm run photos:sync
+        env:
+          DROPBOX_APP_KEY: ${{ secrets.DROPBOX_APP_KEY }}
+          DROPBOX_APP_SECRET: ${{ secrets.DROPBOX_APP_SECRET }}
+          DROPBOX_REFRESH_TOKEN: ${{ secrets.DROPBOX_REFRESH_TOKEN }}
+          DROPBOX_FOLDER_PATH: ${{ vars.DROPBOX_FOLDER_PATH }}
+      - run: npm run photos:validate
+      - name: Publish photo changes
+        id: publish
+        shell: bash
+        run: |
+          git add -- src/data/locations.json public/images/travel
+          if git diff --cached --quiet; then
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Update food diary from Dropbox'
+          git pull --rebase origin "$DEFAULT_BRANCH"
+          git push origin "HEAD:$DEFAULT_BRANCH"
+          echo 'changed=true' >> "$GITHUB_OUTPUT"
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+      - name: Check whether these photos were deployed
+        id: deployment-cache
+        uses: actions/cache/restore@v4
+        with:
+          path: /tmp/portfolio-photo-deploy
+          key: photo-deploy-${{ hashFiles('src/data/locations.json') }}
+      - name: Deploy the updated diary
+        if: steps.deployment-cache.outputs.cache-hit != 'true' || github.event_name == 'workflow_dispatch'
+        env:
+          VERCEL_DEPLOY_HOOK_URL: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
+        run: node scripts/deploy-photos.mjs
+      - name: Record the successful deployment request
+        if: steps.deployment-cache.outputs.cache-hit != 'true'
+        run: touch /tmp/portfolio-photo-deploy
+      - uses: actions/cache/save@v4
+        if: steps.deployment-cache.outputs.cache-hit != 'true'
+        with:
+          path: /tmp/portfolio-photo-deploy
+          key: photo-deploy-${{ hashFiles('src/data/locations.json') }}

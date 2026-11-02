@@ -1,92 +1,66 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
+import Image from "next/image";
+import dynamic from "next/dynamic";
+import { ArrowDown, ChevronDown, MapPin, Utensils } from "lucide-react";
 import Navbar from "@/components/Navbar";
-import dynamic from "next/dynamic"; 
+import Footer from "@/components/Footer";
 import TravelGallery from "./TravelGallery";
+import { photos, hasCoordinates, type TravelPhoto } from "@/src/data/travel";
 
-// Dynamic import for Map (No SSR)
-const TravelMap = dynamic(() => import("./TravelMap"), { 
-  ssr: false,
-  loading: () => (
-    <div className="w-full h-[70vh] rounded-xl bg-[#0b1020] animate-pulse flex items-center justify-center border border-white/10">
-      <span className="text-white/50">Loading Map...</span>
-    </div>
-  ) 
+const TravelMap = dynamic(() => import("./TravelMap"), {
+  ssr: false, loading: () => <div className="food-map-status" role="status">Unfolding the map…</div>,
 });
+const coverPhotos = [
+  { src: "/images/travel/travel-img-9148.jpg", alt: "A brunch spread with eggs, fruit, and a grilled wrap" },
+  { src: "/images/travel/travel-img-9119.jpg", alt: "A scoop of pink ice cream in a cone" },
+  { src: "/images/travel/travel-img-2304.jpg", alt: "A birthday cake topped with fresh berries" },
+];
 
 export default function TravelPage() {
-  // STATE LIFTED UP: This controls the map's focus
-  const [focusLocation, setFocusLocation] = useState<any>(null);
-
-  const handleLocationSelect = (location: any) => {
-    // 1. Set the location data to pass to the map
-    setFocusLocation(location);
-
-    // 2. Smooth scroll up to the map section
-    const mapElement = document.getElementById("map");
-    if (mapElement) {
-      mapElement.scrollIntoView({ behavior: "smooth", block: "center" });
-    }
+  const [focusLocation, setFocusLocation] = useState<TravelPhoto | null>(null);
+  const [mapOpen, setMapOpen] = useState(false);
+  const mapSection = useRef<HTMLElement>(null);
+  const handleLocationSelect = (photo: TravelPhoto) => {
+    setFocusLocation(photo);
+    setMapOpen(true);
+    // The section already exists, including while the map bundle is loading.
+    requestAnimationFrame(() => mapSection.current?.scrollIntoView({
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth", block: "start",
+    }));
   };
 
-  return (
-    <div className="min-h-screen bg-[var(--background)]">
-      <div className="fixed top-0 left-0 w-full z-50">
-        <Navbar page="travel" />
-      </div>
-
-      <main className="pt-28 container mx-auto px-4 max-w-7xl pb-20">
-        <div className="flex flex-col gap-12">
-          
-          <div 
-            id="hero" 
-            className="text-center space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-700"
-          >
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-[var(--foreground)]">
-              Travel <span className="text-[var(--accent)]">Map</span>
-            </h1>
-            <p className="text-[var(--muted)] max-w-2xl mx-auto text-lg md:text-xl">
-              From local bites to global sights. Exploring the world through food and adventure!
-            </p>
-          </div>
-
-          <div 
-            id="map" 
-            className="w-full animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200"
-          >
-             {/* Pass the focus state down to the map */}
-             <TravelMap highlightedLocation={focusLocation} />
-          </div>
-
-          {/* Gallery Section replacing the placeholder */}
-          <div id="gallery" className="min-h-[200px] pt-10">
-             <div className="flex flex-col md:flex-row justify-between items-end mb-8 border-b border-[var(--foreground)]/10 pb-4">
-               <div>
-                  <h2 className="text-3xl font-bold text-[var(--foreground)]">Gallery</h2>
-                  <p className="text-[var(--muted)] mt-2">
-                    A visual timeline of my nom nom adventures.
-                  </p>
-               </div>
-               <span className="text-sm text-[var(--accent)] font-mono hidden md:block">
-                  Sorted by Date (Newest)
-               </span>
-             </div>
-             
-             {/* Pass the handler down to the gallery */}
-             <TravelGallery onLocationSelect={handleLocationSelect} />
-          </div>
-
-          {/* Trips Placeholder (Optional: You can move this below Gallery if preferred) */}
-          <div id="trips" className="min-h-[200px] pt-10 opacity-50">
-             <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6">Trips Journals</h2>
-             <div className="p-8 border border-[var(--foreground)]/10 rounded-xl text-center text-[var(--muted)] bg-[var(--foreground)]/5 text-sm">
-                Detailed blog posts coming soon...
-             </div>
-          </div>
-
+  return <div className="food-page">
+    <a className="skip-link" href="#gallery">Skip to photos</a>
+    <div className="fixed top-0 left-0 w-full z-50"><Navbar page="travel" /></div>
+    <main className="food-main">
+      <section id="hero" className="food-hero" aria-labelledby="food-title">
+        <div className="food-hero-copy">
+          <span className="food-eyebrow"><Utensils size={17} aria-hidden="true" /> Austyn’s camera roll</span>
+          <h1 id="food-title">Food &<br /><span>adventures.</span></h1>
+          <p>What I ate. Where I went.</p>
+          <a className="food-diary-link" href="#gallery">Open the photo diary <ArrowDown size={18} aria-hidden="true" /></a>
         </div>
-      </main>
-    </div>
-  );
+        <div className="food-cover" aria-label="A few recent bites">
+          {coverPhotos.map((photo, index) => <figure key={photo.src} className={`food-cover-photo food-cover-photo-${index + 1}`}>
+            <Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 639px) 45vw, 28vw" preload={index === 0} />
+          </figure>)}
+          <span className="food-cover-note">good food, good company</span>
+        </div>
+      </section>
+      <section id="gallery" className="food-diary" aria-labelledby="diary-title">
+        <header className="food-section-heading"><h2 id="diary-title">Photo diary</h2><span>{photos.length} photos · newest first</span></header>
+        <TravelGallery onLocationSelect={handleLocationSelect} />
+      </section>
+      <section id="map" ref={mapSection} className="food-map-paper" aria-labelledby="map-title">
+        <button className="food-map-toggle" type="button" aria-expanded={mapOpen} aria-controls="food-map-panel" onClick={() => setMapOpen(open => !open)}>
+          <span><MapPin size={24} aria-hidden="true" /><span><span id="map-title" className="food-map-title">Places on the menu</span><span className="food-map-subtitle">{photos.filter(hasCoordinates).length} geotagged photos</span></span></span>
+          <span className="food-map-toggle-label">{mapOpen ? "Fold away" : "Unfold the map"}<ChevronDown size={20} aria-hidden="true" /></span>
+        </button>
+        <div id="food-map-panel" hidden={!mapOpen}>{mapOpen && <TravelMap highlightedLocation={focusLocation} onLocationSelect={setFocusLocation} />}</div>
+      </section>
+    </main>
+    <Footer page="travel" />
+  </div>;
 }
