@@ -31,9 +31,19 @@ export async function dropboxFetch(url, options) {
     headers.set('Content-Type', 'application/x-www-form-urlencoded');
     options = { ...options, headers, body: new URLSearchParams(options.body) };
   }
-  const response = await fetch(url, { ...options, signal: AbortSignal.timeout(60000) });
-  response.buffer = async () => Buffer.from(await response.arrayBuffer());
-  return response;
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(new DOMException('Dropbox request timed out', 'TimeoutError')), 60000);
+  timer.unref?.();
+  try {
+    const response = await fetch(url, { ...options, signal: controller.signal });
+    const readBuffer = async () => Buffer.from(await response.arrayBuffer());
+    response.buffer = async () => { try { return await readBuffer(); } finally { clearTimeout(timer); } };
+    for (const method of ['arrayBuffer', 'blob', 'formData', 'json', 'text']) {
+      const read = response[method].bind(response);
+      response[method] = async (...args) => { try { return await read(...args); } finally { clearTimeout(timer); } };
+    }
+    return response;
+  } catch (error) { clearTimeout(timer); throw error; }
 }
 
 export function createClient(env = process.env, fetchImpl = dropboxFetch) {
@@ -74,6 +84,15 @@ export async function syncPhotos({ client, root = ROOT, folder = '', sleep = pau
   const nameCounts = new Map();
   for (const entry of files) nameCounts.set(entry.name, (nameCounts.get(entry.name) || 0) + 1);
   let added = 0, updated = 0, linked = 0, unchanged = 0;
+  let processed = 0;
+  const checkpoint = async () => {
+    processed++;
+    if (processed % 20 === 0) {
+      validateCatalog(catalog);
+      await atomicWrite(catalogFile, JSON.stringify(catalog, null, 2) + '\n');
+      log(`Checkpoint saved (${processed}/${files.length} Dropbox files checked).`);
+    }
+  };
   const failures = [];
   const retired = new Set();
   for (const entry of files) {
@@ -81,12 +100,19 @@ export async function syncPhotos({ client, root = ROOT, folder = '', sleep = pau
       if (!entry.id || !entry.rev) throw new Error('Dropbox file is missing its ID or revision.');
       const existing = catalog.features.find(photo => photo.properties.dropboxId === entry.id);
       if (existing?.properties.dropboxRev === entry.rev) {
-        try { await fs.access(path.join(root, 'public', existing.properties.src)); unchanged++; continue; }
+        try { await fs.access(path.join(root, 'public', existing.properties.src)); unchanged++; await checkpoint(); continue; }
         catch { /* Restore a missing thumbnail from Dropbox. */ }
       }
-      const preview = await retry(() => client.filesGetThumbnailV2({ resource: { '.tag': 'path', path: entry.id }, format: 'jpeg', size: 'w1024h768', mode: 'bestfit' }), sleep);
-      const raw = preview.result.fileBinary ?? preview.result.fileBlob;
-      const thumbnail = raw instanceof Blob ? Buffer.from(await raw.arrayBuffer()) : Buffer.isBuffer(raw) ? raw : typeof raw === 'string' ? Buffer.from(raw, 'binary') : Buffer.from(raw);
+      const stem = entry.name.replace(/\.[^.]+$/, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 70) || 'photo';
+      // Reuse a completed preview left by an interrupted earlier run.
+      const src = `/images/travel/travel-${stem}-${digest(entry.id + ':' + entry.rev).slice(0, 16)}.jpg`;
+      let thumbnail;
+      try { thumbnail = await fs.readFile(path.join(root, 'public', src)); }
+      catch {
+        const preview = await retry(() => client.filesGetThumbnailV2({ resource: { '.tag': 'path', path: entry.id }, format: 'jpeg', size: 'w1024h768', mode: 'bestfit' }), sleep);
+        const raw = preview.result.fileBinary ?? preview.result.fileBlob;
+        thumbnail = raw instanceof Blob ? Buffer.from(await raw.arrayBuffer()) : Buffer.isBuffer(raw) ? raw : typeof raw === 'string' ? Buffer.from(raw, 'binary') : Buffer.from(raw);
+      }
       // Link legacy imports only when the filename is unambiguous AND the bytes match.
       const legacy = !existing && nameCounts.get(entry.name) === 1
         ? catalog.features.filter(photo => !photo.properties.dropboxId && photo.properties.name === entry.name) : [];
@@ -97,7 +123,7 @@ export async function syncPhotos({ client, root = ROOT, folder = '', sleep = pau
         if (bytes && digest(bytes) === digest(thumbnail)) {
           const dimensions = await sharp(bytes).metadata();
           Object.assign(photo.properties, { dropboxId: entry.id, dropboxRev: entry.rev, width: dimensions.width, height: dimensions.height });
-          linked++; continue;
+          linked++; await checkpoint(); continue;
         }
       }
       let exif;
@@ -110,9 +136,7 @@ export async function syncPhotos({ client, root = ROOT, folder = '', sleep = pau
       }
       const metadata = photoMetadata(entry, exif || {});
       const { data, info } = await sharp(thumbnail).rotate().jpeg({ quality: 88 }).toBuffer({ resolveWithObject: true });
-      const stem = entry.name.replace(/\.[^.]+$/, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 70) || 'photo';
       // ID prevents name collisions; revision prevents stale browser/CDN thumbnails after edits.
-      const src = `/images/travel/travel-${stem}-${digest(entry.id + ':' + entry.rev).slice(0, 16)}.jpg`;
       await atomicWrite(path.join(root, 'public', src), data);
       const feature = { type: 'Feature', geometry: metadata.geometry, properties: {
         ...(existing?.properties.caption ? { caption: existing.properties.caption } : {}),
@@ -124,6 +148,7 @@ export async function syncPhotos({ client, root = ROOT, folder = '', sleep = pau
       // Avoid logging response bodies, tokens, signed links, or file contents.
       failures.push(`${entry.name}: ${error.status ? `Dropbox HTTP ${error.status}` : 'could not process photo'}`);
     }
+    await checkpoint();
   }
   validateCatalog(catalog);
   const result = JSON.stringify(catalog, null, 2) + '\n';
