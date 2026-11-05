@@ -2,10 +2,14 @@ name: Sync Dropbox photos
 
 on:
   schedule:
-    - cron: '7,22,37,52 * * * *'
+    # First of each month at 12:07 UTC (7:07 AM EST / 8:07 AM EDT).
+    - cron: '7 12 1 * *'
   workflow_dispatch:
-  repository_dispatch:
-    types: [dropbox-photos-changed]
+    inputs:
+      clean:
+        description: Rebuild the gallery from the current Dropbox folder
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -26,15 +30,37 @@ jobs:
         with:
           node-version: '22'
           cache: npm
-      - run: npm ci
-      - run: npm run test:photos
-      - name: Import new and changed photos
-        run: npm run photos:sync
+      - name: Check required account configuration
         env:
           DROPBOX_APP_KEY: ${{ secrets.DROPBOX_APP_KEY }}
           DROPBOX_APP_SECRET: ${{ secrets.DROPBOX_APP_SECRET }}
           DROPBOX_REFRESH_TOKEN: ${{ secrets.DROPBOX_REFRESH_TOKEN }}
-          DROPBOX_FOLDER_PATH: ${{ vars.DROPBOX_FOLDER_PATH }}
+          VERCEL_DEPLOY_HOOK_URL: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
+        run: |
+          node --input-type=module <<'NODE'
+          const required = ['DROPBOX_APP_KEY', 'DROPBOX_APP_SECRET', 'DROPBOX_REFRESH_TOKEN', 'VERCEL_DEPLOY_HOOK_URL'];
+          const missing = required.filter(name => !process.env[name]);
+          if (missing.length) {
+            console.error(`Missing GitHub Actions secrets: ${missing.join(', ')}. Configure them in Settings > Secrets and variables > Actions.`);
+            process.exitCode = 1;
+          }
+          NODE
+      - run: npm ci
+      - run: npm run test:photos
+      - name: Import new and changed photos
+        run: |
+          if [ "$CLEAN_REBUILD" = 'true' ]; then
+            npm run photos:sync -- --clean
+          else
+            npm run photos:sync
+          fi
+        env:
+          CLEAN_REBUILD: ${{ inputs.clean || false }}
+          DROPBOX_APP_KEY: ${{ secrets.DROPBOX_APP_KEY }}
+          DROPBOX_APP_SECRET: ${{ secrets.DROPBOX_APP_SECRET }}
+          DROPBOX_REFRESH_TOKEN: ${{ secrets.DROPBOX_REFRESH_TOKEN }}
+          # This app's upload folder is its root, matching the local configuration.
+          DROPBOX_FOLDER_PATH: ${{ vars.DROPBOX_FOLDER_PATH || '/' }}
       - run: npm run photos:validate
       - name: Publish photo changes
         id: publish

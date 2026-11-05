@@ -69,7 +69,7 @@ Personal project descriptions reflect my contributions. Organization names, logo
 
 ## Dropbox publishing
 
-[Setup and maintenance guide](docs/dropbox-photos.md) covers refresh-token authorization, GitHub Actions secrets, Vercel deployment, and the optional signed upload webhook. The scheduled workflow checks approximately every 15 minutes and publishes only photo changes. Account secrets must be configured before it runs.
+[Setup and maintenance guide](docs/dropbox-photos.md) covers refresh-token authorization, GitHub Actions secrets, Vercel deployment, and clean rebuilds. Automatic pulls run on the first of each month at 12:07 UTC and publish only photo changes. Manual runs remain available; upload webhooks do not trigger imports. Account secrets must be configured before it runs.
 
 ```sh
 npm run dev

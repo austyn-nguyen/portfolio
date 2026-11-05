@@ -66,13 +66,14 @@ export function photoMetadata(entry, exif = {}) {
   return { geometry: validGps ? { type: 'Point', coordinates: [longitude, latitude] } : null, date: date.toISOString() };
 }
 
-export async function syncPhotos({ client, root = ROOT, folder = '', sleep = pause, log = console.log } = {}) {
+export async function syncPhotos({ client, root = ROOT, folder = '', clean = false, sleep = pause, log = console.log } = {}) {
   if (!client) throw new Error('Dropbox client required.');
   if (folder === '/') folder = '';
   if (folder !== '' && !folder.startsWith('/')) throw new Error('DROPBOX_FOLDER_PATH must begin with / (or be empty for the app root).');
   const catalogFile = path.join(root, 'src/data/locations.json');
-  const catalog = await readCatalog(catalogFile);
-  const originalCatalog = JSON.stringify(catalog, null, 2) + '\n';
+  const previous = await readCatalog(catalogFile);
+  const catalog = clean ? { type: 'FeatureCollection', features: [] } : structuredClone(previous);
+  const originalCatalog = JSON.stringify(previous, null, 2) + '\n';
   const entries = [];
   let page = await retry(() => client.filesListFolder({ path: folder, recursive: true, include_media_info: true, limit: 2000 }), sleep);
   while (true) {
@@ -80,85 +81,123 @@ export async function syncPhotos({ client, root = ROOT, folder = '', sleep = pau
     if (!page.result.has_more) break;
     page = await retry(() => client.filesListFolderContinue({ cursor: page.result.cursor }), sleep);
   }
-  const files = entries.filter(entry => entry['.tag'] === 'file' && supported.test(entry.name));
+  const hashes = new Set();
+  const duplicateEntries = [];
+  const files = entries.filter(entry => {
+    if (entry['.tag'] !== 'file' || !supported.test(entry.name)) return false;
+    if (entry.content_hash && hashes.has(entry.content_hash)) { duplicateEntries.push(entry); return false; }
+    if (entry.content_hash) hashes.add(entry.content_hash);
+    return true;
+  });
   const nameCounts = new Map();
   for (const entry of files) nameCounts.set(entry.name, (nameCounts.get(entry.name) || 0) + 1);
   let added = 0, updated = 0, linked = 0, unchanged = 0;
+  const duplicates = duplicateEntries.length;
   let processed = 0;
   const checkpoint = async () => {
     processed++;
     if (processed % 20 === 0) {
       validateCatalog(catalog);
-      await atomicWrite(catalogFile, JSON.stringify(catalog, null, 2) + '\n');
-      log(`Checkpoint saved (${processed}/${files.length} Dropbox files checked).`);
+      // A clean rebuild must keep the published catalog intact until every file succeeds.
+      if (!clean) await atomicWrite(catalogFile, JSON.stringify(catalog, null, 2) + '\n');
+      log(`${clean ? 'Clean rebuild progress' : 'Checkpoint saved'} (${processed}/${files.length} Dropbox files checked).`);
     }
   };
   const failures = [];
   const retired = new Set();
-  for (const entry of files) {
-    try {
-      if (!entry.id || !entry.rev) throw new Error('Dropbox file is missing its ID or revision.');
-      const existing = catalog.features.find(photo => photo.properties.dropboxId === entry.id);
-      if (existing?.properties.dropboxRev === entry.rev) {
-        try { await fs.access(path.join(root, 'public', existing.properties.src)); unchanged++; await checkpoint(); continue; }
-        catch { /* Restore a missing thumbnail from Dropbox. */ }
-      }
-      const stem = entry.name.replace(/\.[^.]+$/, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 70) || 'photo';
-      // Reuse a completed preview left by an interrupted earlier run.
-      const src = `/images/travel/travel-${stem}-${digest(entry.id + ':' + entry.rev).slice(0, 16)}.jpg`;
-      let thumbnail;
-      try { thumbnail = await fs.readFile(path.join(root, 'public', src)); }
-      catch {
-        const preview = await retry(() => client.filesGetThumbnailV2({ resource: { '.tag': 'path', path: entry.id }, format: 'jpeg', size: 'w1024h768', mode: 'bestfit' }), sleep);
-        const raw = preview.result.fileBinary ?? preview.result.fileBlob;
-        thumbnail = raw instanceof Blob ? Buffer.from(await raw.arrayBuffer()) : Buffer.isBuffer(raw) ? raw : typeof raw === 'string' ? Buffer.from(raw, 'binary') : Buffer.from(raw);
-      }
-      // Link legacy imports only when the filename is unambiguous AND the bytes match.
-      const legacy = !existing && nameCounts.get(entry.name) === 1
-        ? catalog.features.filter(photo => !photo.properties.dropboxId && photo.properties.name === entry.name) : [];
-      if (legacy.length === 1) {
-        const photo = legacy[0];
-        let bytes;
-        try { bytes = await fs.readFile(path.join(root, 'public', photo.properties.src)); } catch { /* Import a new, recoverable copy below. */ }
-        if (bytes && digest(bytes) === digest(thumbnail)) {
-          const dimensions = await sharp(bytes).metadata();
-          Object.assign(photo.properties, { dropboxId: entry.id, dropboxRev: entry.rev, width: dimensions.width, height: dimensions.height });
-          linked++; await checkpoint(); continue;
+  // Bound Dropbox traffic and memory. Await each batch so catalog checkpoints cannot overlap.
+  for (let offset = 0; offset < files.length; offset += 4) {
+    await Promise.all(files.slice(offset, offset + 4).map(async entry => {
+      try {
+        if (!entry.id || !entry.rev) throw new Error('Dropbox file is missing its ID or revision.');
+        const existing = (clean ? previous : catalog).features.find(photo => photo.properties.dropboxId === entry.id);
+        const rememberHash = photo => {
+          if (entry.content_hash) {
+            photo.properties.dropboxContentHash = entry.content_hash;
+          }
+        };
+        if (existing?.properties.dropboxRev === entry.rev) {
+          try {
+            await fs.access(path.join(root, 'public', existing.properties.src));
+            const photo = clean ? structuredClone(existing) : existing;
+            rememberHash(photo);
+            if (clean) catalog.features.push(photo);
+            unchanged++; await checkpoint(); return;
+          }
+          catch { /* Restore a missing thumbnail from Dropbox. */ }
         }
+        const stem = entry.name.replace(/\.[^.]+$/, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 70) || 'photo';
+        // Reuse a completed preview left by an interrupted earlier run.
+        const src = `/images/travel/travel-${stem}-${digest(entry.id + ':' + entry.rev).slice(0, 16)}.jpg`;
+        let thumbnail;
+        try { thumbnail = await fs.readFile(path.join(root, 'public', src)); }
+        catch {
+          const preview = await retry(() => client.filesGetThumbnailV2({ resource: { '.tag': 'path', path: entry.id }, format: 'jpeg', size: 'w1024h768', mode: 'bestfit' }), sleep);
+          const raw = preview.result.fileBinary ?? preview.result.fileBlob;
+          thumbnail = raw instanceof Blob ? Buffer.from(await raw.arrayBuffer()) : Buffer.isBuffer(raw) ? raw : typeof raw === 'string' ? Buffer.from(raw, 'binary') : Buffer.from(raw);
+        }
+        // Link legacy imports only when the filename is unambiguous AND the bytes match.
+        const legacy = !existing && nameCounts.get(entry.name) === 1
+          ? catalog.features.filter(photo => !photo.properties.dropboxId && photo.properties.name === entry.name) : [];
+        if (legacy.length === 1) {
+          const photo = legacy[0];
+          let bytes;
+          try { bytes = await fs.readFile(path.join(root, 'public', photo.properties.src)); } catch { /* Import a new, recoverable copy below. */ }
+          if (bytes && digest(bytes) === digest(thumbnail)) {
+            const dimensions = await sharp(bytes).metadata();
+            Object.assign(photo.properties, { dropboxId: entry.id, dropboxRev: entry.rev, width: dimensions.width, height: dimensions.height });
+            rememberHash(photo);
+            linked++; await checkpoint(); return;
+          }
+        }
+        let exif;
+        // Full originals avoid the old truncated-EXIF bug. Large files use Dropbox's metadata.
+        if (entry.size <= 50 * 1024 * 1024) {
+          const download = await retry(() => client.filesDownload({ path: entry.id }), sleep);
+          const binary = download.result.fileBinary ?? download.result.fileBlob;
+          const buffer = binary instanceof Blob ? Buffer.from(await binary.arrayBuffer()) : Buffer.from(binary);
+          try { exif = await exifr.parse(buffer, { gps: true }); } catch { /* A photo without readable EXIF still belongs in the diary. */ }
+        }
+        const metadata = photoMetadata(entry, exif || {});
+        const { data, info } = await sharp(thumbnail).rotate().jpeg({ quality: 88 }).toBuffer({ resolveWithObject: true });
+        // ID prevents name collisions; revision prevents stale browser/CDN thumbnails after edits.
+        await atomicWrite(path.join(root, 'public', src), data);
+        const feature = { type: 'Feature', geometry: metadata.geometry, properties: {
+          ...(existing?.properties.caption ? { caption: existing.properties.caption } : {}),
+          src, name: entry.name, date: metadata.date, width: info.width, height: info.height, dropboxId: entry.id, dropboxRev: entry.rev,
+        } };
+        rememberHash(feature);
+        if (existing && !clean) { retired.add(existing.properties.src); catalog.features[catalog.features.indexOf(existing)] = feature; updated++; }
+        else { catalog.features.push(feature); added++; }
+      } catch (error) {
+        // Avoid logging response bodies, tokens, signed links, or file contents.
+        failures.push(`${entry.name}: ${error.status ? `Dropbox HTTP ${error.status}` : 'could not process photo'}`);
       }
-      let exif;
-      // Full originals avoid the old truncated-EXIF bug. Large files use Dropbox's metadata.
-      if (entry.size <= 50 * 1024 * 1024) {
-        const download = await retry(() => client.filesDownload({ path: entry.id }), sleep);
-        const binary = download.result.fileBinary ?? download.result.fileBlob;
-        const buffer = binary instanceof Blob ? Buffer.from(await binary.arrayBuffer()) : Buffer.from(binary);
-        try { exif = await exifr.parse(buffer, { gps: true }); } catch { /* A photo without readable EXIF still belongs in the diary. */ }
-      }
-      const metadata = photoMetadata(entry, exif || {});
-      const { data, info } = await sharp(thumbnail).rotate().jpeg({ quality: 88 }).toBuffer({ resolveWithObject: true });
-      // ID prevents name collisions; revision prevents stale browser/CDN thumbnails after edits.
-      await atomicWrite(path.join(root, 'public', src), data);
-      const feature = { type: 'Feature', geometry: metadata.geometry, properties: {
-        ...(existing?.properties.caption ? { caption: existing.properties.caption } : {}),
-        src, name: entry.name, date: metadata.date, width: info.width, height: info.height, dropboxId: entry.id, dropboxRev: entry.rev,
-      } };
-      if (existing) { retired.add(existing.properties.src); catalog.features[catalog.features.indexOf(existing)] = feature; updated++; }
-      else { catalog.features.push(feature); added++; }
-    } catch (error) {
-      // Avoid logging response bodies, tokens, signed links, or file contents.
-      failures.push(`${entry.name}: ${error.status ? `Dropbox HTTP ${error.status}` : 'could not process photo'}`);
-    }
-    await checkpoint();
+      await checkpoint();
+    }));
   }
+  if (clean && failures.length) throw new Error(`Clean rebuild aborted; the previous catalog and its images were preserved.\n${failures.join('\n')}`);
+  if (!failures.length) {
+    const keptIds = new Set(files.map(entry => entry.id));
+    const duplicateIds = new Set(duplicateEntries.filter(entry => !keptIds.has(entry.id)).map(entry => entry.id));
+    catalog.features = catalog.features.filter(photo => {
+      if (!duplicateIds.has(photo.properties.dropboxId)) return true;
+      retired.add(photo.properties.src);
+      return false;
+    });
+  }
+  // Keep output stable even when concurrent downloads finish in a different order.
+  catalog.features.sort((a, b) => a.properties.src.localeCompare(b.properties.src));
   validateCatalog(catalog);
   const result = JSON.stringify(catalog, null, 2) + '\n';
   if (result !== originalCatalog) await atomicWrite(catalogFile, result);
   // Only remove superseded imports after the replacement catalog is safely written.
   const referenced = new Set(catalog.features.map(photo => photo.properties.src));
+  if (clean) for (const photo of previous.features) retired.add(photo.properties.src);
   for (const src of retired) if (!referenced.has(src)) await fs.rm(path.join(root, 'public', src), { force: true });
-  log(`Photos: ${added} added, ${updated} updated, ${linked} legacy linked, ${unchanged} unchanged; ${catalog.features.length} total.`);
+  log(`Photos: ${added} added, ${updated} updated, ${linked} legacy linked, ${unchanged} unchanged, ${duplicates} duplicate sources skipped; ${catalog.features.length} total.`);
   if (failures.length) throw new Error(`${failures.length} photo(s) failed; retry the sync.\n${failures.join('\n')}`);
-  return { added, updated, linked, unchanged, total: catalog.features.length, referenced };
+  return { added, updated, linked, unchanged, duplicates, total: catalog.features.length, referenced };
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
@@ -166,7 +205,7 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
   try {
     const folder = process.env.DROPBOX_FOLDER_PATH;
     if (!folder) throw new Error('Set DROPBOX_FOLDER_PATH to the upload folder (or / for the app root). Refusing to import an unspecified folder.');
-    await syncPhotos({ client: createClient(), folder });
+    await syncPhotos({ client: createClient(), folder, clean: process.argv.includes('--clean') });
   }
   catch (error) {
     console.error(error.status ? `Dropbox sync failed (HTTP ${error.status}). Check credentials and permissions.` : error.message);

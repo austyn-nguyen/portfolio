@@ -86,6 +86,51 @@ test('a corrupt catalog remains untouched and no Dropbox requests run', async t 
   assert.equal(await fs.readFile(manifest(root), 'utf8'), '{broken');
 });
 
+test('a clean rebuild removes legacy copies and removed sources while reusing current previews', async t => {
+  const root = await fixture(t);
+  await run(root, mockClient([entry('keep'), entry('removed')]));
+  const previous = await readCatalog(manifest(root));
+  const removedSrc = previous.features.find(photo => photo.properties.dropboxId === 'removed').properties.src;
+  const legacySrc = '/images/travel/legacy.jpg';
+  await fs.writeFile(path.join(root, 'public', legacySrc), jpeg);
+  previous.features.push({ ...structuredClone(previous.features[0]), properties: { name: 'IMG_0001.HEIC', src: legacySrc, date: '2026-01-15' } });
+  await fs.writeFile(manifest(root), JSON.stringify(previous));
+  const client = mockClient([entry('keep')]);
+  const result = await syncPhotos({ root, client, clean: true, log: () => {} });
+  assert.equal(result.total, 1);
+  assert.equal(result.unchanged, 1);
+  assert.equal(client.thumbnails, 0);
+  await assert.rejects(fs.access(path.join(root, 'public', legacySrc)));
+  await assert.rejects(fs.access(path.join(root, 'public', removedSrc)));
+  await validateImages(await readCatalog(manifest(root)), root);
+});
+
+test('a failed clean rebuild preserves the previous catalog even after a checkpoint', async t => {
+  const root = await fixture(t);
+  await run(root, mockClient([entry('published')]));
+  const bytes = await fs.readFile(manifest(root));
+  const previous = await readCatalog(manifest(root));
+  const client = mockClient(Array.from({ length: 21 }, (_, n) => entry('new-' + n)));
+  client.filesGetThumbnailV2 = async ({ resource }) => {
+    if (resource.path === 'new-20') throw { status: 403 };
+    return { result: { fileBinary: jpeg } };
+  };
+  await assert.rejects(syncPhotos({ root, client, clean: true, log: () => {} }), /Clean rebuild aborted/);
+  assert.deepEqual(await fs.readFile(manifest(root)), bytes);
+  await validateImages(previous, root);
+});
+
+test('identical Dropbox content is imported once, while distinct same-name photos stay separate', async t => {
+  const root = await fixture(t);
+  const client = mockClient([entry('one', { content_hash: 'same-original' }), entry('copy', { content_hash: 'same-original' }), entry('different', { content_hash: 'different-original' })]);
+  const result = await run(root, client);
+  assert.equal(result.total, 2);
+  assert.equal(result.duplicates, 1);
+  assert.equal(client.thumbnails, 2);
+  assert.equal((await run(root, client)).total, 2);
+  assert.equal(client.thumbnails, 2);
+});
+
 test('partial failures are reported and successful imports are safe to retry', async t => {
   const root = await fixture(t); const client = mockClient([entry('one'), entry('two')]);
   client.filesGetThumbnailV2 = async ({ resource }) => { if (resource.path === 'two') throw { status: 403 }; return { result: { fileBinary: jpeg } }; };
