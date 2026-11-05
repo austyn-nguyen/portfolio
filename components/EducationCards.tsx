@@ -10,9 +10,9 @@ export default function EducationCard({ edu }: { edu: EducationEntry }) {
       <span className="education-pin" aria-hidden="true" />
       <header className="education-school">
         <span className="education-school-mark" aria-hidden="true"><Image src={edu.logo} alt="" width={56} height={56} /></span>
-        <div><h3>{edu.school}</h3><p>{edu.location} · {edu.years}</p></div>
+        <div><h3>{edu.school}</h3><p>{edu.location}</p></div>
       </header>
-      <ul className="education-degrees">{degrees.map((degree) => <li key={degree.degree}><h4>{degree.degree}</h4><p>{degree.years}</p>{degree.description && <span className="education-incoming">{degree.description}</span>}</li>)}</ul>
+      <ul className="education-degrees">{degrees.map((degree) => <li key={degree.degree}><h4>{degree.degree}</h4><p>{degree.years}</p>{degree.description && <span className="education-degree-note">{degree.description}</span>}</li>)}</ul>
       {edu.description && <p>{edu.description}</p>}
       {edu.studyAbroad && <aside className="education-abroad" aria-label={`${edu.studyAbroad.program} at ${edu.studyAbroad.university}`}>
         <span className="education-slip-clip" aria-hidden="true" />
@@ -21,10 +21,10 @@ export default function EducationCard({ edu }: { edu: EducationEntry }) {
         <p className="education-postcard-location"><Globe2 size={14} aria-hidden="true" />{edu.studyAbroad.location}</p>
         <p className="education-postcard-date">{edu.studyAbroad.years}</p>
       </aside>}
-      <AnimatedDetails className="education-details" summary={<>Honors &amp; activities <Plus size={17} aria-hidden="true" /><span className="sr-only"> at {edu.school}</span></>}><div className="education-detail-content">
+      {(!!edu.honors?.length || !!edu.clubs?.length) && <AnimatedDetails className="education-details" summary={<>Honors &amp; activities <Plus size={17} aria-hidden="true" /><span className="sr-only"> at {edu.school}</span></>}><div className="education-detail-content">
         {!!edu.honors?.length && <div><h4>Honors</h4><ul>{edu.honors.map((honor) => <li key={honor}>{honor}</li>)}</ul></div>}
         {!!edu.clubs?.length && <div><h4>Activities</h4><ul className="education-communities">{edu.clubs.map((club) => <li key={club.name}><strong>{club.name}</strong><span>{club.role}</span></li>)}</ul></div>}
-      </div></AnimatedDetails>
+      </div></AnimatedDetails>}
     </article>
   );
 }

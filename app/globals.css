@@ -476,7 +476,7 @@ a:focus-visible, button:focus-visible {
 .education-degrees li:last-child { padding-bottom: 0; }
 .education-degrees h4 { font-size: 18px; font-weight: 500; line-height: 1.4; }
 .education-degrees p { font-size: 13px; color: var(--muted); margin-top: 5px; }
-.education-incoming { display: inline-block; font-size: 12px; color: var(--accent); border: 1px solid var(--border); border-radius: 100px; padding: 3px 9px; margin-top: 8px; }
+.education-degree-note { display: inline-block; max-width: 100%; font-size: 12px; line-height: 1.5; color: var(--accent); background: color-mix(in srgb, var(--sunshine) 12%, var(--surface)); border: 1px solid color-mix(in srgb, var(--sunshine) 42%, var(--border)); border-radius: 6px; padding: 5px 10px; margin-top: 10px; }
 .education-abroad-label { color: var(--accent); font-size: 13px; }
 .education-abroad h4 { font-size: 18px; font-weight: 500; }
 .education-postcard-date { font-size: 13px; color: var(--muted); margin-top: 5px; }
@@ -685,23 +685,28 @@ html.dark { color-scheme: dark; }
 }
 
 /* Education: pinned, ruled paper with a clipped study-abroad slip. */
-.education-spread { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); align-items: start; gap: 54px; padding: 26px 10px 14px; }
-.education-entry { --sheet-color: var(--surface); --sheet-tilt: -1deg; position: relative; min-width: 0; padding: 52px 32px 36px 54px; overflow-wrap: anywhere; background-color: var(--sheet-color); background-image: linear-gradient(to right, transparent 26px, color-mix(in srgb, var(--coral) 22%, transparent) 26px 27px, transparent 27px), repeating-linear-gradient(to bottom, transparent 0 31px, color-mix(in srgb, var(--foreground) 5%, transparent) 31px 32px); box-shadow: 2px 3px 3px color-mix(in srgb, var(--foreground) 5%, transparent), 7px 14px 20px color-mix(in srgb, var(--foreground) 8%, transparent); transform: rotate(var(--sheet-tilt)); }
-.education-entry + .education-entry { --sheet-tilt: 1.3deg; --sheet-color: color-mix(in srgb, var(--sunshine) 9%, var(--surface)); margin-top: 64px; }
+.education-heading > p { max-width: 660px; margin-top: 18px; color: var(--muted); font-size: 17px; line-height: 1.7; }
+.education-spread { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); align-items: start; gap: 36px 44px; padding: 22px 10px 14px; }
+.education-entry { --sheet-color: var(--surface); --sheet-tilt: -1deg; position: relative; min-width: 0; padding: 48px 28px 30px 42px; overflow-wrap: break-word; background-color: var(--sheet-color); background-image: linear-gradient(to right, transparent 22px, color-mix(in srgb, var(--coral) 22%, transparent) 22px 23px, transparent 23px), repeating-linear-gradient(to bottom, transparent 0 31px, color-mix(in srgb, var(--foreground) 5%, transparent) 31px 32px); box-shadow: 2px 3px 3px color-mix(in srgb, var(--foreground) 5%, transparent), 7px 14px 20px color-mix(in srgb, var(--foreground) 8%, transparent); transform: rotate(var(--sheet-tilt)); }
+.education-entry:nth-child(2) { --sheet-tilt: 1deg; --sheet-color: color-mix(in srgb, var(--sunshine) 9%, var(--surface)); grid-column: 2; grid-row: 1 / span 2; margin-top: 26px; }
+.education-entry:nth-child(3) { --sheet-tilt: -.6deg; grid-column: 1; grid-row: 2; }
 .education-entry::before { content: ""; position: absolute; right: 0; top: 0; width: 28px; height: 28px; background: linear-gradient(225deg, var(--background) 48%, var(--border) 50%, var(--sheet-color) 57%); pointer-events: none; }
 .education-entry::after { content: ""; position: absolute; bottom: -8px; left: 0; right: 0; height: 9px; background: var(--sheet-color); clip-path: polygon(0 0,100% 0,100% 60%,96% 90%,91% 40%,85% 80%,79% 45%,73% 95%,67% 50%,61% 85%,55% 35%,49% 85%,43% 45%,37% 95%,31% 50%,25% 85%,19% 40%,13% 90%,7% 45%,0 85%); pointer-events: none; }
 .education-entry:focus-within { z-index: 1; }
 .education-pin { position: absolute; top: 12px; left: calc(50% - 10px); width: 20px; height: 20px; border-radius: 50%; background: var(--coral); box-shadow: inset -3px -4px 0 color-mix(in srgb, var(--foreground) 22%, transparent), 3px 5px 3px color-mix(in srgb, var(--foreground) 18%, transparent); transform: rotate(-12deg); pointer-events: none; }
 .education-pin::before { content: ""; position: absolute; top: 4px; left: 5px; width: 6px; height: 4px; border-radius: 50%; background: color-mix(in srgb, var(--surface) 65%, transparent); transform: rotate(-25deg); }
-.education-entry + .education-entry .education-pin { background: var(--accent); transform: rotate(14deg); }
-.education-school { display: grid; grid-template-columns: 56px minmax(0, 1fr); align-items: center; gap: 16px; }
-.education-school h3 { font-size: clamp(23px, 2.3vw, 29px); }
-.education-school-mark { display: flex; align-items: center; justify-content: center; width: 56px; height: 64px; background: var(--image-mat); border: 1px solid var(--border); padding: 6px; transform: rotate(-5deg); }
-.education-school-mark img { width: 44px; height: 50px; object-fit: contain; }
-.education-entry + .education-entry .education-school-mark { transform: rotate(5deg); }
-.education-spread .education-degrees { margin: 24px 0 18px; }
-.education-spread .education-degrees li { padding: 14px 0; }
-.education-spread .education-degrees h4 { font-size: 20px; }
+.education-entry:nth-child(2) .education-pin { background: var(--accent); transform: rotate(14deg); }
+.education-entry:nth-child(3) .education-pin { background: var(--muted); }
+.education-school { display: grid; grid-template-columns: 64px minmax(0, 1fr); align-items: center; gap: 16px; }
+.education-school h3 { font-size: clamp(22px, 2vw, 26px); line-height: 1.25; text-wrap: balance; }
+.education-school-mark { display: flex; align-items: center; justify-content: center; width: 64px; height: 72px; background: #fff; border: 1px solid var(--border); padding: 7px; transform: rotate(-5deg); box-shadow: 2px 3px 0 color-mix(in srgb, var(--foreground) 6%, transparent); }
+.education-school-mark img { width: 50px; height: 58px; object-fit: contain; }
+.education-entry:nth-child(2) .education-school-mark { transform: rotate(5deg); }
+.education-spread .education-degrees { margin: 24px 0 0; }
+.education-spread .education-degrees li { padding: 18px 0; border-top: 1px dashed var(--border); }
+.education-spread .education-degrees li:last-child { padding-bottom: 0; }
+.education-spread .education-degrees h4 { font-size: 19px; line-height: 1.45; text-wrap: pretty; }
+.education-spread .education-degrees p { margin-top: 8px; font-variant-numeric: tabular-nums; }
 .education-spread .education-abroad { margin: 28px -6px 28px -10px; padding: 22px 70px 22px 20px; border: 0; background: var(--soft-green); box-shadow: 2px 4px 0 color-mix(in srgb, var(--foreground) 8%, transparent); transform: rotate(2deg); }
 .education-slip-clip { position: absolute; top: -12px; left: 16px; width: 12px; height: 34px; border: 2px solid var(--muted); border-radius: 8px; transform: rotate(-12deg); pointer-events: none; }
 .education-slip-clip::after { content: ""; position: absolute; inset: 3px 2px 4px; border: 1px solid var(--muted); border-top: 0; border-radius: 0 0 5px 5px; }
@@ -709,7 +714,7 @@ html.dark { color-scheme: dark; }
 @media (max-width: 899px) {
   .education-spread { grid-template-columns: minmax(0, 1fr); gap: 42px; padding-inline: 4px; }
   .education-entry { transform: none; }
-  .education-entry + .education-entry { margin-top: 0; }
+  .education-entry:nth-child(2), .education-entry:nth-child(3) { grid-column: auto; grid-row: auto; margin-top: 0; }
 }
 @media (max-width: 479px) {
   .education-spread { padding-inline: 0; }

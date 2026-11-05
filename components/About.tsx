@@ -13,7 +13,7 @@ export default function About() {
       <div className="about-introduction">
         <div className="about-story">
           <p className="about-opening">I like figuring out how things work.<br /><span>Especially when people are part of the puzzle.</span></p>
-          <p>I’m studying Computer Science at Michigan, with an M.S.E. in Industrial &amp; Operations Engineering up next. Product management brings together the things I enjoy most: understanding people, untangling tricky problems, and building something useful.</p>
+          <p>I’m studying Computer Science at Michigan, with concurrent enrollment in Georgia Tech’s online M.S. in Computer Science (OMSCS) and Michigan’s M.S.E. in Industrial &amp; Operations Engineering. Product management brings together the things I enjoy most: understanding people, untangling tricky problems, and building something useful.</p>
           <p>That curiosity has taken me from banking experiences to hospital workflows to AI for economic policy. Different problems, same starting point: <strong>who are we trying to help, and what’s getting in their way?</strong></p>
           <a href="#experiences" className="about-story-link">A few places that curiosity has taken me <ArrowUpRight className="link-arrow" size={17} aria-hidden="true" /></a>
         </div>
@@ -22,7 +22,7 @@ export default function About() {
           <p className="about-note-heading">A little introduction</p>
           <ul>
             <li><span>Studying</span>Computer Science @ Michigan</li>
-            <li><span>Up next</span>Operations Research</li>
+            <li><span>Concurrent graduate enrollment</span>Georgia Tech OMSCS + Michigan IOE</li>
             <li><span>Drawn to</span>Products with people at the center</li>
           </ul>
           <p className="about-note-signoff">Always a little curious.<span aria-hidden="true"><DecorativeMark kind="smile" /></span></p>
