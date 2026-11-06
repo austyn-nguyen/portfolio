@@ -1,12 +1,14 @@
 import "./globals.css";
-import { Sour_Gummy } from "next/font/google";
+import localFont from "next/font/local";
 import SpaceBackground from "@/components/SpaceBackground";
 import LightBackground from "@/components/LightBackground";
 import ScrollRestoration from "@/components/ScrollRestoration";
 
-const sourGummy = Sour_Gummy({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+const sourGummy = localFont({
+  src: "./fonts/sour-gummy.ttf",
+  weight: "100 900",
+  style: "normal",
+  display: "swap",
 });
 
 export default function RootLayout({
