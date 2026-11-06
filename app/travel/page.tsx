@@ -7,16 +7,16 @@ import { ArrowDown, ChevronDown, MapPin, Utensils } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import TravelGallery from "./TravelGallery";
-import { photos, hasCoordinates, type TravelPhoto } from "@/src/data/travel";
+import { photos, hasCoordinates, featuredPhoto, type TravelPhoto } from "@/src/data/travel";
 
 const TravelMap = dynamic(() => import("./TravelMap"), {
   ssr: false, loading: () => <div className="food-map-status" role="status">Unfolding the map…</div>,
 });
 const coverPhotos = [
-  { src: "/images/travel/travel-img-9148.jpg", alt: "A brunch spread with eggs, fruit, and a grilled wrap" },
-  { src: "/images/travel/travel-img-9119.jpg", alt: "A scoop of pink ice cream in a cone" },
-  { src: "/images/travel/travel-img-2304.jpg", alt: "A birthday cake topped with fresh berries" },
-];
+  featuredPhoto("id:7Rn7lAImlWMAAAAAAAAAJw", "A brunch spread with eggs, fruit, and a grilled wrap", 0),
+  featuredPhoto("id:7Rn7lAImlWMAAAAAAAAAFw", "A scoop of pink ice cream in a cone", 1),
+  featuredPhoto("id:7Rn7lAImlWMAAAAAAAAAIw", "A birthday cake topped with fresh berries", 2),
+].filter(photo => photo !== null);
 
 export default function TravelPage() {
   const [focusLocation, setFocusLocation] = useState<TravelPhoto | null>(null);

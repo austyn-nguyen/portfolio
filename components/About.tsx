@@ -2,6 +2,9 @@ import DecorativeMark from "./DecorativeMark";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Gamepad2, Music2, Utensils } from "lucide-react";
+import { featuredPhoto } from "@/src/data/travel";
+
+const foodPhoto = featuredPhoto("id:7Rn7lAImlWMAAAAAAAAABg", "A bowl of pasta from Austyn’s food and travel photo collection");
 
 export default function About() {
   return (
@@ -36,7 +39,7 @@ export default function About() {
           <div className="about-postcard-copy"><p className="about-postcard-label"><Music2 size={16} aria-hidden="true" /> A different kind of keyboard break</p><h4>There’s usually a viola involved.<ArrowUpRight className="link-arrow" size={23} aria-hidden="true" /></h4><p>Principal violist with the Michigan Pops Orchestra, and always happy to talk repertoire.</p><span className="about-postcard-cta">Come hear a little more</span></div>
         </Link>
         <Link href="/travel" className="about-postcard about-postcard-travel">
-          <div className="about-postcard-image"><Image src="/images/travel/travel-img-9023.jpg" alt="A bowl of pasta from Austyn’s food and travel photo collection" fill sizes="(max-width: 767px) 90vw, 530px" /></div>
+          <div className="about-postcard-image">{foodPhoto && <Image src={foodPhoto.src} alt={foodPhoto.alt} fill sizes="(max-width: 767px) 90vw, 530px" />}</div>
           <div className="about-postcard-copy"><p className="about-postcard-label"><Utensils size={16} aria-hidden="true" /> A camera roll full of good food</p><h4>Or something good to eat.<ArrowUpRight className="link-arrow" size={23} aria-hidden="true" /></h4><p>Local bites, new places, and a growing collection of food adventures. Yes, there’s a map.</p><span className="about-postcard-cta">Follow the food trail</span></div>
         </Link>
       </div>

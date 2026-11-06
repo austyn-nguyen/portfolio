@@ -35,3 +35,10 @@ export function hasCoordinates(photo: TravelPhoto): photo is TravelPhoto & { geo
 export function photoDescription(photo: TravelPhoto) {
   return photo.properties.caption || `Food and adventures · ${photoDate(photo)}`;
 }
+
+// Dropbox IDs survive renames and revisions; preview filenames do not.
+export function featuredPhoto(dropboxId: string, alt: string, fallbackIndex = 0) {
+  const selected = photos.find(photo => photo.properties.dropboxId === dropboxId);
+  const photo = selected ?? photos[fallbackIndex] ?? photos[0];
+  return photo ? { src: photo.properties.src, alt: selected ? alt : photoDescription(photo) } : null;
+}
