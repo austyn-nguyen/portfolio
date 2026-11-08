@@ -10,7 +10,9 @@
     "photos:authorize": "node scripts/authorize-dropbox.mjs",
     "photos:sync": "node scripts/sync-dropbox.mjs",
     "photos:validate": "node scripts/validate-photos.mjs",
-    "test:photos": "node --test scripts/tests/*.test.mjs"
+    "test:photos": "node --test scripts/tests/*.test.mjs",
+    "spotify:authorize": "node scripts/authorize-spotify.mjs",
+    "test:spotify": "node --experimental-strip-types --test scripts/spotify-tests/*.test.mjs"
   },
   "dependencies": {
     "dotenv": "^17.2.3",

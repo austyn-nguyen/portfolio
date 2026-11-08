@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Timeline, { TimelineEvent } from "./Timeline";
 import PerformanceShowcase from "./PerformanceShowcase";
 import Hero from "./Hero";
+import ListeningLately from "./ListeningLately";
 
 const timelineEvents: TimelineEvent[] = [
   {
@@ -81,6 +82,7 @@ export default function MusicalJourneyPage() {
       <main id="music-content" className="music-main" tabIndex={-1}>
         <Hero />
         <PerformanceShowcase />
+        <ListeningLately />
         <Timeline events={timelineEvents} />
       </main>
       <Footer page="music" />

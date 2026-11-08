@@ -24,6 +24,7 @@ const sectionLinks = {
   music: [
     { name: "Introduction", id: "hero" },
     { name: "Performances", id: "performances" },
+    { name: "Listening lately", id: "listening" },
     { name: "My journey", id: "timeline" },
   ],
   travel: [

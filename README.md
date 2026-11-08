@@ -20,7 +20,7 @@ The About section introduces the person behind the work through a personal note,
 
 ### Music · `/music`
 
-A personal recital program: a portrait with my viola, one featured YouTube player controlled by a selectable program list, and dated notes from my musical journey. Performance selection preserves each recording’s starting timestamp; on phones, a pointer selection brings the player back into view. The layout and restrained animations adapt to smaller screens and reduced-motion preferences.
+A personal recital program: a portrait with my viola, one featured YouTube player controlled by a selectable program list, a Spotify listening rotation, and dated notes from my musical journey. The listening section shows up to eight top tracks from the past four weeks, with album covers, an embedded player, and a profile link. Spotify data refreshes hourly on the server; visitors do not connect their accounts. [Connect Spotify](docs/spotify-listening.md) to replace the initial placeholder with live tracks. Performance selection preserves each recording’s starting timestamp; on phones, a pointer selection brings the player back into view. The layout and restrained animations adapt to smaller screens and reduced-motion preferences.
 
 ### Travel · `/travel`
 
