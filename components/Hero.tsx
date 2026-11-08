@@ -24,7 +24,9 @@ export default function Hero() {
           <figure className="hero-photo">
             <span className="photo-tape" aria-hidden="true" />
             <div className="hero-photo-image">
-              <Image src="/images/portraits/austyn-nguyen-campus.png" alt="Austyn Nguyen smiling on the University of Michigan campus" fill priority sizes="(max-width: 767px) 80vw, 400px" />
+              <div className="hero-photo-crop">
+                <Image src="/images/portraits/austyn-nguyen-campus.png" alt="Austyn Nguyen smiling on the University of Michigan campus" fill preload quality={95} sizes="(max-width: 767px) min(372px, calc(98vw - 77px)), 448px" />
+              </div>
             </div>
             <figcaption>Equal parts curious &amp; creative. <span aria-hidden="true"><DecorativeMark kind="smile" /></span></figcaption>
           </figure>

@@ -27,14 +27,14 @@ export interface EducationEntry {
 export const educationData: EducationEntry[] = [
   {
     school: "Georgia Institute of Technology",
-    years: "Expected Dec 2029",
+    years: "Expected Dec 2028",
     location: "Atlanta, GA · Online",
     logo: "/images/education/georgia-tech-logo.png",
     accentColor: "rgba(179, 163, 105, 0.4)",
     degrees: [
       {
         degree: "Master of Science in Computer Science",
-        years: "Expected Dec 2029",
+        years: "Expected Dec 2028",
         description: "Online program (OMSCS)",
       },
     ],
@@ -49,7 +49,6 @@ export const educationData: EducationEntry[] = [
       {
         degree: "M.S.E. in Industrial & Operations Engineering",
         years: "Jan 2027 – Aug 2027",
-        description: "Concurrent with Georgia Tech OMSCS",
       },
       {
         degree: "B.S.E. in Computer Science",
