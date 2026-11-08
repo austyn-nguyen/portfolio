@@ -42,7 +42,7 @@ In the portfolio's Vercel project settings, add these environment variables for 
 - `SPOTIFY_CLIENT_ID`
 - `SPOTIFY_CLIENT_SECRET`
 - `SPOTIFY_REFRESH_TOKEN`
-- `SPOTIFY_PROFILE_URL` (optional profile link)
+- `SPOTIFY_PROFILE_URL` (optional override; the portfolio's public profile link is already set in `src/data/music-listening.ts`)
 
 Copy values from `.env.local` directly into Vercel; do not commit them or paste them into chat. Use the same Spotify app for authorization and production. All variables are server-only; none should have a `NEXT_PUBLIC_` prefix. The existing GitHub photo sync does not need Spotify secrets.
 

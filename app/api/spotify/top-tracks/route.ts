@@ -1,6 +1,7 @@
 import { unstable_cache } from "next/cache";
 import { createHash } from "node:crypto";
 import { fetchSpotifyListening, spotifyProfileUrl, SpotifyApiError } from "@/src/lib/spotify";
+import { spotifyProfileUrl as defaultProfileUrl } from "@/src/data/music-listening";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -11,7 +12,7 @@ function getListening() {
     clientId: process.env.SPOTIFY_CLIENT_ID!,
     clientSecret: process.env.SPOTIFY_CLIENT_SECRET!,
     refreshToken: process.env.SPOTIFY_REFRESH_TOKEN!,
-    profileUrl: process.env.SPOTIFY_PROFILE_URL,
+    profileUrl: spotifyProfileUrl(process.env.SPOTIFY_PROFILE_URL) ?? defaultProfileUrl,
   };
   // Reconnecting an account must not reuse another connection's cached tracks.
   const connection = createHash("sha256").update(`${credentials.clientId}:${credentials.refreshToken}:${credentials.profileUrl ?? ""}`).digest("hex");
@@ -19,7 +20,7 @@ function getListening() {
 }
 
 export async function GET() {
-  const profileUrl = spotifyProfileUrl(process.env.SPOTIFY_PROFILE_URL);
+  const profileUrl = spotifyProfileUrl(process.env.SPOTIFY_PROFILE_URL) ?? defaultProfileUrl;
   if (!process.env.SPOTIFY_CLIENT_ID || !process.env.SPOTIFY_CLIENT_SECRET || !process.env.SPOTIFY_REFRESH_TOKEN) {
     return Response.json({ status: "pending", tracks: [], profileUrl }, {
       headers: { "Cache-Control": "no-store" },
