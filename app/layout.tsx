@@ -22,7 +22,7 @@ export default function RootLayout({
       className={sourGummy.className}
       suppressHydrationWarning={true}
     >
-      <body className="min-h-screen bg-[var(--background)] text-[var(--foreground)] transition-colors duration-300">
+      <body className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
         <script
           dangerouslySetInnerHTML={{
             __html: `try { document.documentElement.classList.add(localStorage.getItem('theme') === 'dark' ? 'dark' : 'light'); } catch { document.documentElement.classList.add('light'); }`,

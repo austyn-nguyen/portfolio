@@ -18,19 +18,19 @@ Vercel Deploy Hook → rebuild → updated /travel
 4. Run `npm run photos:authorize`, open the printed authorization URL in Brave, and approve the app. The local callback saves the refresh token to `.env.local` without printing credentials. It times out after five minutes.
 5. Run `npm run photos:sync`, then `npm run photos:validate`. Review the new photos on `/travel` before the first automated publish.
 
-The importer refreshes short-lived access tokens automatically. `DROPBOX_ACCESS_TOKEN` is supported for a one-off local import, but scheduled runs use the refresh token. See [Dropbox's OAuth guide](https://developers.dropbox.com/oauth-guide).
+The importer refreshes short-lived access tokens automatically. `DROPBOX_ACCESS_TOKEN` is supported for a one-off local import, but scheduled runs use the refresh token. See [Dropbox&#39;s OAuth guide](https://developers.dropbox.com/oauth-guide).
 
 ## Enable scheduled publishing
 
 In this GitHub repository's **Settings → Secrets and variables → Actions**, add:
 
-| Type | Name | Value |
-| --- | --- | --- |
-| Secret | `DROPBOX_APP_KEY` | Dropbox app key |
-| Secret | `DROPBOX_APP_SECRET` | Dropbox app secret |
-| Secret | `DROPBOX_REFRESH_TOKEN` | Refresh token from local `.env.local` |
-| Variable | `DROPBOX_FOLDER_PATH` | Optional override; defaults to `/` in Actions |
-| Secret | `VERCEL_DEPLOY_HOOK_URL` | Production deploy hook from Vercel |
+| Type     | Name                       | Value                                   |
+| -------- | -------------------------- | --------------------------------------- |
+| Secret   | `DROPBOX_APP_KEY`        | Dropbox app key                         |
+| Secret   | `DROPBOX_APP_SECRET`     | Dropbox app secret                      |
+| Secret   | `DROPBOX_REFRESH_TOKEN`  | Refresh token from local `.env.local` |
+| Variable | `DROPBOX_FOLDER_PATH`    | Optional override; defaults to `/` in Actions |
+| Secret   | `VERCEL_DEPLOY_HOOK_URL` | Production deploy hook from Vercel      |
 
 Create that hook under **Vercel project → Settings → Git → Deploy Hooks**, targeting the production branch. Treat its URL as a password. It deploys bot commits reliably without relying on the bot being a member of your Vercel team. Do not put it in a public browser environment variable.
 

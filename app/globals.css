@@ -5,18 +5,18 @@
    ========================= */
 :root,
 html.light {
-  --background: #ded9cc;
+  --background: #f2eddf;
   --foreground: #2b3a32;
   --muted: #515c4e;
   --accent: #75570f;
   --sunshine: #d6b558;
-  --surface: #eae5d8;
-  --border: #bdbead;
-  --soft-green: #cfd7c5;
+  --surface: #faf6eb;
+  --border: #cecdbb;
+  --soft-green: #dce3ce;
   --coral: #91432f;
-  --nav-background: #ded9ccf0;
+  --nav-background: #f2eddfeb;
   --accent-rgb: 117, 87, 15;
-  --image-mat: #e4dfd2;
+  --image-mat: #f6f0e2;
   --photo-tape: #d6b558b3;
 }
 
@@ -43,12 +43,43 @@ html.dark {
    Base Styles & Scroll Logic
    ========================= */
 body {
+  /* Keep both fixed scenes above the body paint, below the page content. */
+  isolation: isolate;
   background-color: var(--background);
   color: var(--foreground);
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+/* A single page snapshot fades over the finished destination theme. */
+html[data-theme-transition="snapshot"]::view-transition-group(root) { animation: none; }
+html[data-theme-transition="snapshot"]::view-transition-old(root) {
+  animation: none;
+  opacity: 1;
+  mix-blend-mode: normal;
+}
+html[data-theme-transition="snapshot"]::view-transition-new(root) {
+  animation: theme-arrive 600ms cubic-bezier(.22, .61, .36, 1) both;
+  mix-blend-mode: normal;
+}
+@keyframes theme-arrive { from { opacity: 0; } to { opacity: 1; } }
+/* Capture settled colors; component hover transitions resume after the fade. */
+html[data-theme-transition="snapshot"] *,
+html[data-theme-transition="snapshot"] *::before,
+html[data-theme-transition="snapshot"] *::after,
+html[data-theme-transition="instant"] *,
+html[data-theme-transition="instant"] *::before,
+html[data-theme-transition="instant"] *::after { transition: none !important; }
+/* Browsers without snapshots blend rendered colors, without inherited animations. */
+html[data-theme-transition="fallback"] *,
+html[data-theme-transition="fallback"] *::before,
+html[data-theme-transition="fallback"] *::after {
+  transition: background-color 600ms ease, color 600ms ease, border-color 600ms ease, fill 600ms ease, stroke 600ms ease !important;
+}
+html[data-theme-transition="fallback"] :is(.night-sky, .courtyard-scene) {
+  transition: opacity 600ms ease !important;
 }
 
 /**
@@ -61,125 +92,345 @@ html {
 }
 
 /* =========================
-   Space background & Animations
+   Night sky: stars above a distant, softly lit city
    ========================= */
 
-.stars {
-  background-image: radial-gradient(1px 1px at 20% 30%, white, transparent),
-    radial-gradient(1px 1px at 80% 40%, white, transparent),
-    radial-gradient(1px 1px at 50% 80%, white, transparent),
-    radial-gradient(1px 1px at 10% 90%, white, transparent),
-    radial-gradient(1px 1px at 90% 10%, white, transparent);
-  background-size: 200px 200px;
-  opacity: 0.6;
-  animation: twinkle 6s infinite ease-in-out alternate;
+.night-sky {
+  background: #141f26;
+  opacity: 0;
 }
-
-@keyframes twinkle {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 0.8;
-  }
-}
-
-/* Slow rotating nebula glow */
-.space-glow {
-  background: radial-gradient(
-    circle at center,
-    rgba(253, 224, 71, 0.08),
-    transparent 60%
-  );
-  animation: rotate-space 120s linear infinite;
-}
-
-@keyframes rotate-space {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* =========================
-   Shooting Star
-   ========================= */
-.shooting-star {
+html.dark .night-sky { opacity: 1; }
+.night-haze {
   position: absolute;
-  top: -10%;
+  inset: -8%;
+  background: radial-gradient(ellipse at 84% 20%, #48717d12, transparent 48%), radial-gradient(ellipse at 13% 65%, #6663840d, transparent 52%);
+  animation: night-air 58s ease-in-out infinite alternate;
+}
+.night-stars {
+  position: absolute;
+  inset: 0;
+  mask-image: linear-gradient(#000 0%, #000 45%, transparent 90%);
+}
+.night-star {
+  position: absolute;
+  border-radius: 50%;
+  background: #f6efdd;
+  opacity: var(--star-opacity);
+  animation: night-twinkle var(--twinkle-duration) ease-in-out var(--twinkle-delay) infinite;
+}
+.night-star:nth-child(5n) { animation-duration: calc(var(--twinkle-duration) * 1.6); }
+.night-star:nth-child(7n) { background: #b6cfdc; }
+.night-star:nth-child(11n) { box-shadow: 0 0 5px #f6efdd30; }
+.night-star:nth-child(8n + 2) { box-shadow: 0 0 7px 1px #d6e7ef30; animation: night-star-shine var(--twinkle-duration) ease-in-out var(--twinkle-delay) infinite; }
+.night-star:nth-child(8n + 2)::before, .night-star:nth-child(8n + 2)::after {
+  content: "";
+  position: absolute;
   left: 50%;
-  width: 2px;
-  height: 80px;
-  background: linear-gradient(transparent, rgba(255, 255, 255, 0.8));
-  opacity: 0.6;
-  animation: shoot 8s linear infinite;
+  top: 50%;
+  width: 7px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #e5f1f3, transparent);
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  animation: night-star-rays var(--twinkle-duration) ease-in-out var(--twinkle-delay) infinite;
 }
-
-@keyframes shoot {
-  0% {
-    transform: translateX(0) translateY(0) rotate(45deg);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(-400px) translateY(600px) rotate(45deg);
-    opacity: 0;
-  }
+.night-star:nth-child(8n + 2)::after { width: 1px; height: 7px; background: linear-gradient(transparent, #e5f1f3, transparent); }
+/* The ribbon paths ripple while their layers gently drift through the sky. */
+.night-aurora {
+  position: absolute;
+  top: -9%;
+  left: -12%;
+  width: 124%;
+  height: min(78vh, 700px);
+  opacity: .32;
+  filter: blur(9px);
+  mask-image: radial-gradient(ellipse at 50% 40%, #000 10%, transparent 72%);
+  transform-origin: 50% 30%;
+}
+.night-aurora-emerald { animation: night-aurora-green 18s ease-in-out -6s infinite alternate; }
+.night-aurora-violet { top: -16%; opacity: .22; animation: night-aurora-purple 26s ease-in-out -15s infinite alternate; }
+.night-city-glow {
+  position: absolute;
+  inset: 40% -10% -10%;
+  background: radial-gradient(ellipse at 20% 112%, #d89d4530, transparent 53%), radial-gradient(ellipse at 77% 113%, #c77f4221, transparent 48%);
+  animation: night-city-breathe 38s ease-in-out -13s infinite alternate;
+}
+.night-city {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: clamp(100px, 19vh, 185px);
+  opacity: .65;
+}
+.night-city-far { fill: #111c23; }
+.night-city-near { fill: #0e181f; }
+.night-city-antenna { stroke: #0e181f; stroke-width: 2; }
+.night-city-near .night-window { fill: var(--room-color); opacity: .025; }
+.night-city-near .night-window-lit { opacity: var(--room-light); }
+.night-city-near .night-window-changing { animation: var(--room-animation) var(--room-duration) steps(1, end) var(--room-delay) infinite; }
+.night-meteor {
+  --meteor-angle: -36deg;
+  --meteor-x: -440px;
+  --meteor-y: 320px;
+  position: absolute;
+  left: 78%;
+  top: 12%;
+  width: 92px;
+  height: 1px;
+  background: linear-gradient(90deg, #f6efdd99, #f6efdd20 30%, transparent);
+  opacity: 0;
+  transform: rotate(var(--meteor-angle));
+  animation: night-meteor 29s linear -21s infinite;
+}
+.night-meteor::before { content: ""; position: absolute; left: 0; top: -1px; width: 2px; height: 2px; background: #f6efdd; border-radius: 50%; }
+.night-meteor-secondary { --meteor-angle: -30deg; --meteor-x: -330px; --meteor-y: 190px; left: 43%; top: 8%; width: 66px; animation-duration: 47s; animation-delay: -28s; }
+@keyframes night-twinkle {
+  0%, 100% { opacity: calc(var(--star-opacity) * .4); }
+  50% { opacity: var(--star-opacity); }
+}
+@keyframes night-star-shine {
+  0%, 30%, 75%, 100% { opacity: calc(var(--star-opacity) * .65); }
+  48% { opacity: min(1, calc(var(--star-opacity) * 1.8)); }
+}
+@keyframes night-star-rays {
+  0%, 33%, 65%, 100% { opacity: 0; }
+  48% { opacity: .55; }
+}
+@keyframes night-aurora-green {
+  0% { opacity: .28; transform: translate3d(-1.5%, -1%, 0) rotate(-3deg) scaleY(.96); }
+  50% { opacity: .4; transform: translate3d(0, 1%, 0) rotate(-1deg) scaleY(1.03); }
+  100% { opacity: .32; transform: translate3d(2%, 2%, 0) rotate(1deg) scaleY(1.07); }
+}
+@keyframes night-aurora-purple {
+  0% { opacity: .2; transform: translate3d(1.5%, 1%, 0) rotate(2deg) scaleY(1.04); }
+  50% { opacity: .28; transform: translate3d(0, -1%, 0) rotate(0deg) scaleY(.98); }
+  100% { opacity: .22; transform: translate3d(-2%, -2%, 0) rotate(-2deg) scaleY(.94); }
+}
+@keyframes night-air {
+  from { transform: translate3d(-1%, 0, 0); }
+  to { transform: translate3d(1%, -1%, 0); }
+}
+@keyframes night-meteor {
+  0%, 89% { opacity: 0; transform: translate3d(0, 0, 0) rotate(var(--meteor-angle)); }
+  90% { opacity: .8; transform: translate3d(-25px, 18px, 0) rotate(var(--meteor-angle)); }
+  95%, 100% { opacity: 0; transform: translate3d(var(--meteor-x), var(--meteor-y), 0) rotate(var(--meteor-angle)); }
+}
+/* Long holds followed by a light switch, rather than blinking or pulsing. */
+@keyframes night-room-evening {
+  0%, 28%, 72%, 100% { opacity: var(--room-light); }
+  29%, 71% { opacity: .025; }
+}
+@keyframes night-room-return {
+  0%, 19%, 81%, 100% { opacity: .025; }
+  20%, 80% { opacity: var(--room-light); }
+}
+@keyframes night-room-late {
+  0%, 47%, 100% { opacity: var(--room-light); }
+  48%, 99% { opacity: .025; }
+}
+@keyframes night-city-breathe {
+  from { opacity: .65; transform: translate3d(-1%, 1%, 0); }
+  to { opacity: 1; transform: translate3d(1%, 0, 0); }
+}
+.night-sky[data-paused] *, .night-sky[data-paused] *::before, .night-sky[data-paused] *::after { animation-play-state: paused !important; }
+@media (max-width: 767px) {
+  .night-aurora { height: 60vh; filter: blur(7px); }
+  .night-city { height: 105px; opacity: .5; }
+  .night-city-glow { opacity: .8; }
+  .night-meteor { width: 65px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .night-sky *, .night-sky *::before, .night-sky *::after { animation: none !important; }
+  .night-aurora { opacity: .13; }
+  .night-meteor { display: none; }
 }
 
 /* =========================
-   Soft sage wash (Light Mode)
+   A sunlit courtyard: soft canopy shadows and patches of warm daylight
    ========================= */
-.sun-bubble {
+.courtyard-scene {
+  background: #f2eddf;
+  opacity: 1;
+}
+html.dark .courtyard-scene { opacity: 0; }
+.courtyard-sky {
   position: absolute;
-  border-radius: 9999px;
-  background: radial-gradient(
-    circle at 30% 30%,
-    rgba(113, 135, 101, 0.12),
-    rgba(113, 135, 101, 0.04),
-    transparent 70%
-  );
-  filter: blur(12px);
-  animation: float 20s ease-in-out infinite;
+  inset: 0 0 auto;
+  height: 72vh;
+  background: linear-gradient(#cbdfe5a6, #e2e9df70 35%, #f2eddf00 100%);
 }
-
-.bubble-1 {
-  width: 300px;
-  height: 300px;
-  top: 20%;
-  left: 10%;
+.courtyard-clouds {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 72vh;
+  overflow: hidden;
+  mask-image: linear-gradient(#000 65%, transparent);
 }
-
-.bubble-2 {
-  width: 200px;
-  height: 200px;
-  top: 60%;
-  left: 70%;
-  animation-duration: 25s;
+.courtyard-cloud {
+  position: absolute;
+  left: 0;
+  width: clamp(360px, 48vw, 760px);
+  aspect-ratio: 80 / 23;
+  animation: courtyard-cloud-drift 180s linear -65s infinite;
 }
-
-.bubble-3 {
-  width: 400px;
-  height: 400px;
-  top: 80%;
-  left: 30%;
-  animation-duration: 30s;
+.courtyard-cloud svg { display: block; width: 100%; height: 100%; }
+.courtyard-cloud-body { fill: #fffdf3; }
+.courtyard-cloud-underbelly { fill: #b4c5c0; opacity: .13; filter: blur(7px); }
+.courtyard-cloud-near { top: 7vh; opacity: .65; filter: blur(2px); }
+.courtyard-cloud-far { top: 24vh; width: clamp(300px, 38vw, 590px); opacity: .48; filter: blur(4px); animation-duration: 230s; animation-delay: -140s; }
+.courtyard-cloud-wisp { top: 43vh; width: clamp(300px, 43vw, 680px); opacity: .3; filter: blur(6px); animation-duration: 260s; animation-delay: -30s; }
+.courtyard-cloud-shadow {
+  position: absolute;
+  inset: -15%;
+  background: radial-gradient(ellipse 28% 11% at 30% 46%, #63796b14, transparent 85%), radial-gradient(ellipse 34% 14% at 76% 82%, #63796b10, transparent 85%);
+  animation: courtyard-cloud-shadow 42s ease-in-out -15s infinite alternate;
 }
-
-@keyframes float {
-  0% {
-    transform: translateY(0) translateX(0);
-  }
-  50% {
-    transform: translateY(-40px) translateX(20px);
-  }
-  100% {
-    transform: translateY(0) translateX(0);
-  }
+@keyframes courtyard-cloud-drift {
+  from { transform: translate3d(-100%, 0, 0); }
+  to { transform: translate3d(100vw, 0, 0); }
+}
+@keyframes courtyard-cloud-shadow {
+  from { transform: translate3d(-6%, -1%, 0); opacity: .55; }
+  to { transform: translate3d(6%, 2%, 0); opacity: 1; }
+}
+.courtyard-sunlight {
+  position: absolute;
+  inset: -8%;
+  background: radial-gradient(ellipse at 12% 3%, #fff8dccc, transparent 58%), radial-gradient(ellipse at 98% 85%, #bcc9a640, transparent 55%), linear-gradient(150deg, #fffdf01a 35%, #c9b99526);
+  animation: courtyard-sunlight 24s ease-in-out -8s infinite alternate;
+}
+.courtyard-sunbeams {
+  position: absolute;
+  inset: -15%;
+  background: linear-gradient(118deg, transparent 20%, #fffdf066 26%, #fffdf010 33%, transparent 37%, #fffdf073 43%, transparent 53%, #fffdf040 59%, transparent 67%);
+  mask-image: linear-gradient(#0009, #000 30%, transparent 90%);
+  transform-origin: 20% 0;
+  animation: courtyard-sunbeams 30s ease-in-out -12s infinite alternate;
+}
+.courtyard-dappled-light {
+  position: absolute;
+  inset: -8%;
+  background: radial-gradient(ellipse 15% 30% at 78% 18%, #fffcef9c, transparent 80%), radial-gradient(ellipse 23% 18% at 11% 72%, #fff8da99, transparent 80%), radial-gradient(ellipse 17% 28% at 91% 62%, #fffdf075, transparent 80%);
+  animation: courtyard-dappled 18s ease-in-out -5s infinite alternate;
+}
+.courtyard-canopy {
+  position: absolute;
+  width: clamp(400px, 43vw, 670px);
+  aspect-ratio: 4 / 5;
+  color: #62764e;
+  transform-origin: 100% 0;
+}
+.courtyard-canopy svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.courtyard-leaves { opacity: .2; filter: blur(.5px); }
+.courtyard-leaf-shadow { opacity: .13; filter: blur(9px); transform: translate(-34px, 42px) rotate(-4deg); }
+.courtyard-branch { fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: round; }
+.courtyard-canopy-upper { top: -95px; right: -105px; transform: rotate(-1.5deg); }
+.courtyard-canopy-lower { bottom: -190px; left: -135px; width: clamp(340px, 32vw, 480px); opacity: .75; transform-origin: 50% 50%; transform: rotate(175deg); --bough-duration: 10s; --bough-delay: -6s; }
+/* Each bough pivots at its own attachment, so movement grows toward the tip.
+   The nested twig adds a little flex, and the shadow uses the same timing. */
+.courtyard-bough { transform-box: view-box; }
+.courtyard-bough-main { transform-origin: 636px -54px; animation: courtyard-bough-sway var(--bough-duration, 7.5s) ease-in-out var(--bough-delay, -3s) infinite alternate; }
+.courtyard-bough-side { transform-origin: 640px 236px; animation: courtyard-bough-sway 9s ease-in-out -5s infinite alternate; }
+.courtyard-bough-twig { transform-origin: 524px 150px; animation: courtyard-twig-sway 6s ease-in-out -2s infinite alternate; }
+/* Local coordinates keep each leaf attached while its tip catches the breeze. */
+.courtyard-leaf-flutter { transform-box: view-box; transform-origin: 0 0; animation: courtyard-leaf-flutter var(--leaf-duration) ease-in-out var(--leaf-delay) infinite; }
+@keyframes courtyard-leaf-flutter {
+  0%, 100% { transform: rotate(-2deg) scaleX(1); }
+  35% { transform: rotate(2.8deg) scaleX(.96); }
+  70% { transform: rotate(-.5deg) scaleX(.99); }
+}
+.courtyard-terrace {
+  position: absolute;
+  inset: auto 0 0;
+  height: clamp(125px, 21vh, 210px);
+}
+.courtyard-terrace-warmth {
+  position: absolute;
+  inset: -40% 0 0;
+  background: linear-gradient(transparent, #d9caa222);
+  animation: courtyard-terrace-light 24s ease-in-out -8s infinite alternate;
+}
+.courtyard-terrace-stone { position: absolute; bottom: 0; width: 100%; height: clamp(58px, 9vh, 94px); }
+.courtyard-stone-cap { fill: #eee3c9; opacity: .75; }
+.courtyard-stone-joints { fill: none; stroke: #9a8e74; stroke-width: 1; opacity: .13; }
+.courtyard-stone-grain { fill: none; stroke: #fff8e5; stroke-width: 1; stroke-linecap: round; opacity: .45; }
+.courtyard-terrace-planting {
+  position: absolute;
+  bottom: clamp(32px, 5vh, 53px);
+  width: clamp(170px, 18vw, 260px);
+  height: auto;
+  color: #8b9974;
+  opacity: .65;
+  overflow: visible;
+}
+.courtyard-terrace-planting-left { left: clamp(8px, 3vw, 48px); }
+.courtyard-terrace-planting-right { right: clamp(0px, 2vw, 32px); transform: scaleX(-1); width: clamp(190px, 21vw, 290px); }
+.courtyard-terrace-sprig { transform-box: view-box; transform-origin: 130px 178px; animation: courtyard-grass-sway 9s ease-in-out -3s infinite alternate; }
+.courtyard-terrace-planting-right .courtyard-terrace-sprig { animation-duration: 12s; animation-delay: -7s; }
+.courtyard-grass-blade { transform-box: view-box; animation: courtyard-blade-sway 5s ease-in-out infinite alternate; }
+.courtyard-flower-sway { transform-box: view-box; animation: courtyard-flower-sway 6s ease-in-out infinite alternate; }
+.courtyard-flower-stems { fill: currentColor; stroke: currentColor; stroke-width: 1.2; }
+.courtyard-flower-stems > path:first-child { fill: none; }
+.courtyard-wildflower { fill: #fff7dc; }
+.courtyard-flower-center { fill: #b99b56; }
+@keyframes courtyard-grass-sway {
+  from { transform: rotate(-1.5deg); }
+  to { transform: rotate(2deg); }
+}
+@keyframes courtyard-blade-sway {
+  from { transform: rotate(-2deg); }
+  to { transform: rotate(2.5deg); }
+}
+@keyframes courtyard-flower-sway {
+  from { transform: rotate(1.5deg); }
+  to { transform: rotate(-2.5deg); }
+}
+@keyframes courtyard-terrace-light {
+  from { opacity: .4; }
+  to { opacity: 1; }
+}
+@keyframes courtyard-sunlight {
+  from { transform: translate3d(-1%, -1%, 0); opacity: .8; }
+  to { transform: translate3d(1%, 1%, 0); opacity: 1; }
+}
+@keyframes courtyard-sunbeams {
+  from { transform: translate3d(-1%, 0, 0) rotate(-1deg); opacity: .65; }
+  to { transform: translate3d(1%, 0, 0) rotate(1deg); opacity: .95; }
+}
+@keyframes courtyard-dappled {
+  from { transform: translate3d(-1%, 0, 0); opacity: .6; }
+  to { transform: translate3d(1.5%, 1%, 0); opacity: 1; }
+}
+@keyframes courtyard-bough-sway {
+  from { transform: rotate(-1.8deg); }
+  to { transform: rotate(1.8deg); }
+}
+@keyframes courtyard-twig-sway {
+  from { transform: rotate(-1deg); }
+  to { transform: rotate(1deg); }
+}
+html.dark .courtyard-scene *, .courtyard-scene[data-paused] * { animation-play-state: paused !important; }
+@media (max-width: 767px) {
+  .courtyard-cloud-near { width: 380px; top: 10vh; animation-duration: 150s; }
+  .courtyard-cloud-far { width: 300px; top: 29vh; }
+  .courtyard-cloud-wisp { width: 350px; top: 47vh; }
+  .courtyard-canopy-upper { width: 350px; right: -155px; top: -75px; }
+  .courtyard-canopy-lower { width: 280px; left: -140px; bottom: -115px; opacity: .6; }
+  .courtyard-leaves { opacity: .17; }
+  .courtyard-sunbeams { opacity: .6; }
+  .courtyard-terrace-stone { height: 54px; }
+  .courtyard-terrace-planting { bottom: 29px; opacity: .55; }
+  .courtyard-terrace-planting-left { left: -48px; width: 165px; }
+  .courtyard-terrace-planting-right { right: -48px; width: 180px; }
+  .courtyard-stone-joints { opacity: .08; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .courtyard-scene * { animation: none !important; }
+  .courtyard-cloud-near { left: 8%; }
+  .courtyard-cloud-far { left: 62%; }
+  .courtyard-cloud-wisp { left: -15%; }
+  .courtyard-canopy-upper { transform: rotate(-1.5deg); }
+  .courtyard-canopy-lower { transform: rotate(175deg); }
 }
 
 /* =========================
@@ -742,8 +993,8 @@ html.dark { color-scheme: dark; }
 .theme-icon { position: absolute; transition: opacity 220ms ease, transform 260ms cubic-bezier(.2,.7,.2,1); }
 .theme-icon-moon { opacity: 1; transform: rotate(0deg) scale(1); }
 .theme-icon-sun { opacity: 0; transform: rotate(-90deg) scale(.65); }
-.theme-toggle[data-theme="dark"] .theme-icon-moon { opacity: 0; transform: rotate(90deg) scale(.65); }
-.theme-toggle[data-theme="dark"] .theme-icon-sun { opacity: 1; transform: rotate(0deg) scale(1); }
+html.dark .theme-toggle .theme-icon-moon { opacity: 0; transform: rotate(90deg) scale(.65); }
+html.dark .theme-toggle .theme-icon-sun { opacity: 1; transform: rotate(0deg) scale(1); }
 .theme-toggle:active { transform: scale(.94); }
 .personal-nav, .education-entry, .education-abroad, .featured-project, .compact-project, .now-note, .contact-postcard, .project-dialog, .photo-dialog, .project-dialog-toolbar, .photo-dialog-toolbar {
   transition: background-color 280ms ease, color 280ms ease, border-color 280ms ease, box-shadow 220ms ease, transform 220ms ease;

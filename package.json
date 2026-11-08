@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "test:theme": "node --test scripts/theme-tests/*.test.mjs",
     "photos:authorize": "node scripts/authorize-dropbox.mjs",
     "photos:sync": "node scripts/sync-dropbox.mjs",
     "photos:validate": "node scripts/validate-photos.mjs",
