@@ -23,12 +23,13 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 40
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           ref: ${{ github.event.repository.default_branch }}
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
-          node-version: '22'
+          node-version-file: '.nvmrc'
+          check-latest: true
           cache: npm
       - name: Check required account configuration
         env:
@@ -81,7 +82,7 @@ jobs:
           DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
       - name: Check whether these photos were deployed
         id: deployment-cache
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@v6
         with:
           path: /tmp/portfolio-photo-deploy
           key: photo-deploy-${{ hashFiles('src/data/locations.json') }}
@@ -93,7 +94,7 @@ jobs:
       - name: Record the successful deployment request
         if: steps.deployment-cache.outputs.cache-hit != 'true'
         run: touch /tmp/portfolio-photo-deploy
-      - uses: actions/cache/save@v4
+      - uses: actions/cache/save@v6
         if: steps.deployment-cache.outputs.cache-hit != 'true'
         with:
           path: /tmp/portfolio-photo-deploy

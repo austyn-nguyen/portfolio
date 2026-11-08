@@ -2,8 +2,8 @@ import DecorativeMark from "./DecorativeMark";
 import { ArrowUpRight, Code2, Compass, Database, Monitor } from "lucide-react";
 import type { CSSProperties } from "react";
 import type { IconType } from "react-icons";
-import { FaPython, FaGitAlt, FaGithub, FaTools, FaFilePowerpoint, FaFileExcel, FaEnvelope, FaCloud, FaChartBar, FaWindows, FaApple, FaLinux } from "react-icons/fa";
-import { SiC, SiCplusplus, SiMongodb, SiPostgresql, SiJira, SiAsana, SiScrumalliance, SiDebian, SiGo, SiAmazon, SiFigma, SiConfluence } from "react-icons/si";
+import { FaPython, FaGitAlt, FaGithub, FaTools, FaFilePowerpoint, FaFileExcel, FaEnvelope, FaCloud, FaChartBar, FaWindows, FaApple, FaLinux, FaAws } from "react-icons/fa";
+import { SiC, SiCplusplus, SiMongodb, SiPostgresql, SiJira, SiAsana, SiScrumalliance, SiDebian, SiGo, SiFigma, SiConfluence } from "react-icons/si";
 import { DiJava, DiMsqlServer } from "react-icons/di";
 
 const skillVisuals: Record<string, { icon: IconType; color: string }> = {
@@ -26,7 +26,7 @@ const skillVisuals: Record<string, { icon: IconType; color: string }> = {
   Excel: { icon: FaFileExcel, color: "#55a17c" },
   PowerPoint: { icon: FaFilePowerpoint, color: "#d47c55" },
   "Power BI": { icon: FaChartBar, color: "#c69b23" },
-  AWS: { icon: SiAmazon, color: "#d59639" },
+  AWS: { icon: FaAws, color: "#d59639" },
   "Microsoft Azure": { icon: FaCloud, color: "#57a4d5" },
   Windows: { icon: FaWindows, color: "#548fe0" },
   macOS: { icon: FaApple, color: "var(--foreground)" },

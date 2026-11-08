@@ -2,18 +2,23 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "26.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "npm run test:theme && npm run test:photos && npm run test:spotify",
     "test:theme": "node --test scripts/theme-tests/*.test.mjs",
     "photos:authorize": "node scripts/authorize-dropbox.mjs",
     "photos:sync": "node scripts/sync-dropbox.mjs",
     "photos:validate": "node scripts/validate-photos.mjs",
     "test:photos": "node --test scripts/tests/*.test.mjs",
     "spotify:authorize": "node scripts/authorize-spotify.mjs",
-    "test:spotify": "node --experimental-strip-types --test scripts/spotify-tests/*.test.mjs"
+    "test:spotify": "node --test scripts/spotify-tests/*.test.mjs"
   },
   "dependencies": {
     "dotenv": "^17.2.3",
@@ -22,21 +27,27 @@
     "framer-motion": "^12.23.26",
     "lucide-react": "^0.562.0",
     "mapbox-gl": "^3.18.1",
-    "next": "16.0.10",
-    "react": "19.2.1",
-    "react-dom": "19.2.1",
+    "next": "16.4.5",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
     "react-icons": "^5.5.0",
     "react-map-gl": "^8.1.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
+    "@types/geojson": "^7946.0.16",
+    "@types/node": "^26",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.0.10",
-    "sharp": "^0.34.5",
+    "eslint-config-next": "16.4.5",
+    "sharp": "^0.35.5",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "overrides": {
+    "@typescript-eslint/typescript-estree": {
+      "minimatch": "^11.0.5"
+    }
   }
 }

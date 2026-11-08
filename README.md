@@ -63,6 +63,35 @@ Use lowercase kebab-case names, preserve the actual file extension, and keep ima
 
 Built with **Next.js, React, TypeScript, and Tailwind CSS**, with custom CSS for the visual identity. Framer Motion powers restrained entrances in supporting sections, Mapbox GL and React Map GL power the travel map, and Lucide/React Icons provide interface icons. The travel import uses Dropbox and EXIF metadata. Hosting is on Vercel.
 
+## Development setup
+
+Use **Node.js 26 LTS** and npm. `.nvmrc`, `package.json`, and GitHub Actions select the same Node major version; Vercel reads `engines.node` for future deployments. With nvm installed:
+
+```sh
+nvm install
+nvm use
+npm ci
+npm run dev
+```
+
+VS Code is configured to offer the project's installed TypeScript version. Copy `.env.example` to `.env.local` and configure the services you need using the linked Dropbox and Spotify guides; keep credentials out of Git.
+
+Before shipping changes, run:
+
+```sh
+npm run lint
+npm run typecheck
+npm test
+npm run photos:validate
+npm run build
+```
+
+Check `npm outdated` and `npm audit` when maintaining dependencies. Keep Next.js and `eslint-config-next` on the same release and React and React DOM on the same release. Review breaking upgrades to animation, icons, and TypeScript separately from routine dependency updates.
+
+GitHub Actions runs these checks on pull requests and pushes to `main`, without service credentials. Dependabot proposes dependency and action updates weekly, grouping related framework packages for review.
+
+The scoped `minimatch` override patches [GHSA-g3hv-75wg-m249](https://github.com/advisories/GHSA-g3hv-75wg-m249) in TypeScript ESLint's project-service glob matching. Remove it once `@typescript-eslint/typescript-estree` requires a patched release itself. ESLint stays on version 9 because the current React lint plugin does not yet declare compatibility with version 10; TypeScript stays on version 5 within TypeScript ESLint's supported range.
+
 ## Content and attribution
 
 Personal project descriptions reflect my contributions. Organization names, logos, and third-party page screenshots identify the work and its context; they do not imply endorsement. External links lead to their respective owners’ websites.
