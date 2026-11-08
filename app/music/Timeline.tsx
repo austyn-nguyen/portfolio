@@ -6,7 +6,13 @@ export interface TimelineEvent {
   title: string;
   description: string;
   location: string;
-  images?: string[];
+  affiliations?: {
+    name: string;
+    detail: string;
+    logo?: string;
+    logoTone?: "dark";
+    initials?: string;
+  }[];
 }
 
 export default function Timeline({ events }: { events: TimelineEvent[] }) {
@@ -20,9 +26,14 @@ export default function Timeline({ events }: { events: TimelineEvent[] }) {
             <article className="music-history-story">
               <h3>{event.title}</h3><p>{event.description}</p>
               <p className="music-history-location"><MapPin size={14} aria-hidden="true" />{event.location}</p>
-              {!!event.images?.length && <div className="music-history-photos">{event.images.map((src) => (
-                <div className="music-history-photo" key={src}><Image src={src} alt="" width={180} height={120} sizes="(max-width: 479px) 40vw, 180px" /></div>
-              ))}</div>}
+              {!!event.affiliations?.length && <ul className="music-history-affiliations" aria-label="Schools and musical communities">{event.affiliations.map((affiliation) => (
+                <li className="music-history-affiliation" key={affiliation.name}>
+                  <span className={`music-affiliation-mark${affiliation.logo ? "" : " music-affiliation-monogram"}${affiliation.logoTone === "dark" ? " music-affiliation-mark-dark" : ""}`} aria-hidden="true">
+                    {affiliation.logo ? <Image src={affiliation.logo} alt="" width={52} height={52} sizes="52px" quality={95} /> : affiliation.initials}
+                  </span>
+                  <div className="music-affiliation-copy"><p>{affiliation.name}</p><span>{affiliation.detail}</span></div>
+                </li>
+              ))}</ul>}
             </article>
           </li>
         ))}
